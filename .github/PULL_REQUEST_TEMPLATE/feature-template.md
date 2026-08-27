@@ -1,4 +1,4 @@
-# � PULL REQUEST – Actividad Obligatoria N.º 1 – Diseño Orientado a Objetos
+# PULL REQUEST – Actividad Obligatoria Nº 1 – Programación Web I
 
 ---
 
