@@ -12,6 +12,8 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 ## Changed
 
+- [fix/plan-sesion] Se agregó una nueva función para inicio de sesión y creación de cuentas (como un concepto para la página), debido a esto, se actualizaron plan.md y README.md. PR: [#3](https://github.com/eternalnight04/HeladeriaVainell/pull/3) - @eternalnight04 (Coordinador / DevOps)
+
 ## Fixed
 
 ---
