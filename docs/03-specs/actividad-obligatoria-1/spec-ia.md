@@ -4,6 +4,10 @@
 
 - **Rol:** Especialista en IA y Prompt Engineering
 - **Responsable:** Lautaro Chavez
+<<<<<<< HEAD
+=======
+- **Estado:** Borrador
+>>>>>>> cef935d (docs: agrega spec de IA y decisiones SDD)
 
 ---
 
