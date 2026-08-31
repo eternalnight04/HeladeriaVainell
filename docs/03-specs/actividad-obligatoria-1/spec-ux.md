@@ -3,7 +3,7 @@
 **Proyecto:** Vainell
 **Entrega:** Actividad Obligatoria N°1
 **Rol:** Documentador / Diseñador UX
-**Rama:** `feature/`
+**Rama:** `feature/doc-ux-add-readme-and-mockup`
 
 ---
 
