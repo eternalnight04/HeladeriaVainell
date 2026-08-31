@@ -28,7 +28,7 @@
 - Ofrecer un sistema de inicio de sesión, donde, hipotéticamente, se podrían ganar puntos con cada compra para descuentos.
 - Sentar una base de código sólida, documentada y escalable, que permita incorporar progresivamente estilos e interactividad en las próximas entregas.
 
-> **Nota:** Vainell es un *simulador*. Resuelve ciertas tareas (catálogo, elección de modalidad, carga de datos del pedido) y brinda información de valor al usuario, pero no procesa pagos reales, ni persiste pedidos en una base de datos, ni envía notificaciones reales.
+> **Nota:** Vainell es un simulador, por lo que no procesa pagos reales ni persiste datos en una base de datos.
 
 ---
 
@@ -57,17 +57,17 @@
 
 ## Maqueta de diseño web
 
-El concepto visual del producto final fue diseñado en Figma, tomando como base los requerimientos funcionales definidos en [`plan.md`](./plan.md).
+El mockup del proyecto fue desarrollado en Figma y toma como referencia los requerimientos funcionales definidos en [plan.md](plan.md). La propuesta visual busca reflejar una identidad moderna, fresca y amigable para una heladería.
 
 ---
 
 ## Documentación
 
-- 📄 Plan del proyecto: [`plan.md`](./plan.md)
-- 🎨 Mockup: [`docs/01-mockup/diseño-inicial.png`](./docs/01-mockup/diseno-inicial.png) — Ver en Figma: *(pegar aquí el enlace público del archivo de Figma)*
-- 🤖 Índice de Prompts: [`docs/02-prompts/prompts.md`](./docs/02-prompts/prompts.md)
-- 📝 Changelog: [`changelog.md`](./changelog.md)
-- 🧩 Especificaciones técnicas (SDD): [`docs/03-specs/`](./docs/03-specs/)
+-  Plan del proyecto: [plan.md](plan.md)
+-  [`docs/01-mockup/diseño-inicial.png`](./docs/01-mockup/actividad-obligatoria-01) — Ver en Figma: https://www.figma.com/make/8UBb5SIznSz81a6y57nQ7v/Ice-Cream-Shop?t=MiOriddmlnQAfXnL-20&fullscreen=1
+-  Prompts de IA: [docs/02-prompts/prompts.md](docs/02-prompts/prompts.md)
+-  Changelog: [changelog.md](changelog.md)
+-  Especificaciones técnicas: [docs/03-specs](docs/03-specs)
 
 ---
 
@@ -77,5 +77,5 @@ El concepto visual del producto final fue diseñado en Figma, tomando como base 
 |---|---|---|---|
 | *Milenka Vila* | *157550* | *@eternalnight04* | Coordinador / DevOps |
 | *Alexis Matias Britez Acosta* | *(matrícula)* | *@britezacostaalexis-pixel* | Desarrollador Frontend |
-| *Lautaro Chavez* | *(matrícula)* | *@lautarochavez14* | Documentador / Diseñador UX |
-| *Milenka Vila* | *157550* | *@eternalnight04* | Especialista en IA y Prompt Engineering |
+| *Alexis Matias Britez Acosta* | *(matrícula)* | *@britezacostaalexis-pixel* | Documentador / Diseñador UX |
+| *Lautaro Chavez* | *157550* | *@lautarochavez14* | Especialista en IA y Prompt Engineering |
