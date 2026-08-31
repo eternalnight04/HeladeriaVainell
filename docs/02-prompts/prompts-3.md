@@ -3,7 +3,11 @@
 ## Información general
 
 - **Modelo:** Gemini 1.5 Pro
+<<<<<<< HEAD
 - **Método:** Chatbot
+=======
+- **Método:** Few-shot
+>>>>>>> 4435a65 (docs: agrega documentación de prompts y spec de IA)
 - **Objetivo:** Planificar futuros estilos y criterios de diseño responsivo para el proyecto.
 
 ---
@@ -36,12 +40,17 @@
 
 ## Resultado esperado
 
+<<<<<<< HEAD
 Obtener recomendaciones para planificar la futura incorporación de CSS3 y diseño responsivo sin modificar el alcance actual de la primera entrega.
+=======
+Obtener recomendaciones para planificar la futura incorporación de CSS3 y diseño responsive sin modificar el alcance actual de la primera entrega.
+>>>>>>> 4435a65 (docs: agrega documentación de prompts y spec de IA)
 
 ---
 
 ## Resultado obtenido
 
+<<<<<<< HEAD
 Header y navegación:
 
 - Mantener el menú visible y accesible sin saturar el espacio.
@@ -100,11 +109,24 @@ Footer:
 - Uso de fuentes pequeñas pero legibles y colores que contrasten con el fondo.
 
 - Espaciados adecuados para que no se vea saturado sin perder información.
+=======
+[Completar con el resultado real obtenido al utilizar el modelo.]
+
+---
+
+## Correcciones manuales
+
+[Indicar qué recomendaciones fueron seleccionadas, descartadas o modificadas.]
+>>>>>>> 4435a65 (docs: agrega documentación de prompts y spec de IA)
 
 ---
 
 ## Aporte al proyecto
 
+<<<<<<< HEAD
 Este prompt permitió anticipar criterios de diseño para futuras entregas sin incorporar CSS antes de la etapa prevista.
 
 ![alt text](prompt-3.png)
+=======
+Este prompt permitió anticipar criterios de diseño para futuras entregas sin incorporar CSS antes de la etapa prevista.
+>>>>>>> 4435a65 (docs: agrega documentación de prompts y spec de IA)
