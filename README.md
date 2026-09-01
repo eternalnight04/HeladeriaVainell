@@ -64,7 +64,7 @@ El mockup del proyecto fue desarrollado en Figma y toma como referencia los requ
 ## Documentación
 
 -  Plan del proyecto: [plan.md](plan.md)
--  [`docs/01-mockup/diseño-inicial.png`](./docs/01-mockup/actividad-obligatoria-01) — Ver en Figma: https://www.figma.com/make/8UBb5SIznSz81a6y57nQ7v/Ice-Cream-Shop?t=MiOriddmlnQAfXnL-20&fullscreen=1
+-  [`docs/01-mockup/diseño-inicial`](./docs/01-mockup/actividad-obligatoria-1/actividad-obligatoria-01.md) — Ver en Figma: https://www.figma.com/make/8UBb5SIznSz81a6y57nQ7v/Ice-Cream-Shop?t=MiOriddmlnQAfXnL-20&fullscreen=1
 -  Prompts de IA: [docs/02-prompts/prompts.md](docs/02-prompts/prompts.md)
 -  Changelog: [changelog.md](changelog.md)
 -  Especificaciones técnicas: [docs/03-specs](docs/03-specs)
