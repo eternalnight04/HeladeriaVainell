@@ -15,6 +15,7 @@ Un cliente que quiere comprar helados de Vainell hoy solo puede hacerlo llamando
 - Ver el catálogo de sabores, productos y precios.
 - Elegir entre **delivery** o **retiro en local**.
 - Completar sus datos y los del pedido a través de un formulario.
+- Crear una cuenta e iniciar sesión para agilizar futuros pedidos, guardar sus datos de contacto/dirección y acceder a un espacio propio dentro del sitio (a la manera de un "Club Vainell"), inspirado en una sección de socios/login.
 - Recibir información clara sobre el proceso de compra.
 
 Como se trata de un **simulador**, el pedido no se procesa realmente (no hay pasarela de pago, ni conexión a una base de datos, ni notificación real al local): el objetivo es que el usuario reciba información de valor y una experiencia de flujo de compra realista, aunque el circuito no se complete de forma funcional en esta etapa del curso.
@@ -27,12 +28,13 @@ Como se trata de un **simulador**, el pedido no se procesa realmente (no hay pas
 - Formulario de pedido (datos del cliente, dirección si es delivery, horario de retiro si es en local, medio de pago declarado).
 - Cálculo simulado de costo de envío según zona (a incorporar con JavaScript en entregas futuras).
 - Confirmación visual del pedido (sin backend real).
+- Sistema de inicio de sesión y registro de usuario simulado ("Mi cuenta Vainell"): formulario de registro, formulario de inicio de sesión y un espacio de usuario donde, en entregas futuras, se mostrará el historial de pedidos y datos guardados (dirección, medio de contacto).
 
 **Fuera de alcance (no se resuelve realmente):**
 - Procesamiento real de pagos.
 - Persistencia de pedidos en una base de datos.
 - Envío real de notificaciones (mail, WhatsApp, etc.) al local o al cliente.
-- Sistema de usuarios con login/autenticación real.
+- Sistema de usuarios con login/autenticación real: no habrá backend, base de datos de usuarios, cifrado de contraseñas, recuperación de contraseña por mail, ni sesiones persistentes reales. El inicio de sesión será una simulación de front-end (a incorporar con JavaScript en entregas futuras), pensada únicamente para mostrar el flujo de UX de "loguearse" en el sitio.
 
 ## 4. Tecnologías utilizadas
 
@@ -61,12 +63,13 @@ Extraídos y estructurados a partir de la consigna del profesor:
    - Al menos una lista (ordenada o desordenada) — por ejemplo, sabores disponibles.
    - Una tabla con `<th>`/`<td>` — por ejemplo, precios por tamaño/formato.
    - Un formulario con al menos 3 campos relevantes — el **formulario de pedido**, incluyendo como mínimo: nombre del cliente, modalidad de entrega (delivery / retiro en local) y datos asociados (dirección u horario de retiro).
+   - Un formulario de inicio de sesión (usuario/mail y contraseña) y un formulario de registro (nombre, mail, contraseña y confirmación de contraseña como mínimo), en una sección o subpágina "Iniciar sesión / Crear cuenta".
 
 3. **Maquetación CSS (no requerida aún)**
    - Dejar comentarios `<!-- CSS: ... -->` indicando dónde se aplicarán estilos en la próxima entrega (ej. sección hero, catálogo, formulario de pedido, footer).
 
 4. **Interactividad JavaScript (no requerida aún)**
-   - Dejar comentarios `<!-- JS: ... -->` indicando dónde se incorporará lógica interactiva futura: cálculo de costo de envío, validación del formulario de pedido, cambio dinámico de campos según modalidad elegida (delivery/local), simulación de confirmación del pedido.
+   - Dejar comentarios `<!-- JS: ... -->` indicando dónde se incorporará lógica interactiva futura: cálculo de costo de envío, validación del formulario de pedido, cambio dinámico de campos según modalidad elegida (delivery/local), simulación de confirmación del pedido, y simulación del inicio de sesión/registro (validación de campos, mensaje de "sesión iniciada", cambio de la interfaz mostrando el nombre del usuario logueado, sin backend real).
 
 5. **Documentación**
    - Comentarios claros en el HTML explicando estructura y elementos.
@@ -86,6 +89,7 @@ Extraídos y estructurados a partir de la consigna del profesor:
   - Sección de catálogo (lista de sabores y tabla de precios/formatos).
   - Sección "Cómo pedir" explicando delivery vs. retiro en local.
   - Formulario de pedido (nombre, contacto, modalidad de entrega, dirección/horario, comentarios).
+  - Sección "Mi cuenta Vainell": formulario de inicio de sesión y formulario de registro de usuario, con marcadores de futura integración de JavaScript para simular el login y de CSS para su diseño.
 - **Footer**: datos de contacto, horarios de atención, enlaces a redes sociales.
 
 ## 7. Criterios de aceptación de esta entrega
@@ -93,6 +97,7 @@ Extraídos y estructurados a partir de la consigna del profesor:
 - [ ] El sitio se renderiza correctamente como HTML5 válido.
 - [ ] Incluye todos los elementos obligatorios (título, párrafos, imágenes, enlaces, lista, tabla, formulario).
 - [ ] El formulario contempla explícitamente la elección entre delivery y retiro en local.
+- [ ] Incluye los formularios de inicio de sesión y de registro de usuario ("Mi cuenta Vainell"), con marcadores de futura validación/simulación en JavaScript.
 - [ ] Usa etiquetas semánticas de forma pertinente.
 - [ ] Contiene comentarios que documentan la estructura y marcan los puntos de futura integración de CSS y JS.
 - [ ] Existe trazabilidad completa: `plan.md` → `docs/03-specs/spec-[rol].md` → Pull Request → `changelog.md`.

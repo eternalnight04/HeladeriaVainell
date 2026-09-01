@@ -10,7 +10,11 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 - [feature/coordinador-setup-repo-and-pages] Se agregaron las carpetas y los archivos correspondientes para asegurar la estructura del proyecto. Se agregó un changelog, plan.md con las especificaciones que debe seguir el proyecto y un archivo README.md con la información del mismo. PR: [#2](https://github.com/eternalnight04/HeladeriaVainell/pull/2) - @eternalnight04 (Coordinador / DevOps)
 
+- [feature/feature/doc-ux-add-readme-and-mockup] Se agregaron las carpetas y los archivos correspondientes para asegurar la estructura del proyecto. Se agregó un changelog, plan.md con las especificaciones que debe seguir el proyecto y un archivo README.md con la información del mismo. PR: [#6](https://github.com/eternalnight04/HeladeriaVainell/pull/6) - @britezacostaalexis-pixel (Documentador / Diseñador UX)
+
 ## Changed
+
+- [fix/plan-sesion] Se agregó una nueva función para inicio de sesión y creación de cuentas (como un concepto para la página), debido a esto, se actualizaron plan.md y README.md. PR: [#3](https://github.com/eternalnight04/HeladeriaVainell/pull/3) - @eternalnight04 (Coordinador / DevOps)
 
 ## Fixed
 
