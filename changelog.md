@@ -10,6 +10,17 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 - [feature/coordinador-setup-repo-and-pages] Se agregaron las carpetas y los archivos correspondientes para asegurar la estructura del proyecto. Se agregó un changelog, plan.md con las especificaciones que debe seguir el proyecto y un archivo README.md con la información del mismo. PR: [#2](https://github.com/eternalnight04/HeladeriaVainell/pull/2) - @eternalnight04 (Coordinador / DevOps)
 
+- [feature/ia-add-prompts-1-to-5] documentación estructural y de proceso significativa para el proyecto, incluyendo prompts, decisiones SDD y specs por rol. El enfoque general es ordenado y útil para la trazabilidad del equipo.
+  PR  [#4](https://github.com/eternalnight04/HeladeriaVainell/pull/4)- @lautaroChavez14 (Especialista en IA y Prompt Engineering)
+  
+- [feature/ia-add-prompts-1-to-5]
+Se agregó la especificación del rol en spec-ia.md.
+Se documentaron las decisiones tomadas para la aplicación de Spec-Driven Development (SDD) en sdd-decisions.md.
+Se agregaron 5 archivos de documentación de prompts en docs/02-prompts/.
+Se definió la estructura para registrar modelo, método, prompt, resultado esperado, resultado obtenido y correcciones manuales.
+Se mantuvo la trazabilidad con los requerimientos definidos en plan.md.
+PR: [#5](https://github.com/eternalnight04/HeladeriaVainell/pull/5)
+
 ## Changed
 
 - [fix/plan-sesion] Se agregó una nueva función para inicio de sesión y creación de cuentas (como un concepto para la página), debido a esto, se actualizaron plan.md y README.md. PR: [#3](https://github.com/eternalnight04/HeladeriaVainell/pull/3) - @eternalnight04 (Coordinador / DevOps)
