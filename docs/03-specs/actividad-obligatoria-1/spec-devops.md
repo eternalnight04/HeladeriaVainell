@@ -29,21 +29,6 @@ Configurar la infraestructura base del repositorio de Vainell en GitHub y genera
 - La **administración de Pull Requests con revisión asistida por IA** asegura que el código que se integra a `develop` cumple con lo especificado, no solo que "funciona", incorporando así una práctica real de desarrollo de software profesional.
 - La **rama de release y GitHub Pages** son necesarias para poder entregar un enlace público y verificable del trabajo, tal como exige el formato de entrega de la consigna.
 
-## 3. Criterios de aceptación
-
-- [ ] Repositorio `HeladeriaVainell` creado en GitHub, público, con ramas `master` y `develop`.
-- [ ] Reglas de protección activas en `master` y en `develop` (revisor obligatorio, push directo bloqueado).
-- [ ] Profesor y todos los integrantes agregados como colaboradores.
-- [ ] Commit inicial con la estructura de carpetas completa (`docs/01-mockup/`, `docs/02-prompts/`, `docs/03-specs/`, `.github/PULL_REQUEST_TEMPLATE/`) e `index.html` vacío.
-- [ ] `plan.md` existe en la raíz del repositorio, generado con GitHub Copilot en modo Agente, con requerimientos funcionales concretos de Vainell (no copia literal de la consigna) y el alcance del simulador definido.
-- [ ] Templates de Pull Request configurados y utilizados por todo el equipo.
-- [ ] Todas las Pull Requests del proyecto cuentan con al menos una revisión aprobada antes del merge.
-- [ ] Al menos 4 code reviews asistidos con IA documentados como evidencia en los comentarios de las PRs, evaluando cumplimiento contra `plan.md`.
-- [ ] Rama `release/actividad-obligatoria-1` creada desde `develop`, con GitHub Pages habilitado y el sitio accesible públicamente.
-- [ ] Pull Request de release publicada en Slack (con el formato de título indicado en la consigna) y enlaces subidos al campus virtual.
-- [ ] `changelog.md` actualizado con la Pull Request propia (número, link, autor y resumen del aporte).
-- [ ] Issue creada para la tarea de este rol, vinculada correctamente a la Pull Request y cerrada tras el merge.
-
-## 4. PR asociado
+## 3. PR asociado
 
 Esta especificación se incluye en la Pull Request `feature/coordinador-setup-repo-and-pages → develop`, que agrega o actualiza la estructura base del proyecto, la configuración de GitHub Pages y el archivo `plan.md`, redactado antes de iniciar el desarrollo.
