@@ -7,16 +7,15 @@
 
 ---
 
-## 1. qué le pidió a la IA
+## 1. Qué se le pidió a la IA
 
-- Se le solicito  sugerencias de layout, estructura de secciones y jerarquía visual para la página principal del proyecto. 
-
+- Se le solicitó sugerencias de layout, estructura de secciones y jerarquía visual para la página principal del proyecto. 
 
 ---
 
-## 2 Qué sugirió la IACopilot
+## 2. Qué sugirió Copilot
 
-- propuso la siguiente estructura de página:
+- Propuso la siguiente estructura de página:
 
 1. Header fijo con logo, navegación y botón de acción principal  
 2. Hero section con título, subtítulo, CTAs e imagen principal  
@@ -32,24 +31,23 @@ También recomendó una jerarquía visual clara (entender en 3 segundos qué es 
 ---
 
 
-## 3.  Qué decidí usarDecidí utilizar
+## 3. Qué decidí utilizar
 
- - las secciones 1, 2, 3, 4, 5, 6 , 7 y 8:
+ - Las secciones 1, 2, 3, 4, 5, 6 , 7 y 8:
 1. Header fijo  
 2. Hero section  
 3. Beneficios  
-4.  Catálogo de productos  
+4. Catálogo de productos  
 5. Cómo pedir  
 6. Formulario de pedido 
-7. testimonios 
+7. Testimonios 
 8. Footer
 
 
 ---
 
 
-
-## 4. que se descarto
+## 4. Qué se descarto
 
 - Decidi no descartar ninguna sugerencia.
 
