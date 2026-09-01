@@ -76,6 +76,6 @@ El mockup del proyecto fue desarrollado en Figma y toma como referencia los requ
 | Nombre completo | N° de Matrícula | Usuario GitHub | Rol en esta entrega |
 |---|---|---|---|
 | *Milenka Vila* | *157550* | *@eternalnight04* | Coordinador / DevOps |
-| *Alexis Matias Britez Acosta* | *(matrícula)* | *@britezacostaalexis-pixel* | Desarrollador Frontend |
-| *Alexis Matias Britez Acosta* | *(matrícula)* | *@britezacostaalexis-pixel* | Documentador / Diseñador UX |
-| *Lautaro Chavez* | *157550* | *@lautarochavez14* | Especialista en IA y Prompt Engineering |
+| *Alexis Matias Britez Acosta* | *158100* | *@britezacostaalexis-pixel* | Desarrollador Frontend |
+| *Alexis Matias Britez Acosta* | *158100* | *@britezacostaalexis-pixel* | Documentador / Diseñador UX |
+| *Lautaro Chavez* | *151222* | *@lautarochavez14* | Especialista en IA y Prompt Engineering |
