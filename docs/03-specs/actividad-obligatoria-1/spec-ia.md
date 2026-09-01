@@ -4,7 +4,6 @@
 
 - **Rol:** Especialista en IA y Prompt Engineering
 - **Responsable:** Lautaro Chavez
-- **Estado:** Borrador
 
 ---
 
