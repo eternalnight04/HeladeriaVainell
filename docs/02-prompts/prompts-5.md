@@ -1,38 +1,53 @@
 # Prompt 5 - Optimización y validación del código
 
-## Objetivo
+## Información general
 
-Revisar, optimizar y validar el código desarrollado para **Heladería Vainell**, verificando que los archivos HTML y CSS estén correctamente estructurados y funcionen de manera adecuada.
+- **Modelo:** [Completar con el modelo utilizado realmente]
+- **Método:** Chain-of-thought guiado
+- **Objetivo:** Revisar el código HTML y verificar su cumplimiento con los requerimientos del proyecto.
 
-## Prompt utilizado
+---
 
-> Revisá el código actual del proyecto **Heladería Vainell**, incluyendo el archivo `index.html` y los estilos de `css/style.css`.
+## Prompt exacto
+
+> Actuá como revisor de código especializado en HTML5.
 >
-> Analizá el código en busca de errores, problemas de estructura, etiquetas HTML incorrectamente utilizadas, estilos innecesarios o código repetido.
+> Necesito que analices la estructura de un proyecto académico llamado Heladería Vainell.
 >
-> Verificá que el HTML utilice correctamente la estructura semántica de HTML5 y que el CSS esté organizado, limpio y sea fácil de mantener.
+> La primera entrega debe cumplir los siguientes requisitos:
 >
-> Comprobá también que el diseño responsive funcione correctamente en diferentes tamaños de pantalla, especialmente en dispositivos móviles, tablets y computadoras.
+> 1. Utilizar HTML5 válido.
+> 2. Incluir estructura semántica.
+> 3. Contener header, main y footer.
+> 4. Incluir navegación.
+> 5. Contener textos descriptivos reales.
+> 6. Incluir imágenes con atributo alt.
+> 7. Contener enlaces.
+> 8. Incluir una lista.
+> 9. Incluir una tabla con th y td.
+> 10. Contener un formulario de pedido.
+> 11. Permitir indicar delivery o retiro en local.
+> 12. No utilizar todavía CSS ni JavaScript funcional.
+> 13. Incluir comentarios indicando futuras integraciones de CSS y JavaScript.
 >
-> Optimizá el código cuando sea necesario, pero sin modificar innecesariamente el diseño o la estructura ya desarrollada.
+> Analizá el código paso a paso y generá una lista de verificación.
 >
-> No agregues funcionalidades nuevas. El objetivo es corregir errores, mejorar la organización y validar el código existente.
+> Para cada requisito indicá:
+>
+> - Cumple.
+> - No cumple.
+> - Requiere revisión.
+>
+> Si detectás un problema, explicá brevemente cómo podría corregirse sin modificar innecesariamente la estructura existente.
+
+---
 
 ## Resultado esperado
 
-Obtener una versión revisada y optimizada del proyecto, reduciendo errores y código innecesario y manteniendo una estructura clara y organizada.
+Obtener una revisión estructurada del código para detectar posibles errores o incumplimientos antes de realizar la entrega.
 
-La revisión debe contemplar:
+---
 
-- Validación de la estructura HTML5.
-- Correcto uso de etiquetas semánticas.
-- Revisión de enlaces y rutas de archivos.
-- Limpieza y organización del código CSS.
-- Eliminación de estilos o código innecesario.
-- Corrección de posibles errores.
-- Verificación del diseño responsive.
-- Mejora de la legibilidad y mantenimiento del código.
+## Aporte al proyecto
 
-## Propósito
-
-Este quinto y último paso permite realizar una revisión general del proyecto antes de su entrega, asegurando que el código sea correcto, organizado, responsive y coherente con los objetivos planteados para **Heladería Vainell**.
+Este prompt permitió utilizar la IA como herramienta de revisión y control de calidad para verificar el cumplimiento de los requerimientos definidos en el `plan.md`.
