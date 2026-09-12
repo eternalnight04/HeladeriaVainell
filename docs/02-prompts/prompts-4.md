@@ -1,7 +1,5 @@
 # Prompt 4 - Creación del mockup
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 ## Información general
 
 - **Modelo:** Figma.
@@ -59,65 +57,3 @@ Se separó frame por frame con Claude.ia.
 Este prompt aportó una referencia para la organización visual del sitio y facilitó la planificación de la interfaz.
 
 ![alt text](prompt-4.png)
-=======
-## Objetivo
-=======
-## Información general
->>>>>>> 4435a65 (docs: agrega documentación de prompts y spec de IA)
-
-- **Modelo:** [Completar con el modelo utilizado realmente]
-- **Método:** Contextual prompting
-- **Objetivo:** Obtener una propuesta visual para el mockup del proyecto Heladería Vainell.
-
----
-
-## Prompt exacto
-
-> Necesito crear un mockup para una página web de una heladería ficticia llamada Vainell.
->
-> La página representa un simulador de pedidos de helados para delivery o retiro en el local.
->
-> El diseño debe contemplar las siguientes secciones:
->
-> - Header con logo o nombre de la heladería.
-> - Navegación.
-> - Sección principal de presentación.
-> - Catálogo de productos.
-> - Sabores disponibles.
-> - Tabla o sección de precios.
-> - Explicación sobre las modalidades de pedido.
-> - Formulario para simular un pedido.
-> - Footer con información de contacto.
->
-> El objetivo es crear una propuesta visual clara que posteriormente pueda utilizarse como referencia para el desarrollo frontend.
->
-> Priorizá la organización visual y la experiencia del usuario.
-
----
-
-## Resultado esperado
-
-Obtener una propuesta visual que permita definir la organización y jerarquía de las secciones de la página.
-
----
-
-## Resultado obtenido
-
-[Completar con el resultado real obtenido.]
-
-<<<<<<< HEAD
-Este cuarto paso permite visualizar el resultado esperado del proyecto antes de realizar los ajustes finales, facilitando la detección de posibles problemas de diseño, distribución o experiencia de usuario.
->>>>>>> cef935d (docs: agrega spec de IA y decisiones SDD)
-=======
----
-
-## Correcciones manuales
-
-[Indicar los cambios realizados manualmente sobre el diseño o propuesta obtenida.]
-
----
-
-## Aporte al proyecto
-
-Este prompt aportó una referencia para la organización visual del sitio y facilitó la planificación de la interfaz.
->>>>>>> 4435a65 (docs: agrega documentación de prompts y spec de IA)

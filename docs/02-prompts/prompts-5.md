@@ -1,7 +1,5 @@
 # Prompt 5 - Optimización y validación del código
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 ## Información general
 
 - **Modelo:** Gemini
@@ -104,75 +102,3 @@ Para cumplir al 100% con los requisitos sin alterar la estructura existente, se 
 Este prompt permitió utilizar la IA como herramienta de revisión y control de calidad para verificar el cumplimiento de los requerimientos definidos en el `plan.md`.
 
 ![alt text](prompt-5.png)
-=======
-## Objetivo
-=======
-## Información general
->>>>>>> 4435a65 (docs: agrega documentación de prompts y spec de IA)
-
-- **Modelo:** [Completar con el modelo utilizado realmente]
-- **Método:** Chain-of-thought guiado
-- **Objetivo:** Revisar el código HTML y verificar su cumplimiento con los requerimientos del proyecto.
-
----
-
-## Prompt exacto
-
-> Actuá como revisor de código especializado en HTML5.
->
-> Necesito que analices la estructura de un proyecto académico llamado Heladería Vainell.
->
-> La primera entrega debe cumplir los siguientes requisitos:
->
-> 1. Utilizar HTML5 válido.
-> 2. Incluir estructura semántica.
-> 3. Contener header, main y footer.
-> 4. Incluir navegación.
-> 5. Contener textos descriptivos reales.
-> 6. Incluir imágenes con atributo alt.
-> 7. Contener enlaces.
-> 8. Incluir una lista.
-> 9. Incluir una tabla con th y td.
-> 10. Contener un formulario de pedido.
-> 11. Permitir indicar delivery o retiro en local.
-> 12. No utilizar todavía CSS ni JavaScript funcional.
-> 13. Incluir comentarios indicando futuras integraciones de CSS y JavaScript.
->
-> Analizá el código paso a paso y generá una lista de verificación.
->
-> Para cada requisito indicá:
->
-> - Cumple.
-> - No cumple.
-> - Requiere revisión.
->
-> Si detectás un problema, explicá brevemente cómo podría corregirse sin modificar innecesariamente la estructura existente.
-
----
-
-## Resultado esperado
-
-Obtener una revisión estructurada del código para detectar posibles errores o incumplimientos antes de realizar la entrega.
-
----
-
-## Resultado obtenido
-
-[Completar con el resultado real obtenido al ejecutar el prompt.]
-
-<<<<<<< HEAD
-Este quinto y último paso permite realizar una revisión general del proyecto antes de su entrega, asegurando que el código sea correcto, organizado, responsive y coherente con los objetivos planteados para **Heladería Vainell**.
->>>>>>> cef935d (docs: agrega spec de IA y decisiones SDD)
-=======
----
-
-## Correcciones manuales
-
-[Indicar qué correcciones fueron aplicadas manualmente después de revisar la respuesta.]
-
----
-
-## Aporte al proyecto
-
-Este prompt permitió utilizar la IA como herramienta de revisión y control de calidad para verificar el cumplimiento de los requerimientos definidos en el `plan.md`.
->>>>>>> 4435a65 (docs: agrega documentación de prompts y spec de IA)

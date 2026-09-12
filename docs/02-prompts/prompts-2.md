@@ -2,11 +2,7 @@
 
 ## Información general
 
-<<<<<<< HEAD
 - **Modelo:** Gemini
-=======
-- **Modelo:** Claude 3.5 Sonnet
->>>>>>> 4435a65 (docs: agrega documentación de prompts y spec de IA)
 - **Método:** Role prompting
 - **Objetivo:** Obtener una propuesta inicial de código HTML5 para el proyecto.
 
@@ -52,31 +48,17 @@ Obtener una propuesta de código HTML5 que cumpla con los requerimientos funcion
 
 ## Resultado obtenido
 
-<<<<<<< HEAD
 Características destacadas del código:
 Semántica rigurosa: Hace uso de header, nav, main, section, article, fieldset, legend, table y footer para estructurar la información jerárquicamente.
 
 Accesibilidad integrada: Las etiquetas <label> están correctamente enlazadas mediante sus atributos for e id correspondientes con cada <input>, <select> y <textarea>. La tabla cuenta con <caption> y <thead>/<tbody> para lectores de pantalla.
 
 Puntos de extensión (CSS/JS): Se dejaron comentarios explicativos en el <head> y antes del </body> indicando exactamente dónde y cómo se vincularán la capa de estilos e interactividad en las siguientes etapas.
-=======
-[Completar con el resultado real obtenido al utilizar el modelo.]
-
----
-
-## Correcciones manuales
-
-[Indicar qué partes del código fueron modificadas, eliminadas o adaptadas manualmente.]
->>>>>>> 4435a65 (docs: agrega documentación de prompts y spec de IA)
 
 ---
 
 ## Aporte al proyecto
 
-<<<<<<< HEAD
 Este prompt ayudó a generar una base inicial para analizar la estructura de `index.html` y verificar la presencia de los elementos requeridos.
 
 ![alt text](prompt-2.png)
-=======
-Este prompt ayudó a generar una base inicial para analizar la estructura de `index.html` y verificar la presencia de los elementos requeridos.
->>>>>>> 4435a65 (docs: agrega documentación de prompts y spec de IA)
