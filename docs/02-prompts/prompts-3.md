@@ -3,7 +3,7 @@
 ## Información general
 
 - **Modelo:** Gemini 1.5 Pro
-- **Método:** Few-shot
+- **Método:** chatbot
 - **Objetivo:** Planificar futuros estilos y criterios de diseño responsivo para el proyecto.
 
 ---
@@ -42,7 +42,36 @@ Obtener recomendaciones para planificar la futura incorporación de CSS3 y dise�
 
 ## Resultado obtenido
 
-[Completar con el resultado real obtenido al utilizar el modelo.]
+Header y navegación
+Mantener el menú visible y accesible sin saturar el espacio.
+Usar un diseño horizontal para escritorio y un menú hamburguesa o desplegable para móviles.
+Priorizar íconos y textos legibles, ajustando tamaños y espacios según pantalla.
+Considerar sticky header para facilitar la navegación en scroll largo.
+Sección de presentación
+Jerarquía clara: título principal destacado, subtítulos y texto de apoyo con tamaños proporcionales.
+Imágenes o banners adaptables que mantengan buena resolución sin interferir con el texto.
+Uso de alineación central en móviles y márgenes en escritorio para mejor lectura.
+Espaciados amplios para evitar saturación visual.
+Catálogo de productos
+Implementar un diseño de tarjetas flexibles que se reorganizan en columnas según ancho de pantalla (por ejemplo: 3 columnas en escritorio, 1 columna en móvil).
+Asegurar que las imágenes se redimensionen manteniendo proporciones.
+Botones y textos dentro de las tarjetas deben ser suficientemente grandes para interacción táctil.
+Mantener consistencia visual en fuentes, colores y bordes para facilitar la lectura rápida.
+Tabla de precios
+Evitar tablas muy anchas que obliguen scroll horizontal en móvil.
+Considerar transformar tablas en listas o tarjetas en dispositivos pequeños.
+Títulos y datos alineados para claridad, con contraste suficiente para distinguir filas.
+Uso de tipografía legible y espaciados para evitar agrupamientos densos.
+Formulario de pedido
+Colocar etiquetas arriba de los campos para mejorar la legibilidad en móviles.
+Campos y botones adaptables de ancho completo en pantallas pequeñas y con suficiente padding para fácil interacción.
+Orden lógico de campos y agrupación visual que ayude al usuario a completar.
+Respuesta visual clara para errores o validaciones.
+Footer
+Diseño simple y organizado, con información agrupada en bloques (contacto, redes, horarios).
+En móvil, cambiar distribución horizontal por vertical para mejor lectura.
+Uso de fuentes pequeñas pero legibles y colores que contrasten con el fondo.
+Espaciados adecuados para que no se vea saturado sin perder información.
 
 ---
 
@@ -55,3 +84,5 @@ Obtener recomendaciones para planificar la futura incorporación de CSS3 y dise�
 ## Aporte al proyecto
 
 Este prompt permitió anticipar criterios de diseño para futuras entregas sin incorporar CSS antes de la etapa prevista.
+
+![alt text](image.png)

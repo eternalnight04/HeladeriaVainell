@@ -40,9 +40,10 @@ Obtener una propuesta visual que permita definir la organización y jerarquía d
 
 ## Resultado obtenido
 
-[Completar con el resultado real obtenido.]
 
----
+---La IA generó un mockup visual de la página web de la heladería Vainell, organizando las secciones principales del proyecto: encabezado y navegación, presentación, catálogo de productos, sabores disponibles, precios, modalidades de pedido, formulario para simular un pedido y pie de página.
+
+El resultado permitió obtener una referencia visual de la distribución de los elementos y de la organización general de la página, que puede utilizarse como guía para el posterior desarrollo frontend.
 
 ## Correcciones manuales
 
@@ -53,3 +54,5 @@ Obtener una propuesta visual que permita definir la organización y jerarquía d
 ## Aporte al proyecto
 
 Este prompt aportó una referencia para la organización visual del sitio y facilitó la planificación de la interfaz.
+
+![alt text](image.png)
