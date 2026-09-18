@@ -23,6 +23,8 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 - [fix/correcciones-archivos-1] Se agregó el archivo index.html con el código fuente de la página, además de que se agregaron los cambios hechos en la PR #5 a esta. PR: [#9](https://github.com/eternalnight04/HeladeriaVainell/pull/9) - @eternalnight04 (Documentador / DevOps)
 
+- [feature/ia-add-prompts-1-to-5-copy] Se trasladaron los nuevos cambios de la PR #5 a esta nueva PR debido a problemas de merge. PR: [#13](https://github.com/eternalnight04/HeladeriaVainell/pull/13) - @eternalnight04 (Documentador / DevOps)
+
 ## Changed
 
 - [fix/plan-sesion] Se agregó una nueva función para inicio de sesión y creación de cuentas (como un concepto para la página), debido a esto, se actualizaron plan.md y README.md. PR: [#3](https://github.com/eternalnight04/HeladeriaVainell/pull/3) - @eternalnight04 (Coordinador / DevOps)
