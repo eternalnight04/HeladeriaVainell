@@ -8,6 +8,9 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 ## Added
 
+
+- [feature/frontend-add-html-structure] Se agregaron los códigos html, marcas de donde deben ir los css y javascrip. PR: [#12](https://github.com/eternalnight04/HeladeriaVainell/pull/12) - @britezacostaalexis-pixel (Desarrollador Fronted)
+
 - [feature/coordinador-setup-repo-and-pages] Se agregaron las carpetas y los archivos correspondientes para asegurar la estructura del proyecto. Se agregó un changelog, plan.md con las especificaciones que debe seguir el proyecto y un archivo README.md con la información del mismo. PR: [#2](https://github.com/eternalnight04/HeladeriaVainell/pull/2) - @eternalnight04 (Coordinador / DevOps)
 
 - [feature/ia-add-prompts-1-to-5] Se agregaron los archivos de prompts e IA. PR: [#4](https://github.com/eternalnight04/HeladeriaVainell/pull/4) - @lautarochavez14 (Especialista en IA y Prompt Engineering)
