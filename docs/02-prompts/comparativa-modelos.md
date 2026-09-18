@@ -11,7 +11,7 @@ Comparar los modelos y métodos utilizados en los cinco prompts documentados par
 | Prompt 1 | Estructura base del proyecto | GPT-4o | Zero-shot | Permitió analizar y definir una estructura inicial para el proyecto utilizando HTML5 semántico. |
 | Prompt 2 | Generación del HTML inicial | Gemini | Role prompting | Permitió obtener una propuesta inicial de código HTML5, incorporando estructura semántica y criterios de accesibilidad. |
 | Prompt 3 | Estilo CSS y diseño responsivo | Gemini 1.5 Pro | Chatbot | Permitió planificar criterios de diseño responsive para aplicar en futuras etapas del proyecto. |
-| Prompt 4 | Creación del mockup | [Completar con el modelo utilizado realmente] | Contextual prompting | Permitió obtener una referencia visual para organizar las secciones y la distribución general de la página. |
+| Prompt 4 | Creación del mockup | Figma | Contextual prompting | Permitió obtener una referencia visual para organizar las secciones y la distribución general de la página. |
 | Prompt 5 | Optimización y validación del código | Gemini | Chain-of-thought guiado | Permitió revisar el cumplimiento de los requisitos del HTML e identificar como faltante la incorporación de imágenes con atributo `alt`. |
 
 ## Análisis
