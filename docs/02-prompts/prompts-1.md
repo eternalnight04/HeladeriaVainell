@@ -37,16 +37,12 @@ Obtener una propuesta de estructura semántica para organizar correctamente el c
 
 ## Resultado obtenido
 
-[Completar con un resumen del resultado real obtenido al ejecutar el prompt.]
-
----
-
-## Correcciones manuales
-
-[Indicar las modificaciones realizadas manualmente sobre la respuesta antes de aplicarla al proyecto.]
+Se obtuvo una propuesta de estructura base para el proyecto Vainell, definiendo la organización del HTML y CSS. La estructura incluye encabezado, sección principal, catálogo de productos, características del servicio, reseñas y pie de página, además de una adaptación responsiva para distintos tamaños de pantalla.
 
 ---
 
 ## Aporte al proyecto
 
 Este prompt permitió analizar la organización inicial de la página y definir una estructura basada en etiquetas semánticas HTML5 antes de comenzar el desarrollo.
+
+![alt text](image.png)
