@@ -34,9 +34,11 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 ## Fixed
 
-- [release/actividad-obligatoria] Se realizaron commits directos a esta PR, corrigiendo los archivos de prompts. PR:[#16](https://github.com/eternalnight04/HeladeriaVainell/pull/16) - @eternalnight04 (Coordinador / DevOps)
+- [release/actividad-obligatoria] Se realizaron commits directos a esta PR, corrigiendo los archivos de prompts. PR: [#15](https://github.com/eternalnight04/HeladeriaVainell/pull/15) - @eternalnight04 (Coordinador / DevOps)
 
-- [fix/devops-correcciones-1] Se realizaron correcciones en las entradas del changelog y se eliminó una sección no solicitada del archivo spec-devops.md, de acuerdo a los Request Changes planteados.
+- [fix/devops-correcciones-1] Se realizaron correcciones en las entradas del changelog y se eliminó una sección no solicitada del archivo spec-devops.md, de acuerdo a los Request Changes planteados. PR: [#16](https://github.com/eternalnight04/HeladeriaVainell/pull/16) - @eternalnight04 (Coordinador / DevOps)
+
+- [fix/devops-correcciones-2] Se agregó la sección de "Criterios de Aceptacion" para el archivo spec-devops.md. PR: [#17](https://github.com/eternalnight04/HeladeriaVainell/pull/17) - @eternalnight04 (Coordinador / DevOps)
 
 ---
 
