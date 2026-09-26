@@ -28,3 +28,27 @@ Configurar la infraestructura base del repositorio de Vainell en GitHub y genera
 - El **`plan.md`** es el documento central del proyecto: sin requerimientos funcionales claros y consensuados, cada rol (Frontend, UX, IA) no tendría una referencia común contra la cual especificar y validar su trabajo, y los code reviews carecerían de un criterio objetivo.
 - La **administración de Pull Requests con revisión asistida por IA** asegura que el código que se integra a `develop` cumple con lo especificado, no solo que "funciona", incorporando así una práctica real de desarrollo de software profesional.
 - La **rama de release y GitHub Pages** son necesarias para poder entregar un enlace público y verificable del trabajo, tal como exige el formato de entrega de la consigna.
+
+## 3. Criterios de aceptación
+
+- Repositorio HeladeriaVainell creado en GitHub, público, con ramas master y develop.
+
+- Reglas de protección activas en master y en develop (revisor obligatorio, push directo bloqueado).
+
+- Profesor y todos los integrantes agregados como colaboradores.
+
+- Commit inicial con la estructura de carpetas completa (`docs/01-mockup/`, `docs/02-prompts/`, `docs/03-specs/`, `.github/PULL_REQUEST_TEMPLATE/`) e `index.html` vacío.
+
+- `plan.md` existe en la raíz del repositorio, generado con GitHub Copilot en modo Agente, con requerimientos funcionales concretos de HeladeriaVainell (no copia literal de la consigna) y el alcance del simulador definido.
+
+- Templates de Pull Request configurados y utilizados por todo el equipo.
+
+- Todas las Pull Requests del proyecto cuentan con al menos una revisión aprobada antes del merge.
+
+- Al menos 4 code reviews asistidos con IA documentados como evidencia en los comentarios de las PRs, evaluando cumplimiento contra `plan.md`.
+
+- Rama `release/actividad-obligatoria-1` creada desde develop, con GitHub Pages habilitado y el sitio accesible públicamente.
+
+- `changelog.md` actualizado con la Pull Request propia (número, link, autor y resumen del aporte).
+
+- Issue creada para la tarea de este rol, vinculada correctamente a la Pull Request y cerrada tras el merge.
