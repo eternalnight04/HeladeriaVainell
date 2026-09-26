@@ -30,6 +30,8 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 ## Changed
 
+-[fix/desarrollo-frontend-ux-correccion-1]Se realizo las correcciones de los siguientes Request Changes:9,10,11,12,13,14 y 15. PR[#18] (https://github.com/eternalnight04/HeladeriaVainell/pull/18) - @britezacostaalexis-pixel (Documentador / Diseñador UX-fronted)
+
 - [fix/plan-sesion] Se agregó una nueva función para inicio de sesión y creación de cuentas (como un concepto para la página), debido a esto, se actualizaron plan.md y README.md. PR: [#3](https://github.com/eternalnight04/HeladeriaVainell/pull/3) - @eternalnight04 (Coordinador / DevOps)
 
 ## Fixed
