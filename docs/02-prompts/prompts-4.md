@@ -2,7 +2,7 @@
 
 ## Información general
 
-- **Modelo:** [Completar con el modelo utilizado realmente]
+- **Modelo:** Figma
 - **Método:** Contextual prompting
 - **Objetivo:** Obtener una propuesta visual para el mockup del proyecto Heladería Vainell.
 
