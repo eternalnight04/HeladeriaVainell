@@ -51,5 +51,17 @@ También recomendó una jerarquía visual clara (entender en 3 segundos qué es 
 
 - Decidi no descartar ninguna sugerencia.
 
+---
+
+## 5. Criterios de aceptación
+
+- [ ] Se definió la estructura de secciones de la página, alineada con el punto 6 de `plan.md` (Header, presentación, catálogo, cómo pedir, formulario de pedido, "Mi cuenta Vainell", footer).
+- [ ] El mockup fue diseñado en Figma y organizado en Frames independientes por sección, para su posterior lectura vía el servidor MCP de Figma.
+- [ ] La estructura y jerarquía visual propuestas permiten identificar rápidamente qué es Vainell y cómo realizar un pedido.
+- [ ] Se incluyó en el mockup la sección "Mi cuenta Vainell" (inicio de sesión + registro), conforme a los puntos 3 y 6 de `plan.md`.
+- [ ] Se redactó el `README.md` del proyecto con: descripción, objetivos, tecnologías utilizadas, funcionalidades previstas, enlace al mockup de Figma y carátula del grupo.
+- [ ] El enlace al mockup de Figma está incluido y es accesible desde el `README.md`.
+- [ ] Existe trazabilidad entre este spec, el mockup y lo efectivamente construido en `index.html`.
+
 
 

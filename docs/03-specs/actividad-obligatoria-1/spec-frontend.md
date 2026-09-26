@@ -70,3 +70,19 @@ No se descartó contenido estructural de lo sugerido por Copilot. El
 único ajuste manual realizado fue de organización de donde debia ir cada estructura y frame del código en  el index, no 
 del código HTML en sí, que se conservó tal como fue generado por 
 Copilot a partir de cada Frame.
+
+---
+
+## 5. Criterios de aceptación
+
+- [ ] El documento es HTML5 válido (`<!DOCTYPE html>`, `<head>` con `charset`, `viewport` y `title`, `<body lang="es">`).
+- [ ] Usa etiquetas semánticas de forma pertinente: `header`, `nav`, `main`, `section`, `article`, `footer`.
+- [ ] Contiene título y párrafos descriptivos reales de Vainell (sin Lorem Ipsum).
+- [ ] Incluye imágenes con atributo `alt` descriptivo.
+- [ ] Incluye enlaces de navegación interna y a redes sociales.
+- [ ] Incluye al menos una lista (ordenada o desordenada).
+- [ ] Incluye una tabla con `<th>`/`<td>` (catálogo de precios).
+- [ ] Incluye el formulario de pedido con nombre, modalidad de entrega (delivery/retiro) y dirección/horario según corresponda.
+- [ ] Incluye la sección "Mi cuenta Vainell" con formulario de inicio de sesión y formulario de registro.
+- [ ] Contiene comentarios `<!-- CSS: ... -->` y `<!-- JS: ... -->` marcando los puntos de futura integración.
+- [ ] Las 9 secciones del mockup de Figma están integradas en `index.html` en el orden correspondiente.
