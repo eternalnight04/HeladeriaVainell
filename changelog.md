@@ -34,9 +34,9 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 ## Fixed
 
-- [release/actividad-obligatoria] Se realizaron commits directos a esta PR, corrigiendo los archivos de prompts. - @eternalnight04 (Coordinador / DevOps)
+- [release/actividad-obligatoria] Se realizaron commits directos a esta PR, corrigiendo los archivos de prompts. PR:[#16](https://github.com/eternalnight04/HeladeriaVainell/pull/16) - @eternalnight04 (Coordinador / DevOps)
 
-
+- [fix/devops-correcciones-1] Se realizaron correcciones en las entradas del changelog y se eliminó una sección no solicitada del archivo spec-devops.md, de acuerdo a los Request Changes planteados.
 
 ---
 
