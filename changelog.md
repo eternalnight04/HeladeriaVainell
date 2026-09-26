@@ -6,8 +6,11 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 # [Unreleased]
 
-## Added
+---
 
+# [Release - Actividad Obligatoria Nº1] - 2026-08-31
+
+## Added
 
 - [feature/frontend-add-html-structure] Se agregaron los códigos html, marcas de donde deben ir los css y javascrip. PR: [#12](https://github.com/eternalnight04/HeladeriaVainell/pull/12) - @britezacostaalexis-pixel (Desarrollador Fronted)
 
@@ -19,11 +22,11 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 *Nota: La PR #5 no se pudo mergear debido a problemas con cambios en la base, por lo que los cambios fueron trasladados a la PR #9 para que se pueda mergear sin complicaciones.*
 
-- [feature/feature/doc-ux-add-readme-and-mockup] Se agregaron las carpetas y los archivos correspondientes para asegurar la estructura del proyecto. Se agregó un changelog, plan.md con las especificaciones que debe seguir el proyecto y un archivo README.md con la información del mismo. PR: [#6](https://github.com/eternalnight04/HeladeriaVainell/pull/6) - @britezacostaalexis-pixel (Documentador / Diseñador UX)
+- [feature/doc-ux-add-readme-and-mockup] Se agregaron las carpetas y los archivos correspondientes para el mockup, incluyendo un índice a todas sus características. También se actualizó README.md para incluir el link al mockup. PR: [#6](https://github.com/eternalnight04/HeladeriaVainell/pull/6) - @britezacostaalexis-pixel (Documentador / Diseñador UX)
 
-- [fix/correcciones-archivos-1] Se agregó el archivo index.html con el código fuente de la página, además de que se agregaron los cambios hechos en la PR #5 a esta. PR: [#9](https://github.com/eternalnight04/HeladeriaVainell/pull/9) - @eternalnight04 (Documentador / DevOps)
+- [fix/correcciones-archivos-1] Se agregó el archivo index.html con el código fuente de la página, además de que se agregaron los cambios hechos en la PR #5 a esta. PR: [#9](https://github.com/eternalnight04/HeladeriaVainell/pull/9) - @eternalnight04 (Coordinador / DevOps)
 
-- [feature/ia-add-prompts-1-to-5-copy] Se trasladaron los nuevos cambios de la PR #5 a esta nueva PR debido a problemas de merge. PR: [#13](https://github.com/eternalnight04/HeladeriaVainell/pull/13) - @eternalnight04 (Documentador / DevOps)
+- [feature/ia-add-prompts-1-to-5-copy] Se trasladaron los nuevos cambios de la PR #5 a esta nueva PR debido a problemas de merge. PR: [#13](https://github.com/eternalnight04/HeladeriaVainell/pull/13) - @eternalnight04 (Coordinador / DevOps)
 
 ## Changed
 
@@ -31,12 +34,9 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 ## Fixed
 
----
+- [release/actividad-obligatoria] Se realizaron commits directos a esta PR, corrigiendo los archivos de prompts. - @eternalnight04 (Coordinador / DevOps)
 
-# [Release - Actividad Obligatoria Nº1] - 2026-08-31
 
-Aquí se listaran todas las Pull Requests que entraron en esta release.
-Actualmente están en la sección **[Unreleased]** porque sólo están en la rama `develop`.
 
 ---
 
