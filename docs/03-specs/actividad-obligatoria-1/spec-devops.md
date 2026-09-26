@@ -28,7 +28,3 @@ Configurar la infraestructura base del repositorio de Vainell en GitHub y genera
 - El **`plan.md`** es el documento central del proyecto: sin requerimientos funcionales claros y consensuados, cada rol (Frontend, UX, IA) no tendría una referencia común contra la cual especificar y validar su trabajo, y los code reviews carecerían de un criterio objetivo.
 - La **administración de Pull Requests con revisión asistida por IA** asegura que el código que se integra a `develop` cumple con lo especificado, no solo que "funciona", incorporando así una práctica real de desarrollo de software profesional.
 - La **rama de release y GitHub Pages** son necesarias para poder entregar un enlace público y verificable del trabajo, tal como exige el formato de entrega de la consigna.
-
-## 3. PR asociado
-
-Esta especificación se incluye en la Pull Request `feature/coordinador-setup-repo-and-pages → develop`, que agrega o actualiza la estructura base del proyecto, la configuración de GitHub Pages y el archivo `plan.md`, redactado antes de iniciar el desarrollo.
