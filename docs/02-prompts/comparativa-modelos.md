@@ -2,28 +2,25 @@
 
 ## Objetivo
 
-Comparar los modelos y métodos utilizados en los cinco prompts documentados para el proyecto Heladería Vainell, observando el tipo de tarea realizada y el aporte obtenido en cada caso.
+Comparar dos modelos de IA aplicados a una misma tarea del proyecto Heladería Vainell, observando las diferencias entre los resultados obtenidos y determinando para qué tipo de trabajo resulta más útil cada uno.
 
 ## Comparación
 
+Para realizar la comparación, se seleccionaron dos prompts que abordaron la misma tarea: definir y generar la estructura HTML5 inicial del proyecto Heladería Vainell.
+
+Se compararon **GPT-4o**, utilizado en el Prompt 1 mediante Zero-shot prompting, y **Gemini**, utilizado en el Prompt 2 mediante Role prompting.
+
 | Prompt | Tarea | Modelo | Método | Resultado / aporte |
 |---|---|---|---|---|
-| Prompt 1 | Estructura base del proyecto | GPT-4o | Zero-shot | Permitió analizar y definir una estructura inicial para el proyecto utilizando HTML5 semántico. |
-| Prompt 2 | Generación del HTML inicial | Gemini | Role prompting | Permitió obtener una propuesta inicial de código HTML5, incorporando estructura semántica y criterios de accesibilidad. |
-| Prompt 3 | Estilo CSS y diseño responsivo | Gemini 1.5 Pro | Chatbot | Permitió planificar criterios de diseño responsive para aplicar en futuras etapas del proyecto. |
-| Prompt 4 | Creación del mockup | Figma | Contextual prompting | Permitió obtener una referencia visual para organizar las secciones y la distribución general de la página. |
-| Prompt 5 | Optimización y validación del código | Gemini | Chain-of-thought guiado | Permitió revisar el cumplimiento de los requisitos del HTML e identificar como faltante la incorporación de imágenes con atributo `alt`. |
+| Prompt 1 | Estructura semántica inicial en HTML5 | GPT-4o | Zero-shot | Propuso una estructura inicial para organizar el contenido del proyecto utilizando etiquetas semánticas HTML5. Permitió analizar la organización de las secciones necesarias para la primera entrega. |
+| Prompt 2 | Generación del HTML inicial | Gemini | Role prompting | Generó una propuesta de código HTML5 utilizando etiquetas semánticas, incorporando aspectos de accesibilidad como la relación entre `label`, `for` e `id`, y una estructura de tabla con `caption`, `thead` y `tbody`. También dejó indicaciones para futuras incorporaciones de CSS y JavaScript. |
 
-## Análisis
+### Conclusión
 
-Los cinco prompts fueron utilizados para diferentes etapas y necesidades del proyecto. Cada uno tuvo un objetivo específico: analizar la estructura inicial, generar código HTML, planificar el diseño responsive, crear una referencia visual y revisar el cumplimiento de los requisitos.
+Los dos modelos fueron útiles para trabajar sobre la estructura inicial del proyecto, pero aportaron resultados diferentes.
 
-También se utilizaron diferentes métodos de interacción con los modelos, como Zero-shot, Role prompting, Contextual prompting y Chain-of-thought guiado.
+En esta tarea concreta, **GPT-4o fue útil para analizar y proponer la organización semántica general de la página**, mientras que **Gemini resultó más útil para obtener una propuesta de código HTML5 detallada**, incluyendo aspectos de accesibilidad y organización de elementos del documento.
 
-A partir de la comparación, se puede observar que la IA fue utilizada como herramienta de apoyo durante distintas etapas del proyecto, tanto para generar propuestas como para revisar y validar el trabajo realizado.
+Por lo tanto, para tareas de planificación y definición de estructura, GPT-4o aportó una base útil para organizar el proyecto. Para tareas que requieren una propuesta de código HTML5 más detallada y elementos técnicos específicos, el resultado obtenido con Gemini fue más completo.
 
-## Conclusión
-
-La utilización de diferentes modelos y métodos permitió abordar distintas necesidades del proyecto Heladería Vainell. Los prompts sirvieron como apoyo para organizar la estructura, generar código, planificar futuras mejoras de diseño, crear una referencia visual y controlar el cumplimiento de los requisitos establecidos para la primera entrega.
-
-La comparación también permitió identificar que cada prompt tuvo una función diferente dentro del proceso y que la revisión de los resultados obtenidos fue necesaria antes de incorporarlos al proyecto.
+Esta conclusión se basa en los resultados documentados durante el desarrollo de Heladería Vainell y se refiere específicamente a la tarea comparada.

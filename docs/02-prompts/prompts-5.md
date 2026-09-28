@@ -50,7 +50,7 @@ Obtener una revisión estructurada del código para detectar posibles errores o 
 
 ## Resultado obtenido
 
-[Completar con el resultado real obtenido al ejecutar el prompt.]Lista de Verificación de Requisitos
+Lista de Verificación de Requisitos
 Utilizar HTML5 válido: Cumple.
 El documento inicia con <!DOCTYPE html>, especifica el idioma en <html lang="es">, contiene la codificación UTF-8 y no presenta etiquetas obsoletas.
 
