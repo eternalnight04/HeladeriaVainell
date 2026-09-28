@@ -2,7 +2,7 @@
 
 ## Información general
 
-- **Modelo:** Gemini
+- **Modelo / herramienta de IA:** Use.ai
 - **Método:** Role prompting
 - **Objetivo:** Obtener una propuesta inicial de código HTML5 para el proyecto.
 
