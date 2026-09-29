@@ -2,9 +2,11 @@
 
 ## Información general
 
-- **Modelo:** GPT-4o
-- **Método:** Zero-shot
-- **Objetivo:** Analizar y proponer la estructura semántica inicial del proyecto Heladería Vainell.
+* **Modelo:** GPT-4o
+* **Método:** Zero-shot
+* **Integrante que utilizó el prompt:** Alexis Btitez
+* **Archivo/sección donde se aplicó:** `index.html` — estructura semántica inicial de la página.
+* **Objetivo:** Analizar y proponer la estructura semántica inicial del proyecto Heladería Vainell.
 
 ---
 
@@ -16,14 +18,14 @@
 >
 > La página debe incluir:
 >
-> - Header con nombre y navegación.
-> - Sección de presentación de la heladería.
-> - Catálogo de productos.
-> - Lista de sabores.
-> - Tabla de precios.
-> - Explicación sobre delivery y retiro en local.
-> - Formulario de pedido.
-> - Footer con información de contacto.
+> * Header con nombre y navegación.
+> * Sección de presentación de la heladería.
+> * Catálogo de productos.
+> * Lista de sabores.
+> * Tabla de precios.
+> * Explicación sobre delivery y retiro en local.
+> * Formulario de pedido.
+> * Footer con información de contacto.
 >
 > Proponé una estructura utilizando etiquetas semánticas HTML5 adecuadas. No agregues funcionalidades que requieran JavaScript o backend.
 
@@ -37,12 +39,15 @@ Obtener una propuesta de estructura semántica para organizar correctamente el c
 
 ## Resultado obtenido
 
-Se obtuvo una propuesta de estructura base para el proyecto Vainell, definiendo la organización del HTML y CSS. La estructura incluye encabezado, sección principal, catálogo de productos, características del servicio, reseñas y pie de página, además de una adaptación responsiva para distintos tamaños de pantalla.
+Se obtuvo una propuesta de estructura base para el proyecto Vainell, definiendo la organización del contenido mediante etiquetas semánticas HTML5. La estructura permitió organizar el encabezado, la sección principal, el catálogo de productos, la información sobre el servicio, el formulario de pedido y el pie de página.
 
 ---
 
 ## Aporte al proyecto
 
 Este prompt permitió analizar la organización inicial de la página y definir una estructura basada en etiquetas semánticas HTML5 antes de comenzar el desarrollo.
+
+La propuesta se aplicó en `index.html`, donde se estableció la estructura inicial del contenido del sitio.
+
 
 ![alt text](image.png)

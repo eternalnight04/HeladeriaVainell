@@ -6,6 +6,14 @@
 **Rama:** `feature/frontend-add-html-structure`
 
 ---
+## Aclaración:
+
+**Situación:** en esta entrega no se respetó el orden de Spec-Driven Development. El HTML se generó primero, en los commits `fa44538` y `f87bcdf` (21:41 a 22:02hs), y el contenido real de esta especificación se escribió después, en el commit `88dbf69` (22:19hs). El flujo fue código → spec, en lugar de spec → código.
+
+**Consecuencia:** en este archivo la spec funciona como documentación de lo que ya estaba construido, y no como el documento que guió el desarrollo. Por eso no debe leerse como evidencia de que el HTML se derivó de la spec.
+
+**Decisión:** esta desviación no se corrige retroactivamente. El historial de git es el registro de lo que efectivamente ocurrió, y reescribirlo (rebase, cambio de fechas) para simular otro orden alteraría ese registro. Se deja constancia de la desviación en este archivo.
+
 
 ## 1. Qué se le solicitó a Copilot
 
@@ -70,3 +78,19 @@ No se descartó contenido estructural de lo sugerido por Copilot. El
 único ajuste manual realizado fue de organización de donde debia ir cada estructura y frame del código en  el index, no 
 del código HTML en sí, que se conservó tal como fue generado por 
 Copilot a partir de cada Frame.
+
+---
+
+## 5. Criterios de aceptación
+
+- [ ] El documento es HTML5 válido (`<!DOCTYPE html>`, `<head>` con `charset`, `viewport` y `title`, `<body lang="es">`).
+- [ ] Usa etiquetas semánticas de forma pertinente: `header`, `nav`, `main`, `section`, `article`, `footer`.
+- [ ] Contiene título y párrafos descriptivos reales de Vainell (sin Lorem Ipsum).
+- [ ] Incluye imágenes con atributo `alt` descriptivo.
+- [ ] Incluye enlaces de navegación interna y a redes sociales.
+- [ ] Incluye al menos una lista (ordenada o desordenada).
+- [ ] Incluye una tabla con `<th>`/`<td>` (catálogo de precios).
+- [ ] Incluye el formulario de pedido con nombre, modalidad de entrega (delivery/retiro) y dirección/horario según corresponda.
+- [ ] Incluye la sección "Mi cuenta Vainell" con formulario de inicio de sesión y formulario de registro.
+- [ ] Contiene comentarios `<!-- CSS: ... -->` y `<!-- JS: ... -->` marcando los puntos de futura integración.
+- [ ] Las 9 secciones del mockup de Figma están integradas en `index.html` en el orden correspondiente.

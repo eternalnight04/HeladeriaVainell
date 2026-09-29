@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,39 +52,44 @@
         <li>Sin conservantes</li>
       </ul>
     </div>
+   <div class="hero-tarjeta">
+  <img src="imagenes/capitan-helado.svg" alt="" width="200" height="200">
+  <p><strong>Capitán Helado</strong> <span>Guardián del sabor</span></p>
+</div>
 
-    <figure>
-      <img
-        src="./imagenes/helados Vainell.png"
-        alt="Helados artesanales de Vainell"
-      >
-      <figcaption>Helados artesanales Vainell</figcaption>
-    </figure>
+<figure>
+  <img
+    src="./imagenes/helados Vainell.png"
+    alt="Helados artesanales de Vainell"
+  >
+  <figcaption>Helados artesanales Vainell</figcaption>
+</figure>
+</section>    
 
 <section id="caracteristicas" aria-label="Características de Vainell">
   <!-- Aquí se aplicará el CSS de la sección de características. -->
 
-  <dt>
+  <dl>
     <div>
-      <dd>+30</dd>
       <dt>Sabores disponibles</dt>
+      <dd>+30</dd>
     </div>
 
     <div>
-      <dd>+1.200</dd>
       <dt>Pedidos por mes</dt>
+      <dd>+1.200</dd>
     </div>
 
     <div>
-      <dd>20 min</dd>
       <dt>Entrega promedio</dt>
+      <dd>20 min</dd>
     </div>
 
     <div>
-      <dd>100%</dd>
       <dt>Elaboración artesanal</dt>
+      <dd>100%</dd>
     </div>
-  </d1>
+  </dl>
 </section>
 <section id="por-que-vainell" aria-labelledby="titulo-por-que-vainell">
   <!-- Aquí se aplicará el CSS de la sección de características. -->
@@ -133,62 +138,256 @@
   </nav>
 
   <div id="por-kilo">
-    <article>
-      <h3>Dulce de leche</h3>
-      <p>Nuestro clásico irresistible, denso y aromático con toques de vainilla.</p>
-      <p>$2.800</p>
-      <button type="button">Agregar</button>
-    </article>
+  <!-- CSS: Aquí se aplicará el estilo de la tabla (bordes, espaciado entre filas, tipografía). -->
+  <!-- JS: Aquí se controlará la visibilidad de esta tabla según la categoría seleccionada en el nav (mostrar solo si "Por kilo" está activo). -->
+  <table>
+    <caption>Sabores disponibles por kilo</caption>
+    <thead>
+      <tr>
+        <th scope="col">Sabor</th>
+        <th scope="col">Descripción</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Acción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Dulce de leche</td>
+        <td>Nuestro clásico irresistible, denso y aromático con toques de vainilla.</td>
+        <td>$2.800</td>
+        <td><button type="button">Agregar</button></td>
+      </tr>
+      <tr>
+        <td>Menta granizada</td>
+        <td>Menta fresca con chips de chocolate crujientes.</td>
+        <td>$2.800</td>
+        <td><button type="button">Agregar</button></td>
+      </tr>
+      <tr>
+        <td>Chocolate belga</td>
+        <td>Intensidad pura de cacao premium al 70%.</td>
+        <td>$3.200</td>
+        <td><button type="button">Agregar</button></td>
+      </tr>
+      <tr>
+        <td>Crema americana</td>
+        <td>Suave vainilla francesa con un hilo de caramelo.</td>
+        <td>$2.800</td>
+        <td><button type="button">Agregar</button></td>
+      </tr>
+      <tr>
+        <td>Frutilla del bosque</td>
+        <td>Frutillas frescas de temporada batidas en crema.</td>
+        <td>$3.000</td>
+        <td><button type="button">Agregar</button></td>
+      </tr>
+      <tr>
+        <td>Limón al agua</td>
+        <td>Sorbete cítrico, ácido y refrescante sin lácteos.</td>
+        <td>$2.600</td>
+        <td><button type="button">Agregar</button></td>
+      </tr>
+      <tr>
+        <td>Maracuyá</td>
+        <td>Tropical y vibrante, dulce con acidez perfecta.</td>
+        <td>$3.000</td>
+        <td><button type="button">Agregar</button></td>
+      </tr>
+      <tr>
+        <td>Tiramisú</td>
+        <td>Café espresso, mascarpone y cacao en polvo.</td>
+        <td>$3.400</td>
+        <td><button type="button">Agregar</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-    <article>
-      <h3>Menta granizada</h3>
-      <p>Menta fresca con chips de chocolate crujientes.</p>
-      <p>$2.800</p>
-      <button type="button">Agregar</button>
-    </article>
+<div id="potes">
+  <!-- CSS: Aquí se aplicará el estilo de la tabla (bordes, espaciado entre filas, tipografía). -->
+  <!-- JS: Aquí se controlará la visibilidad de esta tabla según la categoría seleccionada en el nav (mostrar solo si "Potes" está activo). -->
+  <table>
+    <caption>Potes de helado</caption>
+    <thead>
+      <tr>
+        <th scope="col">Producto</th>
+        <th scope="col">Descripción</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Acción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Pote Chico 500ml</td>
+        <td>Ideal para una o dos personas. Hasta 2 sabores.</td>
+        <td>$1.600</td>
+        <td><button type="button">Agregar</button></td>
+      </tr>
+      <tr>
+        <td>Pote Mediano 1L</td>
+        <td>Para compartir en familia. Hasta 3 sabores.</td>
+        <td>$2.900</td>
+        <td><button type="button">Agregar</button></td>
+      </tr>
+      <tr>
+        <td>Pote Grande 2L</td>
+        <td>Formato económico. Hasta 4 sabores a elección.</td>
+        <td>$5.200</td>
+        <td><button type="button">Agregar</button></td>
+      </tr>
+      <tr>
+        <td>Pote XL 4L</td>
+        <td>El rey de la mesa. Ideal para eventos y celebraciones.</td>
+        <td>$9.500</td>
+        <td><button type="button">Agregar</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-    <article>
-      <h3>Chocolate belga</h3>
-      <p>Intensidad pura de cacao premium al 70%.</p>
-      <p>$3.200</p>
-      <button type="button">Agregar</button>
-    </article>
+<div id="palitos">
+  <!-- CSS: Aquí se aplicará el estilo de la tabla (bordes, espaciado entre filas, tipografía). -->
+  <!-- JS: Aquí se controlará la visibilidad de esta tabla según la categoría seleccionada en el nav (mostrar solo si "Palitos" está activo). -->
+  <table>
+    <caption>Palitos y bombones helados</caption>
+    <thead>
+      <tr>
+        <th scope="col">Producto</th>
+        <th scope="col">Descripción</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Acción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Bombón clásico</td>
+        <td>Vainilla cubierta de chocolate amargo artesanal.</td>
+        <td>$650</td>
+        <td><button type="button">Agregar</button></td>
+      </tr>
+      <tr>
+        <td>Paleta frutilla</td>
+        <td>Frutilla natural, sin conservantes ni colorantes.</td>
+        <td>$580</td>
+        <td><button type="button">Agregar</button></td>
+      </tr>
+      <tr>
+        <td>Paleta maracuyá</td>
+        <td>Tropical y artesanal, fruta de estación.</td>
+        <td>$580</td>
+        <td><button type="button">Agregar</button></td>
+      </tr>
+      <tr>
+        <td>Paleta limón</td>
+        <td>Sorbete de limón prensado en palito.</td>
+        <td>$550</td>
+        <td><button type="button">Agregar</button></td>
+      </tr>
+      <tr>
+        <td>Paleta nuez</td>
+        <td>Dulce de leche con nueces crocantes.</td>
+        <td>$700</td>
+        <td><button type="button">Agregar</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-    <article>
-      <h3>Crema americana</h3>
-      <p>Suave vainilla francesa con un hilo de caramelo.</p>
-      <p>$2.800</p>
-      <button type="button">Agregar</button>
-    </article>
+<div id="tortas">
+  <!-- CSS: Aquí se aplicará el estilo de la tabla (bordes, espaciado entre filas, tipografía). -->
+  <!-- JS: Aquí se controlará la visibilidad de esta tabla según la categoría seleccionada en el nav (mostrar solo si "Tortas" está activo). -->
+  <table>
+    <caption>Tortas heladas</caption>
+    <thead>
+      <tr>
+        <th scope="col">Producto</th>
+        <th scope="col">Descripción</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Acción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Torta helada clásica</td>
+        <td>Galletita, capas de helado y crema chantilly artesanal.</td>
+        <td>$8.500</td>
+        <td><button type="button">Agregar</button></td>
+      </tr>
+      <tr>
+        <td>Torta brownie</td>
+        <td>Brownie húmedo con helado de chocolate y dulce de leche.</td>
+        <td>$9.800</td>
+        <td><button type="button">Agregar</button></td>
+      </tr>
+      <tr>
+        <td>Torta 3 leches</td>
+        <td>Bizcocho empapado con tres tipos de leche y helado.</td>
+        <td>$9.200</td>
+        <td><button type="button">Agregar</button></td>
+      </tr>
+      <tr>
+        <td>Torta mousse frambuesa</td>
+        <td>Elegante, frutal y perfecta para celebraciones especiales.</td>
+        <td>$10.500</td>
+        <td><button type="button">Agregar</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-    <article>
-      <h3>Frutilla del bosque</h3>
-      <p>Frutillas frescas de temporada batidas en crema.</p>
-      <p>$3.000</p>
-      <button type="button">Agregar</button>
-    </article>
-
-    <article>
-      <h3>Limón al agua</h3>
-      <p>Sorbete cítrico, ácido y refrescante sin lácteos.</p>
-      <p>$2.600</p>
-      <button type="button">Agregar</button>
-    </article>
-
-    <article>
-      <h3>Maracuyá</h3>
-      <p>Tropical y vibrante, dulce con acidez perfecta.</p>
-      <p>$3.000</p>
-      <button type="button">Agregar</button>
-    </article>
-
-    <article>
-      <h3>Tiramisú</h3>
-      <p>Café espresso, mascarpone y cacao en polvo.</p>
-      <p>$3.400</p>
-      <button type="button">Agregar</button>
-    </article>
-  </div>
+<div id="toppings">
+  <!-- CSS: Aquí se aplicará el estilo de la tabla (bordes, espaciado entre filas, tipografía). -->
+  <!-- JS: Aquí se controlará la visibilidad de esta tabla según la categoría seleccionada en el nav (mostrar solo si "Toppings" está activo). -->
+  <table>
+    <caption>Toppings y salsas</caption>
+    <thead>
+      <tr>
+        <th scope="col">Producto</th>
+        <th scope="col">Descripción</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Acción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Chips de chocolate</td>
+        <td>Mini chips belgas, amargos o con leche.</td>
+        <td>$300</td>
+        <td><button type="button">Agregar</button></td>
+      </tr>
+      <tr>
+        <td>Caramelo salado</td>
+        <td>Salsa casera con fleur de sel y manteca.</td>
+        <td>$350</td>
+        <td><button type="button">Agregar</button></td>
+      </tr>
+      <tr>
+        <td>Maní garrapiñado</td>
+        <td>Maní tostado con caramelo artesanal crocante.</td>
+        <td>$320</td>
+        <td><button type="button">Agregar</button></td>
+      </tr>
+      <tr>
+        <td>Coco tostado</td>
+        <td>Coco rallado fino tostado al horno.</td>
+        <td>$280</td>
+        <td><button type="button">Agregar</button></td>
+      </tr>
+      <tr>
+        <td>Frutos del bosque</td>
+        <td>Mix de moras, arándanos y frambuesas frescas.</td>
+        <td>$480</td>
+        <td><button type="button">Agregar</button></td>
+      </tr>
+      <tr>
+        <td>Salsa de Nutella</td>
+        <td>Salsa de avellanas tibia sobre el helado.</td>
+        <td>$420</td>
+        <td><button type="button">Agregar</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   <p>Elaborados con pasión, entregados con amor.</p>
 </section>
@@ -287,6 +486,62 @@
 
     <button type="submit">Confirmar pedido</button>
   </form>
+</section>
+<section id="mi-cuenta" aria-labelledby="titulo-mi-cuenta">
+  <!-- CSS: Aquí se aplicará el CSS de la sección "Mi cuenta Vainell" (login/registro). -->
+
+  <h2 id="titulo-mi-cuenta">Mi cuenta Vainell</h2>
+  <p>Iniciá sesión o creá tu cuenta para agilizar tus próximos pedidos.</p>
+
+  <div>
+    <article aria-labelledby="titulo-login">
+      <h3 id="titulo-login">Iniciar sesión</h3>
+
+      <!-- JS: Aquí se simulará la validación de campos y el inicio de sesión (sin backend real), mostrando un mensaje de "sesión iniciada" y actualizando la interfaz con el nombre del usuario logueado. -->
+      <form action="#" method="post">
+        <div>
+          <label for="login-usuario">Usuario o correo electrónico</label>
+          <input type="text" id="login-usuario" name="login-usuario" placeholder="tuemail@ejemplo.com" required>
+        </div>
+
+        <div>
+          <label for="login-password">Contraseña</label>
+          <input type="password" id="login-password" name="login-password" placeholder="Tu contraseña" required>
+        </div>
+
+        <button type="submit">Iniciar sesión</button>
+      </form>
+    </article>
+
+    <article aria-labelledby="titulo-registro">
+      <h3 id="titulo-registro">Crear cuenta</h3>
+
+      <!-- JS: Aquí se simulará la validación de campos del registro (formato de mail, coincidencia de contraseñas) y la creación de usuario, sin backend real. -->
+      <form action="#" method="post">
+        <div>
+          <label for="registro-nombre">Nombre completo</label>
+          <input type="text" id="registro-nombre" name="registro-nombre" placeholder="Tu nombre" required>
+        </div>
+
+        <div>
+          <label for="registro-mail">Correo electrónico</label>
+          <input type="email" id="registro-mail" name="registro-mail" placeholder="tuemail@ejemplo.com" required>
+        </div>
+
+        <div>
+          <label for="registro-password">Contraseña</label>
+          <input type="password" id="registro-password" name="registro-password" placeholder="Creá una contraseña" required>
+        </div>
+
+        <div>
+          <label for="registro-confirmar">Confirmar contraseña</label>
+          <input type="password" id="registro-confirmar" name="registro-confirmar" placeholder="Repetí tu contraseña" required>
+        </div>
+
+        <button type="submit">Crear cuenta</button>
+      </form>
+    </article>
+  </div>
 </section>
 <section id="testimonios" aria-labelledby="titulo-testimonios">
   <!-- Aquí se aplicará el CSS de la sección de testimonios. -->
