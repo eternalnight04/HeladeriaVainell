@@ -129,3 +129,15 @@ Incluyendo:
 - `test-case-4.md`
 - `test-case-5.md`
 - `testing-doc.md`
+
+## Estado de Ejecución de Pruebas (Momento 1 - Pre-Merge)
+
+- **Última actualización:** Septiembre 2026
+- **Responsable:** Lautaro Chavez
+
+### Tabla Resumen
+- **TC-01:** Auditoría de Accesibilidad — **FAIL** ❌ (Issue `#21`)
+- **TC-02:** Atributos ALT e Imágenes — **PASS** ✅
+- **TC-03:** Formulario de Contacto — **FAIL** ❌ (Issues `#22`, `#23`)
+- **TC-04:** Auditoría Lighthouse — **FAIL** ❌ (Issue `#24`)
+- **TC-05:** Estructura HTML y W3C — **FAIL** ❌ (Issue `#25`)
