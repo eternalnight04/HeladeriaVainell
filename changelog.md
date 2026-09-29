@@ -36,6 +36,8 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 ## Fixed
 
+- [fix/Rc-act-1]RC2,RC7,RC39 corregidos:Se realizo la corrección de las siguientes RC2 , 3 y 39, con lo que solicito el docente. PR: [#29](https://github.com/eternalnight04/HeladeriaVainell/pull/29) - @britezacostaalexis-pixel (Documentador / Diseñador UX-fronted)
+
 - [fix/correcciones-act1]Fix/correcciones act1. PR: [#28](https://github.com/eternalnight04/HeladeriaVainell/pull/28) - @britezacostaalexis-pixel (Documentador / Diseñador UX-fronted)
 
 - [fix/correcciones-rc-act-1] Correcciones de solicitudes de cambio. PR: [#27](https://github.com/eternalnight04/HeladeriaVainell/pull/27) - @britezacostaalexis-pixel (Documentador / Diseñador UX-fronted)
