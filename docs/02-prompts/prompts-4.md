@@ -2,7 +2,7 @@
 
 ## Información general
 
-- **Modelo:** Figma
+- **Modelo:** ChatGPT
 - **Método:** Contextual prompting
 - **Objetivo:** Obtener una propuesta visual para el mockup del proyecto Heladería Vainell.
 

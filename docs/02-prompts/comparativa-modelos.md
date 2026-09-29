@@ -1,26 +1,23 @@
-# Comparativa de modelos de IA
+﻿# Comparativa de modelos de IA
 
 ## Objetivo
 
-Comparar dos modelos de IA aplicados a una misma tarea del proyecto Heladería Vainell, observando las diferencias entre los resultados obtenidos y determinando para qué tipo de trabajo resulta más útil cada uno.
+Comparar los modelos y herramientas de IA utilizados en los cinco prompts del proyecto Heladería Vainell, observando el aporte de cada uno según la tarea realizada.
 
 ## Comparación
 
-Para realizar la comparación, se seleccionaron dos prompts que abordaron la misma tarea: definir y generar la estructura HTML5 inicial del proyecto Heladería Vainell.
+Durante el desarrollo del proyecto se utilizaron diferentes herramientas y modelos de IA para resolver tareas relacionadas con la estructura, el diseño y la validación del sitio web.
 
-Se compararon **GPT-4o**, utilizado en el Prompt 1 mediante Zero-shot prompting, y **Gemini**, utilizado en el Prompt 2 mediante Role prompting.
-
-| Prompt | Tarea | Modelo | Método | Resultado / aporte |
+| Prompt | Tarea | Modelo / herramienta de IA | Método | Resultado / aporte |
 |---|---|---|---|---|
-| Prompt 1 | Estructura semántica inicial en HTML5 | GPT-4o | Zero-shot | Propuso una estructura inicial para organizar el contenido del proyecto utilizando etiquetas semánticas HTML5. Permitió analizar la organización de las secciones necesarias para la primera entrega. |
-| Prompt 2 | Generación del HTML inicial | Gemini | Role prompting | Generó una propuesta de código HTML5 utilizando etiquetas semánticas, incorporando aspectos de accesibilidad como la relación entre `label`, `for` e `id`, y una estructura de tabla con `caption`, `thead` y `tbody`. También dejó indicaciones para futuras incorporaciones de CSS y JavaScript. |
+| Prompt 1 | Estructura semántica inicial en HTML5 | GPT-4o | Zero-shot | Propuso una estructura inicial para organizar el contenido del proyecto utilizando etiquetas semánticas HTML5. |
+| Prompt 2 | Generación del HTML inicial | Use.ai | Role prompting | Generó una propuesta de código HTML5 utilizando etiquetas semánticas y contemplando aspectos de accesibilidad y futuras incorporaciones de CSS y JavaScript. |
+| Prompt 3 | Planificación del diseño responsive | Gemini 1.5 Pro | Chatbot | Permitió analizar una propuesta de diseño responsive y definir criterios para adaptar la interfaz a diferentes tamaños de pantalla. |
+| Prompt 4 | Creación del mockup | ChatGPT | Contextual prompting | Generó una propuesta visual para organizar las principales secciones de la página y utilizarla como referencia para el desarrollo frontend. |
+| Prompt 5 | Validación de requisitos | Gemini | Chain-of-thought guiado | Permitió realizar una lista de verificación para comprobar el cumplimiento de los requisitos definidos para el proyecto. |
 
-### Conclusión
+## Conclusión
 
-Los dos modelos fueron útiles para trabajar sobre la estructura inicial del proyecto, pero aportaron resultados diferentes.
+Los diferentes modelos y herramientas de IA se utilizaron para tareas específicas dentro del desarrollo de Heladería Vainell. Cada prompt permitió obtener un aporte diferente, desde la generación de la estructura HTML5 hasta la planificación visual y la validación de los requisitos.
 
-En esta tarea concreta, **GPT-4o fue útil para analizar y proponer la organización semántica general de la página**, mientras que **Gemini resultó más útil para obtener una propuesta de código HTML5 detallada**, incluyendo aspectos de accesibilidad y organización de elementos del documento.
-
-Por lo tanto, para tareas de planificación y definición de estructura, GPT-4o aportó una base útil para organizar el proyecto. Para tareas que requieren una propuesta de código HTML5 más detallada y elementos técnicos específicos, el resultado obtenido con Gemini fue más completo.
-
-Esta conclusión se basa en los resultados documentados durante el desarrollo de Heladería Vainell y se refiere específicamente a la tarea comparada.
+La utilización de distintas herramientas permitió comparar los resultados obtenidos y seleccionar el recurso más adecuado según la tarea realizada, manteniendo siempre la revisión y validación manual de los resultados.
