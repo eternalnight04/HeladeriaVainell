@@ -20,40 +20,49 @@
     <a href="#como-pedir">Cómo pedir</a>
     <a href="#pedido">Pedido</a>
     <a href="#contacto">Contacto</a>
+    <a href="#mi-cuenta">Iniciar sesión</a> 
     <button type="button">Pedir ahora</button>
   </nav>
 </header>
 <main>
-  <section id="inicio" aria-labelledby="titulo-inicio">
-    <!-- Aquí se aplicará el CSS de la sección hero. -->
+ <section id="inicio" aria-labelledby="titulo-inicio">
+  <!-- Aquí se aplicará el CSS de la sección hero. -->
+
+  <div>
+    <p>✦ Helados 100% artesanales</p>
+
+    <h1 id="titulo-inicio">
+      El frío<br>
+      que<br>
+      enamora
+   
+<h1></h1>
+    <p>
+      Sabores únicos elaborados con ingredientes naturales.
+      Delivery y retiro en local, en el día.
+    </p>
+
+     </h1>
+
+    <img src="imagenes/cono-de-helado.jpg"
+         alt="Cono de helado con tres bochas: vainilla, chocolate y frutilla"
+         class="hero-imagen"
+         height="400">
 
     <div>
-      <p>✦ Helados 100% artesanales</p>
-
-      <h1 id="titulo-inicio">
-        El frío<br>
-        que<br>
-        enamora
-      </h1>
-
-      <p>
-        Sabores únicos elaborados con ingredientes naturales.
-        Delivery y retiro en local, en el día.
-      </p>
-
-      <div>
-        <a href="#catalogo">Ver catálogo</a>
-        <a href="#pedido">Hacer mi pedido</a>
-      </div>
-
-      <ul>
-        <li>Delivery disponible</li>
-        <li>+30 sabores</li>
-        <li>Sin conservantes</li>
-      </ul>
+      <a href="#catalogo">Ver catálogo</a>
+      <a href="#pedido">Hacer mi pedido</a>
     </div>
+
+    <ul>
+      <li>Delivery disponible</li>
+      <li>+30 sabores</li>
+      <li>Sin conservantes</li>
+    </ul>
+  </div>
+</section>
    <div class="hero-tarjeta">
-  <img src="imagenes/capitan-helado.svg" alt="" width="200" height="200">
+  <img src="imagenes/capitan-helado.svg" alt="capitan helado,simbolo de nuestra marca" width="200" height="200">
   <p><strong>Capitán Helado</strong> <span>Guardián del sabor</span></p>
 </div>
 
@@ -486,19 +495,17 @@
 
     <button type="submit">Confirmar pedido</button>
   </form>
-</section>
 <section id="mi-cuenta" aria-labelledby="titulo-mi-cuenta">
-  <!-- CSS: Aquí se aplicará el CSS de la sección "Mi cuenta Vainell" (login/registro). -->
-
   <h2 id="titulo-mi-cuenta">Mi cuenta Vainell</h2>
   <p>Iniciá sesión o creá tu cuenta para agilizar tus próximos pedidos.</p>
 
-  <div>
+  <div class="cuenta-container">
+    
+    <!-- Iniciar Sesión -->
     <article aria-labelledby="titulo-login">
       <h3 id="titulo-login">Iniciar sesión</h3>
 
-      <!-- JS: Aquí se simulará la validación de campos y el inicio de sesión (sin backend real), mostrando un mensaje de "sesión iniciada" y actualizando la interfaz con el nombre del usuario logueado. -->
-      <form action="#" method="post">
+      <form id="form-login" action="#" method="post">
         <div>
           <label for="login-usuario">Usuario o correo electrónico</label>
           <input type="text" id="login-usuario" name="login-usuario" placeholder="tuemail@ejemplo.com" required>
@@ -513,11 +520,11 @@
       </form>
     </article>
 
+    <!-- Crear Cuenta -->
     <article aria-labelledby="titulo-registro">
       <h3 id="titulo-registro">Crear cuenta</h3>
 
-      <!-- JS: Aquí se simulará la validación de campos del registro (formato de mail, coincidencia de contraseñas) y la creación de usuario, sin backend real. -->
-      <form action="#" method="post">
+      <form id="form-registro" action="#" method="post">
         <div>
           <label for="registro-nombre">Nombre completo</label>
           <input type="text" id="registro-nombre" name="registro-nombre" placeholder="Tu nombre" required>
@@ -541,6 +548,7 @@
         <button type="submit">Crear cuenta</button>
       </form>
     </article>
+
   </div>
 </section>
 <section id="testimonios" aria-labelledby="titulo-testimonios">
