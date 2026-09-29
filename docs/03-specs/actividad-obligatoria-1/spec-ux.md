@@ -67,7 +67,7 @@ También recomendó una jerarquía visual clara (entender en 3 segundos qué es 
 
 **Limitación reconocida:** la estructura general depende en gran parte de la propuesta de la IA, y los aportes propios se concentraron en la identidad visual y el contenido de ejemplo. Se consideró aceptable porque las sugerencias respondían a los requisitos del plan.
 
-- **Cambios menores de originalidad:** se hicieron ajustes puntuales sobre la propuesta de la IA para que el diseño no fuera una copia literal: [cambio 1, por ejemplo: textos propios en el hero o en los beneficios], [cambio 2, por ejemplo: nombres o descripciones distintas en los productos]. El objetivo fue darle un tono propio a Vainell sin alterar la estructura ni el flujo de pedido.
+- **Cambios menores de originalidad:** No se hicieron cambios concretos de originalidad.
 
 sugerencia de la ia:
 

@@ -30,17 +30,21 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 ## Changed
 
--[fix/desarrollo-frontend-ux-correccion-1]RC2,RC3,RC7,RC9,RC12,RC17,RC19,RC21,RC23,RC24 hechas y realizadas. PR[#18] (https://github.com/eternalnight04/HeladeriaVainell/pull/18) - @britezacostaalexis-pixel (Documentador / Diseñador UX-fronted)
+-[fix/desarrollo-frontend-ux-correccion-1]RC9,10,11,12,13,14,15. PR[#18] (https://github.com/eternalnight04/HeladeriaVainell/pull/18) - @britezacostaalexis-pixel (Documentador / Diseñador UX-fronted)
 
 - [fix/plan-sesion] Se agregó una nueva función para inicio de sesión y creación de cuentas (como un concepto para la página), debido a esto, se actualizaron plan.md y README.md. PR: [#3](https://github.com/eternalnight04/HeladeriaVainell/pull/3) - @eternalnight04 (Coordinador / DevOps)
 
 ## Fixed
 
+
 - [fix/correcciones-rc-act-1] Correcciones de solicitudes de cambio. PR: [#27](https://github.com/eternalnight04/HeladeriaVainell/pull/27) - @britezacostaalexis-pixel (Documentador / Diseñador UX-fronted)
 
 - [release/actividad-obligatoria] [`c3b2790`](https://github.com/eternalnight04/HeladeriaVainell/commit/c3b2790b4fd57b8708bf8b0e11c1791fad8a1e86) (commit directo, fuera de la PR #15) - @eternalnight04. (Coordinador / DevOps)
 
-[fix/ia-correcciones-release]Fix/ia correcciones release. PR[# 20](https://github.com/eternalnight04/HeladeriaVainell/pull/20) - @lautarochavez14 (Especialista en IA y Prompt Engineering)
+-[fix/ia-correcciones-release]Fix/ia correcciones release. PR:[# 22](https://github.com/eternalnight04/HeladeriaVainell/pull/22) - @lautarochavez14 (Especialista en IA y Prompt Engineering)
+
+
+-[fix/ia-correcciones-release]Fix/ia correcciones release. PR:[# 20](https://github.com/eternalnight04/HeladeriaVainell/pull/20) - @lautarochavez14 (Especialista en IA y Prompt Engineering)
 
 - [fix/devops-correcciones-1] Se realizaron correcciones en las entradas del changelog y se eliminó una sección no solicitada del archivo spec-devops.md, de acuerdo a los Request Changes planteados. PR: [#16](https://github.com/eternalnight04/HeladeriaVainell/pull/16) - @eternalnight04 (Coordinador / DevOps)
 
