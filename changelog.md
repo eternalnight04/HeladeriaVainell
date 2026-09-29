@@ -36,7 +36,8 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 ## Fixed
 
-### Fixed
+- -[fix/correcciones-rc-act-1]correcciones de solicitud de cambio. PR[# 27] (https://github.com/eternalnight04/HeladeriaVainell/pull/27) - @britezacostaalexis-pixel (Documentador / Diseñador UX-fronted)
+
 - [release/actividad-obligatoria] [`c3b2790`](https://github.com/eternalnight04/HeladeriaVainell/commit/c3b2790b4fd57b8708bf8b0e11c1791fad8a1e86) (commit directo, fuera de la PR #15) - @eternalnight04. (Coordinador / DevOps)
 
 [fix/ia-correcciones-release]Fix/ia correcciones release. PR[# 20](https://github.com/eternalnight04/HeladeriaVainell/pull/20) - @lautarochavez14 (Especialista en IA y Prompt Engineering)
