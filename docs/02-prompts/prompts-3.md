@@ -2,9 +2,11 @@
 
 ## Información general
 
-- **Modelo:** Gemini 1.5 Pro
-- **Método:** Chatbot
-- **Objetivo:** Planificar futuros estilos y criterios de diseño responsivo para el proyecto.
+* **Modelo:** Gemini 1.5 Pro
+* **Método:** Chatbot
+* **Integrante que utilizó el prompt:** Alexis Britez
+* **Archivo/sección donde se aplicó:** `index.html` — planificación de estilos para Header, navegación, presentación, catálogo, tabla de precios, formulario y Footer. Implementación prevista para futuras hojas de estilo CSS.
+* **Objetivo:** Planificar futuros estilos y criterios de diseño responsivo para el proyecto.
 
 ---
 
@@ -17,18 +19,19 @@
 > Tomá como referencia este criterio de trabajo:
 >
 > Ejemplo:
-> - Una sección principal debe priorizar una jerarquía visual clara.
-> - Las tarjetas de productos deben poder reorganizarse según el tamaño de pantalla.
-> - El formulario debe mantener una buena legibilidad tanto en escritorio como en dispositivos móviles.
+>
+> * Una sección principal debe priorizar una jerarquía visual clara.
+> * Las tarjetas de productos deben poder reorganizarse según el tamaño de pantalla.
+> * El formulario debe mantener una buena legibilidad tanto en escritorio como en dispositivos móviles.
 >
 > A partir de estos criterios, proponé recomendaciones generales para planificar la futura implementación de CSS responsive para las siguientes secciones:
 >
-> - Header y navegación.
-> - Sección de presentación.
-> - Catálogo de productos.
-> - Tabla de precios.
-> - Formulario de pedido.
-> - Footer.
+> * Header y navegación.
+> * Sección de presentación.
+> * Catálogo de productos.
+> * Tabla de precios.
+> * Formulario de pedido.
+> * Footer.
 >
 > No generes el código completo. Solamente proponé criterios de organización y diseño que puedan utilizarse en una futura entrega.
 
@@ -42,64 +45,43 @@ Obtener recomendaciones para planificar la futura incorporación de CSS3 y dise�
 
 ## Resultado obtenido
 
-Header y navegación:
+Se obtuvieron recomendaciones de diseño responsivo para las diferentes secciones del proyecto:
 
-- Mantener el menú visible y accesible sin saturar el espacio.
+**Header y navegación:**
 
-- Usar un diseño horizontal para escritorio y un menú hamburguesa o desplegable para móviles.
+* Mantener el menú visible y accesible sin saturar el espacio.
+* Utilizar una distribución horizontal en escritorio y adaptar la navegación para dispositivos móviles.
+* Priorizar íconos y textos legibles, ajustando tamaños y espacios según el dispositivo.
 
-- Priorizar íconos y textos legibles, ajustando tamaños y espacios según pantalla.
+**Sección de presentación:**
 
-- Considerar sticky header para facilitar la navegación en scroll largo.
+* Mantener una jerarquía visual clara entre título, subtítulos y texto.
+* Utilizar imágenes adaptables que no interfieran con el contenido.
+* Ajustar alineación, márgenes y espaciados según el tamaño de pantalla.
 
-Sección de presentación:
+**Catálogo de productos:**
 
-- Jerarquía clara: título principal destacado, subtítulos y texto de apoyo con tamaños proporcionales.
+* Utilizar tarjetas flexibles que puedan reorganizarse según el ancho disponible.
+* Mantener las proporciones de las imágenes.
+* Asegurar tamaños adecuados para textos y elementos interactivos.
 
-- Imágenes o banners adaptables que mantengan buena resolución sin interferir con el texto.
+**Tabla de precios:**
 
-- Uso de alineación central en móviles y márgenes en escritorio para mejor lectura.
+* Evitar tablas demasiado anchas que generen problemas de visualización en dispositivos móviles.
+* Considerar alternativas de presentación para pantallas pequeñas.
+* Mantener una tipografía legible y una estructura clara.
 
-- Espaciados amplios para evitar saturación visual.
+**Formulario de pedido:**
 
-Catálogo de productos:
+* Colocar etiquetas de los campos de forma clara.
+* Adaptar campos y botones al ancho disponible.
+* Mantener un orden lógico y una organización visual adecuada.
 
-- Implementar un diseño de tarjetas flexibles que se reorganizan en columnas según ancho de pantalla (por ejemplo: 3 columnas en escritorio, 1 columna en móvil).
+**Footer:**
 
-- Asegurar que las imágenes se redimensionen manteniendo proporciones.
-
-- Botones y textos dentro de las tarjetas deben ser suficientemente grandes para interacción táctil.
-
-- Mantener consistencia visual en fuentes, colores y bordes para facilitar la lectura rápida.
-
-Tabla de precios:
-
-- Evitar tablas muy anchas que obliguen scroll horizontal en móvil.
-Considerar transformar tablas en listas o tarjetas en dispositivos pequeños.
-
-- Títulos y datos alineados para claridad, con contraste suficiente para distinguir filas.
-
-- Uso de tipografía legible y espaciados para evitar agrupamientos densos.
-
-Formulario de pedido:
-
-- Colocar etiquetas arriba de los campos para mejorar la legibilidad en móviles.
-
-- Campos y botones adaptables de ancho completo en pantallas pequeñas y con suficiente padding para fácil interacción.
-
-- Orden lógico de campos y agrupación visual que ayude al usuario a completar.
-
-- Respuesta visual clara para errores o validaciones.
-
-Footer:
-
-- Diseño simple y organizado, con información agrupada en bloques (contacto, redes, horarios).
-
-- En móvil, cambiar distribución horizontal por vertical para mejor lectura.
-
-- Uso de fuentes pequeñas pero legibles y colores que contrasten con el fondo.
-
-- Espaciados adecuados para que no se vea saturado sin perder información.
+* Organizar la información en bloques.
+* Adaptar la distribución de horizontal a vertical en dispositivos móviles.
+* Mantener textos legibles y suficiente espaciado.
 
 ---
 
@@ -107,4 +89,4 @@ Footer:
 
 Este prompt permitió anticipar criterios de diseño para futuras entregas sin incorporar CSS antes de la etapa prevista.
 
-![alt text](prompt-3.png)
+Las recomendaciones se aplicaron como planificación sobre las diferentes secciones estructurales de `index.html`, dejando definida una referencia para la futura implementación de CSS3 y diseño responsivo.

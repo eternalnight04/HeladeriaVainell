@@ -2,11 +2,14 @@
 
 ## Información general
 
-- **Modelo:** ChatGPT
-- **Método:** Contextual prompting
-- **Objetivo:** Obtener una propuesta visual para el mockup del proyecto Heladería Vainell.
+* **Modelo:** ChatGPT
+* **Método:** Contextual prompting
+* **Integrante que utilizó el prompt:** Alexis Britez
+* **Archivo/sección donde se aplicó:** Mockup visual en Figma — frames correspondientes al Header, navegación, presentación, catálogo, sabores, precios, modalidades de pedido, formulario y Footer.
+* **Objetivo:** Obtener una propuesta visual para el mockup del proyecto Heladería Vainell.
 
 ---
+
 ## Prompt exacto
 
 > Necesito crear un mockup para una página web de una heladería ficticia llamada Vainell.
@@ -15,15 +18,15 @@
 >
 > El diseño debe contemplar las siguientes secciones:
 >
-> - Header con logo o nombre de la heladería.
-> - Navegación.
-> - Sección principal de presentación.
-> - Catálogo de productos.
-> - Sabores disponibles.
-> - Tabla o sección de precios.
-> - Explicación sobre las modalidades de pedido.
-> - Formulario para simular un pedido.
-> - Footer con información de contacto.
+> * Header con logo o nombre de la heladería.
+> * Navegación.
+> * Sección principal de presentación.
+> * Catálogo de productos.
+> * Sabores disponibles.
+> * Tabla o sección de precios.
+> * Explicación sobre las modalidades de pedido.
+> * Formulario para simular un pedido.
+> * Footer con información de contacto.
 >
 > El objetivo es crear una propuesta visual clara que posteriormente pueda utilizarse como referencia para el desarrollo frontend.
 >
@@ -47,12 +50,15 @@ El resultado permitió obtener una referencia visual de la distribución de los 
 
 ## Correcciones manuales
 
-Se separó frame por frame con Claude.ia.
+Se separó frame por frame con Claude.ai para facilitar la organización y utilización del mockup.
 
 ---
 
 ## Aporte al proyecto
 
 Este prompt aportó una referencia para la organización visual del sitio y facilitó la planificación de la interfaz.
+
+El resultado se aplicó en el mockup de Figma, utilizando los diferentes frames como referencia visual para las secciones que posteriormente serán desarrolladas en el proyecto frontend.
+
 
 ![alt text](prompt-4.png)
