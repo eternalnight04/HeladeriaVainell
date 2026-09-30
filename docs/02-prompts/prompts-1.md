@@ -2,7 +2,7 @@
 
 ## Información general
 
-* **Modelo:** GPT-4o
+* **Modelo:** claude
 * **Método:** Zero-shot
 * **Integrante que utilizó el prompt:** Alexis Btitez
 * **Archivo/sección donde se aplicó:** `index.html` — estructura semántica inicial de la página.

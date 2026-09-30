@@ -4,7 +4,7 @@
 
 * **Modelo:** ChatGPT
 * **Método:** Contextual prompting
-* **Integrante que utilizó el prompt:** Alexis Britez
+* **Integrante que utilizó el prompt:** Milenka vila
 * **Archivo/sección donde se aplicó:** Mockup visual en Figma — frames correspondientes al Header, navegación, presentación, catálogo, sabores, precios, modalidades de pedido, formulario y Footer.
 * **Objetivo:** Obtener una propuesta visual para el mockup del proyecto Heladería Vainell.
 
