@@ -57,6 +57,8 @@ Se le pasó el plan.md a Copilot Agente para obtener sugerencias de layout, estr
 
 - [fix/ia-correcciones-release] docs: corrige textos de prompts 1 a 5. PR: [#30](https://github.com/eternalnight04/HeladeriaVainell/pull/30) - @lautarochavez14 (Especialista en IA y Prompt Engineering)
 
+- [fix/correcciones-2] Correcciones de Request Changes varios. Se realizaron varios RC con respecto a prompts, el changelog, el sdd-decisions y el index. PR: [#32](https://github.com/eternalnight04/HeladeriaVainell/pull/32) - @eternalnight04 (Coordinador / DevOps)
+
 ---
 
 # Cómo usar este archivo
