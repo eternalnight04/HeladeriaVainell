@@ -1,64 +1,53 @@
-# Prompt 4 - Creación del mockup
+# Prompt 4 - Creación del plan.
 
 ## Información general
 
-* **Modelo:** ChatGPT
-* **Método:** Contextual prompting
-* **Integrante que utilizó el prompt:** Milenka vila
-* **Archivo/sección donde se aplicó:** Mockup visual en Figma — frames correspondientes al Header, navegación, presentación, catálogo, sabores, precios, modalidades de pedido, formulario y Footer.
-* **Objetivo:** Obtener una propuesta visual para el mockup del proyecto Heladería Vainell.
-
+* **Modelo:** Claude Sonnet 5
+* **Método:** Few-shot prompting.
+* **Integrante que utilizó el prompt:** Milenka Vila
+* **Archivo/sección donde se aplicó:** plan.md
+* **Objetivo:** Elaborar un documento que indique de qué tratará el sitio web, qué características tendrá, qué funciones tendrá, qué datos se mostrarán, etc.
 ---
 
 ## Prompt exacto
 
-> Necesito crear un mockup para una página web de una heladería ficticia llamada Vainell.
->
-> La página representa un simulador de pedidos de helados para delivery o retiro en el local.
->
-> El diseño debe contemplar las siguientes secciones:
->
-> * Header con logo o nombre de la heladería.
-> * Navegación.
-> * Sección principal de presentación.
-> * Catálogo de productos.
-> * Sabores disponibles.
-> * Tabla o sección de precios.
-> * Explicación sobre las modalidades de pedido.
-> * Formulario para simular un pedido.
-> * Footer con información de contacto.
->
-> El objetivo es crear una propuesta visual clara que posteriormente pueda utilizarse como referencia para el desarrollo frontend.
->
-> Priorizá la organización visual y la experiencia del usuario.
+```
+Teniendo en cuenta las consignas, arma el contenido del archivo plan.md teniendo en cuenta que el proyecto tratara de una página web de una heladería llamada Vainell. Considera que la página debe permitir que los usuarios puedan realizar pedidos a domicilio o de entrega en local.
+```
+
+![alt text](prompt-4.png)
 
 ---
 
 ## Resultado esperado
 
-Obtener una propuesta visual que permita definir la organización y jerarquía de las secciones de la página.
+Obtener un plan más detallado con respecto a las características de la página, que ayude a ampliar la idea y trasladarla a un formato más formal, entendible y completo.
 
 ---
 
 ## Resultado obtenido
 
-La IA generó un mockup visual de la página web de la heladería Vainell, organizando las secciones principales del proyecto: encabezado y navegación, presentación, catálogo de productos, sabores disponibles, precios, modalidades de pedido, formulario para simular un pedido y pie de página.
+```
+Este plan.md toma la consigna de la actividad y la traduce al proyecto concreto de Vainell, la heladería con pedidos por delivery o retiro en local. Incluye:
 
-El resultado permitió obtener una referencia visual de la distribución de los elementos y de la organización general de la página, que puede utilizarse como guía para el posterior desarrollo frontend.
+- Descripción y propósito del simulador (qué resuelve y qué queda explícitamente fuera de alcance, como el pago real o el backend).
+- Requerimientos funcionales de esta entrega, mapeados 1 a 1 con lo que pide el profesor (HTML5, elementos obligatorios, marcadores para CSS/JS, documentación, specs, prompts de IA).
+- Una propuesta de estructura de index.html acorde al rubro (catálogo, tabla de precios, formulario de pedido con modalidad delivery/local).
+- Checklist de criterios de aceptación para que sirva de referencia en los code reviews, tal como pide la consigna.
+
+Podés ajustar nombres de secciones, sabores o el tono según lo que ya tengan definido en README.md o en el mockup del Documentador/UX — este plan.md está pensado para ser la base contra la que se traza todo lo demás.
+```
+
+![alt text](prompt-res-4.png)
 
 ---
 
 ## Correcciones manuales
 
-Se separó frame por frame con Claude.ai para facilitar la organización y utilización del mockup.
+Se realizaron correcciones mínimas con respecto a los títulos y funciones que iba a tener la página. Además de incluir un sistema de inicio de sesión.
 
 ---
 
 ## Aporte al proyecto
 
-Este prompt aportó una referencia para la organización visual del sitio y facilitó la planificación de la interfaz.
-
-El resultado se aplicó en el mockup de Figma, utilizando los diferentes frames como referencia visual para las secciones que posteriormente serán desarrolladas en el proyecto frontend.
-
-
-![alt text](prompt-4.png)
+Este prompt ayudó a realizar el plan de la página, es decir, de qué tratará, qué hará y que otras características tendrá.

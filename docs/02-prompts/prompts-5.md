@@ -4,7 +4,7 @@
 
 * **Modelo:** Gemini
 * **Método:** Chain-of-thought guiado
-* **Integrante que utilizó el prompt:** Milenka Vila
+* **Integrante que utilizó el prompt:** Alexis Britez
 * **Archivo/sección donde se aplicó:** `index.html` — revisión y validación de la estructura HTML5, contenido, navegación, tabla, formulario y requisitos de la primera entrega.
 * **Objetivo:** Revisar el código HTML y verificar su cumplimiento con los requerimientos del proyecto.
 
@@ -12,6 +12,7 @@
 
 ## Prompt exacto
 
+```
 > Actuá como revisor de código especializado en HTML5.
 >
 > Necesito que analices la estructura de un proyecto académico llamado Heladería Vainell.
@@ -41,6 +42,9 @@
 > * Requiere revisión.
 >
 > Si detectás un problema, explicá brevemente cómo podría corregirse sin modificar innecesariamente la estructura existente.
+```
+
+![alt text](prompt-5.png)
 
 ---
 
@@ -96,7 +100,10 @@ Se implementa un elemento `<form>` con campos de texto, correo, teléfono, menú
 
 **Permitir indicar delivery o retiro en local: Cumple.**
 
-Conti
+## Correcciones manuales
 
+Se agregaron más imagenes al código.
 
-![alt text](prompt-5.png)
+## Aporte al proyecto
+
+Este prompt ayudó a realizar las últimas correcciones al código html y verificar que sea completamente funcional.
