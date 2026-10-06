@@ -2,9 +2,9 @@
 
 ## Información general
 
-* **Modelo:** Claude
-* **Método:** Zero-shot prompting
-* **Integrante que utilizó el prompt:** Alexis Btitez
+* **Modelo:** claude
+* **Método:** Zero-shot
+* **Integrante que utilizó el prompt:** Alexis Britez
 * **Archivo/sección donde se aplicó:** `index.html` — estructura semántica inicial de la página.
 * **Objetivo:** Analizar y proponer la estructura semántica inicial del proyecto Heladería Vainell.
 
@@ -57,4 +57,11 @@ No se realizaron correcciones.
 
 Este prompt permitió analizar la organización inicial de la página y definir una estructura basada en etiquetas semánticas HTML5 antes de comenzar el desarrollo.
 
+<<<<<<< HEAD
 La propuesta se aplicó en `index.html`, donde se estableció la estructura inicial del contenido del sitio.
+
+
+![alt text](image.png)
+=======
+La propuesta se aplicó en `index.html`, donde se estableció la estructura inicial del contenido del sitio.
+>>>>>>> origin/release/actividad-obligatoria-1

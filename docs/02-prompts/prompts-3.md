@@ -2,9 +2,9 @@
 
 ## Información general
 
-* **Modelo:** Gemini 1.5 Pro
+* **Modelo:** chatbox ai
 * **Método:** Chatbot
-* **Integrante que utilizó el prompt:** Alexis Britez
+* **Integrante que utilizó el prompt:** Milenka villa
 * **Archivo/sección donde se aplicó:** `index.html` — planificación de estilos para Header, navegación, presentación, catálogo, tabla de precios, formulario y Footer. Implementación prevista para futuras hojas de estilo CSS.
 * **Objetivo:** Planificar futuros estilos y criterios de diseño responsivo para el proyecto.
 
