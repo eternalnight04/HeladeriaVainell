@@ -25,6 +25,8 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 - [feature/ia-add-prompts-1-to-5-copy] Se trasladaron los nuevos cambios de la PR #5 a esta nueva PR debido a problemas de merge. PR: [#13](https://github.com/eternalnight04/HeladeriaVainell/pull/13) - @eternalnight04 (Documentador / DevOps)
 
+  [Fix/rehacer prompts 1 5] se corrigio problemas de promts 1 a 5, nombres y documentacionn de ia  [#34](https://github.com/eternalnight04/HeladeriaVainell/pull/34#issue-5720913269) 
+
 ## Changed
 
 - [fix/plan-sesion] Se agregó una nueva función para inicio de sesión y creación de cuentas (como un concepto para la página), debido a esto, se actualizaron plan.md y README.md. PR: [#3](https://github.com/eternalnight04/HeladeriaVainell/pull/3) - @eternalnight04 (Coordinador / DevOps)
