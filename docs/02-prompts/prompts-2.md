@@ -2,7 +2,7 @@
 
 ## Información general
 
-* **Modelo:** Gemini
+* **Modelo:** use.ai
 * **Método:** Role prompting
 * **Integrante que utilizó el prompt:** Alexis Britez
 * **Archivo/sección donde se aplicó:** `index.html` — estructura HTML5 inicial.

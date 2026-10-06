@@ -4,7 +4,7 @@
 
 * **Modelo:** claude
 * **Método:** Zero-shot
-* **Integrante que utilizó el prompt:** Alexis Btitez
+* **Integrante que utilizó el prompt:** Milenka Villa
 * **Archivo/sección donde se aplicó:** `index.html` — estructura semántica inicial de la página.
 * **Objetivo:** Analizar y proponer la estructura semántica inicial del proyecto Heladería Vainell.
 
