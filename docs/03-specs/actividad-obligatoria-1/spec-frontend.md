@@ -6,6 +6,14 @@
 **Rama:** `feature/frontend-add-html-structure`
 
 ---
+## Aclaración:
+
+**Situación:** en esta entrega no se respetó el orden de Spec-Driven Development. El HTML se generó primero, en los commits `fa44538` y `f87bcdf` (21:41 a 22:02hs), y el contenido real de esta especificación se escribió después, en el commit `88dbf69` (22:19hs). El flujo fue código → spec, en lugar de spec → código.
+
+**Consecuencia:** en este archivo la spec funciona como documentación de lo que ya estaba construido, y no como el documento que guió el desarrollo. Por eso no debe leerse como evidencia de que el HTML se derivó de la spec.
+
+**Decisión:** esta desviación no se corrige retroactivamente. El historial de git es el registro de lo que efectivamente ocurrió, y reescribirlo (rebase, cambio de fechas) para simular otro orden alteraría ese registro. Se deja constancia de la desviación en este archivo.
+
 
 ## 1. Qué se le solicitó a Copilot
 

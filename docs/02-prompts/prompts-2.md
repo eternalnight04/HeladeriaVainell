@@ -12,6 +12,7 @@
 
 ## Prompt exacto
 
+```
 > Actuá como un desarrollador frontend especializado en HTML5 semántico.
 >
 > Necesito generar una estructura HTML inicial para el proyecto académico "Heladería Vainell".
@@ -39,6 +40,9 @@
 > Utilizá etiquetas semánticas correctamente y agregá comentarios indicando dónde se incorporará CSS y JavaScript en futuras entregas.
 >
 > No inventes funcionalidades de backend ni procesamiento real de pagos.
+```
+
+![alt text](prompt-2.png)
 
 ---
 
@@ -60,11 +64,14 @@ Características destacadas del código:
 
 ---
 
+## Correcciones manuales
+
+Se hicieron cambios en el inicio y registro de sesión.
+
+---
+
 ## Aporte al proyecto
 
 Este prompt ayudó a generar una base inicial para analizar la estructura de `index.html` y verificar la presencia de los elementos requeridos.
 
 La propuesta se aplicó sobre `index.html`, utilizado como archivo principal de la página durante la primera etapa del proyecto.
-
-
-![alt text](prompt-2.png)
