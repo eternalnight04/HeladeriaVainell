@@ -4,7 +4,7 @@
 
 * **Modelo:** use.ai
 * **Método:** Role prompting
-* **Integrante que utilizó el prompt:** Alexis Britez
+* **Integrante que utilizó el prompt:** Milenka Villa
 * **Archivo/sección donde se aplicó:** `index.html` — estructura HTML5 inicial.
 * **Objetivo:** Obtener una propuesta inicial de código HTML5 para el proyecto.
 

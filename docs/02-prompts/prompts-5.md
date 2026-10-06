@@ -4,7 +4,7 @@
 
 * **Modelo:** Gemini
 * **Método:** Chain-of-thought guiado
-* **Integrante que utilizó el prompt:** Milenka Vila
+* **Integrante que utilizó el prompt:** Alexis Britez
 * **Archivo/sección donde se aplicó:** `index.html` — revisión y validación de la estructura HTML5, contenido, navegación, tabla, formulario y requisitos de la primera entrega.
 * **Objetivo:** Revisar el código HTML y verificar su cumplimiento con los requerimientos del proyecto.
 
