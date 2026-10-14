@@ -2,8 +2,8 @@
 
 ## Información general
 
-* **Modelo:** Figma ai
-* **Método:** Contextual prompting
+* **Modelo:** GPT-4o
+* **Método:** Figma
 * **Integrante que utilizó el prompt:** Alexis Britez
 * **Archivo/sección donde se aplicó:** Mockup visual en Figma — frames correspondientes al Header, navegación, presentación, catálogo, sabores, precios, modalidades de pedido, formulario y Footer.
 * **Objetivo:** Obtener una propuesta visual para el mockup del proyecto Heladería Vainell.
