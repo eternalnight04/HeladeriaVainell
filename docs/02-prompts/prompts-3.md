@@ -12,6 +12,7 @@
 
 ## Prompt exacto
 
+```
 > Estoy desarrollando un proyecto académico llamado Heladería Vainell.
 >
 > Actualmente la primera entrega utiliza solamente HTML5, pero en futuras entregas se incorporará CSS3 para mejorar el diseño y la adaptación a diferentes dispositivos.
@@ -34,6 +35,9 @@
 > * Footer.
 >
 > No generes el código completo. Solamente proponé criterios de organización y diseño que puedan utilizarse en una futura entrega.
+```
+
+![alt text](prompt-3.png)
 
 ---
 
@@ -82,6 +86,12 @@ Se obtuvieron recomendaciones de diseño responsivo para las diferentes seccione
 * Organizar la información en bloques.
 * Adaptar la distribución de horizontal a vertical en dispositivos móviles.
 * Mantener textos legibles y suficiente espaciado.
+
+---
+
+## Correcciones manuales
+
+No se realizaron correcciones.
 
 ---
 

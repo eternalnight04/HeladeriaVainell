@@ -1,4 +1,4 @@
-# Prompt 4 - Creación del mockup
+# Prompt 4 - Creación del plan.
 
 ## Información general
 
@@ -421,29 +421,33 @@ Si quieres, en el siguiente paso te puedo armar una versión más detallada con:
 
 ## Resultado esperado
 
-Obtener una propuesta visual que permita definir la organización y jerarquía de las secciones de la página.
+Obtener un plan más detallado con respecto a las características de la página, que ayude a ampliar la idea y trasladarla a un formato más formal, entendible y completo.
 
 ---
 
 ## Resultado obtenido
 
-La IA generó un mockup visual de la página web de la heladería Vainell, organizando las secciones principales del proyecto: encabezado y navegación, presentación, catálogo de productos, sabores disponibles, precios, modalidades de pedido, formulario para simular un pedido y pie de página.
+```
+Este plan.md toma la consigna de la actividad y la traduce al proyecto concreto de Vainell, la heladería con pedidos por delivery o retiro en local. Incluye:
 
-El resultado permitió obtener una referencia visual de la distribución de los elementos y de la organización general de la página, que puede utilizarse como guía para el posterior desarrollo frontend.
+- Descripción y propósito del simulador (qué resuelve y qué queda explícitamente fuera de alcance, como el pago real o el backend).
+- Requerimientos funcionales de esta entrega, mapeados 1 a 1 con lo que pide el profesor (HTML5, elementos obligatorios, marcadores para CSS/JS, documentación, specs, prompts de IA).
+- Una propuesta de estructura de index.html acorde al rubro (catálogo, tabla de precios, formulario de pedido con modalidad delivery/local).
+- Checklist de criterios de aceptación para que sirva de referencia en los code reviews, tal como pide la consigna.
+
+Podés ajustar nombres de secciones, sabores o el tono según lo que ya tengan definido en README.md o en el mockup del Documentador/UX — este plan.md está pensado para ser la base contra la que se traza todo lo demás.
+```
+
+![alt text](prompt-res-4.png)
 
 ---
 
 ## Correcciones manuales
 
-Se separó frame por frame con Claude.ai para facilitar la organización y utilización del mockup.
+Se realizaron correcciones mínimas con respecto a los títulos y funciones que iba a tener la página. Además de incluir un sistema de inicio de sesión.
 
 ---
 
 ## Aporte al proyecto
 
-Este prompt aportó una referencia para la organización visual del sitio y facilitó la planificación de la interfaz.
-
-El resultado se aplicó en el mockup de Figma, utilizando los diferentes frames como referencia visual para las secciones que posteriormente serán desarrolladas en el proyecto frontend.
-
-
-![alt text](prompt-4.png)
+Este prompt ayudó a realizar el plan de la página, es decir, de qué tratará, qué hará y que otras características tendrá.

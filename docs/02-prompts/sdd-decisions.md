@@ -104,7 +104,22 @@ El proyecto establece como requerimiento documentar al menos 5 prompts reales ut
 
 ---
 
-## 8. Resumen del flujo SDD
+## 8. Decisión 7: Herramientas y extensiones.
+
+Se decidió que todos los integrantes del equipo deberán contar con dos extensiones instaladas para VS Code:
+
+- GitHub Pull Request
+- GitHub Copilot 
+
+Al día de la fecha, se confirmó que todos poseen las extensiones mencionadas para trabajar.
+
+**Motivo:**
+
+El proyecto establece que todos deben tener instaladas las extensiones de GitHub Pull Request y GitHub Copilot.
+
+---
+
+## 9. Resumen del flujo SDD
 
 El proceso de trabajo definido para el proyecto será:
 
@@ -117,8 +132,9 @@ El proceso de trabajo definido para el proyecto será:
 
 ---
 
-## 9. Historial de cambios
+## 10. Historial de cambios
 
 | Fecha | Decisión o cambio | Responsable |
 |---|---|---|
 | 30/08/2026 | Creación inicial del documento de decisiones SDD | Lautaro Chavez |
+| 01/10/2026 | Añadida nueva decisión (7) | Milenka Vila |

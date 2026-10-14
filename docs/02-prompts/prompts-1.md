@@ -12,6 +12,7 @@
 
 ## Prompt exacto
 
+```
 > Necesito desarrollar la estructura inicial en HTML5 para una página web de una heladería ficticia llamada Vainell. El proyecto consiste en un simulador de pedidos de helado con modalidad delivery o retiro en el local.
 >
 > La primera entrega debe utilizar únicamente HTML5 semántico, sin CSS ni JavaScript.
@@ -28,6 +29,9 @@
 > * Footer con información de contacto.
 >
 > Proponé una estructura utilizando etiquetas semánticas HTML5 adecuadas. No agregues funcionalidades que requieran JavaScript o backend.
+```
+
+![alt text](prompt-1.png)
 
 ---
 
@@ -43,11 +47,21 @@ Se obtuvo una propuesta de estructura base para el proyecto Vainell, definiendo 
 
 ---
 
+## Correcciones manuales
+
+No se realizaron correcciones.
+
+---
+
 ## Aporte al proyecto
 
 Este prompt permitió analizar la organización inicial de la página y definir una estructura basada en etiquetas semánticas HTML5 antes de comenzar el desarrollo.
 
+<<<<<<< HEAD
 La propuesta se aplicó en `index.html`, donde se estableció la estructura inicial del contenido del sitio.
 
 
 ![alt text](image.png)
+=======
+La propuesta se aplicó en `index.html`, donde se estableció la estructura inicial del contenido del sitio.
+>>>>>>> origin/release/actividad-obligatoria-1
