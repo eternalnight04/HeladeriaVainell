@@ -38,6 +38,10 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 ## Fixed
 
+- [fix/correcciones-act1-v3] cambios en changelog PR: [#38](https://github.com/eternalnight04/HeladeriaVainell/pull/38) - @britezacostaalexis-pixel (Documentador / Diseñador UX)
+
+- [fix/rehacer-promts-1-5] fix: corrige modelos y trazabilidad de IA PR: [#37](https://github.com/eternalnight04/HeladeriaVainell/pull/37) - @lautarochavez14 (Especialista en IA y Prompt Engineering)
+
 - [fix/rehacer-prompts-1-5] Fix/rehacer prompts 1 5 PR: [#34](https://github.com/eternalnight04/HeladeriaVainell/pull/34) - @lautarochavez14 (Especialista en IA y Prompt Engineering)
 
 - [fix/correcciones-act1-v2]Fix/correcciones act1 v2 PR: [#36](https://github.com/eternalnight04/HeladeriaVainell/pull/36) - @britezacostaalexis-pixel (Documentador / Diseñador UX)
