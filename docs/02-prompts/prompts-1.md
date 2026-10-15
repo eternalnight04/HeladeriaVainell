@@ -57,11 +57,7 @@ No se realizaron correcciones.
 
 Este prompt permitió analizar la organización inicial de la página y definir una estructura basada en etiquetas semánticas HTML5 antes de comenzar el desarrollo.
 
-<<<<<<< HEAD
 La propuesta se aplicó en `index.html`, donde se estableció la estructura inicial del contenido del sitio.
 
 
 ![alt text](image.png)
-=======
-La propuesta se aplicó en `index.html`, donde se estableció la estructura inicial del contenido del sitio.
->>>>>>> origin/release/actividad-obligatoria-1

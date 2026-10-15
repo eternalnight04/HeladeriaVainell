@@ -21,7 +21,7 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 *Nota: La PR #5 no se pudo mergear debido a problemas con cambios en la base, por lo que los cambios fueron trasladados a la PR #9 para que se pueda mergear sin complicaciones.*
 
-- [feature/doc-ux-add-readme-and-mockup] Documentador / Diseñador: UXSe generó el README.md del proyecto utilizando GitHub Copilot en modo Agente,tomando como contexto la consigna y el plan.md. PR: [#6](https://github.com/eternalnight04/HeladeriaVainell/pull/6) - @britezacostaalexis-pixel (Documentador / Diseñador UX)
+- [feature/doc-ux-add-readme-and-mockup] Documentador / Diseñador UX. PR: [#6](https://github.com/eternalnight04/HeladeriaVainell/pull/6) - @britezacostaalexis-pixel (Documentador / Diseñador UX)
 
 - [fix/correcciones-archivos-1]se completo el archivo index con el codigo fuente de la pagina:Se agregó el código fuente a index.html. PR: [#9](https://github.com/eternalnight04/HeladeriaVainell/pull/9) - @eternalnight04 (Coordinador / DevOps)
 
@@ -38,9 +38,17 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 ## Fixed
 
-- [fix/rehacer-prompts-1-5] Fix/rehacer prompts 1 5. PR: [#34](https://github.com/eternalnight04/HeladeriaVainell/pull/34) - @lautarochavez14 (Especialista en IA y Prompt Engineering)
+- [fix/correcciones-act1-v3] cambios en changelog PR: [#38](https://github.com/eternalnight04/HeladeriaVainell/pull/38) - @britezacostaalexis-pixel (Documentador / Diseñador UX)
 
-- [fix/correcciones-act1-v2]Fix/correcciones act1 v2. PR: [#36](https://github.com/eternalnight04/HeladeriaVainell/pull/36) - @britezacostaalexis-pixel (Documentador / Diseñador UX-fronted)
+- [fix/rehacer-promts-1-5] fix: corrige modelos y trazabilidad de IA PR: [#37](https://github.com/eternalnight04/HeladeriaVainell/pull/37) - @lautarochavez14 (Especialista en IA y Prompt Engineering)
+
+- [fix/rehacer-prompts-1-5] Fix/rehacer prompts 1 5 PR: [#34](https://github.com/eternalnight04/HeladeriaVainell/pull/34) - @lautarochavez14 (Especialista en IA y Prompt Engineering)
+
+- [fix/correcciones-act1-v2]Fix/correcciones act1 v2 PR: [#36](https://github.com/eternalnight04/HeladeriaVainell/pull/36) - @britezacostaalexis-pixel (Documentador / Diseñador UX)
+
+- [fix/correcciones-2] Correcciones de Request Changes varios. PR: [#32](https://github.com/eternalnight04/HeladeriaVainell/pull/32)  - @eternalnight04. (Coordinador / DevOps)
+
+- [fix/ia-correcciones-release]docs: corrige textos de prompts 1 a 5 PR: [#30](https://github.com/eternalnight04/HeladeriaVainell/pull/30) - @lautarochavez14 (Especialista en IA y Prompt Engineering)
 
 - [fix/Rc-act-1]RC2,RC7,RC39 corregidos: Se realizo la corrección de las siguientes RC2 , 3 y 39, con lo que solicito el docente. PR: [#29](https://github.com/eternalnight04/HeladeriaVainell/pull/29) - @britezacostaalexis-pixel (Documentador / Diseñador UX-fronted)
 
@@ -56,9 +64,9 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 - [fix/ia-correcciones-release]Fix/ia correcciones release. PR: [#22](https://github.com/eternalnight04/HeladeriaVainell/pull/22) - @lautarochavez14 (Especialista en IA y Prompt Engineering)
 
-- [fix/devops-correcciones-1] Correcciones del changelog:Se corrigieron el changelog y el archivo spec-devops.md según los request changes solicitados. PR: [#16](https://github.com/eternalnight04/HeladeriaVainell/pull/16) - @eternalnight04 (Coordinador / DevOps)
+- [fix/devops-correcciones-1]Correcciones del changelog.  PR: [#16](https://github.com/eternalnight04/HeladeriaVainell/pull/16) - @eternalnight04 (Coordinador / DevOps)
 
-- [fix/devops-correcciones-2] Fix - Corrección archivo DevOps:Se agregó la sección "Criterios de Aceptación" del archivo spec-devops.md. Además de incluir pequeñas correcciones en algunas entradas del changelog. PR: [#17](https://github.com/eternalnight04/HeladeriaVainell/pull/17) - @eternalnight04 (Coordinador / DevOps)
+- [fix/devops-correcciones-2] Fix - Corrección archivo DevOps. PR: [#17](https://github.com/eternalnight04/HeladeriaVainell/pull/17) - @eternalnight04 (Coordinador / DevOps)
 
 ---
 
