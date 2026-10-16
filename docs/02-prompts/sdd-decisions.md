@@ -111,7 +111,14 @@ Se decidió que todos los integrantes del equipo deberán contar con dos extensi
 - GitHub Pull Request
 - GitHub Copilot 
 
-Al día de la fecha, se confirmó que todos poseen las extensiones mencionadas para trabajar.
+La verificación se realiza integrante por integrante. Cada uno comprueba en su propia instalación de VS Code que tiene las extensiones y adjunta una captura como evidencia. Los integrantes marcados como pendientes todavía no adjuntaron su evidencia, por lo que no se da por confirmada su verificación.
+
+| Integrante | Usuario de GitHub | GitHub Copilot | GitHub Pull Requests | Fecha de verificación | Evidencia |
+|---|---|---|---|---|---|
+| Alexis Britez | @britezacostaalexis-pixel | Integrada en VS Code (GitHub Copilot Chat, activa) | Instalada (v0.170.0) | 16/10/2026 | ![Pull Requests](../../extensiones/extensiones-alexis-pull-requests.png) ![Copilot](../../extensiones/extensiones-alexis-copilot.png)
+|
+| Milenka Villa |  @eternalnight04 | Pendiente de verificación | Pendiente de verificación | Pendiente | ![Pull Requests](../../extensiones/extensiones...) ![Copilot](../../extensiones/extensiones...)|
+| Lautaro Chavez |  @lautarochavez14 | Pendiente de verificación | Pendiente de verificación | Pendiente | ![Pull Requests](../../extensiones/extensiones...) ![Copilot](../../extensiones/extensiones...)|
 
 **Motivo:**
 

@@ -2,13 +2,13 @@
 
 Este archivo se actualiza con cada Pull Request para registrar avances y correcciones.
 
----
+
 
 # [Unreleased]
 
----
 
-# [Release - Actividad Obligatoria Nº1] - 2026-08-31
+
+## [Release - Actividad Obligatoria Nº1] - 2026-08-31
 
 ## Added
 
@@ -50,11 +50,11 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 - [fix/ia-correcciones-release]docs: corrige textos de prompts 1 a 5 PR: [#30](https://github.com/eternalnight04/HeladeriaVainell/pull/30) - @lautarochavez14 (Especialista en IA y Prompt Engineering)
 
-- [fix/Rc-act-1]RC2,RC7,RC39 corregidos: Se realizo la corrección de las siguientes RC2 , 3 y 39, con lo que solicito el docente. PR: [#29](https://github.com/eternalnight04/HeladeriaVainell/pull/29) - @britezacostaalexis-pixel (Documentador / Diseñador UX-fronted)
+- [fix/Rc-act-1]RC2,RC7,RC39 corregidos PR: [#29](https://github.com/eternalnight04/HeladeriaVainell/pull/29) - @britezacostaalexis-pixel (Documentador / Diseñador UX-fronted)
 
-- [fix/correcciones-act1]Fix/correcciones act1: Se realizo las RC: 39,RC12,RC14,RC43 y RC2. PR: [#28](https://github.com/eternalnight04/HeladeriaVainell/pull/28) - @britezacostaalexis-pixel (Documentador / Diseñador UX-fronted)
+- [fix/correcciones-act1]Fix/correcciones act1 PR: [#28](https://github.com/eternalnight04/HeladeriaVainell/pull/28) - @britezacostaalexis-pixel (Documentador / Diseñador UX-fronted)
 
-- [fix/correcciones-rc-act-1]correcciónes de request change: Este PR responde a las observaciones del revisor sobre spec, changelog e imágenes del HTML.  PR: [#27](https://github.com/eternalnight04/HeladeriaVainell/pull/27) - @britezacostaalexis-pixel (Documentador / Diseñador UX-fronted)
+- [fix/correcciones-rc-act-1]correcciónes de request change PR: [#27](https://github.com/eternalnight04/HeladeriaVainell/pull/27) - @britezacostaalexis-pixel (Documentador / Diseñador UX-fronted)
 
 - [release/actividad-obligatoria-1] Commit directo: "agregado nombre de ia utilizada en cuarto prompt" (17/09/2026). Commit: [`c3b2790`](https://github.com/eternalnight04/HeladeriaVainell/commit/c3b2790b4fd57b8708bf8b0e11c1791fad8a1e86) (fuera de la PR #15; la PR asociada:#14)
 
