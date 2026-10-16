@@ -38,6 +38,8 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 ## Fixed
 
+- [fix/correccion-rc] Se realizaron los rc solicitados PR: [#39](https://github.com/eternalnight04/HeladeriaVainell/pull/39) - @britezacostaalexis-pixel (Documentador / Diseñador UX)
+
 - [fix/correcciones-act1-v3] cambios en changelog PR: [#38](https://github.com/eternalnight04/HeladeriaVainell/pull/38) - @britezacostaalexis-pixel (Documentador / Diseñador UX)
 
 - [fix/rehacer-promts-1-5] fix: corrige modelos y trazabilidad de IA PR: [#37](https://github.com/eternalnight04/HeladeriaVainell/pull/37) - @lautarochavez14 (Especialista en IA y Prompt Engineering)
