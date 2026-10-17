@@ -20,7 +20,7 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 *Nota: La PR #5 no se pudo mergear debido a problemas con cambios en la base, por lo que los cambios fueron trasladados a la PR #9 para que se pueda mergear sin complicaciones.*
 
-- [feature/doc-ux-add-readme-and-mockup] Documentador / Diseñador UX. PR: [#6](https://github.com/eternalnight04/HeladeriaVainell/pull/6) - @britezacostaalexis-pixel (Documentador / Diseñador UX)
+- [feature/doc-ux-add-readme-and-mockup]  Documentador / Diseñador UX. PR: [#6](https://github.com/eternalnight04/HeladeriaVainell/pull/6) - @britezacostaalexis-pixel (Documentador / Diseñador UX)
 
 - [fix/correcciones-archivos-1] se completo el archivo index con el codigo fuente de la pagina. PR: [#9](https://github.com/eternalnight04/HeladeriaVainell/pull/9) - @eternalnight04 (Coordinador / DevOps)
 
@@ -32,7 +32,7 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 - [fix/desarrollo-frontend-ux-correccion-1] RC 9, 10, 11, 12, 13, 14, 15. PR: [#18](https://github.com/eternalnight04/HeladeriaVainell/pull/18)  @britezacostaalexis-pixel (Documentador / Diseñador UX + Frontend)
 
-- [fix/plan-sesion] Se agregó una nueva función al plan. PR: [#3](https://github.com/eternalnight04/HeladeriaVainell/pull/3) - @eternalnight04 (Coordinador / DevOps)
+- [fix/plan-sesion] Fix: Se agregó una nueva función al plan. PR: [#3](https://github.com/eternalnight04/HeladeriaVainell/pull/3) - @eternalnight04 (Coordinador / DevOps)
 
 ### Fixed
 
