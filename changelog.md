@@ -36,6 +36,8 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 ## Fixed
 
+- [fix/changelog-correccion-min] Se corrigio changelog con unreleased en header 2. PR: [#41](https://github.com/eternalnight04/HeladeriaVainell/pull/41) - @eternalnight04 (Coordinador / DevOps)
+
 - [fix/correcciones-varias-2] Se corrigieron los archivos de acuerdo a los cambios solicitados. PR: [#40](https://github.com/eternalnight04/HeladeriaVainell/pull/40) - @eternalnight04 (Coordinador / DevOps)
 
 - [fix/correccion-rc] Se realizaron los rc solicitados PR: [#39](https://github.com/eternalnight04/HeladeriaVainell/pull/39) - @britezacostaalexis-pixel (Documentador / Diseñador UX)
