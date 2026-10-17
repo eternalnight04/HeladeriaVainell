@@ -136,17 +136,42 @@ El uso de IA forma parte de las tecnologías y herramientas definidas para el pr
 
 ---
 
-## 6. Criterios de aceptación
+## 6. Etapas del rol y criterios de aceptación
 
-- [ ] Se investigó y definió cómo se aplicará la metodología SDD en Heladería Vainell.
-- [ ] Se definió qué información debe contener cada archivo `spec-[rol].md`.
-- [ ] Se creó un template reutilizable para las especificaciones de los roles.
-- [ ] El template permite identificar objetivo, alcance, requerimientos, criterios de aceptación y trazabilidad.
-- [ ] Se estableció una relación entre los requerimientos de la spec y el `plan.md`.
-- [ ] Se definió un mecanismo para validar las specs contra el plan del proyecto.
+El trabajo del Especialista en IA y Prompt Engineering se organiza en dos etapas: una PR inicial, orientada a establecer y documentar las bases del rol, y una PR final, orientada a completar, revisar y validar los entregables.
+
+### 6.1 PR inicial
+
+La PR inicial tiene como objetivo establecer la estructura de trabajo del rol y documentar las primeras definiciones relacionadas con SDD, las especificaciones y el uso de IA.
+
+**Criterios de aceptación:**
+
+- [ ] Se definió el rol y sus responsabilidades dentro del proyecto.
+- [ ] Se documentó la aplicación de la metodología SDD en Heladería Vainell.
+- [ ] Se definió la estructura que deben tener las especificaciones `spec-[rol].md`.
+- [ ] Se creó o documentó el template reutilizable para las especificaciones.
+- [ ] Se estableció la relación entre la spec y los puntos correspondientes del `plan.md`.
+- [ ] La documentación inicial corresponde al alcance definido para el rol.
+
+### 6.2 PR final
+
+La PR final tiene como objetivo completar y validar los entregables del Especialista en IA y Prompt Engineering antes de la entrega de la actividad.
+
+**Criterios de aceptación:**
+
 - [ ] Se documentaron al menos 5 prompts reales utilizados durante el desarrollo.
+- [ ] Cada prompt documentado identifica la herramienta o modelo utilizado y su aporte al proyecto.
+- [ ] La comparativa de modelos está completa y actualizada.
+- [ ] Se documentaron las decisiones relacionadas con el uso de IA.
+- [ ] Se verificó la trazabilidad entre `plan.md`, las specs, los prompts y el `changelog.md`.
+- [ ] Los entregables del rol cumplen con los requerimientos definidos en esta especificación.
+- [ ] La PR final cuenta con al menos una revisión aprobada antes del merge.
+
+### 6.3 Criterios generales de aceptación
+
+- [ ] Se definió un mecanismo para validar las specs contra el plan del proyecto.
 - [ ] Los prompts documentados aportaron valor concreto al proyecto.
-- [ ] Se mantiene la trazabilidad entre `plan.md`, `spec-[rol].md`, Pull Request y `changelog.md`.
+- [ ] Se mantiene la trazabilidad entre `plan.md`, `spec-[rol].md`, Pull Requests y `changelog.md`.
 
 ---
 

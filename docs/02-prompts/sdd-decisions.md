@@ -104,7 +104,29 @@ El proyecto establece como requerimiento documentar al menos 5 prompts reales ut
 
 ---
 
-## 8. Resumen del flujo SDD
+## 8. Decisión 7: Herramientas y extensiones.
+
+Se decidió que todos los integrantes del equipo deberán contar con dos extensiones instaladas para VS Code:
+
+- GitHub Pull Request
+- GitHub Copilot 
+
+La verificación se realiza integrante por integrante. Cada uno comprueba en su propia instalación de VS Code que tiene las extensiones y adjunta una captura como evidencia. Los integrantes marcados como pendientes todavía no adjuntaron su evidencia, por lo que no se da por confirmada su verificación.
+
+| Integrante | Usuario de GitHub | GitHub Copilot | GitHub Pull Requests | Fecha de verificación | Evidencia |
+|---|---|---|---|---|---|
+| Alexis Britez | @britezacostaalexis-pixel | Integrada en VS Code (GitHub Copilot Chat, activa) | Instalada (v0.170.0) | 16/10/2026 | ![Pull Requests](../../extensiones/extensiones-alexis-pull-requests.png) ![Copilot](../../extensiones/extensiones-alexis-copilot.png)
+|
+| Milenka Vila |  @eternalnight04 | Integrada en VS Code (GitHub Copilot Chat, activa) | Instalada (v0.170.0) | 16/10/2026 | ![Pull Requests](../../extensiones/extensiones-milenka-pull-requests.png) ![Copilot](../../extensiones/extensiones-milenka-copilot.png)|
+| Lautaro Chavez |  @lautarochavez14 | Integrada en VS Code (GitHub Copilot Chat, activa) | Instalada (v0.170.0) | 16/10/2026 | ![Pull Requests](../../extensiones/extensiones-lautaro-pull-requests.jpeg) ![Copilot](../../extensiones/extensiones-lautaro-copilot.jpeg)|
+
+**Motivo:**
+
+El proyecto establece que todos deben tener instaladas las extensiones de GitHub Pull Request y GitHub Copilot.
+
+---
+
+## 9. Resumen del flujo SDD
 
 El proceso de trabajo definido para el proyecto será:
 
@@ -117,8 +139,9 @@ El proceso de trabajo definido para el proyecto será:
 
 ---
 
-## 9. Historial de cambios
+## 10. Historial de cambios
 
 | Fecha | Decisión o cambio | Responsable |
 |---|---|---|
 | 30/08/2026 | Creación inicial del documento de decisiones SDD | Lautaro Chavez |
+| 01/10/2026 | Añadida nueva decisión (7) | Milenka Vila |

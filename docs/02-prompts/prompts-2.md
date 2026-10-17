@@ -2,14 +2,17 @@
 
 ## Información general
 
-- **Modelo:** Gemini
-- **Método:** Role prompting
-- **Objetivo:** Obtener una propuesta inicial de código HTML5 para el proyecto.
+* **Modelo:** Use.ai
+* **Método:** Role prompting
+* **Integrante que utilizó el prompt:** Milenka Vila
+* **Archivo/sección donde se aplicó:** `index.html` — estructura HTML5 inicial.
+* **Objetivo:** Obtener una propuesta inicial de código HTML5 para el proyecto.
 
 ---
 
 ## Prompt exacto
 
+```
 > Actuá como un desarrollador frontend especializado en HTML5 semántico.
 >
 > Necesito generar una estructura HTML inicial para el proyecto académico "Heladería Vainell".
@@ -20,23 +23,26 @@
 >
 > El documento debe incluir:
 >
-> - <!DOCTYPE html>
-> - Etiqueta html con idioma español.
-> - head con charset, viewport y title.
-> - header.
-> - nav.
-> - main.
-> - Sección de presentación.
-> - Sección de catálogo.
-> - Lista de sabores.
-> - Tabla con productos y precios.
-> - Sección explicando cómo realizar un pedido.
-> - Formulario con nombre, contacto, modalidad de entrega y datos relacionados.
-> - footer.
+> * `<!DOCTYPE html>`
+> * Etiqueta html con idioma español.
+> * head con charset, viewport y title.
+> * header.
+> * nav.
+> * main.
+> * Sección de presentación.
+> * Sección de catálogo.
+> * Lista de sabores.
+> * Tabla con productos y precios.
+> * Sección explicando cómo realizar un pedido.
+> * Formulario con nombre, contacto, modalidad de entrega y datos relacionados.
+> * footer.
 >
 > Utilizá etiquetas semánticas correctamente y agregá comentarios indicando dónde se incorporará CSS y JavaScript en futuras entregas.
 >
 > No inventes funcionalidades de backend ni procesamiento real de pagos.
+```
+
+![alt text](prompt-2.png)
 
 ---
 
@@ -49,11 +55,18 @@ Obtener una propuesta de código HTML5 que cumpla con los requerimientos funcion
 ## Resultado obtenido
 
 Características destacadas del código:
-Semántica rigurosa: Hace uso de header, nav, main, section, article, fieldset, legend, table y footer para estructurar la información jerárquicamente.
 
-Accesibilidad integrada: Las etiquetas <label> están correctamente enlazadas mediante sus atributos for e id correspondientes con cada <input>, <select> y <textarea>. La tabla cuenta con <caption> y <thead>/<tbody> para lectores de pantalla.
+**Semántica rigurosa:** Hace uso de `header`, `nav`, `main`, `section`, `article`, `fieldset`, `legend`, `table` y `footer` para estructurar la información jerárquicamente.
 
-Puntos de extensión (CSS/JS): Se dejaron comentarios explicativos en el <head> y antes del </body> indicando exactamente dónde y cómo se vincularán la capa de estilos e interactividad en las siguientes etapas.
+**Accesibilidad integrada:** Las etiquetas `<label>` están correctamente enlazadas mediante sus atributos `for` e `id` correspondientes con cada `<input>`, `<select>` y `<textarea>`. La tabla cuenta con `<caption>` y `<thead>/<tbody>` para mejorar su estructura y accesibilidad.
+
+**Puntos de extensión CSS/JS:** Se dejaron comentarios explicativos en el `<head>` y antes del `</body>` indicando dónde y cómo se vincularán la capa de estilos e interactividad en las siguientes etapas.
+
+---
+
+## Correcciones manuales
+
+Se hicieron cambios en el inicio y registro de sesión.
 
 ---
 
@@ -61,4 +74,4 @@ Puntos de extensión (CSS/JS): Se dejaron comentarios explicativos en el <head> 
 
 Este prompt ayudó a generar una base inicial para analizar la estructura de `index.html` y verificar la presencia de los elementos requeridos.
 
-![alt text](prompt-2.png)
+La propuesta se aplicó sobre `index.html`, utilizado como archivo principal de la página durante la primera etapa del proyecto.

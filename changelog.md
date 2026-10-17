@@ -2,41 +2,79 @@
 
 Este archivo se actualiza con cada Pull Request para registrar avances y correcciones.
 
----
-
-# [Unreleased]
-
-## Added
 
 
-- [feature/frontend-add-html-structure] Se agregaron los códigos html, marcas de donde deben ir los css y javascrip. PR: [#12](https://github.com/eternalnight04/HeladeriaVainell/pull/12) - @britezacostaalexis-pixel (Desarrollador Fronted)
+## [Unreleased]
 
-- [feature/coordinador-setup-repo-and-pages] Se agregaron las carpetas y los archivos correspondientes para asegurar la estructura del proyecto. Se agregó un changelog, plan.md con las especificaciones que debe seguir el proyecto y un archivo README.md con la información del mismo. PR: [#2](https://github.com/eternalnight04/HeladeriaVainell/pull/2) - @eternalnight04 (Coordinador / DevOps)
 
-- [feature/ia-add-prompts-1-to-5] Se agregaron los archivos de prompts e IA. PR: [#4](https://github.com/eternalnight04/HeladeriaVainell/pull/4) - @lautarochavez14 (Especialista en IA y Prompt Engineering)
 
-- [feature/ia-add-prompts-1-to-5] Se hicieron pequeñas correcciones en los archivos de prompts. PR: [#5](https://github.com/eternalnight04/HeladeriaVainell/pull/5) - @lautarochavez14 (Especialista en IA y Prompt Engineering)
+## [Release Actividad Obligatoria N°1] - 2026-08-31
 
-*Nota: La PR #5 no se pudo mergear debido a problemas con cambios en la base, por lo que los cambios fueron trasladados a la PR #9 para que se pueda mergear sin complicaciones.*
+### Added
 
-- [feature/feature/doc-ux-add-readme-and-mockup] Se agregaron las carpetas y los archivos correspondientes para asegurar la estructura del proyecto. Se agregó un changelog, plan.md con las especificaciones que debe seguir el proyecto y un archivo README.md con la información del mismo. PR: [#6](https://github.com/eternalnight04/HeladeriaVainell/pull/6) - @britezacostaalexis-pixel (Documentador / Diseñador UX)
+- [feature/coordinador-setup-repo-and-pages] [Feature] Coordinador / DevOps. PR: [#2](https://github.com/eternalnight04/HeladeriaVainell/pull/2) - @eternalnight04 (Coordinador / DevOps)
 
-- [fix/correcciones-archivos-1] Se agregó el archivo index.html con el código fuente de la página, además de que se agregaron los cambios hechos en la PR #5 a esta. PR: [#9](https://github.com/eternalnight04/HeladeriaVainell/pull/9) - @eternalnight04 (Documentador / DevOps)
+- [feature/ia-add-prompts-1-to-5] docs: agrega spec de IA y decisiones SDD. PR: [#4](https://github.com/eternalnight04/HeladeriaVainell/pull/4) - @lautarochavez14 (Especialista en IA y Prompt Engineering)
 
-- [feature/ia-add-prompts-1-to-5-copy] Se trasladaron los nuevos cambios de la PR #5 a esta nueva PR debido a problemas de merge. PR: [#13](https://github.com/eternalnight04/HeladeriaVainell/pull/13) - @eternalnight04 (Documentador / DevOps)
+- [feature/doc-ux-add-readme-and-mockup]  Documentador / Diseñador UX. PR: [#6](https://github.com/eternalnight04/HeladeriaVainell/pull/6) - @britezacostaalexis-pixel (Documentador / Diseñador UX)
 
-## Changed
+- [fix/correcciones-archivos-1] se completo el archivo index con el codigo fuente de la pagina. PR: [#9](https://github.com/eternalnight04/HeladeriaVainell/pull/9) - @eternalnight04 (Coordinador / DevOps)
 
-- [fix/plan-sesion] Se agregó una nueva función para inicio de sesión y creación de cuentas (como un concepto para la página), debido a esto, se actualizaron plan.md y README.md. PR: [#3](https://github.com/eternalnight04/HeladeriaVainell/pull/3) - @eternalnight04 (Coordinador / DevOps)
+- [feature/frontend-add-html-structure] Feature/frontend add html structure. PR: [#12](https://github.com/eternalnight04/HeladeriaVainell/pull/12) - @britezacostaalexis-pixel (Desarrollador Frontend)
 
-## Fixed
+- [feature/ia-add-prompts-1-to-5-copy] Correcciones de archivos de prompts. PR: [#13](https://github.com/eternalnight04/HeladeriaVainell/pull/13) - @eternalnight04 (Coordinador / DevOps)
 
----
+### Changed
 
-# [Release - Actividad Obligatoria Nº1] - 2026-08-31
+- [fix/desarrollo-frontend-ux-correccion-1] RC 9, 10, 11, 12, 13, 14, 15. PR: [#18](https://github.com/eternalnight04/HeladeriaVainell/pull/18)  @britezacostaalexis-pixel (Documentador / Diseñador UX + Frontend)
 
-Aquí se listaran todas las Pull Requests que entraron en esta release.
-Actualmente están en la sección **[Unreleased]** porque sólo están en la rama `develop`.
+- [fix/plan-sesion] Fix: Se agregó una nueva función al plan. PR: [#3](https://github.com/eternalnight04/HeladeriaVainell/pull/3) - @eternalnight04 (Coordinador / DevOps)
+
+### Fixed
+
+- [fix/correcciones-varias-5] Se elimino una entrada del changelog. PR: [#45](https://github.com/eternalnight04/HeladeriaVainell/pull/45) - @eternalnight04 (Coordinador / DevOps)
+
+- [fix/correcciones-varias-4] Se realizaron nuevos cambios según lo solicitado. PR: [#44](https://github.com/eternalnight04/HeladeriaVainell/pull/44) - @eternalnight04 (Coordinador / DevOps)
+
+- [fix/correcciones-varias-3] Se aplicaron correcciones siguiendo los cambios solicitados. PR: [#43](https://github.com/eternalnight04/HeladeriaVainell/pull/43) - @eternalnight04 (Coordinador / DevOps)
+
+- [fix/changelog-nuevas-entradas-1] Se agregaron nuevas entradas al changelog. PR: [#42](https://github.com/eternalnight04/HeladeriaVainell/pull/42) - @eternalnight04 (Coordinador / DevOps)
+
+- [fix/changelog-correccion-min] Se corrigio changelog con unreleased en header 2. PR: [#41](https://github.com/eternalnight04/HeladeriaVainell/pull/41) - @eternalnight04 (Coordinador / DevOps)
+
+- [fix/correcciones-varias-2] Se corrigieron los archivos de acuerdo a los cambios solicitados. PR: [#40](https://github.com/eternalnight04/HeladeriaVainell/pull/40) - @eternalnight04 (Coordinador / DevOps)
+
+- [fix/correccion-rc] Se realizaron los rc solicitados PR: [#39](https://github.com/eternalnight04/HeladeriaVainell/pull/39) - @britezacostaalexis-pixel (Documentador / Diseñador UX)
+
+- [fix/correcciones-act1-v3] cambios en changelog PR: [#38](https://github.com/eternalnight04/HeladeriaVainell/pull/38) - @britezacostaalexis-pixel (Documentador / Diseñador UX)
+
+- [fix/rehacer-promts-1-5] fix: corrige modelos y trazabilidad de IA PR: [#37](https://github.com/eternalnight04/HeladeriaVainell/pull/37) - @lautarochavez14 (Especialista en IA y Prompt Engineering)
+
+- [fix/rehacer-prompts-1-5] Fix/rehacer prompts 1 5 PR: [#34](https://github.com/eternalnight04/HeladeriaVainell/pull/34) - @lautarochavez14 (Especialista en IA y Prompt Engineering)
+
+- [fix/correcciones-act1-v2]Fix/correcciones act1 v2 PR: [#36](https://github.com/eternalnight04/HeladeriaVainell/pull/36) - @britezacostaalexis-pixel (Documentador / Diseñador UX)
+
+- [fix/correcciones-2] Correcciones de Request Changes varios. PR: [#32](https://github.com/eternalnight04/HeladeriaVainell/pull/32)  - @eternalnight04. (Coordinador / DevOps)
+
+- [fix/ia-correcciones-release]docs: corrige textos de prompts 1 a 5 PR: [#30](https://github.com/eternalnight04/HeladeriaVainell/pull/30) - @lautarochavez14 (Especialista en IA y Prompt Engineering)
+
+- [fix/Rc-act-1]RC2,RC7,RC39 corregidos PR: [#29](https://github.com/eternalnight04/HeladeriaVainell/pull/29) - @britezacostaalexis-pixel (Documentador / Diseñador UX + Frontend)
+
+- [fix/correcciones-act1]Fix/correcciones act1 PR: [#28](https://github.com/eternalnight04/HeladeriaVainell/pull/28) - @britezacostaalexis-pixel (Documentador / Diseñador UX)
+
+- [fix/correcciones-rc-act-1]correcciónes de request change PR: [#27](https://github.com/eternalnight04/HeladeriaVainell/pull/27) - @britezacostaalexis-pixel (Documentador / Diseñador UX)
+
+- [release/actividad-obligatoria-1] Commit directo: "agregado nombre de ia utilizada en cuarto prompt" (17/09/2026). Commit: [`c3b2790`](https://github.com/eternalnight04/HeladeriaVainell/commit/c3b2790b4fd57b8708bf8b0e11c1791fad8a1e86) (fuera de la PR #15; la PR asociada:#14)
+
+- [fix/ia-correcciones-release] Fix/ia correcciones release. PR: [#20](https://github.com/eternalnight04/HeladeriaVainell/pull/20) - @lautarochavez14 (Especialista en IA y Prompt Engineering)
+
+- [fix/comparativa-modelos-archivo] Fix/comparativa modelos archivo. PR: [#14](https://github.com/eternalnight04/HeladeriaVainell/pull/14) - @eternalnight04. (Coordinador / DevOps)
+
+- [fix/ia-correcciones-release] Fix/ia correcciones release. PR: [#22](https://github.com/eternalnight04/HeladeriaVainell/pull/22) - @lautarochavez14 (Especialista en IA y Prompt Engineering)
+
+- [fix/devops-correcciones-1]Correcciones del changelog.  PR: [#16](https://github.com/eternalnight04/HeladeriaVainell/pull/16) - @eternalnight04 (Coordinador / DevOps)
+
+- [fix/devops-correcciones-2] Fix - Corrección archivo DevOps. PR: [#17](https://github.com/eternalnight04/HeladeriaVainell/pull/17) - @eternalnight04 (Coordinador / DevOps)
 
 ---
 

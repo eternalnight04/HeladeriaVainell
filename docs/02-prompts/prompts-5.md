@@ -2,14 +2,17 @@
 
 ## Información general
 
-- **Modelo:** Gemini
-- **Método:** Chain-of-thought guiado
-- **Objetivo:** Revisar el código HTML y verificar su cumplimiento con los requerimientos del proyecto.
+* **Modelo:** Gemini
+* **Método:** Chain-of-thought guiado
+* **Integrante que utilizó el prompt:** Lautaro Chavez
+* **Archivo/sección donde se aplicó:** `index.html` — revisión y validación de la estructura HTML5, contenido, navegación, tabla, formulario y requisitos de la primera entrega.
+* **Objetivo:** Revisar el código HTML y verificar su cumplimiento con los requerimientos del proyecto.
 
 ---
 
 ## Prompt exacto
 
+```
 > Actuá como revisor de código especializado en HTML5.
 >
 > Necesito que analices la estructura de un proyecto académico llamado Heladería Vainell.
@@ -34,11 +37,14 @@
 >
 > Para cada requisito indicá:
 >
-> - Cumple.
-> - No cumple.
-> - Requiere revisión.
+> * Cumple.
+> * No cumple.
+> * Requiere revisión.
 >
 > Si detectás un problema, explicá brevemente cómo podría corregirse sin modificar innecesariamente la estructura existente.
+```
+
+![alt text](prompt-5.png)
 
 ---
 
@@ -50,55 +56,54 @@ Obtener una revisión estructurada del código para detectar posibles errores o 
 
 ## Resultado obtenido
 
-[Completar con el resultado real obtenido al ejecutar el prompt.]Lista de Verificación de Requisitos
-Utilizar HTML5 válido: Cumple.
-El documento inicia con <!DOCTYPE html>, especifica el idioma en <html lang="es">, contiene la codificación UTF-8 y no presenta etiquetas obsoletas.
+### Lista de Verificación de Requisitos
 
-Incluir estructura semántica: Cumple.
-Hace un uso impecable de etiquetas semánticas (<header>, <nav>, <main>, <section>, <article>, <fieldset>, <legend>, <table>, <footer>).
+**Utilizar HTML5 válido: Cumple.**
 
-Contener header, main y footer: Cumple.
+El documento inicia con `<!DOCTYPE html>`, especifica el idioma en `<html lang="es">`, contiene la codificación UTF-8 y no presenta etiquetas obsoletas.
+
+**Incluir estructura semántica: Cumple.**
+
+Hace uso de etiquetas semánticas como `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<fieldset>`, `<legend>`, `<table>` y `<footer>`.
+
+**Contener header, main y footer: Cumple.**
+
 Las tres secciones estructurales principales se encuentran presentes y correctamente delimitadas.
 
-Incluir navegación: Cumple.
-La sección <nav> contiene una lista desordenada con enlaces internos (href="#id").
+**Incluir navegación: Cumple.**
 
-Contener textos descriptivos reales: Cumple.
-No utiliza texto de relleno (Lorem Ipsum); toda la información describe productos, precios y el flujo real de la heladería.
+La sección `<nav>` contiene una lista desordenada con enlaces internos mediante `href="#id"`.
 
-Incluir imágenes con atributo alt: No cumple.
-No se incluyó ninguna etiqueta <img> dentro del documento.
+**Contener textos descriptivos reales: Cumple.**
 
-Contener enlaces: Cumple.
-El menú de navegación incluye enlaces de salto interno a los IDs de las secciones.
+No utiliza texto de relleno (Lorem Ipsum); la información describe los productos, precios y el funcionamiento de la heladería.
 
-Incluir una lista: Cumple.
-Se utilizan listas desordenadas (<ul>) para el menú y los sabores, y una lista ordenada (<ol>) para los pasos de compra.
+**Incluir imágenes con atributo alt: No cumple.**
 
-Incluir una tabla con th y td: Cumple.
-La tabla de precios utiliza <caption>, <thead>, <tbody>, <th> (con sus respectivos atributos scope) y <td>.
+No se incluyó ninguna etiqueta `<img>` dentro del documento.
 
-Contener un formulario de pedido: Cumple.
-Se implementa un elemento <form> completo con inputs de texto, correo, teléfono, menú desplegable y áreas de texto.
+**Contener enlaces: Cumple.**
 
-Permitir indicar delivery o retiro en local: Cumple.
-Contiene un grupo de botones de opción (type="radio") con el atributo name="modalidad".
+El menú de navegación incluye enlaces internos a las diferentes secciones.
 
-No utilizar todavía CSS ni JavaScript funcional: Cumple.
-No hay código CSS en línea, bloques <style> ni archivos de JavaScript ejecutables.
+**Incluir una lista: Cumple.**
 
-Incluir comentarios indicando futuras integraciones de CSS y JavaScript: Cumple.
-Se incluyen comentarios explícitos en el <head> y antes del cierre del </body>.
+Se utilizan listas desordenadas (`<ul>`) para el menú y los sabores, y una lista ordenada (`<ol>`) para los pasos de compra.
 
-Corrección para los puntos observados:
+**Incluir una tabla con th y td: Cumple.**
 
-1. Faltante de imágenes (<img> con atributo alt)
-Para cumplir al 100% con los requisitos sin alterar la estructura existente, se pueden incorporar imágenes en la sección de presentación y en la sección del catálogo.
+La tabla de precios utiliza `<caption>`, `<thead>`, `<tbody>`, `<th>` y `<td>`.
 
----
+**Contener un formulario de pedido: Cumple.**
+
+Se implementa un elemento `<form>` con campos de texto, correo, teléfono, menú desplegable y áreas de texto.
+
+**Permitir indicar delivery o retiro en local: Cumple.**
+
+## Correcciones manuales
+
+Se agregaron más imagenes al código.
 
 ## Aporte al proyecto
 
-Este prompt permitió utilizar la IA como herramienta de revisión y control de calidad para verificar el cumplimiento de los requerimientos definidos en el `plan.md`.
-
-![alt text](prompt-5.png)
+Este prompt ayudó a realizar las últimas correcciones al código html y verificar que sea completamente funcional.
