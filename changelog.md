@@ -16,10 +16,6 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 - [feature/ia-add-prompts-1-to-5] docs: agrega spec de IA y decisiones SDD. PR: [#4](https://github.com/eternalnight04/HeladeriaVainell/pull/4) - @lautarochavez14 (Especialista en IA y Prompt Engineering)
 
-- [feature/ia-add-prompts-1-to-5] Se hicieron pequeñas correcciones en los archivos de prompts. PR: [#5](https://github.com/eternalnight04/HeladeriaVainell/pull/5) - @lautarochavez14 (Especialista en IA y Prompt Engineering)
-
-*Nota: La PR #5 no se pudo mergear debido a problemas con cambios en la base, por lo que los cambios fueron trasladados a la PR #9 para que se pueda mergear sin complicaciones.*
-
 - [feature/doc-ux-add-readme-and-mockup]  Documentador / Diseñador UX. PR: [#6](https://github.com/eternalnight04/HeladeriaVainell/pull/6) - @britezacostaalexis-pixel (Documentador / Diseñador UX)
 
 - [fix/correcciones-archivos-1] se completo el archivo index con el codigo fuente de la pagina. PR: [#9](https://github.com/eternalnight04/HeladeriaVainell/pull/9) - @eternalnight04 (Coordinador / DevOps)
@@ -35,6 +31,8 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 - [fix/plan-sesion] Fix: Se agregó una nueva función al plan. PR: [#3](https://github.com/eternalnight04/HeladeriaVainell/pull/3) - @eternalnight04 (Coordinador / DevOps)
 
 ### Fixed
+
+- [fix/correcciones-varias-5] Se elimino una entrada del changelog. PR: [#45](https://github.com/eternalnight04/HeladeriaVainell/pull/45) - @eternalnight04 (Coordinador / DevOps)
 
 - [fix/correcciones-varias-4] Se realizaron nuevos cambios según lo solicitado. PR: [#44](https://github.com/eternalnight04/HeladeriaVainell/pull/44) - @eternalnight04 (Coordinador / DevOps)
 
