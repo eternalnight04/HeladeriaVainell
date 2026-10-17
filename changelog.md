@@ -36,6 +36,8 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 ## Fixed
 
+- [fix/correcciones-varias-2] Se corrigieron los archivos de acuerdo a los cambios solicitados. PR: [#40](https://github.com/eternalnight04/HeladeriaVainell/pull/40) - @eternalnight04 (Coordinador / DevOps)
+
 - [fix/correccion-rc] Se realizaron los rc solicitados PR: [#39](https://github.com/eternalnight04/HeladeriaVainell/pull/39) - @britezacostaalexis-pixel (Documentador / Diseñador UX)
 
 - [fix/correcciones-act1-v3] cambios en changelog PR: [#38](https://github.com/eternalnight04/HeladeriaVainell/pull/38) - @britezacostaalexis-pixel (Documentador / Diseñador UX)
