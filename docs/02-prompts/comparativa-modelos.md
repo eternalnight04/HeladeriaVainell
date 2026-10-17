@@ -10,10 +10,10 @@ Durante el desarrollo del proyecto se utilizaron diferentes herramientas y model
 
 | Prompt | Tarea | Modelo / herramienta de IA | Método | Resultado / aporte |
 |---|---|---|---|---|
-| Prompt 1 | Estructura semántica inicial en HTML5 |gemini| Zero-shot | Propuso una estructura inicial para organizar el contenido del proyecto utilizando etiquetas semánticas HTML5. |
+| Prompt 1 | Estructura semántica inicial en HTML5 |Claude| Zero-shot Prompting | Propuso una estructura inicial para organizar el contenido del proyecto utilizando etiquetas semánticas HTML5. |
 | Prompt 2 | Generación del HTML inicial | Use.ai | Role prompting | Generó una propuesta de código HTML5 utilizando etiquetas semánticas y contemplando aspectos de accesibilidad y futuras incorporaciones de CSS y JavaScript. |
-| Prompt 3 | Planificación del diseño responsive |chatbox ai | Chatbot | Permitió analizar una propuesta de diseño responsive y definir criterios para adaptar la interfaz a diferentes tamaños de pantalla. |
-| Prompt 4 | Creación del mockup | GPT-4o | Figma | Generó una propuesta visual para organizar las principales secciones de la página y utilizarla como referencia para el desarrollo frontend. |
+| Prompt 3 | Planificación del diseño responsive |Chatbox ai | Zero-shot Prompting | Permitió analizar una propuesta de diseño responsive y definir criterios para adaptar la interfaz a diferentes tamaños de pantalla. |
+| Prompt 4 | Creación del mockup | GPT-4o | Few-shot Prompting | Generó una propuesta visual para organizar las principales secciones de la página y utilizarla como referencia para el desarrollo frontend. |
 | Prompt 5 | Validación de requisitos | Gemini | Chain-of-thought guiado | Permitió realizar una lista de verificación para comprobar el cumplimiento de los requisitos definidos para el proyecto. |
 
 

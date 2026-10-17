@@ -2,8 +2,8 @@
 
 ## Información general
 
-* **Modelo:** claude
-* **Método:** Zero-shot
+* **Modelo:** Claude
+* **Método:** Zero-shot Prompting
 * **Integrante que utilizó el prompt:** Alexis Britez
 * **Archivo/sección donde se aplicó:** `index.html` — estructura semántica inicial de la página.
 * **Objetivo:** Analizar y proponer la estructura semántica inicial del proyecto Heladería Vainell.
