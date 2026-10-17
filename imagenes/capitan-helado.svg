@@ -1,0 +1,206 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 300 430"
+  width="300"
+  height="430"
+  role="img"
+  aria-label="Capitán Helado — mascota de Vainell"
+>
+  <!-- ═══════════════════════════════════════════
+       CAPITÁN HELADO · Vainell
+       Colores principales:
+         Verde menta:       #38D9A9
+         Verde menta oscuro:#1A8A6E / #2EC49A
+         Dulce de leche:    #C8874A / #A06530 / #8B5E2A
+         Piel:              #FDDCAA / #F5CB88 / #E8B87A
+         Fondo:             transparente
+  ═══════════════════════════════════════════ -->
+
+  <!-- ── CAPA ──────────────────────────────── -->
+  <g id="cape">
+    <path d="M95 112 C62 172 46 294 62 426 L150 396 L238 426 C254 294 238 172 205 112 Z"
+          fill="#1A8A6E"/>
+    <!-- destello lateral -->
+    <path d="M120 112 C104 166 100 258 110 360 L150 344 Z"
+          fill="white" opacity="0.1"/>
+  </g>
+
+  <!-- ── PIERNAS ─────────────────────────────── -->
+  <g id="legs">
+    <rect x="98"  y="302" width="36" height="88" rx="17" fill="#2EC49A"/>
+    <rect x="166" y="302" width="36" height="88" rx="17" fill="#2EC49A"/>
+  </g>
+
+  <!-- ── BOTAS ──────────────────────────────── -->
+  <g id="boots">
+    <path d="M90 374 Q92 428 142 428 L150 400 L132 390 Z" fill="#1A8A6E"/>
+    <path d="M166 374 Q168 428 208 428 L208 400 L174 390 Z" fill="#1A8A6E"/>
+  </g>
+
+  <!-- ── TORSO ───────────────────────────────── -->
+  <g id="torso">
+    <!-- cuerpo principal -->
+    <path d="M70 148 Q76 124 150 119 Q224 124 230 148 L234 246 Q190 266 150 268 Q110 266 66 246 Z"
+          fill="#38D9A9"/>
+    <!-- sombra de pectorales -->
+    <ellipse cx="114" cy="175" rx="30" ry="24" fill="#2EC49A" opacity="0.55"/>
+    <ellipse cx="186" cy="175" rx="30" ry="24" fill="#2EC49A" opacity="0.55"/>
+    <!-- zona abdominal -->
+    <ellipse cx="150" cy="232" rx="42" ry="25" fill="#2EC49A" opacity="0.6"/>
+    <line x1="134" y1="212" x2="134" y2="254" stroke="#28B890" stroke-width="1.5" opacity="0.5"/>
+    <line x1="150" y1="208" x2="150" y2="257" stroke="#28B890" stroke-width="1.5" opacity="0.5"/>
+    <line x1="166" y1="212" x2="166" y2="254" stroke="#28B890" stroke-width="1.5" opacity="0.5"/>
+  </g>
+
+  <!-- ── EMBLEMA V (sin tipografía — path geométrico) ── -->
+  <g id="chest-emblem">
+    <circle cx="150" cy="190" r="26" fill="#C8874A"/>
+    <circle cx="150" cy="190" r="21" fill="#A06530" opacity="0.35"/>
+    <!-- V como path: 24×26 px, centrada en 150,190 -->
+    <path d="M138 178 L143 178 L150 200 L157 178 L162 178 L150 204 Z"
+          fill="white"/>
+  </g>
+
+  <!-- ── CINTURÓN ───────────────────────────── -->
+  <g id="belt">
+    <rect x="72"  y="285" width="156" height="17" rx="8.5" fill="#C8874A"/>
+    <rect x="133" y="280" width="34"  height="27" rx="5"   fill="#8B5E2A"/>
+    <circle cx="150" cy="293" r="6" fill="#C8874A"/>
+  </g>
+
+  <!-- ── BRAZO IZQUIERDO ────────────────────── -->
+  <g id="left-arm">
+    <!-- hombro / bíceps -->
+    <ellipse cx="46" cy="178" rx="25" ry="42" fill="#38D9A9"
+             transform="rotate(-22 46 178)"/>
+    <!-- antebrazo -->
+    <ellipse cx="24" cy="232" rx="20" ry="34" fill="#38D9A9"
+             transform="rotate(-12 24 232)"/>
+    <!-- puño -->
+    <circle cx="14" cy="266" r="22" fill="#FDDCAA"/>
+    <path d="M4 261 Q14 255 24 261" stroke="#E8B87A" stroke-width="2"
+          fill="none" stroke-linecap="round"/>
+    <path d="M4 270 Q14 266 24 270" stroke="#E8B87A" stroke-width="1.5"
+          fill="none" stroke-linecap="round" opacity="0.55"/>
+  </g>
+
+  <!-- ── BRAZO DERECHO + CONO ───────────────── -->
+  <g id="right-arm-and-cone">
+    <!-- hombro / bíceps -->
+    <ellipse cx="254" cy="178" rx="25" ry="42" fill="#38D9A9"
+             transform="rotate(22 254 178)"/>
+    <!-- antebrazo -->
+    <ellipse cx="276" cy="232" rx="20" ry="34" fill="#38D9A9"
+             transform="rotate(12 276 232)"/>
+    <!-- mano -->
+    <circle cx="286" cy="266" r="22" fill="#FDDCAA"/>
+
+    <!-- cono de helado -->
+    <g id="ice-cream-cone">
+      <!-- cono (gofre) -->
+      <polygon points="280,284 258,352 302,352" fill="#C8874A"/>
+      <line x1="280" y1="286" x2="260" y2="350" stroke="#A06530"
+            stroke-width="1.5" opacity="0.55"/>
+      <line x1="280" y1="286" x2="300" y2="350" stroke="#A06530"
+            stroke-width="1.5" opacity="0.55"/>
+      <line x1="265" y1="316" x2="295" y2="316" stroke="#A06530"
+            stroke-width="1" opacity="0.45"/>
+      <line x1="261" y1="335" x2="299" y2="335" stroke="#A06530"
+            stroke-width="1" opacity="0.45"/>
+      <!-- bola de menta -->
+      <circle cx="280" cy="276" r="29" fill="#38D9A9"/>
+      <!-- bola de dulce de leche -->
+      <circle cx="274" cy="248" r="25" fill="#FDDCAA"/>
+      <!-- brillo en bola superior -->
+      <path d="M256 250 Q274 242 292 250" stroke="white" stroke-width="2"
+            fill="none" opacity="0.45"/>
+      <!-- chorreo -->
+      <path d="M254 282 Q246 298 248 312" stroke="#2EC49A" stroke-width="5"
+            fill="none" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- ── CABEZA ──────────────────────────────── -->
+  <g id="head">
+
+    <!-- pelo (detrás de la cara) -->
+    <g id="hair">
+      <path d="M92 98 Q93 50 150 44 Q207 50 208 98 Q192 76 150 74 Q108 76 92 98 Z"
+            fill="#C8874A"/>
+      <path d="M92 98 Q96 66 122 54 Q92 74 92 98 Z"
+            fill="#8B5E2A" opacity="0.4"/>
+      <!-- mechones superiores -->
+      <path d="M140 46 Q146 33 153 44" fill="#C8874A"/>
+      <path d="M158 49 Q167 36 173 52" fill="#C8874A"/>
+    </g>
+
+    <!-- banda / máscara en la frente -->
+    <path d="M96 94 Q108 84 150 82 Q192 84 204 94 Q180 87 150 86 Q120 87 96 94 Z"
+          fill="#38D9A9" opacity="0.85"/>
+
+    <!-- cara -->
+    <g id="face">
+      <ellipse cx="150" cy="118" rx="58" ry="62" fill="#FDDCAA"/>
+      <!-- mentón suavizado -->
+      <ellipse cx="150" cy="160" rx="44" ry="20" fill="#F5CB88" opacity="0.5"/>
+
+      <!-- mejillas sonrojadas -->
+      <circle cx="104" cy="130" r="20" fill="#FFB0B0" opacity="0.28"/>
+      <circle cx="196" cy="130" r="20" fill="#FFB0B0" opacity="0.28"/>
+
+      <!-- ojos -->
+      <g id="eyes">
+        <!-- blancos -->
+        <ellipse cx="126" cy="114" rx="19" ry="21" fill="white"/>
+        <ellipse cx="174" cy="114" rx="19" ry="21" fill="white"/>
+        <!-- iris -->
+        <circle cx="128" cy="117" r="13" fill="#1A3A35"/>
+        <circle cx="176" cy="117" r="13" fill="#1A3A35"/>
+        <!-- pupila -->
+        <circle cx="130" cy="119" r="8"  fill="#0A1A17"/>
+        <circle cx="178" cy="119" r="8"  fill="#0A1A17"/>
+        <!-- brillos principales -->
+        <circle cx="134" cy="111" r="5"  fill="white"/>
+        <circle cx="182" cy="111" r="5"  fill="white"/>
+        <!-- brillos secundarios -->
+        <circle cx="132" cy="122" r="2.5" fill="white" opacity="0.5"/>
+        <circle cx="180" cy="122" r="2.5" fill="white" opacity="0.5"/>
+      </g>
+
+      <!-- cejas heroicas -->
+      <g id="eyebrows">
+        <path d="M107 97 Q125 89 143 97" stroke="#8B5E2A" stroke-width="4.5"
+              fill="none" stroke-linecap="round"/>
+        <path d="M157 97 Q175 89 193 97" stroke="#8B5E2A" stroke-width="4.5"
+              fill="none" stroke-linecap="round"/>
+      </g>
+
+      <!-- nariz -->
+      <g id="nose">
+        <ellipse cx="150" cy="134" rx="7" ry="5" fill="#E8B87A"/>
+        <path d="M143 135 Q150 140 157 135" stroke="#D4956A" stroke-width="1.5"
+              fill="none" stroke-linecap="round"/>
+      </g>
+
+      <!-- sonrisa -->
+      <g id="mouth">
+        <path d="M114 150 Q150 176 186 150" stroke="#C8874A" stroke-width="5"
+              fill="none" stroke-linecap="round"/>
+        <!-- dientes -->
+        <path d="M118 150 Q150 174 182 150 Q150 166 118 150 Z" fill="white"/>
+        <!-- lengua -->
+        <ellipse cx="150" cy="166" rx="12" ry="7" fill="#FF9999" opacity="0.7"/>
+        <!-- separadores de dientes -->
+        <line x1="134" y1="151" x2="135" y2="165" stroke="#DDD0C8" stroke-width="1.5"/>
+        <line x1="150" y1="151" x2="150" y2="167" stroke="#DDD0C8" stroke-width="1.5"/>
+        <line x1="166" y1="151" x2="165" y2="165" stroke="#DDD0C8" stroke-width="1.5"/>
+      </g>
+
+      <!-- hoyuelo mentón -->
+      <path d="M145 182 Q150 187 155 182" stroke="#E8B87A" stroke-width="2.5"
+            fill="none" stroke-linecap="round" opacity="0.6"/>
+    </g>
+
+  </g>
+
+</svg>

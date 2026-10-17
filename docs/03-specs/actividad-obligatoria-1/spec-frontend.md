@@ -1,0 +1,96 @@
+# spec-frontend.md — Desarrollador Frontend
+
+**Proyecto:** Vainell
+**Entrega:** Actividad Obligatoria N°1
+**Rol:** Desarrollador Frontend
+**Rama:** `feature/frontend-add-html-structure`
+
+---
+## Aclaración:
+
+**Situación:** en esta entrega no se respetó el orden de Spec-Driven Development. El HTML se generó primero, en los commits `fa44538` y `f87bcdf` (21:41 a 22:02hs), y el contenido real de esta especificación se escribió después, en el commit `88dbf69` (22:19hs). El flujo fue código → spec, en lugar de spec → código.
+
+**Consecuencia:** en este archivo la spec funciona como documentación de lo que ya estaba construido, y no como el documento que guió el desarrollo. Por eso no debe leerse como evidencia de que el HTML se derivó de la spec.
+
+**Decisión:** esta desviación no se corrige retroactivamente. El historial de git es el registro de lo que efectivamente ocurrió, y reescribirlo (rebase, cambio de fechas) para simular otro orden alteraría ese registro. Se deja constancia de la desviación en este archivo.
+
+
+## 1. Qué se le solicitó a Copilot
+
+Se conectó el servidor MCP de Figma (Dev Mode, remoto) a VS Code para que 
+GitHub Copilot en modo Agente pudiera leer directamente el mockup diseñado 
+en Figma.
+
+El mockup se organizó previamente en 9 Frames independientes, uno por 
+sección de la página (Header, Inicio, Características, Por qué Vainell, 
+Catálogo, Cómo pedir, Pedido, Testimonios y Contacto), para poder 
+trabajar la generación de código de forma ordenada, frame por frame, 
+en lugar de pedir toda la página de una sola vez.
+
+Para cada Frame, se le pidió a Copilot que:
+- Analizara el diseño correspondiente a través del servidor MCP de Figma.
+- Generara el fragmento de HTML5 semántico de esa sección específica 
+  (título, párrafos, imágenes con atributo `alt`, enlaces, listas y 
+  tablas donde correspondiera, y etiquetas semánticas como `header`, 
+  `nav`, `main`, `section`, `footer`).
+- No incluyera CSS ni JavaScript, y en su lugar dejara comentarios HTML 
+  indicando en qué parte se aplicará el CSS y dónde se agregará el 
+  JavaScript en etapas posteriores del proyecto.
+
+---
+
+## 2. Qué sugirió Copilot
+
+Al leer cada Frame por separado, Copilot propuso ir generando la 
+estructura como fragmentos de código independientes, correspondientes 
+a cada sección del sitio:
+
+1. Header fijo con logo, navegación y botón de acción principal ("Pedir ahora")
+2. Hero section (Inicio) con título, subtítulo, botones de llamada a la 
+   acción e imagen principal
+3. Sección de características/estadísticas destacadas
+4. Sección "¿Por qué Vainell?" con tarjetas de beneficios
+5. Catálogo de productos con filtros por categoría y grilla de tarjetas
+6. Sección "¿Cómo pedir?" con los pasos numerados
+7. Formulario de pedido completo, con campos de datos y selector de 
+   modalidad (Delivery / Retiro en local)
+8. Sección de testimonios de clientes
+9. Footer con datos de contacto, horarios y redes sociales
+
+
+---
+
+## 3. Qué decidí utilizar
+
+- Se utilizaron los 9 fragmentos generados por Copilot, integrándolos en 
+ un único archivo `index.html`, respetando el orden de las secciones tal 
+ como fueron diseñadas en el mockup de Figma.Se modificaron leves partes de la  
+ estructura general propuesta; se mantuvieron las etiquetas semánticas, 
+ los atributos de accesibilidad
+ sugeridos por Copilot, y los comentarios indicando dónde se aplicará el 
+ CSS y el JavaScript en el futuro.
+
+---
+
+## 4. Qué se descartó
+
+No se descartó contenido estructural de lo sugerido por Copilot. El 
+único ajuste manual realizado fue de organización de donde debia ir cada estructura y frame del código en  el index, no 
+del código HTML en sí, que se conservó tal como fue generado por 
+Copilot a partir de cada Frame.
+
+---
+
+## 5. Criterios de aceptación
+
+- [ ] El documento es HTML5 válido (`<!DOCTYPE html>`, `<head>` con `charset`, `viewport` y `title`, `<body lang="es">`).
+- [ ] Usa etiquetas semánticas de forma pertinente: `header`, `nav`, `main`, `section`, `article`, `footer`.
+- [ ] Contiene título y párrafos descriptivos reales de Vainell (sin Lorem Ipsum).
+- [ ] Incluye imágenes con atributo `alt` descriptivo.
+- [ ] Incluye enlaces de navegación interna y a redes sociales.
+- [ ] Incluye al menos una lista (ordenada o desordenada).
+- [ ] Incluye una tabla con `<th>`/`<td>` (catálogo de precios).
+- [ ] Incluye el formulario de pedido con nombre, modalidad de entrega (delivery/retiro) y dirección/horario según corresponda.
+- [ ] Incluye la sección "Mi cuenta Vainell" con formulario de inicio de sesión y formulario de registro.
+- [ ] Contiene comentarios `<!-- CSS: ... -->` y `<!-- JS: ... -->` marcando los puntos de futura integración.
+- [ ] Las 9 secciones del mockup de Figma están integradas en `index.html` en el orden correspondiente.
