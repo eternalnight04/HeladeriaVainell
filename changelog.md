@@ -8,11 +8,11 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 
 
-## [Release Actividad Obligatoria Nº1] - 2026-08-31
+## [Release Actividad Obligatoria N°1] - 2026-08-31
 
-## Added
+### Added
 
-- [feature/coordinador-setup-repo-and-pages] [Feature] Coordinador / DevOps. Se agregaron los archivos y carpetas necesarias para el proyecto. PR: [#2](https://github.com/eternalnight04/HeladeriaVainell/pull/2) - @eternalnight04 (Coordinador / DevOps)
+- [feature/coordinador-setup-repo-and-pages] [Feature] Coordinador / DevOps. PR: [#2](https://github.com/eternalnight04/HeladeriaVainell/pull/2) - @eternalnight04 (Coordinador / DevOps)
 
 - [feature/ia-add-prompts-1-to-5] docs: agrega spec de IA y decisiones SDD. PR: [#4](https://github.com/eternalnight04/HeladeriaVainell/pull/4) - @lautarochavez14 (Especialista en IA y Prompt Engineering)
 
@@ -22,19 +22,19 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 - [feature/doc-ux-add-readme-and-mockup] Documentador / Diseñador UX. PR: [#6](https://github.com/eternalnight04/HeladeriaVainell/pull/6) - @britezacostaalexis-pixel (Documentador / Diseñador UX)
 
-- [fix/correcciones-archivos-1] se completo el archivo index con el codigo fuente de la pagina. Se agregó el código fuente a index.html. PR: [#9](https://github.com/eternalnight04/HeladeriaVainell/pull/9) - @eternalnight04 (Coordinador / DevOps)
+- [fix/correcciones-archivos-1] se completo el archivo index con el codigo fuente de la pagina. PR: [#9](https://github.com/eternalnight04/HeladeriaVainell/pull/9) - @eternalnight04 (Coordinador / DevOps)
 
-- [feature/frontend-add-html-structure] Feature/frontend add html structure. Se generó la estructura HTML5 inicial del sitio (index.html) a partir del mockup diseñado en Figma, utilizando el servidor MCP de Figma (Dev Mode) conectado a VS Code junto con GitHub Copilot en modo Agente. PR: [#12](https://github.com/eternalnight04/HeladeriaVainell/pull/12) - @britezacostaalexis-pixel (Desarrollador Frontend)
+- [feature/frontend-add-html-structure] Feature/frontend add html structure. PR: [#12](https://github.com/eternalnight04/HeladeriaVainell/pull/12) - @britezacostaalexis-pixel (Desarrollador Frontend)
 
-- [feature/ia-add-prompts-1-to-5-copy] Correcciones de archivos de prompts. Se corrigieron y modificaron los archivos del prompt 1 al 5. PR: [#13](https://github.com/eternalnight04/HeladeriaVainell/pull/13) - @eternalnight04 (Coordinador / DevOps)
+- [feature/ia-add-prompts-1-to-5-copy] Correcciones de archivos de prompts. PR: [#13](https://github.com/eternalnight04/HeladeriaVainell/pull/13) - @eternalnight04 (Coordinador / DevOps)
 
-## Changed
+### Changed
 
-- [fix/desarrollo-frontend-ux-correccion-1] RC 9, 10, 11, 12, 13, 14, 15. PR: [#18](https://github.com/eternalnight04/HeladeriaVainell/pull/18)  @britezacostaalexis-pixel (Documentador / Diseñador UX-Frontend)
+- [fix/desarrollo-frontend-ux-correccion-1] RC 9, 10, 11, 12, 13, 14, 15. PR: [#18](https://github.com/eternalnight04/HeladeriaVainell/pull/18)  @britezacostaalexis-pixel (Documentador / Diseñador UX + Frontend)
 
-- [fix/plan-sesion] Se agregó una nueva función al plan. Se agregó el concepto de un sistema de inicio de sesión y creación de usuarios para la página. PR: [#3](https://github.com/eternalnight04/HeladeriaVainell/pull/3) - @eternalnight04 (Coordinador / DevOps)
+- [fix/plan-sesion] Se agregó una nueva función al plan. PR: [#3](https://github.com/eternalnight04/HeladeriaVainell/pull/3) - @eternalnight04 (Coordinador / DevOps)
 
-## Fixed
+### Fixed
 
 - [fix/changelog-nuevas-entradas-1] Se agregaron nuevas entradas al changelog. PR: [#42](https://github.com/eternalnight04/HeladeriaVainell/pull/42) - @eternalnight04 (Coordinador / DevOps)
 
@@ -58,9 +58,9 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 - [fix/Rc-act-1]RC2,RC7,RC39 corregidos PR: [#29](https://github.com/eternalnight04/HeladeriaVainell/pull/29) - @britezacostaalexis-pixel (Documentador / Diseñador UX + Frontend)
 
-- [fix/correcciones-act1]Fix/correcciones act1 PR: [#28](https://github.com/eternalnight04/HeladeriaVainell/pull/28) - @britezacostaalexis-pixel (Documentador / Diseñador UX + Frontend)
+- [fix/correcciones-act1]Fix/correcciones act1 PR: [#28](https://github.com/eternalnight04/HeladeriaVainell/pull/28) - @britezacostaalexis-pixel (Documentador / Diseñador UX)
 
-- [fix/correcciones-rc-act-1]correcciónes de request change PR: [#27](https://github.com/eternalnight04/HeladeriaVainell/pull/27) - @britezacostaalexis-pixel (Documentador / Diseñador UX + Frontend)
+- [fix/correcciones-rc-act-1]correcciónes de request change PR: [#27](https://github.com/eternalnight04/HeladeriaVainell/pull/27) - @britezacostaalexis-pixel (Documentador / Diseñador UX)
 
 - [release/actividad-obligatoria-1] Commit directo: "agregado nombre de ia utilizada en cuarto prompt" (17/09/2026). Commit: [`c3b2790`](https://github.com/eternalnight04/HeladeriaVainell/commit/c3b2790b4fd57b8708bf8b0e11c1791fad8a1e86) (fuera de la PR #15; la PR asociada:#14)
 

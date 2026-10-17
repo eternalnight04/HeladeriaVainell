@@ -117,8 +117,8 @@ La verificación se realiza integrante por integrante. Cada uno comprueba en su 
 |---|---|---|---|---|---|
 | Alexis Britez | @britezacostaalexis-pixel | Integrada en VS Code (GitHub Copilot Chat, activa) | Instalada (v0.170.0) | 16/10/2026 | ![Pull Requests](../../extensiones/extensiones-alexis-pull-requests.png) ![Copilot](../../extensiones/extensiones-alexis-copilot.png)
 |
-| Milenka Villa |  @eternalnight04 | Pendiente de verificación | Pendiente de verificación | Pendiente | ![Pull Requests](../../extensiones/extensiones...) ![Copilot](../../extensiones/extensiones...)|
-| Lautaro Chavez |  @lautarochavez14 | Pendiente de verificación | Pendiente de verificación | Pendiente | ![Pull Requests](../../extensiones/extensiones...) ![Copilot](../../extensiones/extensiones...)|
+| Milenka Vila |  @eternalnight04 | Integrada en VS Code (GitHub Copilot Chat, activa) | Instalada (v0.170.0) | 16/10/2026 | ![Pull Requests](../../extensiones/extensiones-milenka-pull-requests.png) ![Copilot](../../extensiones/extensiones-milenka-copilot.png)|
+| Lautaro Chavez |  @lautarochavez14 | Integrada en VS Code (GitHub Copilot Chat, activa) | Instalada (v0.170.0) | 16/10/2026 | ![Pull Requests](../../extensiones/extensiones-lautaro-pull-requests.jpeg) ![Copilot](../../extensiones/extensiones-lautaro-copilot.jpeg)|
 
 **Motivo:**
 
