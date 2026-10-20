@@ -6,6 +6,10 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 ## [Unreleased]
 
+### Added
+
+- [feature/coord-devops-update-figma-and-readme] Actualización de Mockup. PR: [#51](https://github.com/eternalnight04/HeladeriaVainell/pull/51) - @eternalnight04 (Desarrollador Frontend / CSS)
+
 
 
 ## [Release Actividad Obligatoria N°1] - 2026-08-31
