@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Heladería Vainell</title>
+  <meta name="description" content="Helados artesanales Vainell. Descubrí sabores únicos y pedí delivery o retiro en el local.">
 </head>
 <body>
   <header>
   <!-- Aquí se aplicará el CSS del header. -->
 
   <a href="#inicio" aria-label="Vainell, ir al inicio">
-    <span>V</span>
+    <img src="imagenes/logo_vainell.png" alt="Logo de Vainell">
     <span>Vainell</span>
   </a>
 
@@ -33,8 +34,7 @@
  
         <h1 id="titulo-inicio">
           El frío<br>
-          que<br>
-          enamora
+          que <em>enamora.</em>
         </h1>
  
         <p>
@@ -42,26 +42,21 @@
           Delivery y retiro en local, en el día.
         </p>
  
-        <img src="imagenes/cono-de-helado.jpg"
-             alt="Cono de helado con tres bochas: vainilla, chocolate y frutilla"
-             class="hero-imagen"
-             height="400">
- 
         <div>
-          <a href="#catalogo">Ver catálogo</a>
+          <a href="#catalogo">Descubrir sabores</a>
           <a href="#pedido">Hacer mi pedido</a>
         </div>
  
         <ul>
-          <li>Delivery disponible</li>
-          <li>+30 sabores</li>
-          <li>Sin conservantes</li>
+          <li>+30<br><small>sabores</small></li>
+          <li>20 min<br><small>entrega promedio</small></li>
+          <li>100%<br><small>artesanal</small></li>
         </ul>
       </div>
  
       <div class="hero-tarjeta">
-        <img src="imagenes/capitan-helado.svg" alt="Capitán Helado, símbolo de nuestra marca" width="200" height="200">
-        <p><strong>Capitán Helado</strong> <span>Guardián del sabor</span></p>
+        <img src="imagenes/capitan-helado-reboot.png" alt="Capitán Helado, símbolo de nuestra marca">
+        <p><strong>Capitán Helado</strong><span>Guardián del sabor</span></p>
       </div>
  
       <figure>
@@ -146,7 +141,6 @@
 
   <div id="por-kilo">
   <!-- CSS: Aquí se aplicará el estilo de la tabla (bordes, espaciado entre filas, tipografía). -->
-  <!-- JS: Aquí se controlará la visibilidad de esta tabla según la categoría seleccionada en el nav (mostrar solo si "Por kilo" está activo). -->
   <table>
     <caption>Sabores disponibles por kilo</caption>
     <thead>
@@ -212,7 +206,6 @@
 
 <div id="potes">
   <!-- CSS: Aquí se aplicará el estilo de la tabla (bordes, espaciado entre filas, tipografía). -->
-  <!-- JS: Aquí se controlará la visibilidad de esta tabla según la categoría seleccionada en el nav (mostrar solo si "Potes" está activo). -->
   <table>
     <caption>Potes de helado</caption>
     <thead>
@@ -254,7 +247,6 @@
 
 <div id="palitos">
   <!-- CSS: Aquí se aplicará el estilo de la tabla (bordes, espaciado entre filas, tipografía). -->
-  <!-- JS: Aquí se controlará la visibilidad de esta tabla según la categoría seleccionada en el nav (mostrar solo si "Palitos" está activo). -->
   <table>
     <caption>Palitos y bombones helados</caption>
     <thead>
@@ -302,7 +294,6 @@
 
 <div id="tortas">
   <!-- CSS: Aquí se aplicará el estilo de la tabla (bordes, espaciado entre filas, tipografía). -->
-  <!-- JS: Aquí se controlará la visibilidad de esta tabla según la categoría seleccionada en el nav (mostrar solo si "Tortas" está activo). -->
   <table>
     <caption>Tortas heladas</caption>
     <thead>
@@ -344,7 +335,6 @@
 
 <div id="toppings">
   <!-- CSS: Aquí se aplicará el estilo de la tabla (bordes, espaciado entre filas, tipografía). -->
-  <!-- JS: Aquí se controlará la visibilidad de esta tabla según la categoría seleccionada en el nav (mostrar solo si "Toppings" está activo). -->
   <table>
     <caption>Toppings y salsas</caption>
     <thead>
@@ -496,6 +486,7 @@
 </section>
 
 <section id="mi-cuenta" aria-labelledby="titulo-mi-cuenta">
+  <!-- Aqu? se aplicar?n los estilos de la secci?n de cuenta y sus formularios. -->
   <h2 id="titulo-mi-cuenta">Mi cuenta Vainell</h2>
   <p>Iniciá sesión o creá tu cuenta para agilizar tus próximos pedidos.</p>
 
@@ -602,6 +593,10 @@
 
   <section aria-labelledby="titulo-footer">
     <h2 id="titulo-footer">Vainell</h2>
+    <a class="marca" href="#inicio" aria-label="Vainell, volver al inicio">
+      <img src="imagenes/logo_vainell.png" alt="">
+      <span>Vainell</span>
+    </a>
 
     <p>
       Helados artesanales elaborados con amor y los mejores ingredientes
