@@ -40,9 +40,9 @@ Como se trata de un **simulador**, el pedido no se procesa realmente (no hay pas
 
 | Etapa | Tecnología |
 |---|---|
-| Entrega 1 (actual) | HTML5 semántico |
-| Próximas entregas | CSS3 (maquetación y diseño responsive) |
-| Próximas entregas | JavaScript (interactividad, validaciones, cálculo de envío, simulación del pedido) |
+| Entrega 1 | HTML5 semántico |
+| Entrega 2 (actual) | CSS3 (maquetación y diseño responsive) |
+| Próxima entrega | JavaScript (interactividad, validaciones, cálculo de envío, simulación del pedido) |
 | Gestión de proyecto | Git / GitHub (branch model, Pull Requests, Issues) |
 | IA | GitHub Copilot (modo Agente), y otros modelos (ChatGPT, Gemini, Claude, etc.) para distintas tareas del proyecto |
 | Diseño | Figma (mockup) + servidor MCP de Figma |
