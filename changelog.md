@@ -6,23 +6,22 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 ## [Unreleased] 
 
-## [Release Actividad Obligatoria N°2] - 2026-10-20
+### Added
+
+- [feature/coord-devops-update-figma-and-readme] Actualización de Mockup. PR: [#51](https://github.com/eternalnight04/HeladeriaVainell/pull/51) - @eternalnight04 (Desarrollador Frontend / CSS)
+
 
 ### Added
 
-- [feature/coord-devops-update-figma-and-readme] Actualización de Mockup. PR: [#51](https://github.com/eternalnight04/HeladeriaVainell/pull/51) - @eternalnight04 (Coordinador / DevOps)
-
-- [feature/responsive-design-add-responsive-styles] Se implementó el diseño responsivo. PR: [#50](https://github.com/eternalnight04/HeladeriaVainell/pull/50) - @eternalnight04 (Especialista en Responsive Design)
-
 - [feature/dev-frontend-css-add-styles] Agregado de estilos y componentes CSS. PR: [#48](https://github.com/eternalnight04/HeladeriaVainell/pull/48) - @eternalnight04 (Desarrollador Frontend / CSS)
 
-- [feature/doc-qa-tester-add-test-cases] docs(qa): incorporación de casos de prueba 1-5 e informe consolidado de testing (Momento 1) PR: [#26](https://github.com/eternalnight04/HeladeriaVainell/pull/26) - @lautarochavez14 (4 Documentador / QA Tester)
+- [feature/responsive-design-add-responsive-styles] Se implementó el diseño responsivo. PR: [#50](https://github.com/eternalnight04/HeladeriaVainell/pull/50) - @eternalnight04 (Especialista en Responsive Design)
 
 ### Changed
 
 ### Fixed
 
-- [fix/correcciones-act-2] correcciónes request changes PR: [#53](https://github.com/eternalnight04/HeladeriaVainell/pull/53) -@britezacostaalexis-pixel (Coordinador / DevOps)
+- [fix/frontend-correcciones-1] Correcciones frontend y responsive. PR: [#55](https://github.com/eternalnight04/HeladeriaVainell/pull/55) - @eternalnight04 (Desarrollador Frontend / CSS)
 
 ## [Release Actividad Obligatoria N°1] - 2026-08-31
 

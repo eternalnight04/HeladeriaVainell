@@ -72,7 +72,14 @@ El `index.html` solo recibe los `<link>` a las hojas de estilo en el `<head>`; n
 
 ## 5. Prompt utilizado
 
-**Herramienta usada:** GitHub Copilot. Archivos adjuntados como contexto: `index.html`, `plan.md`, la consigna de la Actividad Obligatoria N°2 (PDF), la imagen de Capitán Helado y la imagen del logo de Vainell.
+**Herramienta usada:** Claude.ai. Esto debido a que Copilot generó un error inesperado a la hora de realizar el prompt asignado. Se recurrió a esta IA como último recurso luego de que se haya reintentado enviar el prompt reescrito varias veces.
+
+![alt text](./../../02-prompts/actividad-obligatoria-2/prompt-frontend-1.png)
+
+Archivos adjuntados como contexto: `index.html`, `plan.md`, la consigna de la Actividad Obligatoria N°2 (PDF), la imagen de Capitán Helado y la imagen del logo de Vainell.
+
+![alt text](./../../02-prompts/actividad-obligatoria-2/prompt-frontend-1.png)
+
 
 ```
 Crea los archivos components.css (botones, cards, navegación, formularios, estados hover/focus) y styles.css (variables CSS en :root, reset, tipografias, colores, layout base) para el diseño visual de index.html (ten en cuenta los comentarios). El diseño debe ser igual o parecido a este modelo de Figma: https://www.figma.com/make/Si4hHXYePCegrXfCQ5TNf3/Heladeria-Vainell-Segundo-Mockup?fullscreen=1&t=Xpd4GgpcrVNqz7z7-1&code-node-id=0-6
