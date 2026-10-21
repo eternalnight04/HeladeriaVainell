@@ -21,6 +21,7 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 ### Fixed
 
+- [fix/frontend-correcciones-1] Correcciones frontend y responsive. PR: [#55](https://github.com/eternalnight04/HeladeriaVainell/pull/55) - @eternalnight04 (Desarrollador Frontend / CSS)
 
 ## [Release Actividad Obligatoria N°1] - 2026-08-31
 
