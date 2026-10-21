@@ -18,7 +18,11 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 - [feature/doc-qa-tester-add-test-cases] docs(qa): incorporación de casos de prueba 1-5 e informe consolidado de testing (Momento 1) PR: [#26](https://github.com/eternalnight04/HeladeriaVainell/pull/26) - @lautarochavez14 (4 Documentador / QA Tester)
 
+### Changed
 
+### Fixed
+
+- [fix/correcciones-act-2] correcciónes request changes PR: [#53](https://github.com/eternalnight04/HeladeriaVainell/pull/53) -@britezacostaalexis-pixel (Coordinador / DevOps)
 
 ## [Release Actividad Obligatoria N°1] - 2026-08-31
 
