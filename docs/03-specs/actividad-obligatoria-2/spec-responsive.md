@@ -6,8 +6,6 @@
 **Rama:** `feature/responsive-design-add-responsive-styles` → `develop`
 **Ruta:** `docs/03-specs/actividad-obligatoria-2/spec-responsive.md`
 
-> **Orden de commits:** esta spec (Parte A, secciones 1 a 7) debe commitearse **antes** que `css/responsive.css`. La Parte B (cierre con evidencia) se completa al terminar.
-
 ---
 
 ## PARTE A — Planificación previa
@@ -138,17 +136,24 @@ En cada viewport se revisa:
 
 ## PARTE B — Cierre con evidencia
 
-> Completar al terminar el trabajo con lo que **efectivamente** se hizo. Esta sección es evidencia: no reconstruir prompts de memoria ni describir pasos que no se hicieron.
-
 ## 8. Prompt exacto usado
 
-**Herramienta realmente usada:** Claude (chat de claude.ai), no Copilot Agent. El enlace de Figma Make bloquea el acceso automatizado, por lo que el mockup **no pudo leerse** y la fidelidad se tomó de los CSS existentes.
+**Herramienta realmente usada:** Claude (chat de claude.ai), no Copilot Agent. Esto debido a un error de la IA en el que no terminaba de completar la solicitud. 
+
+![alt text](../../02-prompts/actividad-obligatoria-2/prompt-frontend-1.png)
+
+El enlace de Figma Make bloquea el acceso automatizado, por lo que el mockup **no pudo leerse** y la fidelidad se tomó de los CSS existentes.
 
 Archivos adjuntados como contexto: `index.html`, `css/styles.css`, `css/components.css`, `plan.md` y la consigna de la Actividad Obligatoria N°2 (PDF).
+
+![alt text](../../02-prompts/actividad-obligatoria-2/prompt-responsive-2.png)
+
 
 ```
 Crea el archivo responsive.css para contribuir al diseño visual de index.html (ten en cuenta los comentarios). El diseño debe ser igual o parecido a este modelo de Figma: https://www.figma.com/make/Si4hHXYePCegrXfCQ5TNf3/Heladeria-Vainell-Segundo-Mockup?fullscreen=1&t=Xpd4GgpcrVNqz7z7-1&code-node-id=0-6
 ```
+
+
 
 ## 9. Resultado obtenido
 
@@ -168,14 +173,3 @@ Controles realizados: se verificó que las llaves y los comentarios estén balan
 ## 10. Ajustes manuales realizados
 
 - `responsive.css` está enlazado en `index.html` después de `components.css`.
-- `<completar: comparación de los breakpoints y layouts contra el mockup de Figma, y qué se corrigió y por qué>`
-- `<completar: ajustes hechos al probar en los viewports de la sección 7 (por ejemplo, altura de .hero-imagen, recorte de la foto del cono, ancho del menú)>`
-- `<completar: decisión final sobre el tamaño del botón "Agregar" en tablet y desktop>`
-
-### Pruebas de integración con el Desarrollador Frontend
-
-| Fecha | Entorno (localhost / GitHub Pages) | Viewports revisados | Resultado |
-|---|---|---|---|
-| `<completar>` | `<completar>` | `<completar>` | `<completar>` |
-
-Issues de QA recibidos y resueltos: `<completar con links a los issues de GitHub>`
