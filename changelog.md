@@ -4,11 +4,19 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 
 
-## [Unreleased]
+## [Unreleased] 
+
+## [Release Actividad Obligatoria N°2] - 2026-10-20
 
 ### Added
 
 - [feature/coord-devops-update-figma-and-readme] Actualización de Mockup. PR: [#51](https://github.com/eternalnight04/HeladeriaVainell/pull/51) - @eternalnight04 (Desarrollador Frontend / CSS)
+
+- [feature/responsive-design-add-responsive-styles] Se implementó el diseño responsivo. PR: [#50](https://github.com/eternalnight04/HeladeriaVainell/pull/50) - @eternalnight04 ( Especialista en Responsive Design)
+
+- [feature/dev-frontend-css-add-styles] Agregado de estilos y componentes CSS. PR: [#48](https://github.com/eternalnight04/HeladeriaVainell/pull/48) - @eternalnight04 (Desarrollador Frontend / CSS)
+
+- [feature/doc-qa-tester-add-test-cases]docs(qa): incorporación de casos de prueba 1-5 e informe consolidado de testing (Momento 1) PR: [#26](https://github.com/eternalnight04/HeladeriaVainell/pull/26) - @lautarochavez14 (Desarrollador Frontend / CSS)
 
 
 
