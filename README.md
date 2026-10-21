@@ -34,8 +34,8 @@
 
 ## Tecnologías utilizadas
 
-- **HTML5** (estructura semántica) — entrega actual
-- **CSS3** (maquetación y diseño responsive) — próximas entregas
+- **HTML5** (estructura semántica)
+- **CSS3** (maquetación y diseño responsive) — entrega actual
 - **JavaScript** (interactividad, validaciones, cálculo de envío) — próximas entregas
 - **Git / GitHub** (branch model, Pull Requests, Issues) para la gestión colaborativa del proyecto
 - **IA generativa** (GitHub Copilot en modo Agente, ChatGPT, Gemini, Claude, entre otros) aplicada en distintas etapas del desarrollo
@@ -64,10 +64,11 @@ El mockup del proyecto fue desarrollado en Figma y toma como referencia los requ
 ## Documentación
 
 -  Plan del proyecto: [plan.md](plan.md)
--  [`docs/01-mockup/diseño-inicial`](./docs/01-mockup/actividad-obligatoria-1/actividad-obligatoria-01.md) — Ver en Figma: https://www.figma.com/make/8UBb5SIznSz81a6y57nQ7v/Ice-Cream-Shop?t=MiOriddmlnQAfXnL-20&fullscreen=1
+-  Primer Mockup: [`docs/01-mockup/actividad-obligatoria-1/`](./docs/01-mockup/actividad-obligatoria-1/01-diseño-inicial-inicio.png) — Ver en Figma: https://www.figma.com/make/8UBb5SIznSz81a6y57nQ7v/Ice-Cream-Shop?t=MiOriddmlnQAfXnL-20&fullscreen=1
+- Segundo Mockup: [`docs/01-mockup/actividad-obligatoria-2/`](docs/01-mockup/actividad-obligatoria-2/01-diseño-con-estilos.png) - Ver en Figma: https://www.figma.com/make/Si4hHXYePCegrXfCQ5TNf3/Heladeria-Vainell-Segundo-Mockup?fullscreen=1&t=tJRtkXQdmbSxJK3J-1&code-node-id=0-6
 -  Prompts de IA: [docs/02-prompts/prompts.md](docs/02-prompts/prompts.md)
 -  Changelog: [changelog.md](changelog.md)
--  Especificaciones técnicas: [docs/03-specs](docs/03-specs)
+-  Especificaciones técnicas: [`docs/03-specs/actividad-obligatoria-2/`](docs/03-specs/actividad-obligatoria-2/)
 
 ---
 
@@ -75,7 +76,7 @@ El mockup del proyecto fue desarrollado en Figma y toma como referencia los requ
 
 | Nombre completo | N° de Matrícula | Usuario GitHub | Rol en esta entrega |
 |---|---|---|---|
-| *Milenka Vila* | *157550* | *@eternalnight04* | Coordinador / DevOps |
-| *Alexis Matias Britez Acosta* | *158100* | *@britezacostaalexis-pixel* | Desarrollador Frontend |
-| *Alexis Matias Britez Acosta* | *158100* | *@britezacostaalexis-pixel* | Documentador / Diseñador UX |
-| *Lautaro Chavez* | *151222* | *@lautarochavez14* | Especialista en IA y Prompt Engineering |
+| *Alexis Matias Britez Acosta* | *158100* | *@britezacostaalexis-pixel* | Coordinador / DevOps |
+| *Lautaro Chavez* | *151222* | *@lautarochavez14* | Documentador / QA Tester |
+| *Milenka Vila* | *157550* | *@eternalnight04* | Desarrollador Frontend |
+| *Milenka Vila* | *157550* | *@eternalnight04* | Especialista en Responsive |

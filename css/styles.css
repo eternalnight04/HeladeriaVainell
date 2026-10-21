@@ -1,0 +1,607 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap");
+
+/* ==========================================================================
+   1. VARIABLES (:root)
+   ========================================================================== */
+:root {
+  /* --- Paleta: sale del logo (verde azulado + menta) y de Capitán Helado
+         (menta, crema y dorado) --- */
+  --color-primary: #1f7a70;        /* teal: acciones principales */
+  --color-primary-dark: #14484a;   /* teal oscuro: títulos y hover */
+  --color-primary-deep: #0f2f35;   /* fondo del footer */
+  --color-mint: #aee9df;           /* menta del logo */
+  --color-mint-soft: #dff6f1;
+  --color-mint-pale: #f1fbf8;
+  --color-gold: #d9a441;           /* dorado de los detalles del personaje */
+  --color-gold-soft: #f6e3b4;
+  --color-cream: #fffaf0;          /* fondo general */
+  --color-pink: #f28ca5;           /* acento (confites) */
+
+  /* Neutros */
+  --color-text: #1d3a3e;
+  --color-text-muted: #4f6b6e;
+  --color-border: #cfe6e1;
+  --color-surface: #ffffff;
+  --color-danger: #c0392b;
+
+  /* --- Tipografías --- */
+  --font-heading: "Fredoka", "Trebuchet MS", system-ui, sans-serif;
+  --font-body: "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Escala tipográfica (jerarquía h1–h6, body, labels) */
+  --fs-xs: 0.8rem;
+  --fs-sm: 0.9rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.35rem;
+  --fs-xl: 1.75rem;
+  --fs-2xl: clamp(1.9rem, 4vw, 2.6rem);
+  --fs-hero: clamp(2.6rem, 7vw, 4.6rem);
+
+  /* --- Espaciados (escala de 0.25rem a 4.5rem) --- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+
+  /* --- Bordes redondeados, sombras y transiciones --- */
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+  --radius-xl: 2rem;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 2px 8px rgba(20, 72, 74, 0.08);
+  --shadow-md: 0 10px 30px rgba(20, 72, 74, 0.12);
+  --shadow-lg: 0 20px 50px rgba(20, 72, 74, 0.18);
+
+  --transition: 180ms ease;
+
+  /* --- Layout --- */
+  --container-width: 1180px;
+  /* Padding lateral de cada sección: mantiene el contenido centrado y
+     limitado a --container-width, pero deja que el fondo ocupe todo el ancho.
+     (El % se resuelve contra el ancho del elemento que usa la variable.) */
+  --gutter: max(1.25rem, calc((100% - var(--container-width)) / 2));
+}
+
+/* ==========================================================================
+   2. RESET
+   ========================================================================== */
+
+/* Box model: con border-box el width incluye padding y border, así el
+   control explícito de padding/margin/border no rompe los anchos. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Evita que el header fijo tape los títulos al navegar por anclas (#catalogo) */
+  scroll-padding-top: 6rem;
+  -webkit-text-size-adjust: 100%;
+}
+
+body,
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, dl, dd, figure, blockquote, address, fieldset {
+  margin: 0;
+}
+
+ul, ol {
+  padding: 0;
+}
+
+fieldset {
+  padding: 0;
+  border: 0;
+  min-width: 0; /* los fieldset tienen min-width: min-content por defecto y desbordan */
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+/* ==========================================================================
+   3. ESTILOS BASE (herencia: color y fuente se definen en body y se heredan)
+   ========================================================================== */
+body {
+  min-height: 100vh;
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-cream);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--color-primary-dark);
+}
+
+h1 { font-size: var(--fs-hero); }
+h2 { font-size: var(--fs-2xl); }
+h3 { font-size: var(--fs-lg); }
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Foco visible para teclado en todo el sitio (accesibilidad) */
+:focus-visible {
+  outline: 3px solid var(--color-gold);
+  outline-offset: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   Elementos en línea vs. en bloque (decisión explícita)
+   - En línea (fluyen dentro del texto, no admiten width/height ni margin
+     vertical): a, em, strong, span, small.
+   - En bloque (ocupan todo el ancho disponible): img, figure, blockquote,
+     address, section, article, label.
+   -------------------------------------------------------------------------- */
+a,
+em,
+strong,
+span,
+small {
+  display: inline;
+}
+
+img {
+  display: block;       /* evita el hueco inferior que deja un img en línea */
+  max-width: 100%;      /* nunca más ancho que su contenedor: sin overflow */
+  height: auto;
+}
+
+figure,
+blockquote,
+address,
+label {
+  display: block;
+}
+
+address {
+  font-style: normal;
+}
+
+/* ==========================================================================
+   4. LAYOUT BASE
+   ========================================================================== */
+
+/* Todas las secciones del <main> comparten padding vertical y el padding
+   lateral calculado (--gutter). */
+main > section {
+  padding: var(--space-8) var(--gutter);
+}
+
+/* Título + subtítulo centrados de cada sección */
+main > section > h2 {
+  text-align: center;
+  margin-bottom: var(--space-3);
+}
+
+main > section > h2 + p {
+  max-width: 38rem;
+  margin: 0 auto var(--space-7);
+  text-align: center;
+  font-size: var(--fs-md);
+  color: var(--color-text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   Header (barra superior fija)
+   -------------------------------------------------------------------------- */
+body > header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3) var(--space-5);
+  padding: var(--space-3) var(--gutter);
+  background-color: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Marca: logo + nombre */
+body > header > a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-heading);
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}
+
+body > header > a img {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+body > header > nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-1) var(--space-2);
+}
+
+/* --------------------------------------------------------------------------
+   Hero (#inicio)
+   Grid de dos columnas que se apila solo cuando no entran (auto-fit).
+   La tarjeta de Capitán Helado ocupa su columna completa para que el
+   personaje se luzca; la foto de los helados va debajo, a todo el ancho.
+   -------------------------------------------------------------------------- */
+#inicio {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
+  gap: var(--space-6) var(--space-7);
+  align-items: center;
+  padding-top: var(--space-7);
+  background:
+    radial-gradient(circle at 12% 18%, var(--color-mint-soft) 0, transparent 45%),
+    radial-gradient(circle at 90% 80%, var(--color-gold-soft) 0, transparent 40%),
+    var(--color-cream);
+  overflow: clip; /* los adornos decorativos no generan scroll horizontal */
+}
+
+/* Burbujas decorativas de fondo */
+#inicio::before,
+#inicio::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+#inicio::before {
+  top: -8rem;
+  right: -6rem;
+  width: 22rem;
+  height: 22rem;
+  background: var(--color-mint);
+  opacity: 0.35;
+}
+
+#inicio::after {
+  bottom: -7rem;
+  left: -5rem;
+  width: 16rem;
+  height: 16rem;
+  background: var(--color-gold);
+  opacity: 0.18;
+}
+
+#inicio > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Columna de texto */
+#inicio > div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+/* "✦ Helados 100% artesanales" (etiqueta pill) */
+#inicio > div:first-child > p:first-of-type {
+  padding: var(--space-1) var(--space-4);
+  font-size: var(--fs-sm);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--color-primary-dark);
+  background-color: var(--color-mint-soft);
+  border: 1px solid var(--color-mint);
+  border-radius: var(--radius-pill);
+}
+
+/* <em> es un elemento en línea: se resalta con un subrayado de dorado
+   pintado con degradado, sin cambiar su caja. */
+#inicio h1 em {
+  font-style: normal;
+  color: var(--color-primary);
+  background: linear-gradient(transparent 68%, var(--color-gold-soft) 68%);
+}
+
+#inicio > div:first-child > p:last-of-type {
+  max-width: 32rem;
+  font-size: var(--fs-md);
+  color: var(--color-text-muted);
+}
+
+/* Contenedor de los dos CTA */
+#inicio > div:first-child > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+/* Métricas: +30 sabores / 20 min / 100% */
+#inicio ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3) var(--space-6);
+  margin-top: var(--space-4);
+  padding: 0;
+  list-style: none;
+}
+
+#inicio ul li {
+  font-family: var(--font-heading);
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-primary-dark);
+}
+
+/* <small> pasa a bloque a propósito: la etiqueta queda debajo del número */
+#inicio ul li small {
+  display: block;
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+/* Foto de los helados: banda ancha debajo del hero */
+#inicio > figure {
+  grid-column: 1 / -1;
+  margin-top: var(--space-4);
+}
+
+#inicio > figure img {
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  max-height: 26rem;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+}
+
+#inicio > figure figcaption {
+  margin-top: var(--space-3);
+  text-align: center;
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   Franja de números (#caracteristicas)
+   <dt> está antes que <dd> en el HTML (semántica correcta); con
+   column-reverse el número grande se ve arriba y la etiqueta abajo.
+   -------------------------------------------------------------------------- */
+#caracteristicas {
+  padding: var(--space-7) var(--gutter);
+  color: var(--color-mint-pale);
+  background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
+}
+
+#caracteristicas dl {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: var(--space-5);
+  text-align: center;
+}
+
+#caracteristicas dl > div {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: var(--space-1);
+}
+
+#caracteristicas dt {
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-mint);
+}
+
+#caracteristicas dd {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-surface);
+}
+
+/* --------------------------------------------------------------------------
+   ¿Por qué Vainell? (grilla de 4 cards)
+   -------------------------------------------------------------------------- */
+#por-que-vainell {
+  background-color: var(--color-surface);
+}
+
+#por-que-vainell > div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: var(--space-5);
+}
+
+/* --------------------------------------------------------------------------
+   Catálogo
+   -------------------------------------------------------------------------- */
+#catalogo {
+  background-color: var(--color-cream);
+}
+
+/* Barra de categorías (estilo de los links en components.css) */
+#catalogo > nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-7);
+}
+
+/* Cada categoría es un contenedor propio; si la tabla fuera más ancha que
+   la pantalla, el scroll queda dentro del contenedor y no en toda la página. */
+#catalogo > div {
+  margin-bottom: var(--space-7);
+  padding: var(--space-1);
+  overflow-x: auto;
+}
+
+/* Frase final del catálogo */
+#catalogo > p:last-child {
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+  color: var(--color-primary);
+}
+
+/* --------------------------------------------------------------------------
+   ¿Cómo pedir? (4 pasos)
+   -------------------------------------------------------------------------- */
+#como-pedir {
+  background-color: var(--color-mint-pale);
+}
+
+#como-pedir ol {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  gap: var(--space-5);
+  list-style: none;
+  counter-reset: paso;
+}
+
+/* --------------------------------------------------------------------------
+   Formulario de pedido (#pedido)
+   Grilla de 2 columnas que colapsa sola; los campos largos ocupan todo el ancho.
+   -------------------------------------------------------------------------- */
+#pedido {
+  background-color: var(--color-surface);
+}
+
+main form {
+  display: grid;
+  gap: var(--space-4);
+}
+
+#pedido form {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  max-width: 46rem;
+  margin: 0 auto;
+}
+
+#pedido form > fieldset,
+#pedido form > div:has(> #direccion),
+#pedido form > div:has(> textarea),
+#pedido form > button {
+  grid-column: 1 / -1;
+}
+
+/* --------------------------------------------------------------------------
+   Mi cuenta (login + registro lado a lado)
+   -------------------------------------------------------------------------- */
+#mi-cuenta {
+  background-color: var(--color-mint-pale);
+}
+
+#mi-cuenta .cuenta-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr));
+  gap: var(--space-6);
+  align-items: start;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   Testimonios
+   -------------------------------------------------------------------------- */
+#testimonios {
+  background-color: var(--color-cream);
+}
+
+#testimonios > div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  gap: var(--space-5);
+}
+
+/* --------------------------------------------------------------------------
+   Footer (#contacto)
+   Se usa body > footer porque cada testimonio también tiene un <footer>
+   propio (autor), que no debe heredar este layout.
+   -------------------------------------------------------------------------- */
+body > footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: var(--space-6) var(--space-7);
+  padding: var(--space-8) var(--gutter) var(--space-5);
+  color: var(--color-mint-soft);
+  background-color: var(--color-primary-deep);
+}
+
+/* El <h2>Vainell</h2> existe por accesibilidad (landmark con título), pero
+   visualmente ya está la marca con logo: se oculta solo para lectores de pantalla. */
+body > footer > section:first-child > h2 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+body > footer h2,
+body > footer h3 {
+  margin-bottom: var(--space-3);
+  font-size: var(--fs-md);
+  letter-spacing: 0.04em;
+  color: var(--color-gold);
+}
+
+body > footer h3 {
+  margin-top: var(--space-4);
+  font-size: var(--fs-base);
+}
+
+body > footer p {
+  margin-bottom: var(--space-2);
+}
+
+/* Los dos párrafos finales (copyright) ocupan todo el ancho */
+body > footer > p {
+  grid-column: 1 / -1;
+  margin: 0;
+  text-align: center;
+  font-size: var(--fs-sm);
+  color: var(--color-mint);
+}
+
+body > footer > section + p {
+  padding-top: var(--space-5);
+  border-top: 1px solid rgba(174, 233, 223, 0.25);
+}
