@@ -6,6 +6,8 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 ## [Unreleased] 
 
+
+
 ## [Release Actividad Obligatoria N°2] - 2026-10-20
 
 ### Added
@@ -16,13 +18,17 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 - [feature/dev-frontend-css-add-styles] Agregado de estilos y componentes CSS. PR: [#48](https://github.com/eternalnight04/HeladeriaVainell/pull/48) - @eternalnight04 (Desarrollador Frontend / CSS)
 
-- [feature/doc-qa-tester-add-test-cases] docs(qa): incorporación de casos de prueba 1-5 e informe consolidado de testing (Momento 1) PR: [#26](https://github.com/eternalnight04/HeladeriaVainell/pull/26) - @lautarochavez14 (4 Documentador / QA Tester)
+- [feature/doc-qa-tester-add-test-cases] docs(qa): incorporación de casos de prueba 1-5 e informe consolidado de testing (Momento 1) PR: [#26](https://github.com/eternalnight04/HeladeriaVainell/pull/26) - @lautarochavez14 (Documentador / QA Tester)
 
 ### Changed
 
 ### Fixed
 
 - [fix/correcciones-act-2] correcciónes request changes PR: [#53](https://github.com/eternalnight04/HeladeriaVainell/pull/53) -@britezacostaalexis-pixel (Coordinador / DevOps)
+
+- [fix/frontend-correcciones-1] Correcciones frontend y responsive. PR: [#55](https://github.com/eternalnight04/HeladeriaVainell/pull/55) - @eternalnight04 (Desarrollador Frontend / CSS)
+
+- [fix/readme-correcciones-1] Actualización de readme. PR: [#56](https://github.com/eternalnight04/HeladeriaVainell/pull/56) - @eternalnight04 (Desarrollador Frontend / CSS)
 
 ## [Release Actividad Obligatoria N°1] - 2026-08-31
 
