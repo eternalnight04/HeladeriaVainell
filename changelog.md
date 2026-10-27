@@ -26,6 +26,8 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 ### Changed
 
 ### Fixed
+- [fix/correcciones-actividad-num2] docs(qa): se incerto issue #57 de favicon y corregir matriz (RC10) PR: [#58](https://github.com/eternalnight04/HeladeriaVainell/pull/58) - @britezacostaalexis-pixel (Coordinador / DevOps)
+
 
 - [fix/correcciones-act-2] correcciónes request changes. PR: [#53](https://github.com/eternalnight04/HeladeriaVainell/pull/53) - @britezacostaalexis-pixel (Coordinador / DevOps)
 

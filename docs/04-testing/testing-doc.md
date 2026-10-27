@@ -1,65 +1,74 @@
 # Informe de Estrategia y Ejecución de QA Testing
 
 - **Proyecto:** Heladería Vainell — Sitio Web Promocional
-- **Documento:** Informe Integrado de QA Testing (Momento 1)
+- **Documento:** Informe Integrado de QA Testing (Momentos 1 y 2)
 - **Responsable de QA:** Lautaro Chavez
 - **Rama de Trabajo:** `feature/doc-qa-tester-add-test-cases`
-- **Fecha de Ejecución:** Septiembre 2026
+- **Momento 1 (pre-merge):** septiembre de 2026 (issues registrados el 28/09/2026)
+- **Momento 2 (retest):** octubre de 2026
 
 ---
 
 ## 1. Introducción y Estrategia de Testing
 
-Este informe documenta los resultados de las pruebas de calidad (QA) realizadas sobre el sitio web promocional de **Heladería Vainell** utilizando **Playwright MCP** (`@playwright/mcp`) en combinación con la suite de auditorías automatizadas de Lighthouse y Axe Core.
+Este informe documenta las pruebas de calidad (QA) realizadas sobre el sitio web promocional de **Heladería Vainell** con **Playwright MCP** (`@playwright/mcp`) mediante GitHub Copilot Agent Mode, junto con axe-core para accesibilidad y la Performance API del navegador para carga.
 
-La estrategia de testing adoptada cubre cinco pilares clave de calidad digital:
-1. **Accesibilidad Web (WCAG 2.1 AA)**
-2. **Atributos ALT e Imágenes Accesibles**
-3. **Formulario de Contacto e Interactividad**
-4. **Performance, SEO y Best Practices (Lighthouse)**
-5. **Estructura HTML Semántica y Validación W3C**
-
----
-
-## 2. Matriz de Resultados Generales (Momento 1)
-
-| ID Test Case | Nombre del Test | Herramienta / Método | Estado | Issue Asociado |
-| :--- | :--- | :--- | :---: | :---: |
-| **TC-01** | Auditoría de Accesibilidad (WCAG 2.1 AA) | Axe Core / Playwright MCP | **FAIL** ❌ | `#21` |
-| **TC-02** | Validación de Atributos ALT en Imágenes | Inspección DOM / Playwright MCP | **PASS** ✅ | N/A |
-| **TC-03** | Funcionalidad del Formulario de Contacto | Interacción DOM / Playwright MCP | **FAIL** ❌ | `#22`, `#23` |
-| **TC-04** | Auditoría Lighthouse (Performance, SEO, BP) | Lighthouse / Playwright MCP | **FAIL** ❌ | `#24` |
-| **TC-05** | Validación HTML Semántico y W3C | Nu Validator W3C / Playwright MCP | **FAIL** ❌ | `#25` |
+Los cinco test cases ejecutados son:
+1. **TC-01:** Compatibilidad de escritorio
+2. **TC-02:** Responsive en dispositivos móviles
+3. **TC-03:** Performance y carga de página
+4. **TC-04:** Accesibilidad web (axe-core)
+5. **TC-05:** Estructura HTML semántica y validación W3C
 
 ---
 
-## 3. Resumen de Issues Registrados en GitHub
+## 2. Matriz de Resultados y Trazabilidad
 
-A partir de las pruebas ejecutadas en el Momento 1, se abrieron los siguientes tickets de corrección para el Desarrollador Frontend:
+| ID | Nombre del test | Herramienta / método | Momento 1 (pre-merge) | Issue asociado | Detectado | Momento 2 (retest) |
+| :--- | :--- | :--- | :---: | :--- | :--- | :---: |
+| | **TC-01** | Compatibilidad de escritorio | Playwright MCP (Chromium) | Sin resultados documentados | [#57](https://github.com/eternalnight04/HeladeriaVainell/issues/57) | 27/10/2026 (Momento 2) | **PARCIAL** ⚠️ |
+| **TC-02** | Responsive en dispositivos móviles | Playwright MCP (viewports) | **FAIL** ❌ (iPhone y Samsung); iPad PASS | [#23](https://github.com/eternalnight04/HeladeriaVainell/issues/23) | 28/09/2026 (Momento 1) | **PASS** ✅ |
+| **TC-03** | Performance y carga de página | Navigation / Resource Timing | Sin resultados documentados | [#57](https://github.com/eternalnight04/HeladeriaVainell/issues/57) | 27/10/2026 (Momento 2) | **MEDIDO** (sin criterio PASS/FAIL) |
+| **TC-04** | Accesibilidad web (axe-core) | axe-core 4.7.2 / Playwright MCP | **FAIL** ❌ | [#24](https://github.com/eternalnight04/HeladeriaVainell/issues/24) | 28/09/2026 (Momento 1) | 0 violaciones; 2 reglas **INCOMPLETAS** ⚠️ |
+| **TC-05** | HTML semántico y validación W3C | Playwright MCP / Nu Validator | **FAIL** ❌ | [#25](https://github.com/eternalnight04/HeladeriaVainell/issues/25) | 28/09/2026 (Momento 1) | Estructura sin hallazgos; W3C formal **PENDIENTE** ⚠️ |
 
-1. **Issue `#21` [BUG - Accesibilidad]:** Contraste insuficiente de color en textos y componentes interactivos según WCAG AA.
-2. **Issue `#22` [BUG - Formulario]:** Ausencia de validaciones de formato HTML5 (email sin validación de sintaxis, campos obligatorios sin atributo `required`).
-3. **Issue `#23` [BUG - Formulario]:** Falta de redirección / respuesta tras el envío exitoso del formulario (`mailto:` o endpoint AJAX).
-4. **Issue `#24` [BUG - Performance/SEO]:** Métricas deficientes de Performance/SEO y recursos de imagen pesados sin optimización.
-5. **Issue `#25` [BUG - HTML/W3C]:** 21 errores de validación W3C, marcado sintáctico (`</d1>`), idioma `lang="en"` erróneo y `<footer>` anidado en `<main>`.
+**Notas:**
+- TC-01: favicon.ico responde 404 (FAIL); autocomplete y título en observación; Firefox, Safari y Edge sin verificar.
+- TC-03: se registró el favicon 404 y que `logo_vainell.png` (≈2,5 MB) y `capitan-helado-reboot.png` (≈1,6 MB) son los recursos más pesados.
+- TC-04: quedan pendientes de revisión manual las reglas `aria-allowed-attr` y `color-contrast`.
+- Los resultados del Momento 1 de TC-04 y TC-05 se toman de los issues #24 y #25; los archivos de test case no conservan las mediciones originales.
+
+---
+
+## 3. Issues Registrados en GitHub
+
+Los issues #23, #24 y #25 fueron abiertos por `lautarochavez14` el 28/09/2026 (Momento 1) y hoy figuran cerrados. El issue #57 se registró el 27/10/2026 por `britezacostaalexis-pixel` (Momento 2) y hoy figura cerrado.
+
+| Issue | Título | Test case | Detectado | Estado |
+| :--- | :--- | :---: | :--- | :---: |
+| [#23](https://github.com/eternalnight04/HeladeriaVainell/issues/23) | [BUG] Desbordamiento horizontal (overflow) en versión mobile por imagen hero | TC-02 | 28/09/2026 (Momento 1) | Cerrado |
+| [#24](https://github.com/eternalnight04/HeladeriaVainell/issues/24) | [BUG] Estructura de lista de definición invalida (regla dlitem) en sección de características | TC-04 | 28/09/2026 (Momento 1) | Cerrado |
+| [#25](https://github.com/eternalnight04/HeladeriaVainell/issues/25) | [BUG] Errores de validación HTML W3C, marcado sintáctico e incorrecta estructura de footer | TC-05 | 28/09/2026 (Momento 1) | Cerrado |
+| [#57](https://github.com/eternalnight04/HeladeriaVainell/issues/57) | [BUG] Error 404 al solicitar favicon.ico (el sitio no tiene favicon) | TC-01, TC-03 (también observado en TC-04 y TC-05) | 27/10/2026 (Momento 2) | Abierto |
 
 ---
 
 ## 4. Detalle de Archivos de Test Cases
 
-Los reportes detallados y con evidencias de cada caso de prueba se encuentran disponibles en la carpeta `docs/04-testing/`:
+Los reportes detallados y las evidencias están en `docs/04-testing/`:
 
-- `docs/04-testing/test-case-1.md`
-- `docs/04-testing/test-case-2.md`
-- `docs/04-testing/test-case-3.md`
-- `docs/04-testing/test-case-4.md`
-- `docs/04-testing/test-case-5.md`
+- [test-case-1.md](test-case-1.md) — Compatibilidad de escritorio
+- [test-case-2.md](test-case-2.md) — Responsive en dispositivos móviles
+- [test-case-3.md](test-case-3.md) — Performance y carga de página
+- [test-case-4.md](test-case-4.md) — Accesibilidad web (axe-core)
+- [test-case-5.md](test-case-5.md) — HTML semántico y W3C
 
 ---
 
-## 5. Próximos Pasos (Momento 2: Post-Merge & Retest)
+## 5. Estado Actual y Próximos Pasos
 
-Una vez que el equipo de desarrollo resuelva las incidencias reportadas (Issues `#21` a `#25`) y realice el merge a la rama principal:
-1. Re-ejecutar la suite completa de Test Cases (TC-01 al TC-05) utilizando los mismos prompts de Playwright MCP.
-2. Verificar el cierre efectivo de los tickets en GitHub.
-3. Actualizar la matriz de trazabilidad al estado final **PASS** ✅.
+El Momento 2 (retest post-merge) ya fue ejecutado. Pendientes:
+1. TC-01: verificar Firefox, Safari y Edge; resolver el favicon 404 y revisar `autocomplete` y el título esperado.
+2. TC-04: revisión manual de `aria-allowed-attr` y `color-contrast`.
+3. TC-05: validar el HTML con Nu HTML Checker.
+4. Decidir si el favicon 404 y las imágenes pesadas se registran como issues.
