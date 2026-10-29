@@ -1,0 +1,647 @@
+/* ==========================================================================
+   responsive.css — Heladería Vainell (Actividad Obligatoria N°2)
+   --------------------------------------------------------------------------
+   Diseño responsive con enfoque MOBILE-FIRST: las reglas sin media query son
+   las de mobile; cada breakpoint posterior (min-width) las amplía.
+   Debe cargarse DESPUÉS de styles.css y components.css (por eso, con la
+   misma especificidad, estas reglas ganan).
+
+   BREAKPOINTS DOCUMENTADOS (1rem = 16px)
+   ┌─────────────┬───────────────────┬───────────────────────────────────────┐
+   │ Nombre      │ Regla             │ Dispositivos objetivo / por qué       │
+   ├─────────────┼───────────────────┼───────────────────────────────────────┤
+   │ Mobile      │ base (< 768px)    │ iPhone 14 Pro 390px, Galaxy S23 412px │
+   │ Tablet      │ ≥ 48rem  (768px)  │ iPad Air 820px: 2 columnas            │
+   │ Desktop     │ ≥ 64rem  (1024px) │ notebooks 1280px y monitores 1920px   │
+   │ Wide        │ ≥ 90rem  (1440px) │ monitores grandes: contenedor mayor   │
+   │ Micro       │ ≤ 22.5rem (360px) │ celulares chicos: ajustes finos       │
+   └─────────────┴───────────────────┴───────────────────────────────────────┘
+
+   LAYOUT POR SECCIÓN
+   - Header ........ Flexbox. Mobile/tablet: marca arriba y menú en una tira
+                     con scroll horizontal DENTRO del <nav>; desktop: una fila.
+   - Hero .......... CSS Grid. 1 columna (mobile) → 2 columnas (tablet y más).
+   - Números, ¿Por qué?, ¿Cómo pedir?, Testimonios, Cuenta, Pedido, Footer
+                     CSS Grid con columnas explícitas (1 → 2 → 3/4); se usa
+                     minmax(0, 1fr) para que ningún contenido fuerce desborde.
+   - Catálogo ...... Mobile: cada fila de la tabla se muestra como una card
+                     (Grid dentro de <tr>). Tablet+: tabla normal.
+
+   Garantía de "sin overflow horizontal": todas las columnas usan
+   minmax(0, 1fr), las imágenes tienen max-width: 100% (styles.css) y el único
+   scroll horizontal es el del menú del header (contenido en su propio <nav>).
+   ========================================================================== */
+
+/* ==========================================================================
+   0. AJUSTES POR CAMBIOS EN index.html
+   El HTML actual trae elementos que styles.css/components.css todavía no
+   cubren: logo "V" en texto, imagen .hero-imagen, métricas del hero como
+   lista simple y footer sin la marca con logo. (Estos bloques se pueden
+   mover a components.css si el equipo prefiere.)
+   ========================================================================== */
+
+/* Logo "V": esfera verde azulada con la V en menta, como el logo original */
+body > header > a > span:first-child {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-mint);
+  background: radial-gradient(circle at 35% 25%, #3b7d86 0, var(--color-primary-deep) 70%);
+  border-radius: 50%;
+  box-shadow: inset 0 -3px 6px rgba(0, 0, 0, 0.3), var(--shadow-sm);
+}
+
+/* Foto del cono dentro de la columna de texto del hero */
+#inicio .hero-imagen {
+  width: 100%;
+  height: auto;           /* el atributo height="400" del HTML no deforma la foto */
+  max-height: 15rem;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+/* Métricas del hero: ahora son texto simple → chips con tilde */
+#inicio ul {
+  gap: var(--space-2) var(--space-3);
+}
+
+#inicio ul li {
+  padding: var(--space-1) var(--space-4);
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: 800;
+  color: var(--color-primary-dark);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-mint);
+  border-radius: var(--radius-pill);
+}
+
+#inicio ul li::before {
+  content: "✓";
+  margin-right: 0.4em;
+  color: var(--color-primary);
+}
+
+/* El footer ya no tiene la marca con logo: el <h2>Vainell</h2> pasa a ser el
+   título visible de la primera columna (en styles.css estaba oculto). */
+body > footer > section:first-child > h2 {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip-path: none;
+  white-space: normal;
+  font-family: var(--font-heading);
+  font-size: var(--fs-xl);
+  color: var(--color-surface);
+  letter-spacing: 0;
+}
+
+/* Un e-mail o link largo nunca debe empujar el ancho de la página */
+body > footer a {
+  overflow-wrap: anywhere;
+}
+
+/* ==========================================================================
+   1. MOBILE (base, sin media query) — 320px a 767px
+   ========================================================================== */
+
+/* El header ocupa ~2 filas: más margen al navegar por anclas */
+html {
+  scroll-padding-top: 8rem;
+}
+
+/* Menos aire vertical entre secciones (4.5rem es demasiado en un celular) */
+main > section {
+  padding-block: var(--space-7);
+}
+
+main > section > h2 + p {
+  margin-bottom: var(--space-6);
+}
+
+/* --- Header: marca arriba, menú en una tira con scroll horizontal --- */
+body > header {
+  gap: var(--space-2);
+  padding-block: var(--space-2);
+}
+
+body > header > a {
+  font-size: var(--fs-lg);
+}
+
+body > header > nav {
+  flex: 1 1 100%;               /* el menú baja a su propia fila */
+  flex-wrap: nowrap;
+  gap: var(--space-1);
+  /* padding vertical para que el anillo de foco no se recorte */
+  padding: 0.4rem 0.25rem;
+  overflow-x: auto;             /* el scroll queda dentro del <nav>, no en la página */
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scrollbar-width: thin;        /* se deja visible a propósito: indica que hay más links */
+  scrollbar-color: var(--color-mint) transparent;
+}
+
+body > header > nav > * {
+  flex: none;                   /* los links no se achican ni se parten */
+  white-space: nowrap;
+  scroll-snap-align: start;
+}
+
+/* --- Hero: una columna --- */
+#inicio {
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-6);
+  padding-top: var(--space-6);
+}
+
+#inicio::before {
+  top: -6rem;
+  right: -5rem;
+  width: 14rem;
+  height: 14rem;
+}
+
+#inicio::after {
+  bottom: -5rem;
+  left: -4rem;
+  width: 11rem;
+  height: 11rem;
+}
+
+/* CTA apilados a todo el ancho: fáciles de tocar con el pulgar */
+#inicio > div:first-child > div {
+  flex-direction: column;
+  align-self: stretch;
+}
+
+.hero-tarjeta {
+  padding: var(--space-4) var(--space-4) var(--space-5);
+  border-radius: var(--radius-lg);
+}
+
+.hero-tarjeta img {
+  width: min(100%, 22rem);
+}
+
+.hero-tarjeta p {
+  padding-inline: var(--space-5);
+}
+
+#inicio > figure img {
+  aspect-ratio: 4 / 3;          /* en mobile 21/9 quedaría una tira muy fina */
+  border-radius: var(--radius-lg);
+}
+
+/* --- Franja de números: 2 × 2 --- */
+#caracteristicas {
+  padding-block: var(--space-6);
+}
+
+#caracteristicas dl {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5) var(--space-4);
+}
+
+#caracteristicas dt {
+  font-size: var(--fs-xs);
+}
+
+/* --- ¿Por qué Vainell?: 1 columna --- */
+#por-que-vainell > div {
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+}
+
+/* --- Catálogo: pills compactas con alto táctil de 44px --- */
+#catalogo > nav {
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+}
+
+#catalogo > nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--fs-sm);
+}
+
+#catalogo > div {
+  margin-bottom: var(--space-6);
+}
+
+/* --- ¿Cómo pedir?: 1 columna (el gap vertical deja lugar al número dorado) --- */
+#como-pedir ol {
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-6) var(--space-4);
+}
+
+/* --- Formulario de pedido: 1 columna --- */
+#pedido form {
+  grid-template-columns: minmax(0, 1fr);
+  padding: var(--space-5) var(--space-4);
+  border-radius: var(--radius-lg);
+}
+
+/* Las dos opciones de modalidad se reparten el ancho */
+fieldset label {
+  flex: 1 1 auto;
+  justify-content: center;
+}
+
+/* --- Mi cuenta: login y registro apilados --- */
+#mi-cuenta .cuenta-container {
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-5);
+}
+
+#mi-cuenta article {
+  padding: var(--space-5) var(--space-4);
+}
+
+/* --- Testimonios: 1 columna --- */
+#testimonios > div {
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+}
+
+/* --- Footer: 1 columna --- */
+body > footer {
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-5);
+  padding-block: var(--space-7) var(--space-5);
+}
+
+body > footer nav:not([aria-label="Redes sociales"]) a {
+  padding-block: var(--space-1);   /* links más fáciles de tocar */
+}
+
+/* --- Celulares en horizontal: el header fijo taparía media pantalla --- */
+@media (orientation: landscape) and (max-height: 30rem) {
+  body > header {
+    position: static;
+  }
+
+  html {
+    scroll-padding-top: 1rem;
+  }
+}
+
+/* --- Pantallas táctiles: sin "levantar" cards al tocar (el hover queda pegado) --- */
+@media (hover: none) {
+  #por-que-vainell article:hover,
+  #testimonios article:hover,
+  #como-pedir ol li:hover,
+  button:hover,
+  #catalogo > nav a:hover,
+  #inicio > div:first-child > div > a:hover {
+    transform: none;
+  }
+}
+
+/* ==========================================================================
+   2. MOBILE ÚNICAMENTE (< 768px): tablas del catálogo como cards
+   Cada <tr> pasa a ser una card con Grid:
+        [ Nombre ........... Precio ]
+        [ Descripción               ]
+        [ Botón Agregar (ancho total) ]
+   El <thead> se oculta visualmente pero sigue disponible para lectores de
+   pantalla. Se usa max-width porque en tablet+ vuelve la tabla normal.
+   ========================================================================== */
+@media (max-width: 47.9375rem) {
+  #catalogo table,
+  #catalogo tbody,
+  #catalogo tr,
+  #catalogo td,
+  #catalogo caption {
+    display: block;
+  }
+
+  #catalogo thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+
+  #catalogo tbody tr {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "nombre precio"
+      "desc   desc"
+      "accion accion";
+    gap: var(--space-1) var(--space-3);
+    margin-bottom: var(--space-3);
+    padding: var(--space-4);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: background-color var(--transition), border-color var(--transition);
+  }
+
+  #catalogo tbody tr:hover {
+    background-color: var(--color-mint-pale);
+    border-color: var(--color-mint);
+  }
+
+  /* Se anula el estilo de "celda de tabla" de components.css */
+  #catalogo td {
+    min-width: 0;
+    padding: 0;
+    text-align: left;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+  }
+
+  #catalogo td:nth-child(1) {
+    grid-area: nombre;
+    font-size: var(--fs-md);
+  }
+
+  #catalogo td:nth-child(2) {
+    grid-area: desc;
+    font-size: var(--fs-sm);
+  }
+
+  #catalogo td:nth-child(3) {
+    grid-area: precio;
+  }
+
+  #catalogo td:nth-child(4) {
+    grid-area: accion;
+    margin-top: var(--space-2);
+  }
+
+  /* Botón "Agregar" a todo el ancho y con alto táctil */
+  #catalogo td button {
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+  }
+}
+
+/* ==========================================================================
+   3. TABLET — desde 768px (48rem)
+   ========================================================================== */
+@media (min-width: 48rem) {
+  main > section {
+    padding-block: var(--space-8);
+  }
+
+  main > section > h2 + p {
+    margin-bottom: var(--space-7);
+  }
+
+  /* --- Hero: texto a la izquierda, Capitán Helado a la derecha --- */
+  #inicio {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    gap: var(--space-6);
+    padding-top: var(--space-7);
+  }
+
+  #inicio::before {
+    top: -8rem;
+    right: -6rem;
+    width: 22rem;
+    height: 22rem;
+  }
+
+  #inicio::after {
+    bottom: -7rem;
+    left: -5rem;
+    width: 16rem;
+    height: 16rem;
+  }
+
+  #inicio .hero-imagen {
+    max-height: 16rem;
+  }
+
+  #inicio > div:first-child > div {
+    flex-direction: row;
+    align-self: auto;
+  }
+
+  .hero-tarjeta {
+    padding: var(--space-5) var(--space-5) var(--space-6);
+    border-radius: var(--radius-xl);
+  }
+
+  .hero-tarjeta img {
+    width: min(100%, 20rem);
+  }
+
+  #inicio > figure img {
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius-xl);
+  }
+
+  /* --- Números: 4 en fila --- */
+  #caracteristicas {
+    padding-block: var(--space-7);
+  }
+
+  #caracteristicas dl {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  #caracteristicas dt {
+    font-size: var(--fs-sm);
+  }
+
+  /* --- ¿Por qué Vainell?: 2 × 2 --- */
+  #por-que-vainell > div {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-5);
+  }
+
+  #catalogo > div {
+    margin-bottom: var(--space-7);
+  }
+
+  /* --- ¿Cómo pedir?: 2 × 2 --- */
+  #como-pedir ol {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-6) var(--space-5);
+  }
+
+  /* --- Pedido: 2 columnas --- */
+  #pedido form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: var(--space-6);
+    border-radius: var(--radius-xl);
+  }
+
+  fieldset label {
+    flex: 0 1 auto;
+  }
+
+  /* --- Cuenta: login y registro lado a lado --- */
+  #mi-cuenta .cuenta-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-6);
+  }
+
+  #mi-cuenta article {
+    padding: var(--space-6);
+  }
+
+  /* --- Testimonios: 2 columnas; el tercero queda centrado debajo --- */
+  #testimonios > div {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-5);
+  }
+
+  #testimonios > div > article:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - var(--space-5) / 2);
+  }
+
+  /* --- Footer: la marca ocupa la primera fila; navegación y contacto debajo --- */
+  body > footer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-6) var(--space-7);
+    padding-block: var(--space-8) var(--space-5);
+  }
+
+  body > footer > section:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ==========================================================================
+   4. DESKTOP — desde 1024px (64rem)
+   ========================================================================== */
+@media (min-width: 64rem) {
+  html {
+    scroll-padding-top: 6rem;
+  }
+
+  /* --- Header: una sola fila, menú sin scroll --- */
+  body > header {
+    gap: var(--space-3) var(--space-5);
+    padding-block: var(--space-3);
+  }
+
+  body > header > a {
+    font-size: var(--fs-xl);
+  }
+
+  body > header > nav {
+    flex: 0 1 auto;
+    flex-wrap: wrap;
+    gap: var(--space-1) var(--space-2);
+    padding: 0;
+    overflow: visible;
+  }
+
+  /* Padding lateral que crece con la pantalla: a 1024px entra todo en una fila */
+  body > header nav a {
+    padding-inline: clamp(0.7rem, 1.2vw, 1rem);
+  }
+
+  body > header nav button {
+    padding-inline: var(--space-4);
+  }
+
+  /* --- Hero: dos columnas con más aire; el personaje se luce --- */
+  #inicio {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: var(--space-7) var(--space-8);
+    padding-top: var(--space-8);
+  }
+
+  #inicio .hero-imagen {
+    max-height: 22rem;
+  }
+
+  .hero-tarjeta img {
+    width: min(100%, 28rem);
+  }
+
+  #inicio > figure img {
+    aspect-ratio: 21 / 9;
+  }
+
+  /* --- Grillas de 4 columnas --- */
+  #por-que-vainell > div {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  #como-pedir ol {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  /* --- Testimonios: 3 columnas --- */
+  #testimonios > div {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  #testimonios > div > article:last-child:nth-child(odd) {
+    grid-column: auto;
+    justify-self: stretch;
+    width: auto;
+  }
+
+  /* --- Footer: 3 columnas, la de la marca un poco más ancha --- */
+  body > footer {
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1.2fr);
+  }
+
+  body > footer > section:first-child {
+    grid-column: auto;
+  }
+}
+
+/* ==========================================================================
+   5. WIDE — desde 1440px (90rem)
+   ========================================================================== */
+@media (min-width: 90rem) {
+  :root {
+    --container-width: 1320px;
+  }
+
+  .hero-tarjeta img {
+    width: min(100%, 32rem);
+  }
+
+  #inicio .hero-imagen {
+    max-height: 26rem;
+  }
+}
+
+/* ==========================================================================
+   6. MICRO — celulares de 360px o menos
+   ========================================================================== */
+@media (max-width: 22.5rem) {
+  body > header > a {
+    font-size: var(--fs-md);
+  }
+
+  #inicio h1 {
+    font-size: 2.35rem;
+  }
+
+  #caracteristicas dt {
+    letter-spacing: 0.03em;
+  }
+
+  #pedido form,
+  #mi-cuenta article {
+    padding-inline: var(--space-3);
+  }
+}
