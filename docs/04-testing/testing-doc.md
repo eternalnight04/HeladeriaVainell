@@ -1,74 +1,200 @@
 # Informe de Estrategia y Ejecución de QA Testing
 
-- **Proyecto:** Heladería Vainell — Sitio Web Promocional
-- **Documento:** Informe Integrado de QA Testing (Momentos 1 y 2)
-- **Responsable de QA:** Lautaro Chavez
-- **Rama de Trabajo:** `feature/doc-qa-tester-add-test-cases`
-- **Momento 1 (pre-merge):** septiembre de 2026 (issues registrados el 28/09/2026)
-- **Momento 2 (retest):** octubre de 2026
+- **Proyecto:** Heladería Vainell — Sitio web promocional.
+- **Responsable de QA:** Lautaro Chavez.
+- **Rama de trabajo original:** `feature/doc-qa-tester-add-test-cases`.
+- **Rama de ejecución de Momento 2:** `qa/momento-2`.
+- **Momentos documentados:** Momento 1 (pre-merge) y Momento 2 (post-merge).
+- **Entorno de Momento 2:** Chromium mediante Playwright MCP, con Live Preview local.
+- **URL observada:** `http://127.0.0.1:3000/index.html?vscode-livepreview=true`.
 
----
+## 1. Objetivo y estrategia
 
-## 1. Introducción y Estrategia de Testing
+Este informe centraliza los resultados disponibles de las pruebas de calidad del sitio Heladería Vainell.
 
-Este informe documenta las pruebas de calidad (QA) realizadas sobre el sitio web promocional de **Heladería Vainell** con **Playwright MCP** (`@playwright/mcp`) mediante GitHub Copilot Agent Mode, junto con axe-core para accesibilidad y la Performance API del navegador para carga.
+La estrategia contempla cinco áreas:
 
-Los cinco test cases ejecutados son:
-1. **TC-01:** Compatibilidad de escritorio
-2. **TC-02:** Responsive en dispositivos móviles
-3. **TC-03:** Performance y carga de página
-4. **TC-04:** Accesibilidad web (axe-core)
-5. **TC-05:** Estructura HTML semántica y validación W3C
+1. Compatibilidad en navegadores de escritorio.
+2. Diseño responsive.
+3. Rendimiento y carga.
+4. Accesibilidad web.
+5. Estructura HTML semántica y validación.
 
----
+Las conclusiones se limitan a las comprobaciones efectivamente documentadas. Las pruebas con viewports emulados no equivalen a pruebas físicas de dispositivos y las auditorías automatizadas no garantizan por sí solas la conformidad total con estándares de accesibilidad o HTML.
 
-## 2. Matriz de Resultados y Trazabilidad
+## 2. Resultados históricos — Momento 1
 
-| ID | Nombre del test | Herramienta / método | Momento 1 (pre-merge) | Issue asociado | Detectado | Momento 2 (retest) |
-| :--- | :--- | :--- | :---: | :--- | :--- | :---: |
-| | **TC-01** | Compatibilidad de escritorio | Playwright MCP (Chromium) | Sin resultados documentados | [#57](https://github.com/eternalnight04/HeladeriaVainell/issues/57) | 27/10/2026 (Momento 2) | **PARCIAL** ⚠️ |
-| **TC-02** | Responsive en dispositivos móviles | Playwright MCP (viewports) | **FAIL** ❌ (iPhone y Samsung); iPad PASS | [#23](https://github.com/eternalnight04/HeladeriaVainell/issues/23) | 28/09/2026 (Momento 1) | **PASS** ✅ |
-| **TC-03** | Performance y carga de página | Navigation / Resource Timing | Sin resultados documentados | [#57](https://github.com/eternalnight04/HeladeriaVainell/issues/57) | 27/10/2026 (Momento 2) | **MEDIDO** (sin criterio PASS/FAIL) |
-| **TC-04** | Accesibilidad web (axe-core) | axe-core 4.7.2 / Playwright MCP | **FAIL** ❌ | [#24](https://github.com/eternalnight04/HeladeriaVainell/issues/24) | 28/09/2026 (Momento 1) | 0 violaciones; 2 reglas **INCOMPLETAS** ⚠️ |
-| **TC-05** | HTML semántico y validación W3C | Playwright MCP / Nu Validator | **FAIL** ❌ | [#25](https://github.com/eternalnight04/HeladeriaVainell/issues/25) | 28/09/2026 (Momento 1) | Estructura sin hallazgos; W3C formal **PENDIENTE** ⚠️ |
+El informe histórico contiene la siguiente matriz:
 
-**Notas:**
-- TC-01: favicon.ico responde 404 (FAIL); autocomplete y título en observación; Firefox, Safari y Edge sin verificar.
-- TC-03: se registró el favicon 404 y que `logo_vainell.png` (≈2,5 MB) y `capitan-helado-reboot.png` (≈1,6 MB) son los recursos más pesados.
-- TC-04: quedan pendientes de revisión manual las reglas `aria-allowed-attr` y `color-contrast`.
-- Los resultados del Momento 1 de TC-04 y TC-05 se toman de los issues #24 y #25; los archivos de test case no conservan las mediciones originales.
+| Prueba del informe original | Resultado histórico | Issues referenciados |
+|---|---|---|
+| Accesibilidad WCAG 2.1 AA | FAIL | `#21` |
+| Atributos ALT e imágenes | PASS | No indicado |
+| Formulario de contacto | FAIL | `#22`, `#23` |
+| Lighthouse: rendimiento, SEO y buenas prácticas | FAIL | `#24` |
+| HTML semántico y W3C | FAIL | `#25` |
 
----
+El informe original atribuye los siguientes hallazgos a esos issues:
 
-## 3. Issues Registrados en GitHub
+- **#21:** contraste insuficiente en textos y componentes interactivos.
+- **#22:** validaciones HTML5 de formulario presuntamente ausentes o incompletas.
+- **#23:** falta de respuesta o redirección tras el envío del formulario.
+- **#24:** observaciones históricas sobre rendimiento, SEO y recursos de imagen.
+- **#25:** errores históricos de validación HTML, idioma del documento y estructura semántica.
 
-Los issues #23, #24 y #25 fueron abiertos por `lautarochavez14` el 28/09/2026 (Momento 1) y hoy figuran cerrados. El issue #57 se registró el 27/10/2026 por `britezacostaalexis-pixel` (Momento 2) y hoy figura cerrado.
+Estas referencias se conservan como antecedentes documentales. La existencia, vigencia y resolución actual de cada issue debe verificarse directamente en GitHub. La matriz histórica usa categorías diferentes de las pruebas actuales, por lo que no debe interpretarse como una medición comparable de los cinco casos del Momento 2.
 
-| Issue | Título | Test case | Detectado | Estado |
-| :--- | :--- | :---: | :--- | :---: |
-| [#23](https://github.com/eternalnight04/HeladeriaVainell/issues/23) | [BUG] Desbordamiento horizontal (overflow) en versión mobile por imagen hero | TC-02 | 28/09/2026 (Momento 1) | Cerrado |
-| [#24](https://github.com/eternalnight04/HeladeriaVainell/issues/24) | [BUG] Estructura de lista de definición invalida (regla dlitem) en sección de características | TC-04 | 28/09/2026 (Momento 1) | Cerrado |
-| [#25](https://github.com/eternalnight04/HeladeriaVainell/issues/25) | [BUG] Errores de validación HTML W3C, marcado sintáctico e incorrecta estructura de footer | TC-05 | 28/09/2026 (Momento 1) | Cerrado |
-| [#57](https://github.com/eternalnight04/HeladeriaVainell/issues/57) | [BUG] Error 404 al solicitar favicon.ico (el sitio no tiene favicon) | TC-01, TC-03 (también observado en TC-04 y TC-05) | 27/10/2026 (Momento 2) | Abierto |
+## 3. Resultados — Momento 2
 
----
+| Caso | Verificación | Resultado |
+|---|---|---|
+| TC-01 | Carga general en Chromium y captura del sitio | Parcial: otros navegadores pendientes. |
+| TC-02 | Responsive en tres viewports emulados | PASS para los tres tamaños probados. |
+| TC-03 | Métricas de navegación y carga de recursos | Métricas registradas; sin umbral formal de aceptación. |
+| TC-04 | Auditoría axe-core 4.7.2 | Sin infracciones automatizadas confirmadas; revisión manual pendiente. |
+| TC-05 | Inspección de estructura y accesibilidad del DOM | Inspección registrada; validación W3C pendiente. |
 
-## 4. Detalle de Archivos de Test Cases
+### 3.1 TC-01 — Compatibilidad de escritorio
 
-Los reportes detallados y las evidencias están en `docs/04-testing/`:
+La página cargó en Chromium y se guardó una captura general.
 
-- [test-case-1.md](test-case-1.md) — Compatibilidad de escritorio
-- [test-case-2.md](test-case-2.md) — Responsive en dispositivos móviles
-- [test-case-3.md](test-case-3.md) — Performance y carga de página
-- [test-case-4.md](test-case-4.md) — Accesibilidad web (axe-core)
-- [test-case-5.md](test-case-5.md) — HTML semántico y W3C
+Se registraron:
+- Un error 404 al solicitar `/favicon.ico`.
+- Mensajes de consola relacionados con atributos `autocomplete`.
+- Compatibilidad con Firefox, Safari y Edge pendiente de comprobación.
 
----
+**Conclusión:** prueba parcialmente ejecutada. No se declara compatibilidad completa entre navegadores.
 
-## 5. Estado Actual y Próximos Pasos
+### 3.2 TC-02 — Diseño responsive
 
-El Momento 2 (retest post-merge) ya fue ejecutado. Pendientes:
-1. TC-01: verificar Firefox, Safari y Edge; resolver el favicon 404 y revisar `autocomplete` y el título esperado.
-2. TC-04: revisión manual de `aria-allowed-attr` y `color-contrast`.
-3. TC-05: validar el HTML con Nu HTML Checker.
-4. Decidir si el favicon 404 y las imágenes pesadas se registran como issues.
+Se evaluaron estos viewports:
+
+| Dispositivo emulado | Viewport | Resultado |
+|---|---:|---|
+| iPhone | 390 × 844 | PASS |
+| Samsung Galaxy | 360 × 800 | PASS |
+| iPad | 768 × 1024 | PASS |
+
+En las mediciones registradas, los controles se encontraban visibles y disponibles para la interacción, y no se detectó desbordamiento horizontal.
+
+**Conclusión:** PASS para los tres viewports emulados. No implica certificación en dispositivos físicos ni en otros navegadores.
+
+### 3.3 TC-03 — Rendimiento y carga
+
+Métricas registradas mediante la Performance API:
+
+| Métrica | Valor |
+|---|---:|
+| `document.readyState` | `complete` |
+| TTFB | 2,6 ms |
+| DOMContentLoaded | 32,8 ms |
+| Carga total | 79,2 ms |
+
+El recurso `imagenes/logo_vainell.png` presentó una duración registrada aproximada de 39,4 ms. Durante la ejecución también se observó el 404 de `/favicon.ico`.
+
+**Conclusión:** métricas obtenidas en un entorno local. Como no se definió un umbral de aceptación previo, no se asigna PASS o FAIL formal. Estos resultados no constituyen una prueba de carga ni una medición de producción.
+
+### 3.4 TC-04 — Accesibilidad
+
+Auditoría realizada con axe-core 4.7.2:
+
+| Resultado de axe-core | Cantidad |
+|---|---:|
+| Infracciones automatizadas confirmadas | 0 |
+| Comprobaciones aprobadas | 47 |
+| Comprobaciones incompletas | 2 |
+| No aplicables | 39 |
+
+Las reglas incompletas incluyen `aria-allowed-attr` y `color-contrast`. Se requiere inspección manual de los elementos señalados.
+
+**Conclusión:** sin infracciones automatizadas confirmadas en esta ejecución. No se declara conformidad completa con WCAG 2.1 AA hasta completar las comprobaciones manuales pertinentes.
+
+### 3.5 TC-05 — Estructura HTML semántica
+
+La inspección del DOM registró:
+
+- **17 encabezados:** 1 `h1`, 9 `h2` y 7 `h3`.
+- **4 imágenes:** todas poseen atributo `alt`; 3 tienen texto alternativo no vacío.
+- **68 controles:** inspeccionados respecto de sus nombres accesibles.
+- **Identificadores duplicados:** ninguno observado.
+- **Validador W3C:** ejecución pendiente de confirmar.
+
+**Conclusión:** inspección estructural documentada. La conformidad HTML no queda certificada hasta completar y registrar la validación W3C.
+
+## 4. Evidencias disponibles
+
+Las capturas de Momento 2 están en `docs/04-testing/`:
+
+- `evidencia-test-case-1-momento-2.png`
+- `evidencia-test-case-2-iphone.png`
+- `evidencia-test-case-2-samsung.png`
+- `evidencia-test-case-2-ipad.png`
+- `evidencia-test-case-3-momento-2.png`
+- `evidencia-test-case-4-momento-2.png`
+- `evidencia-test-case-5-momento-2.png`
+
+También existe la captura histórica `evidencia-test-case-1.png`.
+
+Los detalles de cada ejecución, sus limitaciones y sus conclusiones se encuentran en:
+
+- `test-case-1.md`
+- `test-case-2.md`
+- `test-case-3.md`
+- `test-case-4.md`
+- `test-case-5.md`
+
+## 5. Resumen cuantitativo del Momento 2
+
+- **Casos documentados:** 5.
+- **PASS formal:** 1.
+- **FAIL formal asignado en el resumen:** 0.
+- **Casos parciales o sin criterio formal de aceptación:** 4.
+- **Issues nuevos documentados como creados durante la ejecución:** 0.
+- **Referencias a issues históricos:** 5 (`#21` a `#25`), con estado actual sin verificar.
+
+Los cuatro casos sin cierre formal son TC-01, TC-03, TC-04 y TC-05. La ausencia de un FAIL formal no equivale a aprobación completa.
+
+## 6. Hallazgos, decisiones y seguimiento
+
+| Hallazgo | Decisión |
+|---|---|
+| 404 de `/favicon.ico` | Registrar y evaluar la corrección. No se documenta un issue nuevo. |
+| Mensajes relacionados con `autocomplete` | Inspeccionar los campos afectados antes de clasificarlos como defectos. |
+| Reglas de accesibilidad incompletas | Mantener pendiente la revisión manual. |
+| Validación W3C pendiente | No declarar conformidad HTML completa. |
+| Rendimiento sin umbral definido | Conservar las métricas y definir criterios antes de emitir un PASS o FAIL. |
+| Navegadores adicionales sin probar | No declarar compatibilidad completa. |
+
+Durante el Momento 2 no se documentó la creación de nuevos issues mediante GitHub MCP. Tampoco se dispone en este informe de confirmación verificable del estado actual de los issues históricos.
+
+## 7. Notificaciones
+
+La documentación original contempla notificar los hallazgos del Momento 1 al Desarrollador Frontend y al Especialista en Responsive, y los del Momento 2 al Coordinador y a los responsables correspondientes.
+
+**Estado documental:** no hay constancia de envío o recepción en los reportes consultados. Por tanto, las notificaciones no se consideran verificadas ni completadas en este informe.
+
+Cuando se realicen, se debe registrar el destinatario, la fecha y el medio utilizado, sin afirmar que fueron enviadas antes de contar con evidencia.
+
+## 8. Cierre y pendientes
+
+### Momento 1
+
+Se conserva la matriz histórica y sus referencias a issues. Para cerrar la trazabilidad, falta comprobar el estado de los issues y contrastarlos con las evidencias originales de cada prueba.
+
+### Momento 2
+
+Se documentaron los cinco casos. TC-02 pasó las verificaciones de los tres viewports emulados; los otros cuatro casos necesitan comprobaciones adicionales o criterios formales de aceptación.
+
+### Acciones pendientes
+
+- [ ] Verificar los issues históricos `#21` a `#25` en GitHub.
+- [ ] Revisar el error 404 de `/favicon.ico`.
+- [ ] Analizar los mensajes relacionados con `autocomplete`.
+- [ ] Completar la revisión manual de accesibilidad.
+- [ ] Ejecutar y registrar la validación W3C.
+- [ ] Definir criterios de aceptación de rendimiento.
+- [ ] Completar pruebas en los navegadores pendientes.
+- [ ] Registrar las notificaciones cuando exista evidencia de envío.
+- [ ] Actualizar `changelog.md` y documentar el enlace de la PR cuando corresponda.
+
+**Estado general:** documentación integrada de ambos momentos, con cierre parcial del Momento 2 y pendientes identificados. No se declara la suite completa aprobada.
