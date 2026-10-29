@@ -4,7 +4,11 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 
 
-## [Unreleased] 
+## [Unreleased]
+
+### Changed
+
+- [qa/momento-2] Se actualizan la especificación QA y el informe de testing con resultados de ambos momentos, evidencias disponibles, hallazgos y pendientes de validación - @lautarochavez14 (Documentador / QA Tester).
 
 ## [Release Actividad Obligatoria N°2] - 2026-10-20
 
