@@ -23,23 +23,26 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 - [feature/responsive-design-add-responsive-styles] Se implementó el diseño responsivo. PR: [#50](https://github.com/eternalnight04/HeladeriaVainell/pull/50) - @eternalnight04 (Especialista en Responsive Design)
 
-- [feature/coord-devops-update-figma-and-readme] Actualización de Mockup. PR: [#51](https://github.com/eternalnight04/HeladeriaVainell/pull/51) - @eternalnight04 (Desarrollador Frontend / CSS)
+- [feature/coord-devops-update-figma-and-readme] Actualización de Mockup PR: [#51](https://github.com/eternalnight04/HeladeriaVainell/pull/51) - @eternalnight04 (Coordinador / DevOps)
 
 // Nota: La PR #51 fue realizada por un integrante de otro rol debido a que el compañero que le tocaba dicha tarea no se encontraba presente en el momento, esta fue una decisión tomada por el grupo para ahorrar más tiempo en su momento.
 
 ### Changed
 
 ### Fixed
+
+- [qa/momento-2]docs: actualiza evidencias de testing Momento 2 PR: [#59](https://github.com/eternalnight04/HeladeriaVainell/pull/59) - @lautarochavez14 (Documentador / QA Tester)
+
 - [fix/correcciones-actividad-num2] docs(qa): se incerto issue #57 de favicon y corregir matriz (RC10) PR: [#58](https://github.com/eternalnight04/HeladeriaVainell/pull/58) - @britezacostaalexis-pixel (Coordinador / DevOps)
 
-
-- [fix/correcciones-act-2] correcciónes request changes. PR: [#53](https://github.com/eternalnight04/HeladeriaVainell/pull/53) - @britezacostaalexis-pixel (Coordinador / DevOps)
-
-- [qa/momento-2] docs: actualiza evidencias de testing Momento 2. PR: [#54](https://github.com/eternalnight04/HeladeriaVainell/pull/54) - @lautarochavez14 (Documentador / QA Tester)
+- [fix/readme-correcciones-1] Actualización de readme. PR: [#56](https://github.com/eternalnight04/HeladeriaVainell/pull/56) - @eternalnight04 (Desarrollador Frontend / CSS)
 
 - [fix/frontend-correcciones-1] Correcciones frontend y responsive. PR: [#55](https://github.com/eternalnight04/HeladeriaVainell/pull/55) - @eternalnight04 (Desarrollador Frontend / CSS)
 
-- [fix/readme-correcciones-1] Actualización de readme. PR: [#56](https://github.com/eternalnight04/HeladeriaVainell/pull/56) - @eternalnight04 (Desarrollador Frontend / CSS)
+- [qa/momento-2] docs: actualiza evidencias de testing Momento 2 PR: [#54](https://github.com/eternalnight04/HeladeriaVainell/pull/54) - @lautarochavez14 (Documentador / QA Tester)
+
+- [fix/correcciones-act-2] correcciónes request changes. PR: [#53](https://github.com/eternalnight04/HeladeriaVainell/pull/53) - @britezacostaalexis-pixel (Coordinador / DevOps)
+
 
 
 ## [Release Actividad Obligatoria N°1] - 2026-08-31
