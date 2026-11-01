@@ -20,7 +20,9 @@ El registro inicial documentó problemas de desbordamiento horizontal en los tam
 - **Samsung Galaxy:** FAIL. El registro anterior informó un ancho del documento de 449 px para un viewport de 360 px, con un desbordamiento de 89 px.
 - **iPad:** PASS. El registro anterior indicó que la página se visualizaba correctamente en un viewport de 768 × 1024.
 
-**Observación sobre el registro histórico:** el documento original contiene descripciones contradictorias sobre el desbordamiento y menciona un número de issue de GitHub sin confirmar. Por ese motivo, estos resultados se conservan como antecedentes del Momento 1 y no se consideran una verificación independiente del estado actual del código.
+**Issue asociado:** [#23 — [BUG] Desbordamiento horizontal (overflow) en versión mobile por imagen hero](https://github.com/eternalnight04/HeladeriaVainell/issues/23), abierto el 28/09/2026 durante el Momento 1 y actualmente cerrado. Registra el desbordamiento horizontal en mobile causado por la imagen de la sección Hero, y es la referencia de los resultados FAIL de iPhone y Samsung Galaxy.
+
+**Observación sobre el registro histórico:** el documento original contenía descripciones contradictorias sobre el desbordamiento. Por ese motivo, los resultados del Momento 1 se conservan como antecedentes y no se consideran una verificación independiente del estado actual del código. La verificación vigente es la del Momento 2.
 
 ## 4. Resultados del Momento 2 — Nueva ejecución
 
@@ -68,4 +70,4 @@ En los tres tamaños, los controles del formulario se encontraron visibles, habi
 
 En la nueva ejecución, la página cargó correctamente, sus secciones principales permanecieron visibles y no se detectó desbordamiento horizontal en los viewports de iPhone, Samsung Galaxy e iPad.
 
-Estos resultados describen la verificación realizada en Chromium y no reemplazan las pruebas en otros navegadores ni en dispositivos físicos. Los hallazgos del Momento 1 quedan documentados como antecedentes históricos, pendientes de reconciliación con el registro original y sin atribuirles un issue de GitHub cuyo número no fue verificado.
+Estos resultados describen la verificación realizada en Chromium y no reemplazan las pruebas en otros navegadores ni en dispositivos físicos. Los hallazgos del Momento 1 quedan documentados como antecedentes históricos, cuyo cierre es consistente con el resultado PASS obtenido en el Momento 2.

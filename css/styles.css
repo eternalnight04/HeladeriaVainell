@@ -373,19 +373,11 @@ body > header > nav {
   color: var(--color-text-muted);
 }
 
-/* Foto de los helados: banda ancha debajo del hero */
 #inicio > figure {
   grid-column: 1 / -1;
   margin-top: var(--space-4);
-}
-
-#inicio > figure img {
-  width: 100%;
-  aspect-ratio: 21 / 9;
-  max-height: 26rem;
-  object-fit: cover;
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-lg);
+  margin-inline: auto;
+  max-width: 400px;
 }
 
 #inicio > figure figcaption {
@@ -393,6 +385,14 @@ body > header > nav {
   text-align: center;
   font-size: var(--fs-sm);
   color: var(--color-text-muted);
+}
+
+#inicio > figure img {
+  width: 100%;
+  aspect-ratio: 8 / 9;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
 }
 
 /* --------------------------------------------------------------------------

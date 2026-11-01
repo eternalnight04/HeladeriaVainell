@@ -96,9 +96,27 @@ El árbol de accesibilidad mostró los landmarks principales de banner, navegaci
 
 ### 4.5 Validación formal W3C
 
-**Estado: PENDIENTE.**
+**Estado: EJECUTADA, CON HALLAZGOS.**
 
-No se realizó una validación contra el servicio W3C Nu HTML Checker. La inspección del DOM y del árbol de accesibilidad en el navegador no constituye una validación formal W3C, por lo que no se puede afirmar que el documento HTML cumpla completamente con dicho estándar.
+- **Herramienta:** W3C Nu HTML Checker (https://validator.w3.org/nu/), modo entrada de texto.
+- **Fecha de ejecución:** 01/11/2026.
+- **Archivo validado:** `index.html` del estado actual del repositorio (commit [código del commit]).
+- **Resultado:** 3 errores y 3 advertencias.
+
+| N.º | Línea | Tipo | Mensaje |
+|---:|---:|---|---|
+| 1 | 557 | Error | El atributo `aria-label` no debe especificarse en un elemento `p` a menos que tenga un `role` distinto de los permitidos (`<p aria-label="5 de 5 estrellas">`). |
+| 2 | 556 | Advertencia | El `article` no tiene encabezado; se recomienda usar elementos `h2`–`h6`. |
+| 3 | 569 | Error | Mismo error de `aria-label` en `p` (`<p aria-label="5 de 5 estrellas">`). |
+| 4 | 568 | Advertencia | El `article` no tiene encabezado. |
+| 5 | 581 | Error | Mismo error de `aria-label` en `p` (`<p aria-label="5 de 5 estrellas">`). |
+| 6 | 580 | Advertencia | El `article` no tiene encabezado. |
+
+Los tres errores y las tres advertencias corresponden a los tres testimonios de la sección de comentarios. Los errores coinciden con los tres nodos que axe-core señaló como regla incompleta `aria-allowed-attr` en el Test Case 4.
+
+**Evidencia:** [evidencia-test-case-5-w3c-momento-2.png](evidencia-test-case-5-w3c-momento-2.png)
+
+Esta validación corresponde únicamente a `index.html`. Los archivos CSS no se validaron con este servicio.
 
 ### 4.6 Consola del navegador
 
@@ -116,10 +134,20 @@ Captura completa obtenida con Playwright MCP:
 
 La captura se copió al directorio de evidencias y se verificó su existencia mediante PowerShell (`Test-Path` devolvió `True`).
 
+### 4.8 Retest y trazabilidad
+
+| Hallazgo | Issue | Retest en Momento 2 |
+|---|---|---|
+| Errores W3C y `footer` | [#25 — [BUG] Errores de validación HTML W3C, marcado sintáctico e incorrecta estructura de footer](https://github.com/eternalnight04/HeladeriaVainell/issues/25) | El Nu HTML Checker reporta 3 errores y 3 advertencias, todos en los testimonios (ver 4.5). No se observan mensajes relacionados con `footer`. |
+| `aria-label` en `p` y `article` sin encabezado | [#NN — título](URL) | Reportado a partir de este retest. |
+| Error 404 de `favicon.ico` | [#57 — [BUG] Error 404 al solicitar favicon.ico (el sitio no tiene favicon)](https://github.com/eternalnight04/HeladeriaVainell/issues/57) | Observado en consola; cerrado. |
+
+**Notificación:** los hallazgos W3C se notifican al Desarrollador Frontend mediante el issue [#60](https://github.com/eternalnight04/HeladeriaVainell/issues/60).
+
 ---
 
 ## 5. Conclusión del Momento 2
 
 La inspección encontró una jerarquía de encabezados sin saltos de nivel ni encabezados vacíos, los principales landmarks semánticos y atributos `alt` en todas las imágenes inspeccionadas. La revisión estructural de los 68 controles no identificó controles sin una fuente reconocible de nombre accesible y tampoco se encontraron IDs duplicados.
 
-Estos resultados no certifican la accesibilidad completa del sitio ni su conformidad formal con W3C. La validación con Nu HTML Checker permanece pendiente. También queda registrado el error 404 del favicon como observación independiente.
+Estos resultados no certifican la accesibilidad completa del sitio ni su conformidad formal con W3C.La validación formal con Nu HTML Checker se ejecutó el 01/11/2026 y devolvió 3 errores y 3 advertencias, por lo que el documento no cumple completamente con W3C en esta versión. Los hallazgos se reportaron al Desarrollador Frontend.

@@ -26,6 +26,19 @@ Se evalúan los siguientes aspectos:
 
 ---
 
+## Resultados — Momento 1
+
+**Estado:** No reconstruible.
+
+No es posible reconstruir los resultados de este caso de prueba en el Momento 1. No se conservó captura de pantalla, registro de consola, issue ni otra evidencia de esa ejecución, por lo que cualquier resultado que se informara hoy sería retroactivo y no verificable.
+
+| Comprobación | Resultado | Observaciones |
+|---|---|---|
+| Todas las comprobaciones | NO RECONSTRUIBLE | Sin evidencia disponible del Momento 1. No se asignan resultados retroactivos. |
+
+Este documento registra únicamente la ejecución del Momento 2. La imposibilidad de reconstruir el Momento 1 queda documentada como una limitación del proceso de testing.
+
+
 ## Resultados — Momento 2
 
 | Comprobación | Resultado | Observaciones |
