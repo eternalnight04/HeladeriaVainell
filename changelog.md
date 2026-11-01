@@ -31,6 +31,8 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 ### Fixed
 
+- [fix/correccioness-2] correcciones RC48,RC30,RC37,RC35,RC38 ,RC39,RC40,RC36 PR: [#53](https://github.com/eternalnight04/HeladeriaVainell/pull/61) - @britezacostaalexis-pixel (Coordinador / DevOps)
+
 - [qa/momento-2]docs: actualiza evidencias de testing Momento 2 PR: [#59](https://github.com/eternalnight04/HeladeriaVainell/pull/59) - @lautarochavez14 (Documentador / QA Tester)
 
 - [fix/correcciones-actividad-num2] docs(qa): se incerto issue #57 de favicon y corregir matriz (RC10) PR: [#58](https://github.com/eternalnight04/HeladeriaVainell/pull/58) - @britezacostaalexis-pixel (Coordinador / DevOps)
