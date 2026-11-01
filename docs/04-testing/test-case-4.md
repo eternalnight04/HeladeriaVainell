@@ -101,10 +101,26 @@ Archivo: `docs/04-testing/evidencia-test-case-4-momento-2.png`.
 
 La auditoría dejó dos reglas pendientes de revisión manual: `aria-allowed-attr` y `color-contrast`. Hasta completar esas comprobaciones y las pruebas manuales correspondientes, no se puede afirmar que la aplicación cumpla integralmente con WCAG.
 
-No se crearon issues de GitHub durante esta ejecución.
+No se crearon issues por violaciones de accesibilidad, porque no hubo violaciones confirmadas. El error 404 del favicon, observado en esta ejecución, se reportó en el issue [#57](https://github.com/eternalnight04/HeladeriaVainell/issues/57).
+
+### 3.8 Retest y trazabilidad de hallazgos
+
+El Momento 2 funciona como retest del hallazgo del Momento 1.
+
+| Hallazgo | Issue | Retest en Momento 2 |
+|---|---|---|
+| Lista de definición (`dlitem`) | [#24](https://github.com/eternalnight04/HeladeriaVainell/issues/24) | No se reportó en la nueva auditoría (0 violaciones confirmadas). |
+| Error 404 de `favicon.ico` | [#57 — Error 404 al solicitar favicon.ico (el sitio no tiene favicon)](https://github.com/eternalnight04/HeladeriaVainell/issues/57) | Observado en consola; cerrado. |
+| `aria-allowed-attr` y `color-contrast` | Sin issue | Reglas incompletas, pendientes de revisión manual. No son violaciones confirmadas. |
 
 ---
 
-## 4. Registro histórico del Momento 1
+## 4. Resultados del Momento 1 — Testing pre-merge
 
-El documento original describía la planificación de la auditoría con Playwright MCP y axe-core 4.7.2. En el contenido histórico compartido no se incluyeron resultados concretos de esa ejecución, por lo que no se atribuyen al Momento 1 métricas ni hallazgos que no hayan sido verificados.
+**Estado:** Evidencia parcial, registrada en issue.
+
+La auditoría del Momento 1 quedó registrada en el issue [#24 — TÍTULO EXACTO DEL ISSUE](https://github.com/eternalnight04/HeladeriaVainell/issues/24), abierto el 28/09/2026 y actualmente cerrado. Reportó un hallazgo de accesibilidad en una lista de definición detectado con axe-core (regla `dlitem`). Los resultados del Momento 1 se limitan a lo documentado en ese issue.
+
+| Hallazgo | Fuente | Estado en Momento 1 |
+|---|---|---|
+| Lista de definición (`dlitem`) | [#24](https://github.com/eternalnight04/HeladeriaVainell/issues/24) | Reportado el 28/09/2026 |

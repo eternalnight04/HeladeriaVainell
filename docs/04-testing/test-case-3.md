@@ -8,7 +8,7 @@
 - **URL de prueba:** `http://127.0.0.1:3000/index.html?vscode-livepreview=true`
 - **API utilizada:** Navigation Timing y Resource Timing.
 - **Momento de ejecución documentado:** Momento 2.
-- **Momento 1:** Se conservan sus antecedentes en el historial previo del documento, si corresponde.
+- **Momento 1:** no reconstruible (ver sección 4).
 
 ## 2. Objetivo
 
@@ -23,9 +23,25 @@ Evaluar el tiempo de respuesta y carga de la página de Heladería Vainell media
 5. Se registraron las duraciones y los tamaños transferidos disponibles.
 6. Se tomó una captura de pantalla de la página cargada.
 
-## 4. Resultados del Momento 2
+## 4. Resultados del Momento 1
 
-### 4.1 Métricas de navegación
+**Estado:** No reconstruible.
+
+No es posible reconstruir las métricas de este caso de prueba en el Momento 1. No se conservaron mediciones de Navigation Timing ni Resource Timing, capturas de pantalla, registros de consola, issues ni otra evidencia de esa ejecución. Cualquier valor que se informara hoy sería retroactivo y no verificable.
+
+| Comprobación | Resultado | Observaciones |
+|---|---|---|
+| Tiempos de navegación (TTFB, DOMContentLoaded, carga total) | NO RECONSTRUIBLE | Sin mediciones del Momento 1. |
+| Recursos por duración y tamaño | NO RECONSTRUIBLE | Sin registro de recursos del Momento 1. |
+| Errores de carga | NO RECONSTRUIBLE | Sin registro de consola del Momento 1. |
+
+Este documento registra únicamente la ejecución del Momento 2. La imposibilidad de reconstruir el Momento 1 queda documentada como una limitación del proceso de testing, y por eso no es posible comparar el rendimiento antes y después de la integración.
+
+
+
+## 4.1 Resultados del Momento 2
+
+### 4.2 Métricas de navegación
 
 | Métrica | Cálculo | Resultado |
 |---|---|---:|
@@ -37,7 +53,7 @@ El documento alcanzó `document.readyState === "complete"`. La métrica `loadEve
 
 **Importante:** el TTFB registrado utiliza el cálculo indicado en el caso de prueba (`responseStart - requestStart`). No equivale al cálculo habitual de TTFB desde el inicio de la solicitud (`responseStart - requestStart` sí mide ese intervalo de respuesta, pero no incluye necesariamente el tiempo previo de preparación de la solicitud). Estos valores corresponden a la ejecución local observada y no constituyen una garantía de rendimiento en producción.
 
-### 4.2 Recursos destacados
+### 4.3 Recursos destacados
 
 Los siguientes recursos se ordenaron por duración medida. Los tamaños corresponden a `transferSize`, expresado en bytes.
 
@@ -54,7 +70,7 @@ Los siguientes recursos se ordenaron por duración medida. Los tamaños correspo
 | Fuente Fredoka (`.woff2`) | 0 ms | 0 B |
 | Fuente Nunito (`.woff2`) | 0 ms | 0 B |
 
-### 4.3 Análisis de los resultados
+### 4.4 Análisis de los resultados
 
 - La imagen `logo_vainell.png` fue el recurso destacado con mayor duración y mayor tamaño transferido.
 - La imagen `capitan-helado-reboot.png` ocupó el segundo lugar en ambas mediciones.
@@ -62,7 +78,7 @@ Los siguientes recursos se ordenaron por duración medida. Los tamaños correspo
 - Los recursos de Google Fonts presentaron `transferSize` igual a cero, aunque se observaron valores en `encodedBodySize`. Esto puede relacionarse con la caché o con restricciones de medición entre orígenes.
 - Las mediciones permiten identificar qué recursos convendría revisar primero, pero no demuestran por sí solas que exista un problema de rendimiento.
 
-### 4.4 Errores observados
+### 4.5 Errores observados
 
 Se registró un error HTTP 404 al solicitar:
 
@@ -85,6 +101,7 @@ Archivo: `docs/04-testing/evidencia-test-case-3-momento-2.png`.
 - `transferSize` no siempre refleja el tamaño real del recurso, especialmente cuando intervienen la caché o las restricciones de medición entre orígenes.
 - No se realizó una prueba de carga con múltiples usuarios ni una medición desde un servidor de producción.
 - No se aplicaron modificaciones al código de la aplicación durante esta ejecución.
+- No existe línea base del Momento 1, por lo que las métricas del Momento 2 no pueden compararse con una medición anterior.
 
 ## 7. Conclusión
 

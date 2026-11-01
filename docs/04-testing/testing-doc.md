@@ -22,28 +22,21 @@ La estrategia contempla cinco áreas:
 
 Las conclusiones se limitan a las comprobaciones efectivamente documentadas. Las pruebas con viewports emulados no equivalen a pruebas físicas de dispositivos y las auditorías automatizadas no garantizan por sí solas la conformidad total con estándares de accesibilidad o HTML.
 
-## 2. Resultados históricos — Momento 1
+## 2. Trazabilidad de hallazgos — Momento 1 y Momento 2
 
-El informe histórico contiene la siguiente matriz:
+La matriz original del Momento 1 usaba las referencias `#21` a `#25`, algunas de las cuales no correspondían a hallazgos de QA. Se reemplaza por la trazabilidad verificada en GitHub (fecha de verificación: [fecha]).
 
-| Prueba del informe original | Resultado histórico | Issues referenciados |
-|---|---|---|
-| Accesibilidad WCAG 2.1 AA | FAIL | `#21` |
-| Atributos ALT e imágenes | PASS | No indicado |
-| Formulario de contacto | FAIL | `#22`, `#23` |
-| Lighthouse: rendimiento, SEO y buenas prácticas | FAIL | `#24` |
-| HTML semántico y W3C | FAIL | `#25` |
+| Issue | Título | Test Case | Momento de detección | Estado |
+|---|---|---|---|---|
+| [#23](https://github.com/eternalnight04/HeladeriaVainell/issues/23) |[BUG] Desbordamiento horizontal (overflow) en versión mobile por imagen hero| TC-02 Responsive | Momento 1 (28/09/2026) | Cerrado |
+| [#24](https://github.com/eternalnight04/HeladeriaVainell/issues/24) |[BUG] Estructura de lista de definición invalida (regla dlitem) en sección de características | TC-04 Accesibilidad | Momento 1 (28/09/2026) | Cerrado |
+| [#25](https://github.com/eternalnight04/HeladeriaVainell/issues/25) |[BUG] Errores de validación HTML W3C, marcado sintáctico e incorrecta estructura de footer| TC-05 HTML semántico y W3C | Momento 1 (28/09/2026) | Cerrado |
+| [#57](https://github.com/eternalnight04/HeladeriaVainell/issues/57) | Error 404 al solicitar favicon.ico (el sitio no tiene favicon) | TC-01 y TC-03 (también observado en TC-04 y TC-05) | Momento 2 (27/10/2026) | cerrado|
+| [#60](https://github.com/eternalnight04/HeladeriaVainell/issues/60) |[BUG] Errores de validación W3C: aria-label en párrafos de puntuación de testimonios | TC-05 (relacionado con la regla incompleta `aria-allowed-attr` de TC-04) | Momento 2 (01/11/2026) | Abierto |
 
-El informe original atribuye los siguientes hallazgos a esos issues:
+**Referencias históricas descartadas:** el informe original citaba `#21` y `#22`. El `#21` corresponde a "A2- Coordinador / DevOps" y no es un hallazgo de QA. El `#22` no existe en el repositorio. Ninguno de los dos se incluye en la matriz.
 
-- **#21:** contraste insuficiente en textos y componentes interactivos.
-- **#22:** validaciones HTML5 de formulario presuntamente ausentes o incompletas.
-- **#23:** falta de respuesta o redirección tras el envío del formulario.
-- **#24:** observaciones históricas sobre rendimiento, SEO y recursos de imagen.
-- **#25:** errores históricos de validación HTML, idioma del documento y estructura semántica.
-
-Estas referencias se conservan como antecedentes documentales. La existencia, vigencia y resolución actual de cada issue debe verificarse directamente en GitHub. La matriz histórica usa categorías diferentes de las pruebas actuales, por lo que no debe interpretarse como una medición comparable de los cinco casos del Momento 2.
-
+**Categorías del informe original sin issue verificable:** las pruebas de formulario de contacto y Lighthouse no tienen un issue real asociado ni evidencia del Momento 1 que pueda comprobarse, por lo que no se conservan como resultados históricos.
 ## 3. Resultados — Momento 2
 
 | Caso | Verificación | Resultado |
