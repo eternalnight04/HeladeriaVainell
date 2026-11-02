@@ -37,7 +37,7 @@ Instrucciones de prueba:
 
 El documento original identifica el objetivo, las herramientas y el procedimiento previsto para la prueba. En el registro disponible no se cuenta con resultados detallados suficientes para reconstruir las mediciones del Momento 1.
 
-Por lo tanto, no se asigna un resultado histórico de PASS o FAIL sin evidencia verificable.
+**Referencia:** los hallazgos del Momento 1 quedaron registrados en el issue [#25 - [BUG] Errores de validación HTML W3C, marcado sintáctico e incorrecta estructura de footer ](https://github.com/eternalnight04/HeladeriaVainell/issues/25) (28/09/2026): 21 errores y 4 advertencias del validador Nu, entre ellos `</d1>`, `lang="en"` y `<footer>` anidado en `<main>`. Las mediciones originales no se conservan en este archivo.
 
 ---
 
@@ -100,7 +100,7 @@ El árbol de accesibilidad mostró los landmarks principales de banner, navegaci
 
 - **Herramienta:** W3C Nu HTML Checker (https://validator.w3.org/nu/), modo entrada de texto.
 - **Fecha de ejecución:** 01/11/2026.
-- **Archivo validado:** `index.html` del estado actual del repositorio (commit [código del commit]).
+- **Archivo validado:** `index.html` del estado actual del repositorio (commit `b060d78`).
 - **Resultado:** 3 errores y 3 advertencias.
 
 | N.º | Línea | Tipo | Mensaje |
@@ -139,10 +139,10 @@ La captura se copió al directorio de evidencias y se verificó su existencia me
 | Hallazgo | Issue | Retest en Momento 2 |
 |---|---|---|
 | Errores W3C y `footer` | [#25 — [BUG] Errores de validación HTML W3C, marcado sintáctico e incorrecta estructura de footer](https://github.com/eternalnight04/HeladeriaVainell/issues/25) | El Nu HTML Checker reporta 3 errores y 3 advertencias, todos en los testimonios (ver 4.5). No se observan mensajes relacionados con `footer`. |
-| `aria-label` en `p` y `article` sin encabezado | [#NN — título](URL) | Reportado a partir de este retest. |
 | Error 404 de `favicon.ico` | [#57 — [BUG] Error 404 al solicitar favicon.ico (el sitio no tiene favicon)](https://github.com/eternalnight04/HeladeriaVainell/issues/57) | Observado en consola; cerrado. |
 
-**Notificación:** los hallazgos W3C se notifican al Desarrollador Frontend mediante el issue [#60](https://github.com/eternalnight04/HeladeriaVainell/issues/60).
+
+**Notificación:** los hallazgos W3C se notifican al Desarrollador Frontend mediante el issue [#60 - [BUG] Errores de validación W3C: aria-label en párrafos de puntuación de testimonios](https://github.com/eternalnight04/HeladeriaVainell/issues/60).
 
 ---
 
@@ -150,4 +150,4 @@ La captura se copió al directorio de evidencias y se verificó su existencia me
 
 La inspección encontró una jerarquía de encabezados sin saltos de nivel ni encabezados vacíos, los principales landmarks semánticos y atributos `alt` en todas las imágenes inspeccionadas. La revisión estructural de los 68 controles no identificó controles sin una fuente reconocible de nombre accesible y tampoco se encontraron IDs duplicados.
 
-Estos resultados no certifican la accesibilidad completa del sitio ni su conformidad formal con W3C.La validación formal con Nu HTML Checker se ejecutó el 01/11/2026 y devolvió 3 errores y 3 advertencias, por lo que el documento no cumple completamente con W3C en esta versión. Los hallazgos se reportaron al Desarrollador Frontend.
+Estos resultados no certifican la accesibilidad completa del sitio ni su conformidad formal con W3C. La validación formal con Nu HTML Checker se ejecutó el 01/11/2026 y devolvió 3 errores y 3 advertencias, por lo que el documento no cumple completamente con W3C en esta versión. Los hallazgos se reportaron al Desarrollador Frontend.

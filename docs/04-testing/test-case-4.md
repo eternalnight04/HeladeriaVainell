@@ -101,7 +101,9 @@ Archivo: `docs/04-testing/evidencia-test-case-4-momento-2.png`.
 
 La auditoría dejó dos reglas pendientes de revisión manual: `aria-allowed-attr` y `color-contrast`. Hasta completar esas comprobaciones y las pruebas manuales correspondientes, no se puede afirmar que la aplicación cumpla integralmente con WCAG.
 
-No se crearon issues por violaciones de accesibilidad, porque no hubo violaciones confirmadas. El error 404 del favicon, observado en esta ejecución, se reportó en el issue [#57](https://github.com/eternalnight04/HeladeriaVainell/issues/57).
+**Actualización (01/11/2026):** la regla `aria-allowed-attr` fue confirmada como error por el validador W3C Nu HTML Checker y se registró en el issue [#60](https://github.com/eternalnight04/HeladeriaVainell/issues/60). Solo `color-contrast` sigue pendiente de revisión manual.
+
+No se crearon issues por violaciones de accesibilidad durante la auditoría, porque no hubo violaciones confirmadas. El hallazgo de `aria-allowed-attr` se registró después, a partir de la validación W3C (issue [#60](https://github.com/eternalnight04/HeladeriaVainell/issues/60)). El error 404 del favicon, observado en esta ejecución, se reportó en el issue [#57](https://github.com/eternalnight04/HeladeriaVainell/issues/57).
 
 ### 3.8 Retest y trazabilidad de hallazgos
 
@@ -111,7 +113,8 @@ El Momento 2 funciona como retest del hallazgo del Momento 1.
 |---|---|---|
 | Lista de definición (`dlitem`) | [#24](https://github.com/eternalnight04/HeladeriaVainell/issues/24) | No se reportó en la nueva auditoría (0 violaciones confirmadas). |
 | Error 404 de `favicon.ico` | [#57 — Error 404 al solicitar favicon.ico (el sitio no tiene favicon)](https://github.com/eternalnight04/HeladeriaVainell/issues/57) | Observado en consola; cerrado. |
-| `aria-allowed-attr` y `color-contrast` | Sin issue | Reglas incompletas, pendientes de revisión manual. No son violaciones confirmadas. |
+| `aria-allowed-attr` | [#60 — [BUG] Errores de validación W3C: aria-label en párrafos de puntuación de testimonios](https://github.com/eternalnight04/HeladeriaVainell/issues/60) | Confirmada como error por el validador W3C el 01/11/2026 (líneas 557, 569 y 581 de `index.html`; ver `test-case-5.md`). |
+| `color-contrast` | Sin issue | Regla incompleta, pendiente de revisión manual. No es violación confirmada. |
 
 ---
 
@@ -119,7 +122,7 @@ El Momento 2 funciona como retest del hallazgo del Momento 1.
 
 **Estado:** Evidencia parcial, registrada en issue.
 
-La auditoría del Momento 1 quedó registrada en el issue [#24 — TÍTULO EXACTO DEL ISSUE](https://github.com/eternalnight04/HeladeriaVainell/issues/24), abierto el 28/09/2026 y actualmente cerrado. Reportó un hallazgo de accesibilidad en una lista de definición detectado con axe-core (regla `dlitem`). Los resultados del Momento 1 se limitan a lo documentado en ese issue.
+La auditoría del Momento 1 quedó registrada en el issue [#24 — [BUG] Estructura de lista de definición invalida (regla dlitem) en sección de características](https://github.com/eternalnight04/HeladeriaVainell/issues/24), abierto el 28/09/2026 y actualmente cerrado. Reportó un hallazgo de accesibilidad en una lista de definición detectado con axe-core (regla `dlitem`). Los resultados del Momento 1 se limitan a lo documentado en ese issue.
 
 | Hallazgo | Fuente | Estado en Momento 1 |
 |---|---|---|
