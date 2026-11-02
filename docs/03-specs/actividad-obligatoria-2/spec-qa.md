@@ -51,11 +51,13 @@ Ejecutar una auditoría automatizada con axe-core mediante Playwright MCP y regi
 
 **Limitación:** una auditoría automatizada sin infracciones confirmadas no demuestra por sí sola conformidad completa con WCAG 2.1 AA.
 
-### TC-05 — Estructura HTML semántica
+### TC-05 — Estructura HTML semántica y validación W3C
 
-Inspeccionar encabezados, imágenes, controles, identificadores y elementos semánticos. La validación mediante W3C Nu HTML Checker debe registrarse por separado.
+Inspeccionar encabezados, imágenes, controles, identificadores y elementos semánticos, y validar el documento con el W3C Nu HTML Checker.
 
-**Limitación:** la inspección del DOM no reemplaza una validación completa del documento mediante el validador W3C.
+**Alcance comprobado en Momento 2:** inspección del DOM y del árbol de accesibilidad, y validación formal con W3C Nu HTML Checker ejecutada el 01/11/2026 sobre `index.html`.
+
+**Limitación:** la validación W3C cubre solo `index.html`; los archivos CSS no se validaron.
 
 ## 4. Herramientas y evidencias
 
@@ -63,8 +65,8 @@ Inspeccionar encabezados, imágenes, controles, identificadores y elementos sem�
 - **Chromium:** navegador utilizado en las verificaciones de Momento 2.
 - **axe-core 4.7.2:** auditoría automatizada de accesibilidad.
 - **Performance API:** registro de métricas de carga.
-- **GitHub MCP:** previsto para el registro de issues, pero no se documentó la creación de nuevos issues durante la ejecución de Momento 2.
-- **W3C Nu HTML Checker:** validación pendiente de confirmar en Momento 2.
+- **GitHub:** registro de issues. Durante el Momento 2 se crearon los issues [#57](https://github.com/eternalnight04/HeladeriaVainell/issues/57) y [#60](https://github.com/eternalnight04/HeladeriaVainell/issues/60).
+- **W3C Nu HTML Checker:** ejecutado el 01/11/2026 sobre `index.html` (3 errores y 3 advertencias; ver `test-case-5.md`, sección 4.5, e issue [#60](https://github.com/eternalnight04/HeladeriaVainell/issues/60)).
 
 Las evidencias disponibles en `docs/04-testing/` son:
 
@@ -76,6 +78,7 @@ Las evidencias disponibles en `docs/04-testing/` son:
 - `evidencia-test-case-3-momento-2.png`
 - `evidencia-test-case-4-momento-2.png`
 - `evidencia-test-case-5-momento-2.png`
+- `evidencia-test-case-5-w3c-momento-2.png`
 
 Los resultados detallados deben consultarse en los cinco archivos `test-case-1.md` a `test-case-5.md`.
 
@@ -101,39 +104,39 @@ Solicitar la ejecución de axe-core 4.7.2 sobre la página local, con el registr
 
 ### Prompt TC-05 — HTML semántico
 
-Solicitar la inspección de encabezados, elementos semánticos, imágenes y textos alternativos, nombres accesibles de controles e identificadores duplicados. Registrar por separado si se ejecutó o no el validador W3C.
+Solicitar la inspección de encabezados, elementos semánticos, imágenes y textos alternativos, nombres accesibles de controles e identificadores duplicados. La validación W3C Nu HTML Checker se registró por separado (ejecutada el 01/11/2026; ver `test-case-5.md`, sección 4.5).
 
 ## 6. Resultados del Momento 1 — Pre-merge
 
-El informe histórico `docs/04-testing/testing-doc.md` contiene una matriz anterior con cinco resultados: un PASS y cuatro FAIL, además de referencias a los issues `#21`, `#22`, `#23`, `#24` y `#25`.
+El informe histórico `docs/04-testing/testing-doc.md` contenía una matriz anterior con cinco resultados: un PASS y cuatro FAIL, además de referencias a los issues `#21`, `#22`, `#23`, `#24` y `#25`.
 
-Sin embargo, esa matriz histórica utiliza categorías de pruebas distintas de las definidas en los test cases actuales. Por lo tanto, sus estados no deben trasladarse automáticamente a los TC-01 a TC-05 de esta especificación.
+Esa matriz histórica utilizaba categorías de pruebas distintas de las definidas en los test cases actuales. Por lo tanto, sus estados no se trasladan automáticamente a los TC-01 a TC-05 de esta especificación.
 
 | Registro histórico | Estado consignado en el informe anterior | Observación |
 |---|---|---|
-| TC-01 — Accesibilidad | FAIL | Asociado históricamente al issue `#21`. |
+| TC-01 — Accesibilidad | FAIL | Asociado históricamente al issue `#21`, que corresponde a una tarea de DevOps de la Actividad 2 y no a un hallazgo de QA. |
 | TC-02 — Atributos ALT | PASS | El informe anterior lo registra como aprobado. |
-| TC-03 — Formulario | FAIL | Asociado históricamente a los issues `#22` y `#23`. |
-| TC-04 — Lighthouse | FAIL | Asociado históricamente al issue `#24`. |
-| TC-05 — HTML/W3C | FAIL | Asociado históricamente al issue `#25`. |
+| TC-03 — Formulario | FAIL | Asociado históricamente a los issues `#22` y `#23`. El `#22` no existe; el `#23` corresponde al desbordamiento horizontal en mobile (TC-02 actual). |
+| TC-04 — Lighthouse | FAIL | Asociado históricamente al issue `#24`, que corresponde a la lista de definición detectada con axe-core (TC-04 actual). |
+| TC-05 — HTML/W3C | FAIL | Asociado al issue `#25`, que corresponde al TC-05 actual. |
 
-**Cierre del Momento 1:** documentación histórica disponible, pero el estado actual de los issues y el detalle de cada ejecución deben verificarse en GitHub y en los reportes originales. No se afirma que los issues estén abiertos, cerrados o resueltos sin comprobarlo.
+**Cierre del Momento 1 (verificado en GitHub):** los hallazgos reales del Momento 1 son [#23](https://github.com/eternalnight04/HeladeriaVainell/issues/23) (TC-02), [#24](https://github.com/eternalnight04/HeladeriaVainell/issues/24) (TC-04) y [#25](https://github.com/eternalnight04/HeladeriaVainell/issues/25) (TC-05), abiertos el 28/09/2026 y hoy cerrados. El `#21` es una tarea de DevOps de la Actividad 2 y no es de QA; el `#22` no existe.
 
 ## 7. Resultados del Momento 2 — Post-merge
 
 | Caso | Resultado documentado | Estado de cierre |
 |---|---|---|
-| TC-01 — Compatibilidad | Página cargada y captura general obtenida en Chromium. Se observó un 404 de `/favicon.ico` y mensajes de consola relacionados con `autocomplete`. | Parcial; otros navegadores pendientes. |
+| TC-01 — Compatibilidad | Página cargada y captura general obtenida en Chromium. Se observó un 404 de `/favicon.ico` (issue [#57](https://github.com/eternalnight04/HeladeriaVainell/issues/57), cerrado) y mensajes de consola relacionados con `autocomplete`. | Parcial; otros navegadores pendientes. |
 | TC-02 — Responsive | iPhone 390 × 844, Samsung 360 × 800 e iPad 768 × 1024: controles visibles e interactuables, sin desbordamiento horizontal en las mediciones registradas. | **PASS** para los tres viewports emulados. |
 | TC-03 — Rendimiento | `readyState`: `complete`; TTFB: 2,6 ms; DOMContentLoaded: 32,8 ms; carga total: 79,2 ms. | Métricas registradas; sin PASS/FAIL formal por falta de umbral definido. |
-| TC-04 — Accesibilidad | axe-core: 0 infracciones automatizadas confirmadas, 47 comprobaciones aprobadas, 2 incompletas y 39 no aplicables. | Parcial; revisión manual pendiente. |
-| TC-05 — HTML semántico | 17 encabezados, 4 imágenes con atributo `alt`, 68 controles inspeccionados y ningún ID duplicado observado. | Parcial; validación W3C pendiente. |
+| TC-04 — Accesibilidad | axe-core: 0 infracciones automatizadas confirmadas, 47 comprobaciones aprobadas, 2 incompletas y 39 no aplicables. Los 3 nodos de `aria-allowed-attr` fueron confirmados como errores por el validador W3C (issue [#60](https://github.com/eternalnight04/HeladeriaVainell/issues/60)). | Parcial; `color-contrast` pendiente de revisión manual. |
+| TC-05 — HTML semántico y W3C | Inspección estructural sin hallazgos: 17 encabezados, 4 imágenes con atributo `alt`, 68 controles inspeccionados y ningún ID duplicado. Validación W3C Nu HTML Checker del 01/11/2026: 3 errores y 3 advertencias en los testimonios. Issue: [#60](https://github.com/eternalnight04/HeladeriaVainell/issues/60). | **FAIL** en la validación W3C; estructura semántica sin hallazgos. |
 
 ### Detalles relevantes
 
 **TC-01 — Compatibilidad**
 
-Se observó un error 404 al solicitar `/favicon.ico`. También se registraron mensajes de consola relacionados con atributos `autocomplete`. Estos mensajes requieren revisión antes de decidir si representan defectos funcionales.
+Se observó un error 404 al solicitar `/favicon.ico`, registrado en el issue [#57](https://github.com/eternalnight04/HeladeriaVainell/issues/57) (cerrado el 01/11/2026). También se registraron mensajes de consola relacionados con atributos `autocomplete`. Estos mensajes requieren revisión antes de decidir si representan defectos funcionales.
 
 **TC-02 — Responsive**
 
@@ -145,20 +148,22 @@ Los tiempos registrados corresponden a una ejecución local. No representan una 
 
 **TC-04 — Accesibilidad**
 
-La auditoría no detectó infracciones automatizadas confirmadas. Quedaron dos reglas incompletas: `aria-allowed-attr` y `color-contrast`. Es necesario revisar los elementos señalados manualmente. No se declara conformidad total con WCAG.
+La auditoría no detectó infracciones automatizadas confirmadas. Quedaron dos reglas incompletas: `aria-allowed-attr` y `color-contrast`. La regla `aria-allowed-attr` fue confirmada como error por el validador W3C (líneas 557, 569 y 581 de `index.html`; ver `test-case-5.md` e issue [#60](https://github.com/eternalnight04/HeladeriaVainell/issues/60)). `color-contrast` requiere revisión manual de los elementos señalados. No se declara conformidad total con WCAG.
 
-**TC-05 — HTML semántico**
+**TC-05 — HTML semántico y W3C**
 
-La inspección registró 17 encabezados: 1 `h1`, 9 `h2` y 7 `h3`; 4 imágenes con atributo `alt`, de las cuales 3 tienen texto no vacío; y 68 controles inspeccionados. No se encontraron identificadores duplicados. La validación W3C sigue pendiente de confirmación.
+La inspección registró 17 encabezados: 1 `h1`, 9 `h2` y 7 `h3`; 4 imágenes con atributo `alt`, de las cuales 3 tienen texto no vacío; y 68 controles inspeccionados. No se encontraron identificadores duplicados.
+
+La validación con W3C Nu HTML Checker (01/11/2026) reportó 3 errores (`aria-label` en `p`, líneas 557, 569 y 581) y 3 advertencias (`article` sin encabezado), todos en los testimonios. Los tres errores coinciden con los nodos de la regla incompleta `aria-allowed-attr` de TC-04. Seguimiento en el issue [#60](https://github.com/eternalnight04/HeladeriaVainell/issues/60). Los errores originales del issue [#25](https://github.com/eternalnight04/HeladeriaVainell/issues/25) ya no aparecen en el reporte.
 
 ## 8. Resumen cuantitativo del Momento 2
 
 - **Casos de prueba documentados:** 5.
 - **PASS formal:** 1 — TC-02, limitado a los tres viewports emulados.
-- **FAIL formal:** 0 asignados en este resumen.
-- **Casos con cierre parcial o sin criterio formal de aprobación:** 4 — TC-01, TC-03, TC-04 y TC-05.
-- **Issues nuevos creados durante esta ejecución:** 0 documentados.
-- **Issues históricos mencionados en el informe anterior:** 5 referencias (`#21` a `#25`); su estado actual no está verificado.
+- **FAIL formal:** 1 — TC-05, por la validación W3C (3 errores, issue [#60](https://github.com/eternalnight04/HeladeriaVainell/issues/60)).
+- **Casos con cierre parcial o sin criterio formal de aprobación:** 3 — TC-01, TC-03 y TC-04.
+- **Issues creados durante esta ejecución:** [#57](https://github.com/eternalnight04/HeladeriaVainell/issues/57) (favicon, registrado el 27/10/2026 y cerrado el 01/11/2026) y [#60](https://github.com/eternalnight04/HeladeriaVainell/issues/60) (W3C).
+- **Issues históricos verificados:** #23, #24 y #25 (cerrados); #21 no es de QA y #22 no existe.
 
 Que un caso no tenga un FAIL formal asignado no significa que esté completamente aprobado.
 
@@ -166,14 +171,15 @@ Que un caso no tenga un FAIL formal asignado no significa que esté completament
 
 | Hallazgo | Decisión de QA |
 |---|---|
-| Error 404 de `/favicon.ico` | Registrar como hallazgo técnico y evaluar corrección. No se afirma que exista un issue nuevo. |
+| Error 404 de `/favicon.ico` | Registrado en [#57](https://github.com/eternalnight04/HeladeriaVainell/issues/57); cerrado el 01/11/2026. |
 | Mensajes relacionados con `autocomplete` | Revisar los campos afectados y determinar si requieren corrección. No clasificar automáticamente como bug confirmado. |
-| Reglas de accesibilidad incompletas | Mantener la revisión manual pendiente antes de cerrar la auditoría. |
-| Validación W3C no confirmada | Mantener TC-05 parcialmente cerrado hasta ejecutar y documentar la validación. |
+| `aria-allowed-attr` (accesibilidad) | Confirmada como error por el validador W3C; seguimiento en [#60](https://github.com/eternalnight04/HeladeriaVainell/issues/60). |
+| `color-contrast` (accesibilidad) | Mantener la revisión manual pendiente antes de cerrar la auditoría. |
+| Validación W3C | Ejecutada el 01/11/2026: 3 errores y 3 advertencias en los testimonios, registrados en [#60](https://github.com/eternalnight04/HeladeriaVainell/issues/60). Verificar el cierre del issue y repetir la validación. |
 | Rendimiento sin umbral acordado | Conservar las métricas y definir un criterio de aceptación antes de declarar PASS o FAIL. |
 | Compatibilidad en otros navegadores no comprobada | No declarar compatibilidad completa hasta ejecutar las pruebas pendientes. |
 
-No se documentaron nuevos issues creados durante el Momento 2. Los issues históricos deben verificarse en GitHub antes de informar su estado definitivo.
+Issues creados durante el Momento 2: [#57](https://github.com/eternalnight04/HeladeriaVainell/issues/57) y [#60](https://github.com/eternalnight04/HeladeriaVainell/issues/60).
 
 ## 10. Notificaciones y comunicación
 
@@ -186,19 +192,20 @@ No se declara completada ninguna notificación sin constancia de envío.
 
 ### Momento 1
 
-**Estado documental:** histórico registrado, con necesidad de verificar la trazabilidad entre los test cases, los resultados originales y los issues `#21` a `#25`.
+**Estado documental:** histórico verificado en GitHub. Los issues [#23](https://github.com/eternalnight04/HeladeriaVainell/issues/23), [#24](https://github.com/eternalnight04/HeladeriaVainell/issues/24) y [#25](https://github.com/eternalnight04/HeladeriaVainell/issues/25) corresponden a TC-02, TC-04 y TC-05; el `#21` no es de QA y el `#22` no existe.
 
 ### Momento 2
 
-**Estado documental:** cinco casos documentados; TC-02 aprobado para los viewports emulados y cuatro casos con verificaciones pendientes o sin criterio formal de aceptación.
+**Estado documental:** cinco casos documentados; TC-02 aprobado para los viewports emulados, TC-05 con FAIL en la validación W3C ([#60](https://github.com/eternalnight04/HeladeriaVainell/issues/60)) y TC-01, TC-03 y TC-04 con verificaciones pendientes o sin criterio formal de aceptación.
 
 ### Pendientes para el cierre definitivo
 
-- [ ] Verificar en GitHub la existencia y el estado actual de los issues históricos `#21` a `#25`.
-- [ ] Revisar el 404 de `/favicon.ico`.
+- [x] Verificar en GitHub la existencia y el estado actual de los issues históricos `#21` a `#25`.
+- [x] Registrar y revisar el 404 de `/favicon.ico` ([#57](https://github.com/eternalnight04/HeladeriaVainell/issues/57), cerrado).
 - [ ] Investigar los mensajes de consola relacionados con `autocomplete`.
-- [ ] Completar las revisiones manuales de accesibilidad.
-- [ ] Ejecutar y registrar la validación W3C.
+- [ ] Completar la revisión manual de `color-contrast`.
+- [x] Ejecutar y registrar la validación W3C (01/11/2026).
+- [ ] Verificar el cierre del issue [#60](https://github.com/eternalnight04/HeladeriaVainell/issues/60) y repetir la validación W3C.
 - [ ] Definir umbrales de aceptación de rendimiento.
 - [ ] Completar la comprobación de compatibilidad en los navegadores pendientes.
 - [ ] Verificar y documentar las notificaciones efectivamente enviadas.
