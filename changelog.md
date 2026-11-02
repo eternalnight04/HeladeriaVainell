@@ -31,7 +31,9 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 ### Fixed
 
-- [fix/correccioness-2] correcciones RC48,RC30,RC37,RC35,RC38 ,RC39,RC40,RC36 PR: [#53](https://github.com/eternalnight04/HeladeriaVainell/pull/61) - @britezacostaalexis-pixel (Coordinador / DevOps)
+- [fix/corrección-actividad-obligatoria-2] correcciones hechas PR: [#66](https://github.com/eternalnight04/HeladeriaVainell/pull/66) - @britezacostaalexis-pixel (Coordinador / DevOps)
+
+- [fix/correccioness-2] correcciones RC48,RC30,RC37,RC35,RC38 ,RC39,RC40,RC36 PR: [#61](https://github.com/eternalnight04/HeladeriaVainell/pull/61) - @britezacostaalexis-pixel (Coordinador / DevOps)
 
 - [qa/momento-2]docs: actualiza evidencias de testing Momento 2 PR: [#59](https://github.com/eternalnight04/HeladeriaVainell/pull/59) - @lautarochavez14 (Documentador / QA Tester)
 
