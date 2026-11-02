@@ -81,6 +81,7 @@ body > header > nav {
 
 body > header > nav > * {
   flex: none;                   /* los links no se achican ni se parten */
+  min-height: 2.75rem;          /* conserva el mínimo táctil de 44px */
   white-space: nowrap;
   scroll-snap-align: start;
 }

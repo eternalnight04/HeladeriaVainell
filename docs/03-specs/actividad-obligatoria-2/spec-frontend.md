@@ -60,8 +60,7 @@ Generar la capa de presentación de la página `index.html` a partir del mockup 
 
 ### 5. Herramientas y flujo
 
-- **Mockup:** archivo Figma actualizado por el Coordinador (Dev Mode, nodo `1:3`). Enlace usado:
-  `https://www.figma.com/design/nYfkVF5ih7W14TxU7FpDPQ/Sin-t%C3%ADtulo?node-id=1-3&m=dev&t=bnjvdzgBFps9YXWX-1&code-node-id=1-3`
+- **Mockup:** archivo Figma actualizado por el Coordinador (Dev Mode, nodo `1:3`).
 - **IA:** GitHub Copilot en modo Agente en VS Code, con el servidor **MCP de Figma**.
 - **Contexto:** este spec, `index.html`, `plan.md` y las imágenes de la carpeta `imagenes/`.
 - **Verificación:** navegador local en tres anchos (390, 820 y 1280 px), comprobación de enlaces internos e IDs, y `git diff --check`.
