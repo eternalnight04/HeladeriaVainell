@@ -147,6 +147,9 @@ Agranda un poco la imagen del Capitan Helado y acerca un poco más los globos "M
 - [x] Elementos en línea y en bloque diferenciados.
 - [x] Texto no opacado por imágenes (verificado en 390, 820 y 1280 px).
 - [x] Imágenes cargan y no hay overflow horizontal en los tres anchos probados.
-- [ ] Pruebas de integración con el Especialista en Responsive en localhost y GitHub Pages.
-- [ ] Bugs del QA Tester resueltos antes del merge: *completar con links a los issues*.
-- [ ] PR aprobado por el Coordinador, enlazado en `changelog.md`, con issue vinculado y cerrado.
+- [x] Pruebas de integración con el Especialista en Responsive en localhost y GitHub Pages.
+- [x] Bugs del QA Tester resueltos antes del merge:
+    + [BUG] Desbordamiento horizontal (overflow) en versión mobile por imagen hero. Issue [#23](https://github.com/eternalnight04/HeladeriaVainell/issues/23)
+    + [BUG] Estructura de lista de definición invalida (regla dlitem) en sección de características. Issue [#24](https://github.com/eternalnight04/HeladeriaVainell/issues/24)
+    + [BUG] Errores de validación HTML W3C, marcado sintáctico e incorrecta estructura de footer. Issue [#25](https://github.com/eternalnight04/HeladeriaVainell/issues/25)
+- [x] PR aprobado por el Coordinador, enlazado en `changelog.md`, con issue vinculado y cerrado.
