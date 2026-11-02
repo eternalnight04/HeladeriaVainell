@@ -57,7 +57,7 @@
 
 ## Maqueta de diseño web
 
-El mockup del proyecto fue desarrollado en Figma y toma como referencia los requerimientos funcionales definidos en [plan.md](plan.md). La propuesta visual busca reflejar una identidad moderna, fresca y amigable para una heladería.
+El mockup actualizado del proyecto fue desarrollado en Figma y toma como referencia los requerimientos funcionales definidos en [plan.md](plan.md), con el objetivo de rediseñar la maqueta antes propuesta en `docs/01-mockup/actividad-obligatoria-1/`. La propuesta visual busca reflejar una identidad moderna, fresca y amigable para una heladería.
 
 ---
 
