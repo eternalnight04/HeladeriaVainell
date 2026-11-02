@@ -10,6 +10,9 @@
 
 ## PARTE A — Planificación previa
 
+> Esta parte conserva el análisis y el plan iniciales. La implementación vigente,
+> los ajustes que se apartaron del plan y la evidencia de pruebas están en la Parte B.
+
 ## 1. Qué se va a hacer
 
 - Crear `css/responsive.css`: media queries organizadas por breakpoint (mobile, tablet, desktop, más dos refinamientos) que adaptan layout, tipografías y componentes del sitio usando Flexbox y CSS Grid.
@@ -54,7 +57,7 @@ Reglas auxiliares que no son breakpoints de ancho: `@media (max-width: 47.9375re
 
 **Por qué cinco:** las grillas ahora tienen columnas explícitas por breakpoint (con `minmax(0, 1fr)`) en lugar de depender de `auto-fit`, porque en 820px `auto-fit` dejaba filas huérfanas. Wide y Micro se agregan solo donde las pruebas lo justifican (ancho del contenedor y celulares de 360px o menos).
 
-**Fidelidad al mockup:** el archivo de Figma no pudo leerse, así que la fidelidad en mobile y tablet se toma de la paleta, tipografías y componentes ya definidos en `styles.css` y `components.css`, y se contrasta con el mockup en la revisión manual (ver sección 10).
+**Fidelidad al mockup:** el archivo de Figma no pudo leerse; por eso no se afirma fidelidad pixel-perfect. La implementación conserva la paleta, tipografías y componentes definidos en `styles.css` y `components.css`.
 
 **Mobile-first:** `responsive.css` define el layout mobile como base (reglas sin media query) y usa `min-width` para ampliar a tablet, desktop y wide. Como `styles.css` ya declara valores de escritorio (padding de secciones, hero, footer), `responsive.css` los sobrescribe en mobile y los vuelve a declarar dentro de las queries `min-width`. Esa duplicación es un costo conocido. Una excepción: las tablas como cards usan `max-width`, porque en tablet y desktop vuelve la tabla normal y así no hay que restaurar todos los `display` de la tabla.
 
@@ -64,16 +67,16 @@ Flexbox para alineación en una dimensión (header, menús, filas de botones, in
 
 | Sección | Mobile (base) | Tablet (≥768px) | Desktop (≥1024px) |
 |---|---|---|---|
-| Header + nav (Flex) | Dos filas: marca arriba y menú debajo, en una tira con scroll horizontal propio; `scroll-padding-top` en 8rem | Igual que mobile | Una sola fila, `scroll-padding-top` en 6rem |
-| Hero `#inicio` (Grid) | 1 columna; `.hero-imagen` con alto máximo 15rem; CTA apilados a ancho completo; foto de helados en 4:3 | 2 columnas (`1.1fr 0.9fr`); Capitán Helado hasta 20rem; foto en 16:9 | 2 columnas (`1.05fr 0.95fr`) con más aire; Capitán Helado hasta 28rem; foto en 21:9 |
-| Características (Grid) | 2 × 2 | 4 columnas | 4 columnas |
+| Header + nav (Flex) | Dos filas y menú con scroll horizontal propio; `scroll-padding-top` en 9rem | Igual que mobile | Una fila; `scroll-padding-top` en 6rem |
+| Hero `#inicio` (Grid) | 1 columna; CTA apilados y personaje debajo del contenido | 2 columnas | 2 columnas con mayor espacio |
+| Beneficios (Flex) | Elementos se envuelven según el ancho disponible | Se envuelven según el ancho disponible | Se distribuyen en una franja |
 | Por qué Vainell (Grid) | 1 columna | 2 columnas | 4 columnas |
-| Catálogo (Flex + Grid) | Pills de categorías de 44px de alto; cada fila de la tabla es una card (Grid dentro del `<tr>`: nombre y precio, descripción, botón a ancho completo) | Tabla normal | Tabla normal a ancho completo |
+| Catálogo (Grid + tabla) | Galería de 1 columna; pills; cada fila de tabla se presenta como card | Galería de 2 columnas; tablas normales | Galería de 4 columnas; tablas normales |
 | Cómo pedir (Grid) | 1 columna | 2 columnas | 4 columnas |
-| Pedido (Grid) | 1 columna | 2 columnas (`fieldset`, dirección, comentarios y botón ocupan el ancho completo) | Igual que tablet |
-| Mi cuenta (Grid) | 1 columna | 2 columnas | 2 columnas (máx. 60rem) |
-| Testimonios (Grid) | 1 columna | 2 columnas; la tercera card queda centrada debajo, a media anchura | 3 columnas |
-| Footer (Grid) | 1 columna | 2 columnas; el bloque de marca ocupa la primera fila completa | 3 columnas (`1.4fr 1fr 1.2fr`) |
+| Pedido (Grid) | 1 columna | 2 columnas | 2 columnas |
+| Mi cuenta (Grid) | 1 columna | 2 columnas | 2 columnas |
+| Testimonios (Grid) | 1 columna | 2 columnas | 3 columnas |
+| Footer (Grid) | 1 columna | 2 columnas | 3 columnas |
 
 ## 5. Reglas transversales
 
@@ -83,24 +86,24 @@ Flexbox para alineación en una dimensión (header, menús, filas de botones, in
 - **Hover en pantallas táctiles:** la elevación de cards y botones se neutraliza con `@media (hover: none)`.
 - **Campos de formulario:** se mantiene `font-size` de 1rem (16px) para evitar el zoom automático de iOS al enfocar un campo.
 - **Celulares en horizontal:** con poca altura, el header deja de ser fijo.
-- **Ajustes por cambios del HTML:** `responsive.css` incluye un bloque inicial (sección 0) que estiliza elementos nuevos que los otros CSS no cubren: el logo "V", `.hero-imagen`, las métricas del hero como chips y el título visible del footer. Si el equipo prefiere, ese bloque se puede mover a `components.css`.
+- **Ajustes por cambios del HTML:** el responsive actual adapta la ilustración y las etiquetas de sabor del hero, la galería del catálogo, el menú y las grillas de contenido. Los componentes reutilizables se mantienen en `components.css`; los cambios de composición por ancho, en `responsive.css`.
 - **Organización de `responsive.css`:** un bloque por breakpoint, con comentarios que documentan cada decisión y el motivo del breakpoint.
 
 ## 6. Criterios de aceptación
 
-- [ ] Breakpoints definidos y documentados (mobile, tablet, desktop) en `responsive.css` y en este spec.
-- [ ] Layout mobile-first implementado (base mobile + `min-width` para tablet, desktop y wide).
-- [ ] Todas las secciones del mockup (header, inicio, características, por qué Vainell, catálogo, cómo pedir, pedido, mi cuenta, testimonios, footer) se adaptan correctamente en los tres breakpoints.
-- [ ] No hay overflow horizontal de página en ningún dispositivo de la sección 7 (solo el menú del header scrollea, dentro de su contenedor).
-- [ ] Layouts con Flexbox y/o CSS Grid coherentes con el mockup.
-- [ ] La navegación es usable en mobile y tablet, y el header fijo no tapa el destino de los enlaces ancla.
-- [ ] En mobile, cada fila del catálogo se ve como card legible, con nombre, descripción, precio y botón "Agregar".
-- [ ] Zonas táctiles de al menos 44px en mobile (en tablet, menú y pills).
-- [ ] Capitán Helado y las fotos del hero se ven completos y proporcionados en los tres breakpoints.
-- [ ] `responsive.css` enlazado en `index.html` después de `components.css`.
-- [ ] Pruebas de integración realizadas con el Desarrollador Frontend en GitHub Pages y localhost.
-- [ ] Bugs reportados por el QA Tester resueltos antes del merge a `develop`.
-- [ ] PR hacia `develop` con `changelog.md` actualizado e issue vinculado.
+- [x] Breakpoints definidos y documentados (mobile, tablet, desktop) en `responsive.css` y en este spec.
+- [x] Layout mobile-first implementado (base mobile + `min-width` para tablet, desktop y wide).
+- [x] Secciones adaptadas por breakpoint; composición y legibilidad verificadas en la matriz de viewports de la sección 7.
+- [x] No hay overflow horizontal de página en ningún viewport probado (el menú puede desplazarse dentro de su propio contenedor en mobile).
+- [x] Layouts con Flexbox y CSS Grid.
+- [x] Navegación interna verificada: los destinos quedan debajo del header sticky, también en mobile.
+- [x] En mobile, las filas de catálogo se representan como cards; tablet y desktop conservan las tablas.
+- [x] Enlaces del menú y pills de categorías con altura medida de al menos 44px.
+- [x] Capitán Helado cargado y sin superposición con el título en todos los viewports probados; imágenes de la página cargadas.
+- [x] `responsive.css` enlazado después de `components.css` en `index.html`.
+- [x] Pruebas en GitHub Pages y en un servidor localhost.
+- [x] Bugs reportados por el QA Tester resueltos antes del merge a `develop`.
+- [x] PR hacia `develop` con `changelog.md` actualizado e issue vinculado.
 
 ## 7. Plan de pruebas
 
@@ -115,61 +118,84 @@ Con Live Preview en `http://localhost:3000` y con GitHub Pages, usando la emulac
 | 768×1024 | Tablet clásica |
 | 820×1180 | iPad Air |
 | 1024×768 | Límite tablet/desktop |
-| 1280×800 | Safari / Edge |
-| 1440×900 | Firefox |
-| 1920×1080 | Chrome |
+| 1280×800 | Perfil de escritorio |
+| 1440×900 | Perfil wide |
+| 1920×1080 | Monitor wide |
+| 844×390 | Móvil en horizontal (regla auxiliar de landscape) |
 
-En cada viewport se revisa:
+Los nombres de dispositivos del plan son referencias de dimensiones, no una afirmación de que se haya usado el dispositivo físico o su navegador nativo. En cada viewport se revisa:
 
 1. Overflow de página, con esta línea en la consola del navegador (debe dar `false`):
    ```js
    document.documentElement.scrollWidth > document.documentElement.clientWidth
    ```
 2. Que ninguna sección se vea cortada, superpuesta o con columnas demasiado angostas.
-3. Que los enlaces del menú lleven a la sección sin quedar tapada por el header fijo.
-4. Que el botón "Agregar" y los campos se puedan tocar con comodidad.
+3. Que los enlaces internos del menú y las categorías lleven al destino sin que el header sticky lo tape.
+4. Que los enlaces del menú y las categorías tengan una altura de al menos 44px; que los campos de los formularios sigan siendo utilizables.
 5. Que en mobile las tablas se vean como cards y que en tablet y desktop entren sin scroll de página.
 6. Que el menú del header scrollee solo dentro de su contenedor, sin mover la página.
-7. Que las imágenes del hero (cono, Capitán Helado y foto de los helados) no se deformen ni se recorten de forma que se pierda lo importante.
+7. Que las imágenes de la página carguen y que el título del hero no se superponga con la ilustración ni con su rótulo.
 
 ---
 
 ## PARTE B — Cierre con evidencia
 
-## 8. Prompt exacto usado
+## 8. Primer prompt exacto usado
 
-**Herramienta realmente usada:** Claude (chat de claude.ai), no Copilot Agent. Esto debido a un error de la IA en el que no terminaba de completar la solicitud. 
+**Herramienta realmente usada:** Claude (chat de claude.ai) fue utilizada para realizar el archivo `responsive.css` por primera vez, este fue modificado conforme se empezaron a hacer más pruebas con más cambios con Copilot Agent.
 
-![alt text](../../02-prompts/actividad-obligatoria-2/prompt-frontend-1.png)
-
-El enlace de Figma Make bloquea el acceso automatizado, por lo que el mockup **no pudo leerse** y la fidelidad se tomó de los CSS existentes.
-
-Archivos adjuntados como contexto: `index.html`, `css/styles.css`, `css/components.css`, `plan.md` y la consigna de la Actividad Obligatoria N°2 (PDF).
-
-![alt text](../../02-prompts/actividad-obligatoria-2/prompt-responsive-2.png)
+Archivos adjuntados como contexto: `index.html`, `css/styles.css`, `css/components.css` y `plan.md`.
 
 
 ```
-Crea el archivo responsive.css para contribuir al diseño visual de index.html (ten en cuenta los comentarios). El diseño debe ser igual o parecido a este modelo de Figma: https://www.figma.com/make/Si4hHXYePCegrXfCQ5TNf3/Heladeria-Vainell-Segundo-Mockup?fullscreen=1&t=Xpd4GgpcrVNqz7z7-1&code-node-id=0-6
+Crea el archivo responsive.css para contribuir al diseño visual de index.html (ten en cuenta los comentarios). El diseño debe ser igual o parecido a este modelo de Figma: (dev mode link).
 ```
 
 
-
-## 9. Resultado obtenido
+### Resultado obtenido
 
 ```
-Se generó css/responsive.css con enfoque mobile-first y estos breakpoints: tablet (min-width 48rem), desktop (min-width 64rem), wide (min-width 90rem) y micro (max-width 22.5rem).
+La implementación vigente usa `css/responsive.css` mobile-first: tablet desde 768px, desktop desde 1024px, wide desde 1440px y refinamiento micro hasta 360px. La composición revisada incluye:
 
-- Header: en mobile y tablet, marca arriba y menú en una tira con scroll horizontal dentro del <nav>; en desktop, una sola fila.
-- Hero: 1 columna en mobile y 2 desde tablet; la imagen de Capitán Helado crece con el ancho hasta 32rem.
-- Catálogo: en mobile cada fila de la tabla es una card; desde tablet vuelve la tabla.
-- Resto de secciones: 1 columna en mobile, 2 en tablet y 3 o 4 en desktop, con columnas explícitas (minmax(0, 1fr)).
-- Se estilizaron elementos nuevos del HTML que los otros CSS no cubrían: logo "V", .hero-imagen, métricas del hero como chips y título visible del footer.
-- No se modificaron styles.css ni components.css. No se usó overflow-x: hidden en html ni en body.
+- Header: marca y menú en filas separadas en mobile/tablet; el menú conserva su scroll horizontal dentro del `nav`. Desde desktop se dispone en una fila.
+- Hero: una columna en mobile y dos desde tablet; el título permanece separado de la ilustración de Capitán Helado y de su rótulo opaco. La ilustración y las etiquetas de sabor se ajustan por breakpoint.
+- Catálogo: galería de productos antes de las cinco categorías. Las categorías son enlaces de ancla y las cinco tablas siguen apiladas en la página (no son pestañas). En mobile cada fila se presenta como card; desde 768px se recupera la tabla.
+- Resto de secciones: grillas explícitas que pasan de una columna a dos y, en las secciones correspondientes, a tres o cuatro columnas.
+- `styles.css` y `components.css` conservan la presentación base y los componentes; `responsive.css` controla los cambios de layout por viewport. No se oculta el overflow de `html` o `body` como parche.
 
-Controles realizados: se verificó que las llaves y los comentarios estén balanceados. No se abrió la página en un navegador ni se probó en los viewports del plan de pruebas.
+**Pruebas de integración:** página abierta desde `file:///.../index.html` en el navegador Chromium integrado, GitHub Pages y localhost. Se revisaron 11 viewports: 320×640, 360×800, 390×844, 412×915, 768×1024, 820×1180, 1024×768, 1280×800, 1440×900, 1920×1080 y 844×390 (landscape).
+
+- En los 10 tamaños portrait/desktop: `document.documentElement.scrollWidth > clientWidth` fue `false`; el título no se superpuso a Capitán Helado ni a su rótulo; se cargaron las 6/6 imágenes; se encontraron las 5 tablas.
+- Entre 320px y 412px, las filas se muestran como cards y el menú scrollea dentro de su contenedor. Desde 768px las tablas vuelven a su presentación tabular y no se observó scroll interno del menú.
+- En los viewports medidos, los enlaces del menú y las pills de categorías tuvieron 44px de alto.
+- Al comprobar los anchors se detectó que el buffer original de 8rem podía quedar 9px por debajo del header móvil (137px). Se aumentó a 9rem (144px); después del ajuste, los destinos quedan por debajo del header. En landscape bajo el header deja de ser sticky.
+- El formulario conserva validación nativa: los campos requeridos vacíos no pasan `checkValidity()`, como se espera antes de completar el formulario. La prueba no envía pedidos ni verifica servicios de backend.
+
+La revisión se hizo en Chromium con emulación de viewport y métricas de layout.
 ```
 
-## 10. Ajustes manuales realizados
+## 8.1 Segundo prompt exacto usado
 
+**Herramienta realmente usada:** Copilot Agent con MCP.
+
+```Realiza las pruebas de integración para la página web. Verifica que cada diseño se vea visualmente bien con cada dispositivo que se usará mediante responsive.````
+
+### Resultado obtenido
+
+```
+Actualicé responsive.css: las pruebas mostraron que el espacio para anclas en móvil era menor que la altura del header. Lo aumenté a 9rem y confirmé que las categorías quedan visibles al navegar.
+
+Registré en spec-responsive.md los cambios, sus motivos y los resultados de 11 tamaños de viewport. No se detectó desbordamiento horizontal; el hero mantuvo el título separado del personaje, y se verificaron las tablas, las imágenes y los destinos de navegación.
+
+git diff --check pasó. La prueba se hizo en Chromium con el archivo local.
+```
+
+## 9. Ajustes manuales realizados
+
+- Se ajustó la composición del hero para priorizar el título y evitar que el personaje o los elementos decorativos lo tapen. Capitán Helado se amplió en su columna; el rótulo opaco puede solaparse ligeramente con la ilustración y las etiquetas “Menta” y “Vainilla” se acercaron al personaje. El motivo es destacar la ilustración sin competir con el texto.
+- “Nuestro secreto” se presenta como introducción y “✨ Un poco de magia ✨” como título inmediatamente posterior, para que la lectura tenga el orden solicitado y el conjunto encaje con la sección.
+- Se organizó la galería y las cinco categorías del catálogo con enlaces a anclas; el modo actual conserva todas las tablas en vertical y no introduce el comportamiento de pestañas.
+- Se ajustaron grillas y proporciones por breakpoint para que el hero, la galería, las secciones de contenido, las tablas y el footer se reorganicen sin desbordar en pantallas pequeñas.
+- Se conservó el scroll horizontal del menú dentro de su `nav` en mobile/tablet, en lugar de permitir que ensanche toda la página; las filas del catálogo se presentan como cards por debajo de 768px.
+- Tras la prueba de anclas se cambió `scroll-padding-top` mobile de 8rem a 9rem: el header medía 137px y el buffer de 128px dejaba el destino parcialmente bajo el header. El nuevo buffer de 144px deja 7px de margen en el viewport más estrecho probado. En desktop se mantiene el buffer de 6rem.
 - `responsive.css` está enlazado en `index.html` después de `components.css`.

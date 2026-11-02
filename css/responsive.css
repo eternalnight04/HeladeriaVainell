@@ -42,9 +42,9 @@ body > footer a {
    1. MOBILE (base, sin media query) — 320px a 767px
    ========================================================================== */
 
-/* El header ocupa ~2 filas: más margen al navegar por anclas */
+/* El header ocupa ~2 filas (137px en mobile): reservar espacio para anclas */
 html {
-  scroll-padding-top: 8rem;
+  scroll-padding-top: 9rem;
 }
 
 /* Menos aire vertical entre secciones (4.5rem es demasiado en un celular) */
