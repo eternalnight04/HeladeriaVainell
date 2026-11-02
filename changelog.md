@@ -31,6 +31,8 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 ### Fixed
 
+- [fix/correcciones-varias-8] Correcciones varias 8. PR: [#65](https://github.com/eternalnight04/HeladeriaVainell/pull/65) - @eternalnight04 (Desarrollador Frontend / CSS)
+
 - [fix/correcciones-varias-7] Pruebas de integración - responsive. PR: [#64](https://github.com/eternalnight04/HeladeriaVainell/pull/64) - @eternalnight04 (Desarrollador Frontend / CSS)
 
 - [fix/correcciones-varias-6] Fix/correcciones varias 6. PR: [#63](https://github.com/eternalnight04/HeladeriaVainell/pull/63) - @eternalnight04 (Desarrollador Frontend / CSS)
