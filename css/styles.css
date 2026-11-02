@@ -472,6 +472,14 @@ body > header > nav {
   background: var(--color-mint);
 }
 
+#inicio > figure img {
+  width: 100%;
+  aspect-ratio: 8 / 9;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+}
+
 /* --------------------------------------------------------------------------
    Franja de números (#caracteristicas)
    <dt> está antes que <dd> en el HTML (semántica correcta); con
