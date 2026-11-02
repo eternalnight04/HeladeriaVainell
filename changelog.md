@@ -31,6 +31,8 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 ### Fixed
 
+- [fix/correcciones-varias-6] Fix/correcciones varias 6. PR: [#63](https://github.com/eternalnight04/HeladeriaVainell/pull/63) - @eternalnight04 (Desarrollador Frontend / CSS)
+
 - [fix/correcciones-actividad-2] changelog 3  PR: [#62](https://github.com/eternalnight04/HeladeriaVainell/pull/62) - @britezacostaalexis-pixel (Coordinador / DevOps)
 
 - [fix/correccioness-2] correcciones RC48,RC30,RC37,RC35,RC38 ,RC39,RC40,RC36 PR: [#61](https://github.com/eternalnight04/HeladeriaVainell/pull/61) - @britezacostaalexis-pixel (Coordinador / DevOps)
