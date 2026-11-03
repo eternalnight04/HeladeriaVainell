@@ -16,7 +16,11 @@
 
 ## Descripción
 
-**Vainell** es una página web interactiva desarrollada para una heladería, que ofrece a los usuarios la posibilidad de simular la realización de un pedido, ya sea para **entrega a domicilio (delivery)** o para **retiro en el local (take away)**, y un sistema de autenticación de usuarios. El proyecto se construye de forma progresiva a lo largo del cuatrimestre, incorporando en cada entrega nuevas tecnologías y funcionalidades: comenzando por la estructura HTML5, sumando luego estilos con CSS y, finalmente, interactividad con JavaScript.
+**Vainell** es una página web interactiva desarrollada para una heladería ficticia, que permite simular la realización de pedidos mediante entrega a domicilio (delivery) o retiro en el local (take away), además de ofrecer una simulación de cuenta de usuario.
+
+El proyecto se desarrolla progresivamente a lo largo del cuatrimestre. La primera entrega incorporó la estructura semántica con HTML5, la segunda agregó estilos CSS3 y diseño responsive, y la tercera incorpora lógica de negocio e interactividad mediante JavaScript, junto con diagramas de actividades y pruebas automatizadas con Jasmine.
+
+Vainell es un simulador académico: no procesa pagos reales ni utiliza un backend o una base de datos para persistir información.
 
 ---
 
@@ -34,24 +38,29 @@
 
 ## Tecnologías utilizadas
 
-- **HTML5** (estructura semántica) — entrega actual
-- **CSS3** (maquetación y diseño responsive) — próximas entregas
-- **JavaScript** (interactividad, validaciones, cálculo de envío) — próximas entregas
-- **Git / GitHub** (branch model, Pull Requests, Issues) para la gestión colaborativa del proyecto
-- **IA generativa** (GitHub Copilot en modo Agente, ChatGPT, Gemini, Claude, entre otros) aplicada en distintas etapas del desarrollo
-- **Figma** + servidor MCP de Figma para el diseño y la generación asistida de la estructura visual
-
+- **HTML5** — estructura semántica.
+- **CSS3** — maquetación y diseño responsive.
+- **JavaScript** — lógica de negocio, funciones, validaciones y simulación de flujos.
+- **PlantUML** — diagramas de actividades.
+- **Jasmine** — pruebas automatizadas de JavaScript.
+- **Git / GitHub** — gestión de ramas, Pull Requests, Issues y GitHub Projects.
+- **GitHub Pages** — publicación del sitio.
+- **IA generativa** — GitHub Copilot en modo Agente y otros modelos utilizados durante el desarrollo.
+- **Figma** — diseño y documentación del mockup.
 ---
 
 ## Funcionalidades previstas
 
-- Catálogo de sabores y productos (potes, kilos, palitos, tortas heladas).
-- Tabla de precios por formato.
+- Catálogo de sabores y productos (potes, kilos, palitos y tortas heladas).
 - Selección de modalidad de entrega: delivery o retiro en local.
-- Formulario de pedido con datos del cliente y, según la modalidad, dirección de envío u horario de retiro.
-- Cálculo simulado del costo de envío según zona (a incorporar con JavaScript).
-- Creación de usuario.
-- Confirmación visual del pedido simulado (sin backend real).
+- Formulario de pedido con datos del cliente.
+- Simulación del cálculo del costo de envío.
+- Simulación de registro e inicio de sesión.
+- Implementación de cuatro flujos principales de negocio mediante JavaScript.
+- Menú interactivo mediante `prompt()`.
+- Validación de datos y presentación de resultados mediante `alert()` y/o `console.log()`.
+- Diagramas de actividades desarrollados con PlantUML.
+- Pruebas automatizadas de los flujos mediante Jasmine.
 
 ---
 
@@ -69,6 +78,9 @@ El mockup del proyecto fue desarrollado en Figma y toma como referencia los requ
 -  Prompts de IA: [docs/02-prompts/prompts.md](docs/02-prompts/prompts.md)
 -  Changelog: [changelog.md](changelog.md)
 -  Especificaciones técnicas: [docs/03-specs](docs/03-specs)
+- Especificación del Coordinador / DevOps: [spec-devops.md](docs/03-specs/actividad-obligatoria-3/spec-devops.md)
+- Diagramas de actividades: [diagramas-doc.md](docs/05-diagramas/01-diagrama-de-actividades/diagramas-doc.md)
+- Documentación de testing JavaScript: [testing-doc.md](js/test/testing-doc.md)
 
 ---
 
@@ -76,7 +88,6 @@ El mockup del proyecto fue desarrollado en Figma y toma como referencia los requ
 
 | Nombre completo | N° de Matrícula | Usuario GitHub | Rol en esta entrega |
 |---|---|---|---|
-| *Milenka Vila* | *157550* | *@eternalnight04* | Coordinador / DevOps |
-| *Alexis Matias Britez Acosta* | *158100* | *@britezacostaalexis-pixel* | Desarrollador Frontend |
-| *Alexis Matias Britez Acosta* | *158100* | *@britezacostaalexis-pixel* | Documentador / Diseñador UX |
-| *Lautaro Chavez* | *151222* | *@lautarochavez14* | Especialista en IA y Prompt Engineering |
+| Milenka Vila | 157550 | @eternalnight04 | Arquitecto de Diagramas de Actividades |
+| Alexis Matias Britez Acosta | 158100 | @britezacostaalexis-pixel | Desarrollador JavaScript |
+| Lautaro Chavez | 151222 | @lautarochavez14 | Coordinador / DevOps |
