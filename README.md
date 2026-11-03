@@ -69,6 +69,7 @@ El mockup actualizado del proyecto fue desarrollado en Figma y toma como referen
 -  Prompts de IA: [docs/02-prompts/prompts.md](docs/02-prompts/prompts.md)
 -  Changelog: [changelog.md](changelog.md)
 -  Especificaciones técnicas: [`docs/03-specs/actividad-obligatoria-2/`](docs/03-specs/actividad-obligatoria-2/)
+-  Testing: [`docs/04-testing/testing-doc.md`](docs/04-testing/testing-doc.md)
 
 ---
 
