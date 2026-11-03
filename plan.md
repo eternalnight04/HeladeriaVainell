@@ -6,7 +6,7 @@
 
 **Vainell** es una página web interactiva para una heladería ficticia, cuyo objetivo es simular el proceso de pedido de helados, ya sea para **entrega a domicilio (delivery)** o para **retiro en el local (take away / pickup)**.
 
-El proyecto se desarrolla de forma incremental a lo largo del cuatrimestre. Esta primera entrega (Actividad Obligatoria N°1) construye únicamente la **estructura base en HTML5**, sin estilos (CSS) ni comportamiento (JavaScript), dejando marcadores en el código para las funcionalidades que se incorporarán en las próximas entregas.
+El proyecto se desarrolla de forma incremental a lo largo del cuatrimestre, mediante distintas entregas que amplían las funcionalidades del sitio. La primera entrega estableció la estructura base en HTML5 semántico; la segunda incorporó los estilos CSS3 y el diseño responsive; y la tercera incorpora la lógica e interactividad mediante JavaScript, junto con las actividades de documentación, diagramación y testing establecidas en su consigna.
 
 ## 2. Problema que resuelve / propósito
 
@@ -108,3 +108,21 @@ Extraídos y estructurados a partir de la consigna del profesor:
 
 - Este `plan.md` es la base para que el **Documentador/UX** diseñe el mockup y para que el **Especialista en IA** defina la aplicación de SDD en el equipo.
 - Cada Pull Request debe justificar su cumplimiento contra los puntos declarados aquí.
+
+
+## 9. Requerimientos generales de la Actividad Obligatoria N.º 3
+
+La tercera entrega amplía el proyecto mediante la incorporación de funcionalidades con JavaScript y las actividades de diagramación y testing indicadas en la consigna.
+
+Los requerimientos generales de esta etapa son:
+
+1. **JavaScript:** implementar los cuatro flujos principales solicitados en la consigna, respetando el funcionamiento esperado del simulador.
+2. **Diagramación:** elaborar los diagramas correspondientes mediante PlantUML, de acuerdo con los requerimientos de la actividad.
+3. **Testing:** realizar las pruebas solicitadas utilizando Jasmine y documentar los resultados.
+4. **Integración:** coordinar la incorporación de los cambios desarrollados por los integrantes del equipo mediante ramas y Pull Requests.
+5. **Documentación:** mantener actualizados el plan, el README, el changelog y los índices de documentación.
+6. **Gestión y publicación:** realizar las tareas de coordinación, revisión, integración y publicación establecidas para la entrega.
+
+Los criterios específicos de implementación, diagramación y testing deben respetar la consigna oficial de la Actividad Obligatoria N.º 3 y las especificaciones de cada rol.
+
+La responsabilidad del Coordinador / DevOps es organizar y supervisar el proceso de integración, revisión, documentación y publicación del trabajo del equipo.
