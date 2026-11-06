@@ -77,6 +77,23 @@ Por lo tanto, el caso de prueba no se considera completamente aprobado hasta res
 
 ## Prompt utilizado en Copilot Agent Mode
 
-Se utilizó Playwright MCP para abrir la página local, verificar su carga, revisar los componentes principales, inspeccionar los errores de consola y generar una captura de pantalla completa.
+```text
+Usa Playwright MCP para realizar la auditoría del Test Case 1: Compatibilidad de escritorio en la aplicación local de Heladería Vainell.
 
-No se consideran ejecutadas las verificaciones de navegadores que no fueron probados efectivamente.
+URL:
+http://127.0.0.1:3000/index.html?vscode-livepreview=true
+
+Instrucciones:
+1. Abre la página en Chromium.
+2. Verifica que la página cargue correctamente.
+3. Comprueba el título del documento HTML.
+4. Verifica la visibilidad de la navegación principal.
+5. Verifica el renderizado de la sección principal (hero section).
+6. Verifica la visibilidad del catálogo de productos y del formulario de pedido.
+7. Inspecciona la consola en busca de errores y recursos que no se cargan.
+8. Toma una captura de pantalla completa de la página como evidencia (desde la navegación hasta el formulario).
+9. Reporta el resultado de cada comprobación (PASS / FAIL / OBSERVACIÓN / PENDIENTE).
+
+No modifiques ningún archivo del proyecto.
+```
+

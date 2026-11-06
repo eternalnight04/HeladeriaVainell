@@ -71,3 +71,37 @@ En los tres tamaños, los controles del formulario se encontraron visibles, habi
 En la nueva ejecución, la página cargó correctamente, sus secciones principales permanecieron visibles y no se detectó desbordamiento horizontal en los viewports de iPhone, Samsung Galaxy e iPad.
 
 Estos resultados describen la verificación realizada en Chromium y no reemplazan las pruebas en otros navegadores ni en dispositivos físicos. Los hallazgos del Momento 1 quedan documentados como antecedentes históricos, cuyo cierre es consistente con el resultado PASS obtenido en el Momento 2.
+
+## 7. Prompt utilizado en Copilot Agent Mode
+
+```text
+Usa Playwright MCP para realizar la auditoría del Test Case 2: Responsive en dispositivos móviles en la aplicación local de Heladería Vainell.
+
+URL:
+http://127.0.0.1:3000/index.html?vscode-livepreview=true
+
+Instrucciones:
+1. Abre la página en Chromium.
+2. Configura y prueba los siguientes viewports uno por uno:
+   - iPhone: 390 × 844
+   - Samsung Galaxy: 360 × 800
+   - iPad: 768 × 1024
+3. En cada viewport verifica que:
+   - La página alcance `readyState: complete`.
+   - La navegación principal, la sección Hero, el catálogo y el formulario estén visibles.
+   - No exista desbordamiento horizontal (compara `clientWidth` y `scrollWidth`).
+   - Los controles del formulario estén visibles, habilitados, editables, reciban foco y acepten interacción con el puntero.
+4. No envíes el formulario.
+5. Toma una captura de pantalla completa de cada viewport como evidencia.
+6. Reporta los resultados en el siguiente formato de tabla:
+
+| Dispositivo / viewport | Resultado | `innerWidth × innerHeight` | `clientWidth` | `scrollWidth` | Desbordamiento horizontal |
+|---|---|---:|---:|---:|---|
+| iPhone (390 × 844) | ... | ... | ... | ... | ... |
+| Samsung Galaxy (360 × 800) | ... | ... | ... | ... | ... |
+| iPad (768 × 1024) | ... | ... | ... | ... | ... |
+
+No modifiques ningún archivo del proyecto.
+```
+
+**Prompt del Momento 1:** el texto de la ejecución pre-merge no se conservó. Los resultados del Momento 1 de la sección 3 provienen del registro histórico y del issue [#23](https://github.com/eternalnight04/HeladeriaVainell/issues/23), no de un prompt documentado.
