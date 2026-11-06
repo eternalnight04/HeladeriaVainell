@@ -8,6 +8,55 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 
 
+## [Release Actividad Obligatoria N°2] - 2026-10-20
+
+
+### Added
+
+- [feature/dev-frontend-css-add-styles] Agregado de estilos y componentes CSS. PR: [#48](https://github.com/eternalnight04/HeladeriaVainell/pull/48) - @eternalnight04 (Desarrollador Frontend / CSS)
+
+- [feature/doc-qa-tester-add-test-cases] docs(qa): incorporación de casos de prueba 1-5 e informe consolidado de testing (Momento 1) PR: [#26](https://github.com/eternalnight04/HeladeriaVainell/pull/26) - @lautarochavez14 (Documentador / QA Tester)
+
+- [feature/responsive-design-add-responsive-styles] Se implementó el diseño responsivo. PR: [#50](https://github.com/eternalnight04/HeladeriaVainell/pull/50) - @eternalnight04 (Especialista en Responsive Design)
+
+- [feature/coord-devops-update-figma-and-readme] Actualización de Mockup PR: [#51](https://github.com/eternalnight04/HeladeriaVainell/pull/51) - @eternalnight04 (Coordinador / DevOps)
+
+// Nota: La PR #51 fue realizada por un integrante de otro rol debido a que el compañero que le tocaba dicha tarea no se encontraba presente en el momento, esta fue una decisión tomada por el grupo para ahorrar más tiempo en su momento.
+
+### Changed
+
+### Fixed
+
+- [fix/corrregir-realease-act-2] Fix/corrregir realease act 2 PR: [#69](https://github.com/eternalnight04/HeladeriaVainell/pull/69) - @britezacostaalexis-pixel (Coordinador / DevOps)
+
+
+- [fix/corrección-actividad-obligatoria-2] correcciones hechas PR: [#66](https://github.com/eternalnight04/HeladeriaVainell/pull/66) - @britezacostaalexis-pixel (Coordinador / DevOps)
+
+- [fix/correccioness-2] correcciones RC48,RC30,RC37,RC35,RC38 ,RC39,RC40,RC36 PR: [#61](https://github.com/eternalnight04/HeladeriaVainell/pull/61) - @britezacostaalexis-pixel (Coordinador / DevOps)
+- [fix/correcciones-varias-8] Correcciones varias 8. PR: [#65](https://github.com/eternalnight04/HeladeriaVainell/pull/65) - @eternalnight04 (Desarrollador Frontend / CSS)
+
+- [fix/correcciones-varias-7] Pruebas de integración - responsive. PR: [#64](https://github.com/eternalnight04/HeladeriaVainell/pull/64) - @eternalnight04 (Desarrollador Frontend / CSS)
+
+- [fix/correcciones-varias-6] Fix/correcciones varias 6. PR: [#63](https://github.com/eternalnight04/HeladeriaVainell/pull/63) - @eternalnight04 (Desarrollador Frontend / CSS)
+
+- [fix/correcciones-actividad-2] changelog 3  PR: [#62](https://github.com/eternalnight04/HeladeriaVainell/pull/62) - @britezacostaalexis-pixel (Coordinador / DevOps)
+
+- [fix/correccioness-2] correcciones RC48,RC30,RC37,RC35,RC38 ,RC39,RC40,RC36 PR: [#61](https://github.com/eternalnight04/HeladeriaVainell/pull/61) - @britezacostaalexis-pixel (Coordinador / DevOps)
+
+- [qa/momento-2] docs: actualiza evidencias de testing Momento 2. PR: [#59](https://github.com/eternalnight04/HeladeriaVainell/pull/59) - @lautarochavez14 (Documentador / QA Tester)
+
+- [fix/correcciones-actividad-num2] docs(qa): se incerto issue #57 de favicon y corregir matriz (RC10) PR: [#58](https://github.com/eternalnight04/HeladeriaVainell/pull/58) - @britezacostaalexis-pixel (Coordinador / DevOps)
+
+- [fix/readme-correcciones-1] Actualización de readme. PR: [#56](https://github.com/eternalnight04/HeladeriaVainell/pull/56) - @eternalnight04 (Desarrollador Frontend / CSS)
+
+- [fix/frontend-correcciones-1] Correcciones frontend y responsive. PR: [#55](https://github.com/eternalnight04/HeladeriaVainell/pull/55) - @eternalnight04 (Desarrollador Frontend / CSS)
+
+- [qa/momento-2] docs: actualiza evidencias de testing Momento 2 PR: [#54](https://github.com/eternalnight04/HeladeriaVainell/pull/54) - @lautarochavez14 (Documentador / QA Tester)
+
+- [fix/correcciones-act-2] correcciónes request changes. PR: [#53](https://github.com/eternalnight04/HeladeriaVainell/pull/53) - @britezacostaalexis-pixel (Coordinador / DevOps)
+
+
+
 ## [Release Actividad Obligatoria N°1] - 2026-08-31
 
 ### Added
