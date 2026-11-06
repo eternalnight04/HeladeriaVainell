@@ -108,3 +108,30 @@ Archivo: `docs/04-testing/evidencia-test-case-3-momento-2.png`.
 La página alcanzó el estado `complete` y el tiempo total de carga medido fue de aproximadamente 79,2 ms en esta ejecución local. Las imágenes del logo y del capitán fueron los recursos destacados con mayor duración y tamaño transferido, por lo que podrían ser los primeros candidatos a revisar si se busca optimizar la carga.
 
 También se detectó un error 404 para `favicon.ico`, que queda registrado como hallazgo. Estos resultados describen una ejecución puntual y no deben interpretarse como una medición universal del rendimiento de la aplicación.
+
+
+## 8. Prompt utilizado en Copilot Agent Mode
+
+```text
+Usa Playwright MCP para realizar la auditoría del Test Case 3: Performance y Carga de Página en la aplicación local de Heladería Vainell.
+
+URL:
+http://127.0.0.1:3000/index.html?vscode-livepreview=true
+
+Instrucciones:
+1. Abre la página en Chromium.
+2. Espera hasta que `document.readyState` sea `complete`.
+3. Mide los tiempos de navegación con `window.performance.getEntriesByType('navigation')[0]` y calcula:
+   - TTFB: `responseStart - requestStart`
+   - DOMContentLoaded: `domContentLoadedEventEnd - fetchStart`
+   - Tiempo total de carga: `loadEventEnd - fetchStart`
+4. Inspecciona los recursos con `window.performance.getEntriesByType('resource')`.
+5. Identifica y lista los recursos con mayor duración y mayor tamaño transferido (`transferSize`).
+6. Revisa la consola y registra cualquier error de carga.
+7. Toma una captura de pantalla de la página cargada como evidencia.
+8. Reporta las métricas de navegación, los recursos destacados y los errores encontrados.
+
+No modifiques ningún archivo del proyecto.
+```
+
+**Prompt del Momento 1:** no se conservó el texto de esa ejecución, en coherencia con lo indicado en la sección 4 (Momento 1 no reconstruible).

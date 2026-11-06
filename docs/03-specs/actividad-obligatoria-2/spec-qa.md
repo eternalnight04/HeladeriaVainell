@@ -84,27 +84,147 @@ Los resultados detallados deben consultarse en los cinco archivos `test-case-1.m
 
 ## 5. Prompts y trazabilidad
 
-Los siguientes puntos describen el objetivo de las instrucciones de prueba. **No son transcripciones literales de los prompts originales**, ya que no se dispone aquí de su texto exacto.
+Se transcriben los prompts utilizados en Copilot Agent Mode con Playwright MCP.
 
-### Prompt TC-01 — Compatibilidad de escritorio
+- **TC-01, TC-02, TC-03, TC-04 y TC-05:** texto literal registrado en `test-case-1.md``test-case-2.md``test-case-3.md``test-case-4.md` y `test-case-5.md`.
 
-Solicitar a Playwright MCP que abra el sitio local, compruebe que la página carga, inspeccione su visualización general y registre errores relevantes de consola o de recursos. Limitar las conclusiones a los navegadores realmente probados.
 
-### Prompt TC-02 — Responsive
+La ejecución de cada caso está respaldada por la evidencia de `docs/04-testing/` (capturas, registros de consola y métricas) descrita en la sección 4.
 
-Solicitar la evaluación del sitio con viewports de 390 × 844, 360 × 800 y 768 × 1024. Comprobar visibilidad e interacción de controles y comparar `scrollWidth` con `clientWidth` para detectar desbordamiento horizontal.
+### 5.1 TC-01 — Compatibilidad de escritorio
 
-### Prompt TC-03 — Rendimiento
+```text
+Usa Playwright MCP para realizar la auditoría del Test Case 1: Compatibilidad de escritorio en la aplicación local de Heladería Vainell.
 
-Solicitar la lectura de `document.readyState`, las métricas de navegación disponibles y los tiempos de carga de recursos. Registrar valores medidos y errores de red sin inventar umbrales de aceptación.
+URL:
+http://127.0.0.1:3000/index.html?vscode-livepreview=true
 
-### Prompt TC-04 — Accesibilidad
+Instrucciones:
+1. Abre la página en Chromium.
+2. Verifica que la página cargue correctamente.
+3. Comprueba el título del documento HTML.
+4. Verifica la visibilidad de la navegación principal.
+5. Verifica el renderizado de la sección principal (hero section).
+6. Verifica la visibilidad del catálogo de productos y del formulario de pedido.
+7. Inspecciona la consola en busca de errores y recursos que no se cargan.
+8. Toma una captura de pantalla completa de la página como evidencia (desde la navegación hasta el formulario).
+9. Reporta el resultado de cada comprobación (PASS / FAIL / OBSERVACIÓN / PENDIENTE).
 
-Solicitar la ejecución de axe-core 4.7.2 sobre la página local, con el registro de infracciones confirmadas, reglas incompletas, elementos afectados y comprobaciones manuales pendientes.
+No modifiques ningún archivo del proyecto.
+```
 
-### Prompt TC-05 — HTML semántico
+### 5.2 TC-02 — Responsive
 
-Solicitar la inspección de encabezados, elementos semánticos, imágenes y textos alternativos, nombres accesibles de controles e identificadores duplicados. La validación W3C Nu HTML Checker se registró por separado (ejecutada el 01/11/2026; ver `test-case-5.md`, sección 4.5).
+```text
+Usa Playwright MCP para realizar la auditoría del Test Case 2: Responsive en dispositivos móviles en la aplicación local de Heladería Vainell.
+
+URL:
+http://127.0.0.1:3000/index.html?vscode-livepreview=true
+
+Instrucciones:
+1. Abre la página en Chromium.
+2. Configura y prueba los siguientes viewports uno por uno:
+   - iPhone: 390 × 844
+   - Samsung Galaxy: 360 × 800
+   - iPad: 768 × 1024
+3. En cada viewport verifica que:
+   - La página alcance `readyState: complete`.
+   - La navegación principal, la sección Hero, el catálogo y el formulario estén visibles.
+   - No exista desbordamiento horizontal (compara `clientWidth` y `scrollWidth`).
+   - Los controles del formulario estén visibles, habilitados, editables, reciban foco y acepten interacción con el puntero.
+4. No envíes el formulario.
+5. Toma una captura de pantalla completa de cada viewport como evidencia.
+6. Reporta los resultados en el siguiente formato de tabla:
+
+| Dispositivo / viewport | Resultado | `innerWidth × innerHeight` | `clientWidth` | `scrollWidth` | Desbordamiento horizontal |
+|---|---|---:|---:|---:|---|
+| iPhone (390 × 844) | ... | ... | ... | ... | ... |
+| Samsung Galaxy (360 × 800) | ... | ... | ... | ... | ... |
+| iPad (768 × 1024) | ... | ... | ... | ... | ... |
+
+No modifiques ningún archivo del proyecto.
+```
+
+### 5.3 TC-03 — Rendimiento
+
+```text
+Usa Playwright MCP para realizar la auditoría del Test Case 3: Performance y Carga de Página en la aplicación local de Heladería Vainell.
+
+URL:
+http://127.0.0.1:3000/index.html?vscode-livepreview=true
+
+Instrucciones:
+1. Abre la página en Chromium.
+2. Espera hasta que `document.readyState` sea `complete`.
+3. Mide los tiempos de navegación con `window.performance.getEntriesByType('navigation')[0]` y calcula:
+   - TTFB: `responseStart - requestStart`
+   - DOMContentLoaded: `domContentLoadedEventEnd - fetchStart`
+   - Tiempo total de carga: `loadEventEnd - fetchStart`
+4. Inspecciona los recursos con `window.performance.getEntriesByType('resource')`.
+5. Identifica y lista los recursos con mayor duración y mayor tamaño transferido (`transferSize`).
+6. Revisa la consola y registra cualquier error de carga.
+7. Toma una captura de pantalla de la página cargada como evidencia.
+8. Reporta las métricas de navegación, los recursos destacados y los errores encontrados.
+
+No modifiques ningún archivo del proyecto.
+```
+
+### 5.4 TC-04 — Accesibilidad (literal, Momento 1)
+
+```text
+Usa Playwright MCP para realizar la auditoría del Test Case 4: Accesibilidad Web en la aplicación local de Heladería Vainell.
+
+URL:
+http://localhost:3000
+
+Instrucciones:
+1. Abre la página.
+2. Inyecta la librería axe-core en la página.
+3. Ejecuta axe.run() y analiza los resultados.
+4. Reporta las violaciones por nivel de impacto e indica los elementos HTML afectados.
+5. Si encuentras violaciones críticas o graves, prepara un issue de tipo bug en GitHub.
+6. Toma una captura de pantalla como evidencia.
+
+No modifiques ningún archivo del proyecto.
+```
+
+### 5.5 TC-05 — HTML semántico (literal, Momento 1)
+
+```text
+Usa Playwright MCP para realizar la auditoría del Test Case 5: Validación de estructura HTML semántica sobre la aplicación local de Heladería Vainell.
+
+URL:
+http://localhost:3000
+
+Instrucciones de prueba:
+1. Abre la página en http://localhost:3000.
+2. Obtén un snapshot de accesibilidad (accessibility tree / snapshot) para verificar la jerarquía de encabezados (h1, h2, h3) y los landmarks principales (header, nav, main, section, footer).
+3. Inspecciona la estructura del código HTML generado y evalúa su conformidad con la sintaxis semántica de HTML5 / W3C.
+4. Identifica si existen errores como encabezados salteados (ej. pasar de h1 a h3), etiquetas no semánticas innecesarias o atributos obligatorios faltantes.
+5. Toma una captura de pantalla como evidencia.
+```
+
+---
+
+## 10. Notificaciones y comunicación
+
+Las notificaciones se registran con la fecha real de envío y su constancia. Las comunicaciones del Momento 1 no cuentan con constancia verificable y no se declaran como realizadas.
+
+### Momento 2
+
+Los hallazgos del Momento 2 se registraron como issues en GitHub: [#57](https://github.com/eternalnight04/HeladeriaVainell/issues/57) (404 de `favicon.ico`, cerrado el 01/11/2026) y [#60](https://github.com/eternalnight04/HeladeriaVainell/issues/60) (errores de la validación W3C en los testimonios).
+
+El equipo no cuenta con un responsable separado para el HTML de los testimonios. El Coordinador, que registró los hallazgos, corrigió el hallazgo #60 directamente, de modo que no hubo una notificación a un tercero. La constancia de la gestión es la siguiente:
+
+| Hallazgo | Responsable de la corrección | Medio | Fecha | Evidencia |
+|----------|------------------------------|-------|-------|-----------|
+| [#60](https://github.com/eternalnight04/HeladeriaVainell/issues/60) | Coordinador / DevOps | Corrección en `index.html` mediante pull request | `[5/11/2026]` | [PR:#69](https://github.com/eternalnight04/HeladeriaVainell/pull/69) |
+
+No se documentó una notificación adicional a otros integrantes; no se declara ninguna que no tenga constancia verificable.
+
+### Momento 1
+
+Sin constancia verificable de notificación. Los issues [#23](https://github.com/eternalnight04/HeladeriaVainell/issues/23), [#24](https://github.com/eternalnight04/HeladeriaVainell/issues/24) y [#25](https://github.com/eternalnight04/HeladeriaVainell/issues/25) fueron resueltos y cerrados; el cierre consta en GitHub.
 
 ## 6. Resultados del Momento 1 — Pre-merge
 
