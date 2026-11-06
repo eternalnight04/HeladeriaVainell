@@ -218,7 +218,7 @@ El equipo no cuenta con un responsable separado para el HTML de los testimonios.
 
 | Hallazgo | Responsable de la corrección | Medio | Fecha | Evidencia |
 |----------|------------------------------|-------|-------|-----------|
-| [#60](https://github.com/eternalnight04/HeladeriaVainell/issues/60) | Coordinador / DevOps | Corrección en `index.html` mediante pull request | `[FECHA DE CREACIÓN DE LA PR]` | [PR #`[NÚMERO]`](https://github.com/eternalnight04/HeladeriaVainell/pull/`[NÚMERO]`) |
+| [#60](https://github.com/eternalnight04/HeladeriaVainell/issues/60) | Coordinador / DevOps | Corrección en `index.html` mediante pull request | `[5/11/2026]` | [PR:#69](https://github.com/eternalnight04/HeladeriaVainell/pull/69) |
 
 No se documentó una notificación adicional a otros integrantes; no se declara ninguna que no tenga constancia verificable.
 
