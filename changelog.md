@@ -27,6 +27,9 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 ### Fixed
 
+- [fix/corrregir-realease-act-2] Fix/corrregir realease act 2 PR: [#69](https://github.com/eternalnight04/HeladeriaVainell/pull/69) - @britezacostaalexis-pixel (Coordinador / DevOps)
+
+
 - [fix/corrección-actividad-obligatoria-2] correcciones hechas PR: [#66](https://github.com/eternalnight04/HeladeriaVainell/pull/66) - @britezacostaalexis-pixel (Coordinador / DevOps)
 
 - [fix/correccioness-2] correcciones RC48,RC30,RC37,RC35,RC38 ,RC39,RC40,RC36 PR: [#61](https://github.com/eternalnight04/HeladeriaVainell/pull/61) - @britezacostaalexis-pixel (Coordinador / DevOps)
