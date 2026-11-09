@@ -3,104 +3,108 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Heladería Vainell</title>
+  <title>Vainell — Helados artesanales</title>
+  <!-- Mantener la presentación fuera del HTML: tokens y base en styles.css,
+       piezas reutilizables en components.css y breakpoints en responsive.css. -->
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/responsive.css">
-  <meta name="description" content="Helados artesanales Vainell. Descubrí sabores únicos y pedí delivery o retiro en el local.">
-
+  <meta name="description" content="Helados artesanales Vainell, elaborados cada mañana con ingredientes naturales.">
 </head>
 <body>
   <header>
-  <!-- Aquí se aplicará el CSS del header. -->
- 
-  <a href="#inicio" aria-label="Vainell, ir al inicio">
-    <img src="imagenes/logo_vainell.png" alt="Logo de Vainell" width="40" height="40">
-    <span>Vainell</span>
-  </a>
- 
-  <nav aria-label="Navegación principal">
-    <a href="#inicio">Inicio</a>
-    <a href="#catalogo">Catálogo</a>
-    <a href="#como-pedir">Cómo pedir</a>
-    <a href="#pedido">Pedido</a>
-    <a href="#contacto">Contacto</a>
-    <a href="#mi-cuenta">Iniciar sesión</a> 
-    <button type="button">Pedir ahora</button>
-  </nav>
-</header>
-<main>
- <section id="inicio" aria-labelledby="titulo-inicio">
-      <!-- Aquí se aplicará el CSS de la sección hero. -->
- 
+    <!-- Componente header: conservar su estructura; definir layout, estados y
+         versión móvil en components.css y responsive.css. -->
+    <a href="#inicio" aria-label="Vainell, ir al inicio">
+      <img src="imagenes/logo_vainell.png" alt="" width="40" height="40">
+      <span>Vainell</span>
+    </a>
+
+    <nav aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#como-pedir">Cómo pedir</a>
+      <a href="#pedido">Pedido</a>
+      <a href="#contacto">Contacto</a>
+      <a class="header-pedido" href="#pedido" aria-label="Ver pedido, 0 productos">
+        <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5.5 7V5.5a3.5 3.5 0 0 1 7 0V7M4 7h10l1 9H3l1-9Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Pedido
+        <span class="header-pedido__cantidad" aria-hidden="true">0</span>
+      </a>
+    </nav>
+  </header>
+  <main>
+    <section id="inicio" aria-labelledby="titulo-inicio">
+      <!-- Componente hero: sus fondos, tipografía, composición y estados se
+           implementan en CSS; mantener aquí solo contenido y estructura. -->
       <div>
-        <p>✦ Helados 100% artesanales</p>
- 
+        <p class="hero-etiqueta">Helados 100% artesanales</p>
+
         <h1 id="titulo-inicio">
           El frío<br>
           que <em>enamora.</em>
         </h1>
- 
+
         <p>
-          Sabores únicos elaborados con ingredientes naturales.
-          Delivery y retiro en local, en el día.
+          Sabores únicos elaborados cada mañana con ingredientes naturales,
+          sin atajos y con mucha imaginación.
         </p>
- 
-        <div>
-          <a href="#catalogo">Descubrir sabores</a>
-          <a href="#pedido">Hacer mi pedido</a>
+
+        <div class="hero-acciones">
+          <a href="#catalogo">Descubrir sabores <span aria-hidden="true">→</span></a>
+          <a href="#como-pedir">Cómo pedir</a>
         </div>
- 
-        <ul>
-          <li>+30<br><small>sabores</small></li>
-          <li>20 min<br><small>entrega promedio</small></li>
-          <li>100%<br><small>artesanal</small></li>
+
+        <ul class="hero-metricas" aria-label="Datos destacados">
+          <li><strong>+30</strong><small>Sabores</small></li>
+          <li><strong>20 min</strong><small>Entrega promedio</small></li>
+          <li><strong>100%</strong><small>Artesanal</small></li>
         </ul>
       </div>
- 
-      <div class="hero-tarjeta">
-        <img src="imagenes/capitan-helado-reboot.png" alt="Capitán Helado, símbolo de nuestra marca" width="300" height="164">
-        <p><strong>Capitán Helado</strong><span>Guardián del sabor</span></p>
+
+      <div class="hero-visual">
+        <figure>
+          <img
+            class="hero-visual__ilustracion"
+            src="imagenes/capitan-helado-reboot.png"
+            alt="Capitán Helado, guardián del sabor de Vainell"
+            width="2048"
+            height="1118"
+          >
+          <figcaption>
+            <small>Conocé a</small>
+            <strong>Capitán Helado</strong>
+            <span>Guardián del sabor</span>
+          </figcaption>
+        </figure>
+        <span class="hero-visual__sabor hero-visual__sabor--menta">Menta</span>
+        <span class="hero-visual__sabor hero-visual__sabor--vainilla">Vainilla</span>
       </div>
- 
-      <figure>
-        <img
-          src="./imagenes/helados%20Vainell.png"
-          alt="Helados artesanales de Vainell"
-        >
-        <figcaption>Helados artesanales Vainell</figcaption>
-      </figure>
-    </section>   
- 
-<section id="caracteristicas" aria-label="Características de Vainell">
-  <!-- Aquí se aplicará el CSS de la sección de características. -->
- 
-  <dl>
-    <div>
-      <dt>Sabores disponibles</dt>
-      <dd>+30</dd>
-    </div>
- 
-    <div>
-      <dt>Pedidos por mes</dt>
-      <dd>+1.200</dd>
-    </div>
- 
-    <div>
-      <dt>Entrega promedio</dt>
-      <dd>20 min</dd>
-    </div>
- 
-    <div>
-      <dt>Elaboración artesanal</dt>
-      <dd>100%</dd>
-    </div>
-  </dl>
-</section>
+    </section>
+
+    <!-- Franja de beneficios: componente independiente, estilizar en
+         components.css y adaptar a pantallas pequeñas en responsive.css. -->
+    <aside class="beneficios" aria-label="Beneficios de Vainell">
+      <span>Ingredientes naturales</span>
+      <span aria-hidden="true">◇</span>
+      <span>Hecho en el día</span>
+      <span aria-hidden="true">◇</span>
+      <span>Delivery y retiro</span>
+      <span aria-hidden="true">◇</span>
+      <span>Sin conservantes</span>
+    </aside>
+
 <section id="por-que-vainell" aria-labelledby="titulo-por-que-vainell">
-  <!-- Aquí se aplicará el CSS de la sección de características. -->
- 
-  <h2 id="titulo-por-que-vainell">¿Por qué Vainell?</h2>
+  <!-- Componente de beneficios: separar tarjetas reutilizables en
+       components.css; la grilla y sus breakpoints quedan en CSS. -->
+  <p class="seccion-etiqueta">Nuestro secreto</p>
+  <h2 id="titulo-por-que-vainell">
+    <span aria-hidden="true">✨</span>
+    Un poco de magia
+    <span aria-hidden="true">✨</span>
+  </h2>
   <p>Una experiencia completa, de principio a fin.</p>
  
   <div>
@@ -130,10 +134,44 @@
   </div>
 </section>
 <section id="catalogo" aria-labelledby="titulo-catalogo">
-  <!-- Aquí se aplicará el CSS de la sección catálogo. -->
+  <!-- Galería de producto: mantener imágenes locales y controlar proporciones
+       y recorte desde components.css; adaptar la grilla en responsive.css. -->
  
   <h2 id="titulo-catalogo">Nuestro catálogo</h2>
   <p>Elegí por categoría y encontrá tu próximo sabor favorito.</p>
+
+  <div class="catalogo-galeria" aria-label="Nuestros helados">
+    <figure class="catalogo-galeria__item catalogo-galeria__item--variedad">
+      <img
+        src="imagenes/helados.avif"
+        alt="Variedad de sabores artesanales en la heladería"
+        width="1400"
+        height="400"
+        loading="lazy"
+      >
+      <figcaption>Sabores para elegir</figcaption>
+    </figure>
+    <figure class="catalogo-galeria__item catalogo-galeria__item--potes">
+      <img
+        src="imagenes/helados%20Vainell.png"
+        alt="Porciones de helado artesanal de distintos sabores"
+        width="400"
+        height="450"
+        loading="lazy"
+      >
+      <figcaption>Hechos cada mañana</figcaption>
+    </figure>
+    <figure class="catalogo-galeria__item catalogo-galeria__item--cono">
+      <img
+        src="imagenes/cono-de-helado.jpg"
+        alt="Cono artesanal con tres bochas de helado"
+        width="387"
+        height="516"
+        loading="lazy"
+      >
+      <figcaption>Un clásico irresistible</figcaption>
+    </figure>
+  </div>
  
   <nav aria-label="Categorías del catálogo">
     <a href="#por-kilo">Por kilo</a>
@@ -554,7 +592,7 @@
  
   <div>
     <article>
-      <p aria-label="5 de 5 estrellas">★★★★★</p>
+      <p role="img" aria-label="5 de 5 estrellas">★★★★★</p>
       <blockquote>
         “El helado de menta granizada es una locura. Compré el pote de 2 kilos
         y no duró ni un día en casa. ¡Espectacular!”
@@ -566,7 +604,7 @@
     </article>
  
     <article>
-      <p aria-label="5 de 5 estrellas">★★★★★</p>
+      <p role="img" aria-label="5 de 5 estrellas">★★★★★</p>
       <blockquote>
         “El delivery llegó en 20 minutos y el empaque fue impecable. No se
         derramó nada. Volvería a pedir sin pensarlo dos veces.”
@@ -578,7 +616,7 @@
     </article>
  
     <article>
-      <p aria-label="5 de 5 estrellas">★★★★★</p>
+      <p role="img" aria-label="5 de 5 estrellas">★★★★★</p>
       <blockquote>
         “La torta helada de brownie fue el éxito total en el cumpleaños de mi
         hija. Toda la familia quedó maravillada.”

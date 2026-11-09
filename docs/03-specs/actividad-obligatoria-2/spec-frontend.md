@@ -1,99 +1,155 @@
 # spec-frontend.md — Desarrollador Frontend/CSS
 
-**Proyecto:** Vainell
-**Entrega:** Actividad Obligatoria N°2
+**Proyecto:** Heladería Vainell
+**Materia:** Programación Web I — UCES (1er cuatrimestre 2026), Lic. Matias Velasquez
+**Entrega:** Actividad Obligatoria N°2 (CSS, diseño responsive y QA asistido por MCP)
 **Rol:** Desarrollador Frontend/CSS
 **Rama:** `feature/dev-frontend-css-add-styles` → `develop`
-**Ruta:** `docs/03-specs/actividad-obligatoria-2/spec-frontend.md`
-
+**Ubicación:** `docs/03-specs/actividad-obligatoria-2/spec-frontend.md`
 
 ---
 
-## PARTE A — Planificación previa
+## PARTE 1 — PLANIFICACIÓN PREVIA
 
-## 1. Qué se va a hacer
+### 1. Qué se va a hacer
 
-Escribir los estilos del `index.html` de Vainell a partir del mockup de Figma, en dos archivos separados por responsabilidad:
+Generar la capa de presentación de la página `index.html` a partir del mockup de Figma actualizado por el Coordinador/DevOps, usando el **servidor MCP de Figma** junto con **GitHub Copilot en modo Agente**. Se entregan dos archivos:
 
 | Archivo | Responsabilidad |
 |---|---|
-| `css/styles.css` | Variables en `:root` (paleta, tipografías, escala tipográfica, espaciados, radios, sombras, `--gutter`), reset, estilos base y layout de cada sección: header fijo, hero, franja de números, grillas de "¿Por qué Vainell?", "¿Cómo pedir?", testimonios y "Mi cuenta", formulario de pedido y footer. |
-| `css/components.css` | Componentes reutilizables: navegación (menú del header, categorías del catálogo, links del footer), botones (principal, contorneado, "Agregar", envío de formularios), cards (¿Por qué?, pasos, testimonios, cuenta, tarjeta de Capitán Helado), formularios (campos y `fieldset` de modalidad), tablas del catálogo y estados `hover` / `focus-visible` / `active` / `disabled`. |
+| `css/styles.css` | Variables CSS en `:root` (paleta, tipografías, escala tipográfica, espaciados, radios, sombras, transiciones), reset, estilos base, layout base de header, hero, secciones, catálogo, formularios y footer. |
+| `css/components.css` | Componentes reutilizables: navegación, botones, cards, formularios, tablas del catálogo, galería de imágenes, franja de beneficios, con estados `hover`, `focus-visible` y `disabled`. |
 
-Puntos específicos del diseño:
+`css/responsive.css` es responsabilidad del Especialista en Responsive Design; este spec solo define la base sobre la que trabaja (sin overflow horizontal y con grillas que colapsan solas).
 
-- **Hero:** la tarjeta de Capitán Helado (`.hero-tarjeta`) ocupa toda su columna, con fondo menta y una animación suave de flotación (desactivada con `prefers-reduced-motion`), para que el personaje se luzca. La foto de los helados va debajo, en una banda ancha.
-- **Catálogo:** cada fila de las tablas se ve como una card horizontal.
+### 2. Por qué
 
-Fuera de alcance de este rol: `css/responsive.css` (media queries), que corresponde al Especialista en Responsive Design. Por eso los layouts de `styles.css` usan `grid` con `auto-fit/minmax` y `flex-wrap`: la página no se rompe antes de que existan los breakpoints.
+- Cumplir con la consigna: CSS separado por responsabilidad, coherente con el mockup actualizado (tipografías, paleta y espaciados).
+- Mantener el HTML limpio: toda la presentación vive en CSS y el HTML conserva solo estructura semántica y contenido.
+- Dejar tokens de diseño centralizados (`:root`) para que el Especialista en Responsive y futuras entregas puedan reutilizarlos sin duplicar valores.
+- Aprovechar Figma MCP para reducir errores de transcripción del mockup y dejar evidencia del flujo asistido por IA.
 
-El `index.html` solo recibe los `<link>` a las hojas de estilo en el `<head>`; no se modifica su estructura.
+### 3. Decisiones técnicas previstas
 
-## 2. Por qué
+- **Selectores:** mezcla de selectores de elemento, clase, id, descendientes, hijos directos (`>`), pseudo-clases (`:hover`, `:focus-visible`, `:has()`, `:invalid`) y pseudo-elementos (`::before`, `::after`), aprovechando herencia (color y fuente definidos en `body`) y especificidad controlada (se prefiere `body > header` y `#seccion > …` antes que `!important`).
+- **Box model:** `box-sizing: border-box` global y control explícito de `padding`, `margin` y `border` en cada componente.
+- **En línea vs. bloque:** decisión explícita y comentada. En línea: `a`, `em`, `strong`, `span`, `small`. En bloque: `img`, `figure`, `blockquote`, `address`, `label`. Cambios deliberados de `display` donde el diseño lo pide (ej. `small` a bloque dentro de las métricas del hero).
+- **Layout:** `display: grid` para hero, grillas de cards, catálogo, testimonios, cuenta y footer; `display: flex` para header, navegación, botones, métricas y fieldset de modalidad. Se usa `repeat(auto-fit, minmax(min(100%, X), 1fr))` para que las grillas colapsen sin media queries.
+- **Accesibilidad:** foco visible global (`:focus-visible`), contraste de texto sobre fondos de la paleta y `prefers-reduced-motion`.
+- **Comentarios:** cada bloque lleva un comentario explicando la decisión de estilo.
 
-- La consigna pide separar el CSS por responsabilidad (variables y layout vs. componentes vs. responsive).
-- Centralizar colores, tipografías y espaciados en variables permite ajustar el diseño en un solo lugar, y que el Especialista en Responsive trabaje sobre los mismos valores.
-- El HTML semántico de la Actividad N°1 casi no tiene clases, así que el diseño se aplica con selectores de elemento, `id` de sección y herencia.
+### 4. Criterios de aceptación
 
-## 3. Decisiones técnicas previstas
-
-- **Selectores:** de elemento (`h1`, `table`), de id (`#catalogo`), descendientes e hijos directos (`main > section`, `body > header nav`), de atributo (`a[href="#mi-cuenta"]`, `button[type="submit"]`) y pseudoclases (`:hover`, `:focus-visible`, `:nth-child`, `:has()`). Clases solo donde ya existen en el HTML (`.hero-tarjeta`, `.cuenta-container`).
-- **Header y footer:** se seleccionan como `body > header` y `body > footer`, porque cada testimonio también tiene un `<footer>` propio (el autor) que no debe heredar el layout del footer del sitio.
-- **Herencia y especificidad:** fuente y color de texto definidos una vez en `body` y heredados. Los componentes mantienen especificidad baja y solo suben (ids) cuando hace falta distinguir un mismo elemento en contextos distintos (por ejemplo, el `nav` del header vs. el del footer vs. el del catálogo).
-- **Box model:** `box-sizing: border-box` global; `padding`, `margin` y `border` declarados de forma explícita en cards, campos y botones.
-- **Elementos en línea vs. bloque:** `a`, `span`, `em`, `strong` y `small` quedan en línea por defecto; pasan a `inline-flex` o `block` solo cuando lo necesitan (botones, marca del header, etiquetas del hero, emoji de los pasos). `img`, `figure`, `blockquote`, `address` y `label` son bloque; `img` en bloque evita el hueco inferior.
-- **Layout:** `flex` para header, menús y filas de botones; `grid` para hero, números, tarjetas, pasos, testimonios, cuenta, formulario de pedido y footer.
-- **Tablas:** el scroll horizontal, si hiciera falta, queda dentro del `div` de cada categoría (`overflow-x: auto`), nunca en la página.
-- **Tipografías:** Fredoka para títulos y Nunito para el texto, cargadas con `@import` de Google Fonts y con tipografías del sistema como respaldo.
-- **Paleta:** verde azulado `#1f7a70` (acción principal), menta `#aee9df`, dorado `#d9a441` y crema `#fffaf0` de fondo, tomados del logo y de Capitán Helado. Todos los valores se definen como variables en `:root` (`--color-*`, `--font-*`, `--fs-*`, `--space-*`, `--radius-*`, `--shadow-*`).
-- **Valores de diseño:** como el archivo de Figma Make no está disponible para lectura automática, los valores iniciales son una propuesta derivada de los assets de la marca. Se contrastan con el mockup en la revisión manual (ver Parte B).
-- **Comentarios:** cada bloque lleva un comentario que explica la decisión de estilo.
-
-## 4. Criterios de aceptación
-
-- [ ] `css/styles.css` existe y define variables en `:root`, reset, tipografías, colores y layout base coherente con el mockup.
-- [ ] `css/components.css` existe y define botones, cards, navegación, tablas y formularios con estados `hover` y `focus`.
-- [ ] `index.html` enlaza `styles.css` y `components.css` desde el `<head>` (en ese orden).
-- [ ] Se usan distintos tipos de selectores y la especificidad se mantiene controlada.
-- [ ] Box model con `padding`, `margin` y `border` explícitos.
+- [ ] Este `spec-frontend.md` existe en `docs/03-specs/actividad-obligatoria-2/` y está commiteado antes que cualquier archivo CSS.
+- [ ] Figma MCP se usó con Copilot Agent para generar los estilos desde el mockup actualizado.
+- [ ] El prompt exacto, el resultado y los ajustes manuales quedan documentados en este archivo (Parte 2).
+- [ ] `css/styles.css` define variables en `:root`, reset, tipografías, colores y layout base coherentes con el mockup.
+- [ ] `css/components.css` define botones, cards, navegación y formularios con estados `hover`/`focus`.
+- [ ] Se aplican selectores, herencia y especificidad de forma correcta (sin `!important` salvo `prefers-reduced-motion`).
+- [ ] Box model con control explícito de `padding`, `margin` y `border`.
 - [ ] Elementos en línea y en bloque diferenciados mediante CSS.
-- [ ] Hay comentarios explicativos sobre las decisiones de estilo.
-- [ ] Paleta, tipografías y espaciados coinciden con el mockup actualizado de Figma.
-- [ ] Las 10 secciones del `index.html` (header, inicio, características, ¿por qué Vainell?, catálogo, ¿cómo pedir?, pedido, mi cuenta, testimonios y footer) tienen estilo aplicado.
-- [ ] El estilo de Capitán Helado en el hero lo destaca visualmente.
-- [ ] No hay overflow horizontal causado por los estilos base (cada tabla scrollea dentro de su contenedor).
-- [ ] Pruebas de integración realizadas con el Especialista en Responsive en GitHub Pages y localhost.
-- [ ] Los bugs reportados por el QA Tester están resueltos antes del merge a `develop`.
-- [ ] PR creada hacia `develop`, con `changelog.md` actualizado con el link a la PR.
+- [ ] Ningún título ni texto queda tapado por imágenes o elementos decorativos.
+- [ ] Todas las imágenes del proyecto se ven en la página y no generan overflow horizontal.
+- [ ] Se realizaron pruebas de integración con el Especialista en Responsive en localhost y GitHub Pages.
+- [ ] Los bugs reportados por el QA Tester se resolvieron antes del merge a `develop`.
+- [ ] El PR fue revisado y aprobado por el Coordinador, está enlazado en `changelog.md` y tiene un issue vinculado, cerrado post-merge.
 
 ---
 
-## PARTE B — Cierre con evidencia
+## PARTE 2 — EVIDENCIA AL CIERRE
 
-## 5. Prompt utilizado
+### 5. Herramientas y flujo
 
-**Herramienta usada:** GitHub Copilot. Archivos adjuntados como contexto: `index.html`, `plan.md`, la consigna de la Actividad Obligatoria N°2 (PDF), la imagen de Capitán Helado y la imagen del logo de Vainell.
+- **Mockup:** archivo Figma actualizado por el Coordinador (Dev Mode, nodo `1:3`).
+- **IA:** GitHub Copilot en modo Agente en VS Code, con el servidor **MCP de Figma**.
+- **Contexto:** este spec, `index.html`, `plan.md` y las imágenes de la carpeta `imagenes/`.
+- **Verificación:** navegador local en tres anchos (390, 820 y 1280 px), comprobación de enlaces internos e IDs, y `git diff --check`.
 
-```
-Crea los archivos components.css (botones, cards, navegación, formularios, estados hover/focus) y styles.css (variables CSS en :root, reset, tipografias, colores, layout base) para el diseño visual de index.html (ten en cuenta los comentarios). El diseño debe ser igual o parecido a este modelo de Figma: https://www.figma.com/make/Si4hHXYePCegrXfCQ5TNf3/Heladeria-Vainell-Segundo-Mockup?fullscreen=1&t=Xpd4GgpcrVNqz7z7-1&code-node-id=0-6
+### 6. Prompts utilizados y resultados
 
-Nota: Puedes modificar el tamaño de la imagen de Capitan Helado o la página de inicio para que la imagen se luzca.
-```
+El trabajo se hizo de forma iterativa, con seis prompts consecutivos en un mismo chat de Copilot Agent.
 
-## 6. Resultado obtenido
+#### Prompt 1 — Verificar la conexión con Figma MCP y generar el HTML base
 
-```
-Se generaron css/styles.css y css/components.css.
-
-Colores y tipografías: no salen del Figma, que no pudo leerse. Se armó una paleta propia a partir del logo y de Capitán Helado (verde azulado, menta, dorado y crema) con Fredoka para títulos y Nunito para el texto. Todo está en las variables de :root, para poder compararlo con el mockup y ajustarlo.
-
-styles.css: variables, reset, tipografía base y layout de cada sección (header fijo, hero en grid de dos columnas, franja de números, grillas de tarjetas, formulario de pedido, cuenta y footer).
-components.css: navegación (header, categorías del catálogo y footer), botones, cards (incluida la tarjeta grande de Capitán Helado, con animación de flotación), formularios, tablas del catálogo y estados hover / focus-visible / active / disabled.
-
-Controles realizados: se verificó que las llaves de ambos archivos estén balanceadas. No se abrió la página en un navegador.
+```text
+Primero verifica si la conexión con Figma MCP al siguiente Dev Mode link funciona correctamente.
+Una vez que se comprobó la conexión, extrae el código html de este modelo de Figma y ponlo en el archivo index.html, incluye comentarios a tener en cuenta para poder incluir los estilos y componentes en archivos aparte.
 ```
 
-## 7. Ajustes manuales realizados
+**Resultado:** la conexión MCP con Figma quedó comprobada: Copilot consultó los metadatos del nodo `1:3` y obtuvo la captura. Sin embargo, `get_design_context` no devolvió el HTML, solo indicó que había recursos de código. Por eso el contenido de `index.html` es una **reconstrucción semántica a partir de la captura**, no una extracción literal. Se actualizaron el encabezado, el hero y la franja de beneficios, y se añadieron comentarios que separan responsabilidades entre `styles.css`, `components.css` y `responsive.css`. Se dejó indicado dónde incorporar la ilustración exacta de Capitán Helado, que aún no estaba entre los recursos locales.
+**Fidelidad al mockup:** estructura y jerarquía fieles; los detalles visuales finos requirieron los prompts siguientes.
 
-- Se vincularon `styles.css` y `components.css` en el `<head>` de `index.html` para que funcionen en conjunto (junto con `responsive.css`, del otro rol).
-- Se modificó la paleta de colores.
+#### Prompt 2 — Ubicar las imágenes y adaptar los estilos
+
+```text
+Ahora, siguiendo el archivo index.html, ubica las imagenes correspondientes de la carpeta en la página y modifica los archivos styles.css, components.css y responsive.css, si es necesario.
+```
+
+**Resultado:** se ubicó el logo en el header y el footer, Capitán Helado en el hero y tres fotos de producto en la galería del catálogo. Se agregaron estilos para el hero y las imágenes, y se adaptó la galería a móvil, tablet y escritorio. Copilot detectó que `helados.png` era en realidad un archivo AVIF y corrigió la extensión a `helados.avif`. Verificación en 390, 820 y 1280 px: todas las imágenes cargan y no hay desbordamiento horizontal.
+
+#### Prompt 3 — Evitar que las imágenes opaquen el texto
+
+```text
+Modifica el código de la página de forma tal que ningún título o palabra se vea opacado por imagenes o visuales. Especialmente la imagen del Capitan Helado. Debe verse y lucirse pero no debe opacar el texto.
+```
+
+**Resultado:** el hero prioriza visualmente el texto. La ilustración queda limitada al espacio de su columna y el rótulo se separó de la imagen para que no se superpongan. Verificado en los tres anchos. Cambios en `styles.css` y `responsive.css`.
+
+#### Prompt 4 — Integrar el encabezado de sección "Nuestro secreto"
+
+```text
+La oración "Nuestro secreto" se ve un poco fuera de lugar con el resto de la página. Haz que destaque y encaje teniendo en cuenta que un usuario de la web leería el texto en el siguiente órden: "Nuestro secreto... ✨Un poco de magia✨"
+```
+
+**Resultado:** la sección se lee en el orden pedido: "Nuestro secreto" seguido de "✨ Un poco de magia ✨". La frase introductoria destaca con líneas decorativas y el título mantiene la jerarquía visual del resto de la página. Cambios en `index.html` y `styles.css`.
+
+#### Prompt 5 — Dar más presencia a Capitán Helado
+
+```text
+Agranda un poco la imagen del Capitan Helado y acerca un poco más los globos "Menta" y "Vainilla" hacia este. La imagen puede estar ligeramente debajo del cuadro de texto "Conoce a Capitán Helado Guardían del Sabor". Esto es para que se destaque y no haya tanto espacio vacío cuando el usuario mire al personaje.
+```
+
+**Resultado:** se agrandó la ilustración y se acercaron las etiquetas "Menta" y "Vainilla". El rótulo se superpone ligeramente a la parte inferior de la imagen, con fondo opaco (`--color-cream`) para conservar la legibilidad. Comprobado en móvil, tablet y escritorio: la imagen carga, el título no queda cubierto y no hay desbordamiento horizontal. Cambio en `styles.css`.
+
+### 7. Ajustes manuales realizados
+
+| Ajuste | Motivo |
+|---|---|
+| Corrección de `helados.png` → `helados.avif` | El archivo era AVIF con extensión incorrecta, por lo que la referencia fallaba. |
+| Ajuste del héroe (columna de texto, rótulo y etiquetas de sabor) | Evitar que la ilustración opaque el título y reducir el espacio vacío alrededor del personaje. |
+| Tratamiento visual de "Nuestro secreto" | Integrarlo con el resto de la página y respetar el orden de lectura. |
+
+
+### 8. Estructura de los archivos CSS generados
+
+**`css/styles.css`**
+1. Variables (`:root`): paleta (teal, menta, dorado, crema, rosa), neutros, tipografías (Fredoka para títulos, Nunito para cuerpo), escala tipográfica `--fs-*`, espaciados `--space-1` a `--space-8`, radios, sombras, transición y `--gutter`.
+2. Reset (box-sizing, márgenes, `fieldset`, controles de formulario).
+3. Estilos base (herencia desde `body`, títulos h1–h3, enlaces, `:focus-visible`, elementos en línea vs. bloque).
+4. Layout base: secciones del `main`, header sticky, hero en grid de dos columnas con burbujas decorativas, ilustración de Capitán Helado, grillas de "Por qué Vainell", catálogo, "Cómo pedir", formulario de pedido, "Mi cuenta", testimonios y footer.
+
+**`css/components.css`**
+1. Navegación (pills, botón de pedido con contador, categorías del catálogo, links del footer).
+2. Botones (base compartida, secundario, "Agregar" de tablas, envío de formularios) con estados `hover`, `focus-visible`, `active` y `disabled`.
+3. Cards (¿Por qué Vainell?, pasos de "Cómo pedir" con contador CSS, testimonios, cuenta) y galería del catálogo con `object-fit`.
+4. Formularios (inputs, select, textarea, radios tipo chip, estados `hover`, `focus` e `invalid`).
+5. Tablas del catálogo con filas tipo card y `border-spacing`.
+6. `prefers-reduced-motion`.
+
+### 9. Estado de los criterios de aceptación
+
+- [x] Figma MCP usado con Copilot Agent (conexión comprobada sobre el nodo `1:3`).
+- [x] Prompts, resultados y ajustes manuales documentados en este archivo.
+- [x] `styles.css` con variables, reset, tipografías, colores y layout base.
+- [x] `components.css` con componentes y estados hover/focus.
+- [x] Selectores, herencia y especificidad aplicados.
+- [x] Box model con control explícito.
+- [x] Elementos en línea y en bloque diferenciados.
+- [x] Texto no opacado por imágenes (verificado en 390, 820 y 1280 px).
+- [x] Imágenes cargan y no hay overflow horizontal en los tres anchos probados.
+- [x] Pruebas de integración con el Especialista en Responsive en localhost y GitHub Pages.
+- [x] Bugs del QA Tester resueltos antes del merge:
+    + [BUG] Desbordamiento horizontal (overflow) en versión mobile por imagen hero. Issue [#23](https://github.com/eternalnight04/HeladeriaVainell/issues/23)
+    + [BUG] Estructura de lista de definición invalida (regla dlitem) en sección de características. Issue [#24](https://github.com/eternalnight04/HeladeriaVainell/issues/24)
+    + [BUG] Errores de validación HTML W3C, marcado sintáctico e incorrecta estructura de footer. Issue [#25](https://github.com/eternalnight04/HeladeriaVainell/issues/25)
+- [x] PR aprobado por el Coordinador, enlazado en `changelog.md`, con issue vinculado y cerrado.

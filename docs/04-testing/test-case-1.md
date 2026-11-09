@@ -1,45 +1,99 @@
 # Test Case 1 — Compatibilidad de escritorio
 
-- **Momento de ejecución:** Momento 1 (Testing pre-merge)
+- **Momento de ejecución:** Momento 2 (versión integrada).
 - **URL de prueba:** `http://127.0.0.1:3000/index.html?vscode-livepreview=true`
-- **Herramienta utilizada:** **Playwright MCP** (`@playwright/mcp`) desde GitHub Copilot Agent Mode.
+- **Herramienta utilizada:** Playwright MCP mediante GitHub Copilot Agent Mode.
+- **Navegador verificado:** Chromium.
+- **Estado:** Parcialmente verificado; quedan navegadores y comprobaciones pendientes.
 
 ---
 
 ## Objetivo
 
-Verificar que la página web de Heladería Vainell se visualice y funcione correctamente en los principales navegadores de escritorio (Chrome, Firefox, Safari y Edge).
+Verificar que la página web de Heladería Vainell cargue y se visualice correctamente en navegadores de escritorio, comprobando la navegación principal, la sección principal, el catálogo y el formulario de pedido.
 
----
+## Alcance y criterios de verificación
 
-## Alcance y Criterios de Verificación
+Se evalúan los siguientes aspectos:
 
-Se evaluará la página sobre los siguientes componentes principales:
-
-- Carga correcta de la página y título `"Heladeria Vainell"`.
-- Visibilidad e integridad de la navegación principal.
+- Carga correcta de la página.
+- Título del documento HTML.
+- Visibilidad de la navegación principal.
 - Renderizado de la sección principal (*hero section*).
-- Visibilidad del catálogo de productos y formulario.
-- Ausencia de errores de consola o bloqueos de interfaz.
+- Visibilidad del catálogo de productos y del formulario.
+- Errores de consola y recursos que no se cargan.
+- Compatibilidad con los navegadores de escritorio previstos: Chrome, Firefox, Safari y Edge.
 
 ---
 
-## Prompt Utilizado en Copilot Agent Mode
+## Resultados — Momento 1
+
+**Estado:** No reconstruible.
+
+No es posible reconstruir los resultados de este caso de prueba en el Momento 1. No se conservó captura de pantalla, registro de consola, issue ni otra evidencia de esa ejecución, por lo que cualquier resultado que se informara hoy sería retroactivo y no verificable.
+
+| Comprobación | Resultado | Observaciones |
+|---|---|---|
+| Todas las comprobaciones | NO RECONSTRUIBLE | Sin evidencia disponible del Momento 1. No se asignan resultados retroactivos. |
+
+Este documento registra únicamente la ejecución del Momento 2. La imposibilidad de reconstruir el Momento 1 queda documentada como una limitación del proceso de testing.
+
+
+## Resultados — Momento 2
+
+| Comprobación | Resultado | Observaciones |
+|---|---|---|
+| Carga de la página | PASS | Se confirmó que la página carga correctamente. |
+| Captura de pantalla completa | PASS | Se confirmó visualmente que la captura muestra la página desde la navegación hasta el formulario de pedido. |
+| Título del documento | OBSERVACIÓN | El HTML declara `Heladería Vainell`, mientras que el criterio original indicaba `Heladeria Vainell`. Se debe confirmar cuál es el texto requerido por la especificación vigente. |
+| Favicon | FAIL | La consola registra un error HTTP 404 al solicitar `/favicon.ico`. |
+| Atributos `autocomplete` | OBSERVACIÓN | La consola muestra advertencias que recomiendan atributos `autocomplete` en algunos campos de entrada. Falta inspeccionar los campos y confirmar cuáles requieren corrección. |
+| Firefox | PENDIENTE | Sin verificar. |
+| Safari | PENDIENTE | Sin verificar. |
+| Edge | PENDIENTE | Sin verificar. |
+
+### Evidencia
+
+- **Captura de pantalla:** `docs/04-testing/evidencia-test-case-1-momento-2.png`
+- **Registro de consola:** `.playwright-mcp/console-2026-10-21T02-10-28-058Z.log`
+
+### Detalle del error de consola
+
+Se registró la siguiente solicitud fallida:
+
+`http://127.0.0.1:3000/favicon.ico`
+
+Respuesta observada: `404 (Not Found)`.
+
+El error corresponde al recurso favicon y no impidió la carga de la página durante la prueba realizada.
+
+### Conclusión
+
+La página cargó correctamente y se obtuvo una captura completa de la interfaz. Sin embargo, se detectó un recurso favicon inexistente y quedan pendientes la revisión de los atributos `autocomplete`, la confirmación del título esperado y las pruebas en Firefox, Safari y Edge.
+
+Por lo tanto, el caso de prueba no se considera completamente aprobado hasta resolver o evaluar las observaciones y completar las verificaciones pendientes.
+
+---
+
+## Prompt utilizado en Copilot Agent Mode
 
 ```text
-Usa Playwright MCP para realizar una prueba de compatibilidad de escritorio sobre la aplicación local de Heladería Vainell.
+Usa Playwright MCP para realizar la auditoría del Test Case 1: Compatibilidad de escritorio en la aplicación local de Heladería Vainell.
 
 URL:
-[http://127.0.0.1:3000/index.html?vscode-livepreview=true](http://127.0.0.1:3000/index.html?vscode-livepreview=true)
+http://127.0.0.1:3000/index.html?vscode-livepreview=true
 
-Verifica la página en Chrome, Firefox, Safari y Edge.
-
-Para cada navegador comprueba:
-- que la página cargue correctamente;
-- que el título sea "Heladeria Vainell";
-- que la navegación, hero section, catálogo y formulario sean visibles;
-- que no haya errores que impidan utilizar la página.
-
-Registra los resultados de cada navegador y toma capturas de pantalla como evidencia.
+Instrucciones:
+1. Abre la página en Chromium.
+2. Verifica que la página cargue correctamente.
+3. Comprueba el título del documento HTML.
+4. Verifica la visibilidad de la navegación principal.
+5. Verifica el renderizado de la sección principal (hero section).
+6. Verifica la visibilidad del catálogo de productos y del formulario de pedido.
+7. Inspecciona la consola en busca de errores y recursos que no se cargan.
+8. Toma una captura de pantalla completa de la página como evidencia (desde la navegación hasta el formulario).
+9. Reporta el resultado de cada comprobación (PASS / FAIL / OBSERVACIÓN / PENDIENTE).
 
 No modifiques ningún archivo del proyecto.
+```
+

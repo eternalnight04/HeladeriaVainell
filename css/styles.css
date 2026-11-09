@@ -251,21 +251,19 @@ body > header > nav {
 
 /* --------------------------------------------------------------------------
    Hero (#inicio)
-   Grid de dos columnas que se apila solo cuando no entran (auto-fit).
-   La tarjeta de Capitán Helado ocupa su columna completa para que el
-   personaje se luzca; la foto de los helados va debajo, a todo el ancho.
+   Grid de dos columnas: texto y personaje; en móviles se apila.
    -------------------------------------------------------------------------- */
 #inicio {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
   gap: var(--space-6) var(--space-7);
   align-items: center;
+  min-height: 41rem;
   padding-top: var(--space-7);
   background:
     radial-gradient(circle at 12% 18%, var(--color-mint-soft) 0, transparent 45%),
-    radial-gradient(circle at 90% 80%, var(--color-gold-soft) 0, transparent 40%),
-    var(--color-cream);
+    var(--color-mint-soft);
   overflow: clip; /* los adornos decorativos no generan scroll horizontal */
 }
 
@@ -308,6 +306,7 @@ body > header > nav {
   flex-direction: column;
   align-items: flex-start;
   gap: var(--space-4);
+  z-index: 2;
 }
 
 /* "✦ Helados 100% artesanales" (etiqueta pill) */
@@ -373,26 +372,112 @@ body > header > nav {
   color: var(--color-text-muted);
 }
 
-/* Foto de los helados: banda ancha debajo del hero */
-#inicio > figure {
-  grid-column: 1 / -1;
-  margin-top: var(--space-4);
+/* Ilustración de Capitán Helado, con círculos decorativos del hero. */
+.hero-visual {
+  position: relative;
+  display: grid;
+  min-width: 0;
+  min-height: 31rem;
+  place-items: center;
+  z-index: 1;
+}
+
+.hero-visual::before {
+  position: absolute;
+  width: min(88%, 31rem);
+  aspect-ratio: 1;
+  content: "";
+  background: var(--color-gold-soft);
+  border: 1px solid rgba(20, 72, 74, 0.12);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 1.5rem rgba(255, 250, 240, 0.18),
+    0 0 0 1.6rem rgba(20, 72, 74, 0.1),
+    0 0 0 3rem rgba(255, 250, 240, 0.1),
+    0 0 0 3.1rem rgba(20, 72, 74, 0.08);
+}
+
+.hero-visual figure {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  width: 100%;
+  min-height: inherit;
+}
+
+.hero-visual__ilustracion {
+  width: min(106%, 38rem);
+  max-height: clamp(18rem, 48vw, 34rem);
+  object-fit: contain;
+  object-position: center;
+  filter: drop-shadow(0 1rem 1rem rgba(20, 72, 74, 0.18));
+  transform: translateY(0.75rem);
+}
+
+.hero-visual figcaption {
+  position: relative;
+  z-index: 3;
+  align-self: flex-start;
+  margin-top: -1.5rem;
+  margin-left: 2%;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-3) var(--space-4);
+  color: var(--color-text);
+  background: var(--color-cream);
+  border: 1px solid var(--color-text);
+  border-radius: var(--radius-sm);
+  box-shadow: 5px 6px 0 var(--color-primary-dark);
+}
+
+.hero-visual figcaption small,
+.hero-visual figcaption span {
+  font-size: var(--fs-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-visual figcaption strong {
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+}
+
+.hero-visual__sabor {
+  position: absolute;
+  z-index: 2;
+  display: grid;
+  width: 4.5rem;
+  aspect-ratio: 1;
+  place-items: center;
+  font-size: var(--fs-xs);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: var(--color-gold);
+  border: 1px solid var(--color-text);
+  border-radius: 50%;
+}
+
+.hero-visual__sabor--menta {
+  top: 10%;
+  right: 7%;
+}
+
+.hero-visual__sabor--vainilla {
+  right: 7%;
+  bottom: 18%;
+  background: var(--color-mint);
 }
 
 #inicio > figure img {
   width: 100%;
-  aspect-ratio: 21 / 9;
-  max-height: 26rem;
+  aspect-ratio: 8 / 9;
   object-fit: cover;
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-lg);
-}
-
-#inicio > figure figcaption {
-  margin-top: var(--space-3);
-  text-align: center;
-  font-size: var(--fs-sm);
-  color: var(--color-text-muted);
 }
 
 /* --------------------------------------------------------------------------
@@ -442,6 +527,39 @@ body > header > nav {
   background-color: var(--color-surface);
 }
 
+#por-que-vainell .seccion-etiqueta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
+  font-size: var(--fs-xs);
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  line-height: 1.4;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+#por-que-vainell .seccion-etiqueta::before,
+#por-que-vainell .seccion-etiqueta::after {
+  width: clamp(1.5rem, 6vw, 3.5rem);
+  height: 1px;
+  content: "";
+  background-color: var(--color-mint);
+}
+
+#por-que-vainell > h2 {
+  margin-bottom: var(--space-3);
+}
+
+#por-que-vainell > h2 span {
+  display: inline-block;
+  font-size: 0.62em;
+  vertical-align: 0.12em;
+}
+
 #por-que-vainell > div {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
@@ -455,6 +573,14 @@ body > header > nav {
   background-color: var(--color-cream);
 }
 
+.catalogo-galeria {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+  max-width: var(--container-width);
+  margin: 0 auto var(--space-7);
+}
+
 /* Barra de categorías (estilo de los links en components.css) */
 #catalogo > nav {
   display: flex;
@@ -466,7 +592,7 @@ body > header > nav {
 
 /* Cada categoría es un contenedor propio; si la tabla fuera más ancha que
    la pantalla, el scroll queda dentro del contenedor y no en toda la página. */
-#catalogo > div {
+#catalogo > div:not(.catalogo-galeria) {
   margin-bottom: var(--space-7);
   padding: var(--space-1);
   overflow-x: auto;

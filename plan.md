@@ -41,7 +41,7 @@ Como se trata de un **simulador**, el pedido no se procesa realmente (no hay pas
 | Etapa | Tecnología |
 |---|---|
 | Entrega 1 | HTML5 semántico |
-| Entrega 2 (actual) | CSS3 (maquetación y diseño responsive) |
+| Entrega 2 (actual) | **CSS3 (maquetación y diseño responsive)**<br>• **CSS y componentes:** `styles.css` (variables en `:root`, reset y layout) y `components.css` (navegación, botones, cards, formularios y tablas con estados `hover` y `focus-visible`)<br>• **Responsive:** `responsive.css` con media queries y breakpoints para escritorio, tablet y móvil, sin scroll horizontal<br>• **Mockup:** diseño en Figma con servidor MCP, capturas en `docs/01-mockup/actividad-obligatoria-2/`<br>• **Testing:** casos de prueba 1 a 5 e informe consolidado en `docs/04-testing/`, más pruebas en localhost y GitHub Pages<br>• **Criterios de aceptación:** definidos por rol en cada `spec-[rol].md`<br>• **Trazabilidad:** `plan.md` → spec → Pull Request (#48, #50 y #26) → `changelog.md` |
 | Próxima entrega | JavaScript (interactividad, validaciones, cálculo de envío, simulación del pedido) |
 | Gestión de proyecto | Git / GitHub (branch model, Pull Requests, Issues) |
 | IA | GitHub Copilot (modo Agente), y otros modelos (ChatGPT, Gemini, Claude, etc.) para distintas tareas del proyecto |
