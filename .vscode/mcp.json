@@ -1,0 +1,11 @@
+
+
+{
+	"servers": {
+		"Figma Dev Mode MCP": {
+			"url": "https://mcp.figma.com/mcp",
+			"type": "http"
+		}
+	},
+	"inputs": []
+}
