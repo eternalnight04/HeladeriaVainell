@@ -6,6 +6,14 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 ## [Unreleased]
 
+### Added
+
+- [feature/arq-diagramas-actividades] [Feature] Arquitecto de Diagramas de Actividades. PR: [#71](https://github.com/eternalnight04/HeladeriaVainell/pull/71) - @eternalnight04 (Arquitecto de Diagramas de Actividades)
+
+### Changed
+
+### Fixed
+
 
 
 ## [Release Actividad Obligatoria N°2] - 2026-10-20

@@ -1,0 +1,112 @@
+@startuml actividad-flujo-3-confirmar-pedido
+title Flujo 3 - Confirmar pedido
+
+|Sistema|
+start
+:Muestra el menú principal con prompt();
+|Usuario|
+:Ingresa una opción del 0 al 4 con prompt();
+|Sistema|
+while (¿La opción está fuera de 0 a 4?) is (Sí)
+  :Informa que la opción no es válida con alert();
+  :Vuelve a mostrar el menú con prompt();
+  |Usuario|
+  :Ingresa una opción con prompt();
+  |Sistema|
+endwhile (No)
+
+if (¿Eligió salir con 0?) then (Sí)
+  :Muestra despedida con alert();
+  stop
+else (No)
+  if (¿Eligió confirmar pedido con 3?) then (Sí)
+    :Inicia la confirmación;
+  else (No)
+    :Deriva a otro flujo del menú;
+    :Regresa al menú principal;
+    stop
+  endif
+endif
+
+if (¿Hay productos cargados en memoria?) then (No)
+  :Informa que primero debe cotizar productos con alert();
+  stop
+else (Sí)
+  :Solicita nombre con prompt();
+endif
+
+|Usuario|
+:Ingresa nombre;
+|Sistema|
+while (¿El nombre está vacío?) is (Sí)
+  :Informa el error y vuelve a solicitar nombre con alert() y prompt();
+  |Usuario|
+  :Ingresa nombre;
+  |Sistema|
+endwhile (No)
+
+:Solicita apellido con prompt();
+|Usuario|
+:Ingresa apellido;
+|Sistema|
+while (¿El apellido está vacío?) is (Sí)
+  :Informa el error y vuelve a solicitar apellido con alert() y prompt();
+  |Usuario|
+  :Ingresa apellido;
+  |Sistema|
+endwhile (No)
+
+:Solicita teléfono con prompt();
+|Usuario|
+:Ingresa teléfono;
+|Sistema|
+while (¿El teléfono no tiene formato válido?) is (Sí)
+  :Informa el error y vuelve a solicitar teléfono con alert() y prompt();
+  |Usuario|
+  :Ingresa teléfono;
+  |Sistema|
+endwhile (No)
+
+if (¿La modalidad guardada es delivery?) then (Sí)
+  :Solicita dirección con prompt();
+  |Usuario|
+  :Ingresa dirección;
+  |Sistema|
+  while (¿La dirección está vacía?) is (Sí)
+    :Informa el error y vuelve a solicitar dirección con alert() y prompt();
+    |Usuario|
+    :Ingresa dirección;
+    |Sistema|
+  endwhile (No)
+else (Retiro)
+  :Usa el día y horario de retiro seleccionado;
+endif
+
+:Solicita medio de pago con prompt();
+|Usuario|
+:Ingresa efectivo, transferencia o tarjeta;
+|Sistema|
+while (¿El medio de pago no es válido?) is (Sí)
+  :Informa las opciones y vuelve a solicitar medio de pago con alert() y prompt();
+  |Usuario|
+  :Ingresa medio de pago válido;
+  |Sistema|
+endwhile (No)
+
+:Solicita comentarios opcionales con prompt();
+|Usuario|
+:Ingresa comentarios o deja la respuesta vacía;
+|Sistema|
+:Arma el pedido en memoria y muestra el resumen con alert() y console.log();
+:Solicita confirmación Sí o No con prompt();
+|Usuario|
+:Elige Sí o No;
+|Sistema|
+if (¿Confirma el pedido?) then (Sí)
+  :Muestra confirmación simulada con alert() y console.log();
+  :No procesa pagos ni persiste el pedido;
+else (No)
+  :Muestra que el pedido fue cancelado con alert();
+endif
+stop
+@enduml

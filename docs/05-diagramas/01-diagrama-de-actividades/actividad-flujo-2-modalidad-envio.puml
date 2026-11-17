@@ -1,0 +1,76 @@
+@startuml actividad-flujo-2-modalidad-envio
+title Flujo 2 - Modalidad de entrega y costo de envío
+
+|Sistema|
+start
+:Muestra el menú principal con prompt();
+|Usuario|
+:Ingresa una opción del 0 al 4 con prompt();
+|Sistema|
+while (¿La opción está fuera de 0 a 4?) is (Sí)
+  :Informa que la opción no es válida con alert();
+  :Vuelve a mostrar el menú con prompt();
+  |Usuario|
+  :Ingresa una opción con prompt();
+  |Sistema|
+endwhile (No)
+
+if (¿Eligió salir con 0?) then (Sí)
+  :Muestra despedida con alert();
+  stop
+else (No)
+  if (¿Eligió modalidad y envío con 2?) then (Sí)
+    :Inicia la selección de modalidad;
+  else (No)
+    :Deriva a otro flujo del menú;
+    :Regresa al menú principal;
+    stop
+  endif
+endif
+
+:Solicita modalidad delivery o retiro con prompt();
+|Usuario|
+:Ingresa la modalidad;
+|Sistema|
+while (¿La modalidad no es delivery ni retiro?) is (Sí)
+  :Informa el error y vuelve a solicitar modalidad con alert() y prompt();
+  |Usuario|
+  :Ingresa una modalidad válida;
+  |Sistema|
+endwhile (No)
+
+if (¿Eligió delivery?) then (Sí)
+  :Solicita zona de entrega con prompt();
+  |Usuario|
+  :Ingresa la zona;
+  |Sistema|
+  while (¿La zona no está configurada o no tiene cobertura?) is (Sí)
+    :Informa que no hay cobertura y vuelve a solicitar zona con alert() y prompt();
+    |Usuario|
+    :Ingresa otra zona;
+    |Sistema|
+  endwhile (No)
+  :Busca la tarifa de la zona configurada;
+  :Calcula costo de envío y total del pedido;
+else (Retiro)
+  :Solicita día y horario de retiro con prompt();
+  |Usuario|
+  :Ingresa día y horario;
+  |Sistema|
+  while (¿El horario está fuera de atención?) is (Sí)
+    :Informa el horario válido y vuelve a solicitar con alert() y prompt();
+    note right
+      Lun-Vie: 11:00-22:00
+      Sáb-Dom: 10:00-23:00
+    end note
+    |Usuario|
+    :Ingresa un día y horario válido;
+    |Sistema|
+  endwhile (No)
+  :Establece costo de envío en $0;
+  :Calcula el total del pedido;
+endif
+
+:Muestra modalidad, costo de envío y total con alert() y console.log();
+stop
+@enduml
