@@ -1,0 +1,72 @@
+@startuml actividad-flujo-4-mi-cuenta
+title Flujo 4 - Mi cuenta Vainell (registro y login simulados)
+
+|Sistema|
+start
+:Muestra el menú principal con prompt();
+|Usuario|
+:Ingresa una opción del 0 al 4 con prompt();
+|Sistema|
+while (¿La opción está fuera de 0 a 4?) is (Sí)
+  :Informa que la opción no es válida con alert();
+  :Vuelve a mostrar el menú con prompt();
+  |Usuario|
+  :Ingresa una opción con prompt();
+  |Sistema|
+endwhile (No)
+
+if (¿Eligió salir con 0?) then (Sí)
+  :Muestra despedida con alert();
+  stop
+else (No)
+  if (¿Eligió Mi cuenta con 4?) then (Sí)
+    :Muestra opciones de registro y login con alert();
+  else (No)
+    :Deriva a otro flujo del menú;
+    :Regresa al menú principal;
+    stop
+  endif
+endif
+
+:Solicita registro o login con prompt();
+|Usuario|
+:Elige registro o login;
+|Sistema|
+if (¿Eligió registro?) then (Sí)
+  :Solicita nombre, correo, contraseña y confirmación con prompt();
+  |Usuario|
+  :Ingresa sus datos;
+  |Sistema|
+  while (¿Los datos son inválidos, el correo no es válido,\nya está registrado o las contraseñas no coinciden?) is (Sí)
+    :Informa el problema y vuelve a solicitar los datos con alert() y prompt();
+    |Usuario|
+    :Corrige y reingresa los datos;
+    |Sistema|
+  endwhile (No)
+  :Agrega la cuenta al arreglo de usuarios en memoria;
+  :Muestra cuenta creada con alert() y console.log();
+else (Login)
+  :Inicializa el contador de intentos;
+  while (¿No se autenticó y quedan intentos configurados?) is (Sí)
+    :Solicita correo y contraseña con prompt();
+    |Usuario|
+    :Ingresa credenciales;
+    |Sistema|
+    :Busca coincidencia en el arreglo de usuarios en memoria;
+    if (¿Las credenciales coinciden?) then (Sí)
+      :Marca la sesión simulada como iniciada;
+      :Muestra saludo con el nombre mediante alert() y console.log();
+    else (No)
+      :Incrementa intentos y muestra error con alert();
+    endif
+  endwhile (No)
+  if (¿La sesión simulada se inició?) then (Sí)
+    :Continúa con la cuenta simulada;
+  else (No)
+    :Informa que se agotaron los intentos configurados con alert();
+  endif
+endif
+
+:Aclara que no hay autenticación real ni persistencia;
+stop
+@enduml

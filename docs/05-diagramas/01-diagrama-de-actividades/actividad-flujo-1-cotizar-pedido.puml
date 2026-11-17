@@ -1,0 +1,74 @@
+@startuml actividad-flujo-1-cotizar-pedido
+title Flujo 1 - Cotizar pedido desde el catálogo
+
+|Sistema|
+start
+:Muestra el menú principal con prompt();
+|Usuario|
+:Ingresa una opción del 0 al 4 con prompt();
+|Sistema|
+while (¿La opción está fuera de 0 a 4?) is (Sí)
+  :Informa que la opción no es válida con alert();
+  :Vuelve a mostrar el menú con prompt();
+  |Usuario|
+  :Ingresa una opción con prompt();
+  |Sistema|
+endwhile (No)
+
+if (¿Eligió salir con 0?) then (Sí)
+  :Muestra despedida con alert();
+  stop
+else (No)
+  if (¿Eligió cotizar con 1?) then (Sí)
+    :Inicia el cotizador;
+  else (No)
+    :Deriva a otro flujo del menú;
+    :Regresa al menú principal;
+    stop
+  endif
+endif
+
+:Inicializa la lista de productos y subtotal;
+repeat
+  :Solicita categoría con prompt();
+  |Usuario|
+  :Ingresa una categoría;
+  |Sistema|
+  while (¿La categoría no existe?) is (Sí)
+    :Informa el error y vuelve a solicitar categoría con alert() y prompt();
+    |Usuario|
+    :Ingresa una categoría válida;
+    |Sistema|
+  endwhile (No)
+  :Muestra productos y precios de la categoría con console.log();
+  :Solicita producto con prompt();
+  |Usuario|
+  :Ingresa el producto elegido;
+  |Sistema|
+  while (¿El producto no pertenece a la categoría?) is (Sí)
+    :Informa el error y vuelve a solicitar producto con alert() y prompt();
+    |Usuario|
+    :Ingresa un producto válido;
+    |Sistema|
+  endwhile (No)
+  :Solicita cantidad con prompt();
+  |Usuario|
+  :Ingresa cantidad;
+  |Sistema|
+  while (¿La cantidad no es un entero positivo?) is (Sí)
+    :Informa el error y vuelve a solicitar cantidad con alert() y prompt();
+    |Usuario|
+    :Ingresa una cantidad válida;
+    |Sistema|
+  endwhile (No)
+  :Agrega el producto y cantidad a la lista en memoria;
+  :Calcula el subtotal sumando precio por cantidad;
+  :Pregunta si desea agregar otro producto con prompt();
+  |Usuario|
+  :Elige Sí o No;
+  |Sistema|
+repeat while (¿Desea agregar otro producto?) is (Sí) not (No)
+
+:Muestra detalle de productos, cantidades y subtotal con alert() y console.log();
+stop
+@enduml
