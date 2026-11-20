@@ -66,15 +66,15 @@ Vainell es un simulador académico: no procesa pagos reales ni utiliza un backen
 
 ## Maqueta de diseño web
 
-El mockup del proyecto fue desarrollado en Figma y toma como referencia los requerimientos funcionales definidos en [plan.md](plan.md). La propuesta visual busca reflejar una identidad moderna, fresca y amigable para una heladería.
+El mockup actualizado del proyecto fue desarrollado en Figma y toma como referencia los requerimientos funcionales definidos en [plan.md](plan.md), con el objetivo de rediseñar la maqueta antes propuesta en `docs/01-mockup/actividad-obligatoria-1/`. La propuesta visual busca reflejar una identidad moderna, fresca y amigable para una heladería.
 
 ---
 
 ## Documentación
 
 -  Plan del proyecto: [plan.md](plan.md)
--  [`docs/01-mockup/actividad-obligatoria-1/`](./docs/01-mockup/actividad-obligatoria-1/01-diseño-inicial-inicio.png) — Ver en Figma: https://www.figma.com/make/8UBb5SIznSz81a6y57nQ7v/Ice-Cream-Shop?t=MiOriddmlnQAfXnL-20&fullscreen=1
-- [`docs/01-mockup/actividad-obligatoria-2/`](docs/01-mockup/actividad-obligatoria-2/01-diseño-con-estilos-inicio.png) - Ver en Figma: https://www.figma.com/make/Si4hHXYePCegrXfCQ5TNf3/Heladeria-Vainell-Segundo-Mockup?fullscreen=1&t=tJRtkXQdmbSxJK3J-1&code-node-id=0-6
+-  Primer Mockup: [`docs/01-mockup/actividad-obligatoria-1/`](./docs/01-mockup/actividad-obligatoria-1/01-diseño-inicial-inicio.png) — Ver en Figma: https://www.figma.com/make/8UBb5SIznSz81a6y57nQ7v/Ice-Cream-Shop?t=MiOriddmlnQAfXnL-20&fullscreen=1
+- Segundo Mockup: [`docs/01-mockup/actividad-obligatoria-2/`](docs/01-mockup/actividad-obligatoria-2/diseño-con-estilos.png) - Ver en Figma: https://www.figma.com/make/Si4hHXYePCegrXfCQ5TNf3/Heladeria-Vainell-Segundo-Mockup?fullscreen=1&t=tJRtkXQdmbSxJK3J-1&code-node-id=0-6
 -  Prompts de IA: [docs/02-prompts/prompts.md](docs/02-prompts/prompts.md)
 -  Changelog: [changelog.md](changelog.md)
 -  Especificaciones técnicas: [docs/03-specs](docs/03-specs)

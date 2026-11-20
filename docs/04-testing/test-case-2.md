@@ -1,81 +1,107 @@
 # Test Case 2 — Responsive en dispositivos móviles
 
-- **Momento de ejecución:** Momento 1 (Testing pre-merge)
-- **URL de prueba:** `http://localhost:3000`
-- **Herramienta utilizada:** **Playwright MCP** (`@playwright/mcp`) con emulación de viewport
+## 1. Datos generales
+
 - **Responsable:** Lautaro Chavez
-- **Rama:** `feature/doc-qa-tester-add-test-cases`
+- **Herramienta:** Playwright MCP mediante VS Code Copilot Agent Mode
+- **URL de prueba:** `http://127.0.0.1:3000/index.html?vscode-livepreview=true`
+- **Archivo evaluado:** `index.html`
+- **Dispositivos y tamaños de viewport:** iPhone (390 × 844), Samsung Galaxy (360 × 800) y iPad (768 × 1024).
 
----
+## 2. Objetivo
 
-## 1. Objetivo
+Verificar que la página de Heladería Vainell se adapte a diferentes tamaños de pantalla, que sus secciones principales sean visibles y que no se produzca desbordamiento horizontal que dificulte la navegación.
 
-Verificar la adaptación responsive del sitio web de Heladería Vainell en diferentes dispositivos móviles (iPhone, Samsung Galaxy e iPad), detectando desbordamientos horizontales, elementos fuera de pantalla y problemas de interacción visual o funcional.
+## 3. Resultados del Momento 1 — Testing pre-merge
 
----
+El registro inicial documentó problemas de desbordamiento horizontal en los tamaños correspondientes a iPhone y Samsung Galaxy, mientras que el iPad se registró como aprobado.
 
-## 2. Prompt Utilizado en Copilot Agent Mode
+- **iPhone:** FAIL. Se informó un posible desbordamiento horizontal asociado a la imagen de la sección Hero.
+- **Samsung Galaxy:** FAIL. El registro anterior informó un ancho del documento de 449 px para un viewport de 360 px, con un desbordamiento de 89 px.
+- **iPad:** PASS. El registro anterior indicó que la página se visualizaba correctamente en un viewport de 768 × 1024.
 
-> Ejecutá el Test Case 2 de responsive definido en `docs/03-specs/actividad-obligatoria-2/spec-qa.md`.
->
-> Probá la página en iPhone, Samsung Galaxy e iPad.
->
-> Para cada viewport verificá que la página cargue correctamente, que no exista scroll horizontal, que los elementos principales estén dentro del viewport y que los controles del formulario sean utilizables.
->
-> No modifiques ningún archivo del proyecto.
+**Issue asociado:** [#23 — [BUG] Desbordamiento horizontal (overflow) en versión mobile por imagen hero](https://github.com/eternalnight04/HeladeriaVainell/issues/23), abierto el 28/09/2026 durante el Momento 1 y actualmente cerrado. Registra el desbordamiento horizontal en mobile causado por la imagen de la sección Hero, y es la referencia de los resultados FAIL de iPhone y Samsung Galaxy.
 
----
+**Observación sobre el registro histórico:** el documento original contenía descripciones contradictorias sobre el desbordamiento. Por ese motivo, los resultados del Momento 1 se conservan como antecedentes y no se consideran una verificación independiente del estado actual del código. La verificación vigente es la del Momento 2.
 
-## 3. Resultados de la Ejecución (Momento 1)
+## 4. Resultados del Momento 2 — Nueva ejecución
 
-### iPhone (Mobile - Viewport Small)
-- **Resultado:** **FAIL ❌**
-- **Hallazgos:**
-  - Se detectó desbordamiento (overflow) horizontal no deseado.
-  - La imagen principal del hero section sobresale aproximadamente **58 px** del área visible.
-  - Los demás contenedores principales y el formulario se adaptan correctamente al ancho del dispositivo.
-  - Los controles e inputs del formulario son interactivos y utilizables.
+Se volvió a verificar la página con Playwright MCP en Chromium, modificando el viewport para representar los tres tamaños de pantalla solicitados.
 
-### Samsung Galaxy (Mobile - Viewport Medium)
-- **Resultado:** **FAIL ❌**
-- **Viewport:** `360 × 800 CSS px`
-- **Ancho del documento:** `449 px`
-- **Overflow horizontal:** `89 px`
-- **Hallazgos:**
-  - La imagen hero ocupa un rango de `x=48–448`, sobresaliendo aproximadamente **88 px** a la derecha del canvas.
-  - El header, la navegación, el catálogo, el formulario y el footer se mantienen dentro del ancho visible.
-  - La funcionalidad de los formularios se encuentra operativa.
+En los tres casos, el documento alcanzó `readyState: complete` y la navegación, la sección Hero, el catálogo y el formulario estuvieron visibles.
 
-### iPad (Tablet - Viewport Large)
-- **Resultado:** **PASS ✅**
-- **Viewport:** `768 × 1024 CSS px`
-- **Hallazgos:**
-  - La maquetación y la imagen del hero se ajustan correctamente sin provocar scroll horizontal.
-  - Todos los bloques principales (navegación, catálogo, formulario) se visualizan de forma fluida.
+| Dispositivo / viewport | Resultado | `innerWidth × innerHeight` | `clientWidth` | `scrollWidth` | Desbordamiento horizontal |
+|---|---|---:|---:|---:|---|
+| iPhone (390 × 844) | PASS | 390 × 844 | 375 | 375 | No |
+| Samsung Galaxy (360 × 800) | PASS | 360 × 800 | 345 | 345 | No |
+| iPad (768 × 1024) | PASS | 768 × 1024 | 753 | 753 | No |
 
----
+### Verificación de controles
 
-## 4. Evidencias
+En los tres tamaños, los controles del formulario se encontraron visibles, habilitados, editables y accesibles mediante el foco. También se verificó que aceptaran interacción mediante el puntero.
 
-![Evidencia Test Case 2 - Responsive](evidencia-test-case-2.png)
+**El formulario no se envió** durante esta prueba, ya que el objetivo fue comprobar el comportamiento responsive y la disponibilidad de los controles.
 
-*Figura 1: Captura de pantalla evidenciando el scroll horizontal provocado por el overflow de la imagen en la sección Hero.*
+### Evidencias del Momento 2
 
----
+**iPhone — 390 × 844**
 
-## 5. Issues Generados (GitHub MCP)
+![Evidencia responsive en iPhone](evidencia-test-case-2-iphone.png)
 
-- **Issue Creado:** `#1` (o el número correspondiente asignado por GitHub)
-- **Título:** `[BUG] Desbordamiento horizontal (overflow) en versión mobile por imagen de hero section`
-- **Etiqueta:** `bug` / `responsive`
-- **Notificado a:** Especialista en Responsive / Desarrollador Frontend
+**Samsung Galaxy — 360 × 800**
 
-> **Justificación:** Se registró como bug crítico de responsive ya que romper la cuadrícula del viewport con un scroll horizontal involuntario degrada fuertemente la experiencia de usuario (UX) en dispositivos móviles pequeños y medianos.
+![Evidencia responsive en Samsung Galaxy](evidencia-test-case-2-samsung.png)
 
----
+**iPad — 768 × 1024**
+
+![Evidencia responsive en iPad](evidencia-test-case-2-ipad.png)
+
+## 5. Alcance y limitaciones
+
+- La verificación del Momento 2 se realizó en Chromium mediante Playwright MCP.
+- Se utilizaron distintos tamaños de viewport; esto no equivale a probar en dispositivos físicos reales.
+- No se documentaron pruebas del Momento 2 en Firefox, Safari o Edge.
+- La diferencia observada entre `innerWidth` y `clientWidth` fue de 15 px en los tres tamaños. Como `scrollWidth` coincidió con `clientWidth` en todos los casos, no se detectó desbordamiento horizontal del documento durante estas pruebas.
+- Los resultados corresponden a la página y al estado del código disponibles durante la ejecución.
 
 ## 6. Conclusión
 
-**Prueba completada con hallazgos (FAIL).**
+**Resultado del Momento 2: PASS en los tres tamaños de viewport probados.**
 
-Se confirmó que la estructura general responsive funciona correctamente salvo por la imagen contenedora de la sección **Hero**, la cual carece de reglas CSS adaptativas (`max-width: 100%` / `height: auto`), generando scroll horizontal no deseado en dispositivos iPhone y Samsung Galaxy. Se procede a notificar al Especialista en Responsive para su corrección antes de realizar el merge a `develop`.
+En la nueva ejecución, la página cargó correctamente, sus secciones principales permanecieron visibles y no se detectó desbordamiento horizontal en los viewports de iPhone, Samsung Galaxy e iPad.
+
+Estos resultados describen la verificación realizada en Chromium y no reemplazan las pruebas en otros navegadores ni en dispositivos físicos. Los hallazgos del Momento 1 quedan documentados como antecedentes históricos, cuyo cierre es consistente con el resultado PASS obtenido en el Momento 2.
+
+## 7. Prompt utilizado en Copilot Agent Mode
+
+```text
+Usa Playwright MCP para realizar la auditoría del Test Case 2: Responsive en dispositivos móviles en la aplicación local de Heladería Vainell.
+
+URL:
+http://127.0.0.1:3000/index.html?vscode-livepreview=true
+
+Instrucciones:
+1. Abre la página en Chromium.
+2. Configura y prueba los siguientes viewports uno por uno:
+   - iPhone: 390 × 844
+   - Samsung Galaxy: 360 × 800
+   - iPad: 768 × 1024
+3. En cada viewport verifica que:
+   - La página alcance `readyState: complete`.
+   - La navegación principal, la sección Hero, el catálogo y el formulario estén visibles.
+   - No exista desbordamiento horizontal (compara `clientWidth` y `scrollWidth`).
+   - Los controles del formulario estén visibles, habilitados, editables, reciban foco y acepten interacción con el puntero.
+4. No envíes el formulario.
+5. Toma una captura de pantalla completa de cada viewport como evidencia.
+6. Reporta los resultados en el siguiente formato de tabla:
+
+| Dispositivo / viewport | Resultado | `innerWidth × innerHeight` | `clientWidth` | `scrollWidth` | Desbordamiento horizontal |
+|---|---|---:|---:|---:|---|
+| iPhone (390 × 844) | ... | ... | ... | ... | ... |
+| Samsung Galaxy (360 × 800) | ... | ... | ... | ... | ... |
+| iPad (768 × 1024) | ... | ... | ... | ... | ... |
+
+No modifiques ningún archivo del proyecto.
+```
+
+**Prompt del Momento 1:** el texto de la ejecución pre-merge no se conservó. Los resultados del Momento 1 de la sección 3 provienen del registro histórico y del issue [#23](https://github.com/eternalnight04/HeladeriaVainell/issues/23), no de un prompt documentado.

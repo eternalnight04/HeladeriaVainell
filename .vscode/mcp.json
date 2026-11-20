@@ -1,11 +1,11 @@
+
+
 {
-  "servers": {
-    "playwright": {
-      "type": "stdio",
-      "command": "npx",
-      "args": [
-        "@playwright/mcp@latest"
-      ]
-    }
-  }
+	"servers": {
+		"Figma Dev Mode MCP": {
+			"url": "https://mcp.figma.com/mcp",
+			"type": "http"
+		}
+	},
+	"inputs": []
 }
